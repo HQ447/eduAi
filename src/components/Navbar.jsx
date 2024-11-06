@@ -6,9 +6,15 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div className="flex px-20 py-6 justify-between fixed top-0 w-full backdrop-blur-lg">
+    <div
+      className="flex px-20 py-6 bg-[#ffffff80]  bg-opacity-50 justify-between fixed top-0 w-full backdrop-blur-lg"
+      style={{
+        boxShadow:
+          "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+      }}
+    >
       <h1 className="text-2xl">eduAI</h1>
-      <div className="flex list-none text-lg gap-8">
+      <div className="flex list-none text-lg gap-8 -md:hidden">
         <NavLink to={""}>Home</NavLink>
         <NavLink to={"about"}>About</NavLink>
         <NavLink to={"courses"}>Courses</NavLink>
