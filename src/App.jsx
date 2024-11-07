@@ -5,6 +5,7 @@ import About from "./pages/user/About";
 import Courses from "./pages/user/Courses";
 import Resources from "./pages/user/Resources";
 import CourceDetails from "./pages/user/CourceDetails";
+import "./App.css";
 
 function App() {
   return (

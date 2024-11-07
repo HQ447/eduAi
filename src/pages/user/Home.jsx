@@ -4,8 +4,8 @@ function Home() {
   return (
     <div className=" py-10 flex flex-col px-20 -md:px-10 -sm:px-6  bg-[#cce7f5] w-full">
       <div className="flex w-full  min-h-screen md:items-center -md:justify-center flex-wrap-reverse">
-        <div className="flex basis-3/6  -md:basis-full  ">
-          <h1 className="text-5xl -md:text-center w-full -sm:text-4xl font-bold lineHeight">
+        <div className="flex flex-col gap-5 basis-3/6 -md:basis-full  ">
+          <h1 className="text-5xl -md:text-center w-full -sm:text-4xl font-[600] lineHeight">
             Start your{" "}
             <span
               style={{
@@ -19,6 +19,13 @@ function Home() {
             </span>{" "}
             with our Dedicated community!
           </h1>
+          <p className="text-xl text-[#000000b5] -md:text-center">
+            Begin your coding adventure in our community, where learning is
+            always appreciated and valued.
+          </p>
+          <button className="rounded-full -md:mx-auto max-w-fit py-2 px-5 bg-[#2190ff] text-white font-semibold">
+            Explore Resources
+          </button>
         </div>
         <div className="flex basis-3/6 -md:basis-full -md:w-full ">
           <img
