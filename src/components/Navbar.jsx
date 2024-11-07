@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
   return (
     <div
-      className="flex px-20 py-6 bg-[#ffffff80]  bg-opacity-50 justify-between fixed top-0 w-full backdrop-blur-lg"
+      className="flex px-20 py-6 bg-[#ffffff80] -md:px-10 -sm:px-6 bg-opacity-50 justify-between fixed top-0 w-full backdrop-blur-lg"
       style={{
         boxShadow:
           "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",

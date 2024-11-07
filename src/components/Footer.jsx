@@ -1,12 +1,12 @@
 function Footer() {
   return (
-    <div className="flex flex-col px-20 py-10 gap-5">
+    <div className="flex flex-col px-20 py-10 gap-5 -md:px-10 -sm:px-6">
       <div className="flex justify-between mb-3 flex-wrap gap-10 -sm:px-10 -sm:justify-center">
         <div className="flex flex-col gap-4 ">
           <h1 className=" text-xl font-bold">About</h1>
           <h1>Our Story</h1>
           <h1>Privacy Policy</h1>
-          <h1>FAQ's</h1>
+          <h1>FAQs</h1>
         </div>
         <div className="flex flex-col gap-4 ">
           <h1 className=" text-xl font-bold">Quick Links</h1>
