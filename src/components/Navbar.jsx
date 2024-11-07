@@ -3,11 +3,28 @@ import { LuUserCircle } from "react-icons/lu";
 import { IoMoonOutline } from "react-icons/io5";
 import { FaRegBell } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { updateMode } from "../store/cartSlice";
 
 function Navbar() {
+  const [darkMode, setdarkMode] = useState(false);
+  const dispatch = useDispatch();
+
+  function handledarkMode() {
+    setdarkMode((prev) => !prev);
+    dispatch(updateMode(darkMode));
+  }
+
+  const darkModeFromRedux = useSelector((state) => state.store.darkMode);
+
   return (
     <div
-      className="flex px-20 py-6 bg-[#eff9ff99] text-[#000000b5] -md:px-10 -sm:px-6 bg-opacity-50 justify-between fixed top-0 w-full backdrop-blur-lg"
+      className={` ${
+        darkModeFromRedux
+          ? "bg-[#1b1b1b8f] text-white"
+          : " bg-[#eff9ff99] text-[#000000b5] "
+      } flex px-20 py-6 -md:px-10 -sm:px-6 bg-opacity-50 justify-between fixed top-0 w-full backdrop-blur-lg transition-all`}
       style={{
         boxShadow:
           "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
@@ -23,7 +40,10 @@ function Navbar() {
         <NavLink to={"resources"}>Resources</NavLink>
       </div>
       <div className="flex text-2xl gap-4">
-        <IoMoonOutline />
+        <IoMoonOutline
+          onClick={handledarkMode}
+          className=" hover:scale-95 cursor-pointer"
+        />
         <IoChatbubbleEllipsesOutline />
         <FaRegBell />
         <LuUserCircle />

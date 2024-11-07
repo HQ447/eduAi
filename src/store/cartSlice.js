@@ -1,33 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  cart: [],
-  userData: {},
-  allProduct: [],
-  tempArr: [],
+  darkMode: false,
 };
 
 export const cartSlice = createSlice({
-  name: "cart",
+  name: "store",
   initialState,
   reducers: {
-    updateCart: (state, action) => {
-      state.cart = action.payload;
-    },
-    updateallProduct: (state, action) => {
-      state.allProduct = action.payload;
-    },
-
-    updateUserData: (state, action) => {
-      state.userData = action.payload;
-    },
-    clearTempArr: (state) => {
-      state.tempArr = [];
+    updateMode: (state, action) => {
+      state.darkMode = action.payload;
     },
   },
 });
 
-export const { updateCart, updateUserData, updateallProduct, clearTempArr } =
-  cartSlice.actions;
+export const { updateMode } = cartSlice.actions;
 
 export default cartSlice.reducer;
