@@ -5,7 +5,7 @@ function About() {
   return (
     <div
       className={`${
-        darkMode ? "text-white bg-[#01090a]" : ""
+        darkMode ? "text-white bg-[#101215]" : ""
       } flex flex-col px-20 -md:px-10 -sm:px-6 pt-28 pb-5`}
     >
       <h1 className="w-full text-center text-[2rem] font-[600] mb-5 ">

@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div
       className={`${
-        darkMode ? "text-white bg-[#080808]" : "text-[#000000b5]"
+        darkMode ? "text-white bg-[#101215]" : "text-[#000000b5]"
       } flex flex-col px-20 py-10 gap-5 -md:px-10 -sm:px-6 `}
     >
       <div className="flex justify-between mb-3 flex-wrap gap-10 -sm:px-10 -sm:justify-center">

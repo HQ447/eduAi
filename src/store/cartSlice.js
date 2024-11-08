@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   darkMode: false,
+  currStatus: "",
 };
 
 export const cartSlice = createSlice({
@@ -11,9 +12,12 @@ export const cartSlice = createSlice({
     updateMode: (state, action) => {
       state.darkMode = action.payload;
     },
+    updateCurrStatus: (state, action) => {
+      state.currStatus = action.payload;
+    },
   },
 });
 
-export const { updateMode } = cartSlice.actions;
+export const { updateMode, updateCurrStatus } = cartSlice.actions;
 
 export default cartSlice.reducer;

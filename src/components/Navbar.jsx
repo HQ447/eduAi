@@ -38,7 +38,7 @@ function Navbar() {
         <NavLink to={""}>Home</NavLink>
         <NavLink to={"about"}>About</NavLink>
         <NavLink to={"courses"}>Courses</NavLink>
-        <NavLink to={"resources"}>Resources</NavLink>
+        <NavLink to={"resourses"}>Resources</NavLink>
       </div>
       <div className="flex text-2xl gap-4">
         {darkModeFromRedux ? (

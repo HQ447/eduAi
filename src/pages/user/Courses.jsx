@@ -7,7 +7,7 @@ function Courses() {
   return (
     <div
       className={` ${
-        darkMode ? "bg-[#01090a] text-white " : "bg-[#f7f7f7]"
+        darkMode ? "bg-[#101215] text-white " : "bg-[#f7f7f7]"
       } pt-28 px-20 -md:px-10 -sm:px-6 pb-5  `}
     >
       <div className="flex flex-col justify-center items-center mb-5">

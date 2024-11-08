@@ -7,7 +7,7 @@ function Home() {
   return (
     <div
       className={`${
-        darkMode ? "bg-[#01090a] text-white " : "bg-[#cce7f5]"
+        darkMode ? "bg-[#101215] text-white " : "bg-[#cce7f5]"
       }  py-10 flex flex-col px-20 -md:px-10 -sm:px-6   w-full transition-all`}
     >
       <div className="flex w-full  min-h-screen md:items-center -md:justify-center flex-wrap-reverse">
