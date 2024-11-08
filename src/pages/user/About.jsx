@@ -55,7 +55,7 @@ function About() {
         <br />
         <br />
         <br />
-        <b className="text-xl text-black">
+        <b className={`${darkMode ? "text-white" : "text-black"} text-xl `}>
           <u>Hammad Ahmad</u>{" "}
         </b>
         <br />

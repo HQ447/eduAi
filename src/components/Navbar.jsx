@@ -1,6 +1,7 @@
 import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import { LuUserCircle } from "react-icons/lu";
 import { IoMoonOutline } from "react-icons/io5";
+import { CiBrightnessUp } from "react-icons/ci";
 import { FaRegBell } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
@@ -40,10 +41,18 @@ function Navbar() {
         <NavLink to={"resources"}>Resources</NavLink>
       </div>
       <div className="flex text-2xl gap-4">
-        <IoMoonOutline
-          onClick={handledarkMode}
-          className=" hover:scale-95 cursor-pointer"
-        />
+        {darkModeFromRedux ? (
+          <CiBrightnessUp
+            onClick={handledarkMode}
+            className=" hover:scale-95 cursor-pointer"
+          />
+        ) : (
+          <IoMoonOutline
+            onClick={handledarkMode}
+            className=" hover:scale-95 cursor-pointer"
+          />
+        )}
+
         <IoChatbubbleEllipsesOutline />
         <FaRegBell />
         <LuUserCircle />
