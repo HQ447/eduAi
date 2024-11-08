@@ -20,7 +20,9 @@ function Footer() {
         </div>
         <div className="flex flex-col gap-4 ">
           <h1 className=" text-xl font-bold">Quick Links</h1>
-          <h1>Courses</h1>
+          <NavLink to={"courses"}>
+            <h1>Courses</h1>
+          </NavLink>
           <h1>My Account</h1>
           <h1>Cource Dashboard</h1>
         </div>
