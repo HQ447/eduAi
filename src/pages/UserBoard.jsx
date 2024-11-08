@@ -7,7 +7,7 @@ import { AiOutlineTeam } from "react-icons/ai";
 import { IoBulbOutline } from "react-icons/io5";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import updateCurrStatus from "../store/cartSlice";
+import { updateCurrStatus } from "../store/cartSlice";
 
 function UserBoard() {
   const darkMode = useSelector((state) => state.store.darkMode);
@@ -15,9 +15,13 @@ function UserBoard() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  useEffect(() => {
+  function renderChange() {
     dispatch(updateCurrStatus(currStatus));
-  }, [currStatus, dispatch]);
+  }
+
+  useEffect(() => {
+    renderChange();
+  }, [currStatus]);
 
   return (
     <div className="w-full  ">
@@ -28,7 +32,7 @@ function UserBoard() {
       >
         <div
           className={`${
-            currStatus === "Home" ? "bg-blue-600 text-white" : ""
+            currStatus === "Home" ? "bg-green-600 text-white" : ""
           } flex justify-center items-center gap-2 p-2 rounded-full transition-all`}
         >
           <IoHomeOutline
@@ -42,7 +46,7 @@ function UserBoard() {
         </div>
         <div
           className={`${
-            currStatus === "Courses" ? "bg-blue-600 text-white" : ""
+            currStatus === "Courses" ? "bg-green-600 text-white" : ""
           } flex justify-center items-center gap-2 p-2 rounded-full transition-all`}
         >
           <GiBlackBook
@@ -56,7 +60,7 @@ function UserBoard() {
         </div>
         <div
           className={`${
-            currStatus === "About" ? "bg-blue-600 text-white" : ""
+            currStatus === "About" ? "bg-green-600 text-white" : ""
           } flex justify-center items-center gap-2 p-2 rounded-full transition-all`}
         >
           <AiOutlineTeam
@@ -70,7 +74,7 @@ function UserBoard() {
         </div>
         <div
           className={`${
-            currStatus === "Resourses" ? "bg-blue-600 text-white" : ""
+            currStatus === "Resourses" ? "bg-green-600 text-white" : ""
           } flex justify-center items-center gap-2 p-2 rounded-full transition-all`}
         >
           <IoBulbOutline

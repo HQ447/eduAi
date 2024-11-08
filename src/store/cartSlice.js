@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   darkMode: false,
-  currStatus: "",
+  currStatus: "Home",
 };
 
 export const cartSlice = createSlice({

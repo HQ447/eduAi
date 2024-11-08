@@ -6,7 +6,7 @@ import { FaRegBell } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateMode } from "../store/cartSlice";
+import { updateMode, updateCurrStatus } from "../store/cartSlice";
 
 function Navbar() {
   const [darkMode, setdarkMode] = useState(false);
@@ -18,6 +18,7 @@ function Navbar() {
   }
 
   const darkModeFromRedux = useSelector((state) => state.store.darkMode);
+  const currStatus = useSelector((state) => state.store.currStatus);
 
   return (
     <div
@@ -35,10 +36,34 @@ function Navbar() {
         <h1 className="text-2xl font-semibold">eduAI</h1>
       </NavLink>
       <div className="flex list-none text-lg gap-8 -md:hidden font-semibold">
-        <NavLink to={""}>Home</NavLink>
-        <NavLink to={"about"}>About</NavLink>
-        <NavLink to={"courses"}>Courses</NavLink>
-        <NavLink to={"resourses"}>Resources</NavLink>
+        <NavLink
+          to={""}
+          className={`${currStatus === "Home" ? "text-green-600" : ""}`}
+          onClick={() => dispatch(updateCurrStatus("Home"))}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to={"about"}
+          className={`${currStatus === "About" ? "text-green-600" : ""}`}
+          onClick={() => dispatch(updateCurrStatus("About"))}
+        >
+          About
+        </NavLink>
+        <NavLink
+          to={"courses"}
+          className={`${currStatus === "Courses" ? "text-green-600" : ""}`}
+          onClick={() => dispatch(updateCurrStatus("Courses"))}
+        >
+          Courses
+        </NavLink>
+        <NavLink
+          to={"resourses"}
+          className={`${currStatus === "Resourses" ? "text-green-600" : ""}`}
+          onClick={() => dispatch(updateCurrStatus("Resourses"))}
+        >
+          Resources
+        </NavLink>
       </div>
       <div className="flex text-2xl gap-4">
         {darkModeFromRedux ? (
