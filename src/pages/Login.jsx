@@ -9,33 +9,40 @@ import { FaFacebook } from "react-icons/fa";
 function Login() {
   return (
     <div className=" backdrop-blur-sm flex w-full min-h-screen justify-center items-center">
-      <div className="w-fit flex flex-col px-10 py-10 rounded-lg bg-[#dbdbdb] ">
+      <div className=" w-[28%] flex flex-col px-10 py-10 rounded-lg bg-[#ececec] ">
         <h1 className="text-2xl text-center font-semibold">Hello!</h1>
         <p className="text-md text-center">Welcome back</p>
-        <div className="flex flex-col my-3">
+        <div className="flex flex-col my-3 gap-4">
           <input
             type="text"
             placeholder="Enter Email"
-            className="bg-white px-3 py-1 placeholder:text-sm rounded-md placeholder:text-gray-400"
+            className="bg-white px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
           <input
             type="password"
             placeholder="Password"
-            className="bg-white px-3 py-1 placeholder:text-sm rounded-md placeholder:text-gray-400"
+            className="bg-white outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
-          <p>Recovery Password</p>
+          <p className=" text-end text-[12px] font-semibold">
+            Recovery Password
+          </p>
         </div>
-        <button>Sign in</button>
+        <button className="bg-orange-500 mb-3 hover:scale-95 transition-all hover:bg-orange-600 text-white rounded-md py-2 shadow-md">
+          Sign in
+        </button>
 
         <div>
-          <p>or continue with</p>
-          <div className="flex ">
-            <FcGoogle />
-            <FaFacebook />
-            <FaApple />
+          <p className="text-[12px] text-center">or continue with</p>
+          <div className="flex justify-around my-3">
+            <FcGoogle className="text-5xl border-2 px-3 rounded-md hover:scale-95 transition-all hover:bg-white cursor-pointer" />
+            <FaFacebook className="text-5xl border-2 px-3 rounded-md hover:scale-95 transition-all hover:bg-white cursor-pointer" />
+            <FaApple className="text-5xl border-2 px-3 rounded-md hover:scale-95 transition-all hover:bg-white cursor-pointer" />
           </div>
-          <p>
-            Not a member?<a href="">Register now</a>
+          <p className="text-[12px] text-center">
+            Not a member?{" "}
+            <a href="" className=" text-blue-600">
+              Register now
+            </a>
           </p>
         </div>
       </div>
