@@ -7,6 +7,7 @@ import Resources from "./pages/user/Resources";
 import CourceDetails from "./pages/user/CourceDetails";
 import "./App.css";
 import Login from "./pages/Login";
+import RegisterUser from "./pages/RegisterUser";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="coursedetails" element={<CourceDetails />} />
         </Route>
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<RegisterUser />} />
       </Routes>
     </div>
   );
