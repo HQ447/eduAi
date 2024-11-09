@@ -1,5 +1,6 @@
 import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 function Login() {
   return (
@@ -32,9 +33,11 @@ function Login() {
               <FaLock className="text-3xl" />
             </div>
 
-            <button className=" py-2 px-10 my-3 bg-[#fbb329] shadow-md rounded-full">
-              Login
-            </button>
+            <NavLink to={"/"}>
+              <button className=" py-2 px-10 my-3 bg-[#fbb329] shadow-md rounded-full">
+                Login
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>

@@ -16,18 +16,18 @@ function App() {
         autoPlay
         loop
         muted
-        className="fixed w-full min-h-screen -z-10 opacity-75"
+        className="fixed w-full object-cover h-full  -z-10 opacity-75"
       ></video>
 
       <Routes>
-        <Route path="/home" element={<UserBoard />}>
+        <Route path="/" element={<UserBoard />}>
           <Route index element={<Home />} />
           <Route path="resourses" element={<Resources />} />
           <Route path="courses" element={<Courses />} />
           <Route path="about" element={<About />} />
           <Route path="coursedetails" element={<CourceDetails />} />
         </Route>
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );

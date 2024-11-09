@@ -5,7 +5,7 @@ function About() {
   return (
     <div
       className={`${
-        darkMode ? "text-white bg-[#101215]" : ""
+        darkMode ? "text-white bg-[#101215]" : "bg-[#f7f7f7]"
       } flex flex-col px-20 -md:px-10 -sm:px-6 pt-28 pb-5`}
     >
       <h1 className="w-full text-center text-[2rem] font-[600] mb-5 ">
@@ -23,7 +23,7 @@ function About() {
       </h1>
       <p
         className={` ${
-          darkMode ? "text-white" : "text-[#000000b5]"
+          darkMode ? "text-white" : "text-[#000000b5] "
         } text-lg text-justify `}
       >
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt

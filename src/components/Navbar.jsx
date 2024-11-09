@@ -78,7 +78,9 @@ function Navbar() {
         )}
 
         <FaRegBell />
-        <LuUserCircle />
+        <NavLink to={"/login"}>
+          <LuUserCircle />
+        </NavLink>
       </div>
     </div>
   );
