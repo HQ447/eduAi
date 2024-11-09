@@ -5,7 +5,8 @@ import { NavLink } from "react-router-dom";
 function Login() {
   return (
     <div className=" backdrop-blur-sm flex w-full min-h-screen justify-center items-center">
-      <div className=" w-fit flex justify-center items-center gap-8 flex-col bg-white px-20 -md:px-16 -sm:px-8 -xsm:px-2 -xsm:py-3 py-10 -xsm:w-11/12 rounded-lg">
+      {/* <div className=" w-fit flex justify-center items-center gap-8 flex-col bg-white px-20 -md:px-16 -sm:px-8 -xsm:px-2 -xsm:py-3 py-10 -xsm:w-11/12 rounded-lg">
+
         <h1 className="w-fit text-center shadow-lg rounded-full px-9 py-1 bg-[#fbb329] text-xl ">
           Login
         </h1>
@@ -40,7 +41,7 @@ function Login() {
             </NavLink>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
