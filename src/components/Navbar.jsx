@@ -3,22 +3,18 @@ import { IoMoonOutline } from "react-icons/io5";
 import { CiBrightnessUp } from "react-icons/ci";
 import { FaRegBell } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateMode, updateCurrStatus } from "../store/cartSlice";
 
 function Navbar() {
-  const [darkMode, setdarkMode] = useState(false);
   const dispatch = useDispatch();
-
-  function handledarkMode() {
-    setdarkMode((prev) => !prev);
-    dispatch(updateMode(darkMode));
-  }
 
   const darkModeFromRedux = useSelector((state) => state.store.darkMode);
   const currStatus = useSelector((state) => state.store.currStatus);
 
+  function handledarkMode() {
+    dispatch(updateMode(!darkModeFromRedux));
+  }
   return (
     <div
       className={` ${
