@@ -1,4 +1,3 @@
-import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 import { LuUserCircle } from "react-icons/lu";
 import { IoMoonOutline } from "react-icons/io5";
 import { CiBrightnessUp } from "react-icons/ci";
@@ -78,7 +77,6 @@ function Navbar() {
           />
         )}
 
-        <IoChatbubbleEllipsesOutline />
         <FaRegBell />
         <LuUserCircle />
       </div>
