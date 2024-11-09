@@ -2,22 +2,38 @@ import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
+import { FcGoogle } from "react-icons/fc";
+import { FaApple } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+
 function Login() {
   return (
     <div className=" backdrop-blur-sm flex w-full min-h-screen justify-center items-center">
-      <div className="w-fit flex flex-col px-3 py-3 rounded-lg  ">
-        <h1 className="text-xl font-semibold">Hello!</h1>
-        <p>Welcome back</p>
-        <div>
-          <input type="text" placeholder="Enter Email" />
-          <input type="password" placeholder="Password" />
+      <div className="w-fit flex flex-col px-10 py-10 rounded-lg bg-[#dbdbdb] ">
+        <h1 className="text-2xl text-center font-semibold">Hello!</h1>
+        <p className="text-md text-center">Welcome back</p>
+        <div className="flex flex-col my-3">
+          <input
+            type="text"
+            placeholder="Enter Email"
+            className="bg-white px-3 py-1 placeholder:text-sm rounded-md placeholder:text-gray-400"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="bg-white px-3 py-1 placeholder:text-sm rounded-md placeholder:text-gray-400"
+          />
           <p>Recovery Password</p>
         </div>
         <button>Sign in</button>
 
         <div>
           <p>or continue with</p>
-          <div className="flex "></div>
+          <div className="flex ">
+            <FcGoogle />
+            <FaFacebook />
+            <FaApple />
+          </div>
           <p>
             Not a member?<a href="">Register now</a>
           </p>
