@@ -9,7 +9,7 @@ function Feedback() {
       className={` ${
         darkMode
           ? "bg-[#101215] text-white "
-          : "bg-gradient-to-b from-[#f5faff] to-[#fcfeff]"
+          : "bg-gradient-to-b from-[#f5faff] to-[#f5faff]"
       }  px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-10 `}
     >
       <div className="flex flex-col justify-center items-center mb-5">
