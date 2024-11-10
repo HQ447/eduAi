@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import { GoDotFill } from "react-icons/go";
-import { courseCollection } from "../../Data/data";
+
 import "./style sheets/Home.css";
+import Courses from "./Courses";
 
 function Home() {
   const darkMode = useSelector((state) => state.store.darkMode);
@@ -10,7 +10,7 @@ function Home() {
     <div
       className={`${
         darkMode ? "bg-[#101215] text-white " : "bg-[#cce7f5]"
-      }  py-10  flex flex-col px-20 -md:px-10 -sm:px-6   w-full transition-all`}
+      }  py-10  flex flex-col px-20 -md:px-10 -sm:px-6 -xsm:px-3   w-full transition-all`}
     >
       <div className="flex w-full  min-h-screen md:items-center -md:justify-center flex-wrap-reverse">
         <div className="flex flex-col gap-5  basis-3/6 -md:basis-full  ">
@@ -48,7 +48,7 @@ function Home() {
           />
         </div>
       </div>
-      <div
+      {/* <div
         className={` ${
           darkMode ? "bg-[#101215] text-white " : ""
         } pt-28 px-20 -md:px-10 -sm:px-6 pb-5  `}
@@ -100,7 +100,9 @@ function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
+
+      <Courses />
     </div>
   );
 }
