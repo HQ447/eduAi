@@ -10,11 +10,11 @@ function Home() {
     <div
       className={`${
         darkMode ? "bg-[#101215] text-white " : "bg-[#cce7f5]"
-      }  py-10 flex flex-col px-20 -md:px-10 -sm:px-6   w-full transition-all`}
+      }  py-10  flex flex-col px-20 -md:px-10 -sm:px-6   w-full transition-all`}
     >
       <div className="flex w-full  min-h-screen md:items-center -md:justify-center flex-wrap-reverse">
-        <div className="flex flex-col gap-5 basis-3/6 -md:basis-full  ">
-          <h1 className="text-5xl -md:text-center w-full -sm:text-4xl font-[600] lineHeight">
+        <div className="flex flex-col gap-5  basis-3/6 -md:basis-full  ">
+          <h1 className=" -xsm:text-[1.3rem] text-5xl -md:text-center w-full -sm:text-4xl font-[600] lineHeight">
             Start your{" "}
             <span
               style={{
@@ -31,16 +31,16 @@ function Home() {
           <p
             className={` ${
               darkMode ? "text-white" : "text-[#000000b5] "
-            } text-xl -md:text-center`}
+            } -xsm:text-sm text-xl -md:text-center`}
           >
             Begin your coding adventure in our community, where learning is
             always appreciated and valued.
           </p>
-          <button className="rounded-full -md:mx-auto max-w-fit py-2 px-5 bg-[#2190ff] text-white font-semibold">
+          <button className="rounded-full -xsm:text-sm -md:mx-auto max-w-fit py-2 px-5 bg-[#2190ff] text-white font-semibold">
             Explore Resources
           </button>
         </div>
-        <div className="flex basis-3/6 -md:basis-full -md:w-full ">
+        <div className="flex basis-3/6 -xsm:mt-10 -md:basis-full -md:w-full ">
           <img
             src="https://www.becodemy.com/_next/static/media/banner.8a9f498b.svg"
             alt="img loading error"
@@ -54,7 +54,7 @@ function Home() {
         } pt-28 px-20 -md:px-10 -sm:px-6 pb-5  `}
       >
         <div className="flex flex-col justify-center items-center mb-5">
-          <h1 className="w-full text-center text-4xl font-[600] mb-5 ">
+          <h1 className="-xsm:text-2xl w-full text-center text-4xl font-[600] mb-5 ">
             Popular{" "}
             <span
               style={{
@@ -67,7 +67,7 @@ function Home() {
               Cources
             </span>
           </h1>
-          <p className="text-xl flex items-center -xsm:text-center">
+          <p className="text-xl flex items-center -xsm:text-center -xsm:text-sm">
             <GoDotFill className="text-3xl text-green-500" /> Our comprehensive
             project based courses
           </p>
