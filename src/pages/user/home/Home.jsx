@@ -2,7 +2,7 @@
 
 import "../style sheets/Home.css";
 import Courses from "../Courses";
-import Mainpage from "./mainpage";
+import Mainpage from "./Mainpage";
 import Feedback from "./Feedback";
 
 function Home() {
