@@ -11,8 +11,8 @@ function Home() {
   return (
     <div>
       <Mainpage />
-      <Feedback />
       <Courses />
+      <Feedback />
     </div>
 
     // <div
