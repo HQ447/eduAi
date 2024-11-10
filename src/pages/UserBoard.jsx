@@ -32,7 +32,7 @@ function UserBoard() {
       >
         <div
           className={`${
-            currStatus === "Home" ? "bg-green-600 text-white" : ""
+            currStatus === "Home" ? "bg-[#653bce] text-white" : ""
           } flex justify-center items-center gap-2 p-2 rounded-full transition-all`}
         >
           <IoHomeOutline
@@ -46,7 +46,7 @@ function UserBoard() {
         </div>
         <div
           className={`${
-            currStatus === "Courses" ? "bg-green-600 text-white" : ""
+            currStatus === "Courses" ? "bg-[#653bce] text-white" : ""
           } flex justify-center items-center gap-2 p-2 rounded-full transition-all`}
         >
           <GiBlackBook
@@ -60,7 +60,7 @@ function UserBoard() {
         </div>
         <div
           className={`${
-            currStatus === "About" ? "bg-green-600 text-white" : ""
+            currStatus === "About" ? "bg-[#653bce] text-white" : ""
           } flex justify-center items-center gap-2 p-2 rounded-full transition-all`}
         >
           <AiOutlineTeam
@@ -74,7 +74,7 @@ function UserBoard() {
         </div>
         <div
           className={`${
-            currStatus === "Resourses" ? "bg-green-600 text-white" : ""
+            currStatus === "Resourses" ? "bg-[#653bce] text-white" : ""
           } flex justify-center items-center gap-2 p-2 rounded-full transition-all`}
         >
           <IoBulbOutline

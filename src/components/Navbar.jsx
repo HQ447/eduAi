@@ -21,14 +21,26 @@ function Navbar() {
         darkModeFromRedux
           ? "bg-[#1b1b1b8f] text-white"
           : " bg-[#eff9ff99] text-[#000000b5] "
-      } flex px-20 py-6 -md:px-10 -sm:px-6 bg-opacity-50 justify-between fixed top-0 w-full backdrop-blur-lg transition-all`}
+      } flex px-20 py-6 -xsm:py-4 -md:px-10 -sm:px-6 bg-opacity-50 justify-between fixed top-0 w-full backdrop-blur-lg transition-all`}
       style={{
         boxShadow:
           "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
       }}
     >
       <NavLink to={""}>
-        <h1 className="text-2xl font-semibold">eduAI</h1>
+        <h1 className="text-2xl font-semibold -xsm:text-xl">
+          edu
+          <span
+            style={{
+              background:
+                "linear-gradient(90deg, #455be7 2.34%, #653bce 100.78%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            AI
+          </span>
+        </h1>
       </NavLink>
       <div className="flex list-none text-lg gap-8 -md:hidden font-semibold">
         <NavLink
