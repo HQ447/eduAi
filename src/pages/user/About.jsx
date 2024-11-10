@@ -6,9 +6,9 @@ function About() {
     <div
       className={`${
         darkMode ? "text-white bg-[#101215]" : "bg-[#f7f7f7]"
-      } flex flex-col px-20 -md:px-10 -sm:px-6 pt-28 pb-5`}
+      } flex flex-col px-20 -md:px-10 -sm:px-6 pt-10 pb-5 `}
     >
-      <h1 className="w-full text-center text-[2rem] font-[600] mb-5 ">
+      <h1 className="w-full text-center text-[2rem] -xsm:text-[1.5rem] font-[600] mb-5 ">
         What is{" "}
         <span
           style={{
@@ -24,7 +24,7 @@ function About() {
       <p
         className={` ${
           darkMode ? "text-white" : "text-[#000000b5] "
-        } text-lg text-justify `}
+        } text-[1rem] text-justify -xsm:text-[.8rem]  `}
       >
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
         suscipit assumenda velit! Atque adipisci deleniti ea est, qui cum dolor
@@ -55,8 +55,8 @@ function About() {
         <br />
         <br />
         <br />
-        <b className={`${darkMode ? "text-white" : "text-black"} text-xl `}>
-          <u>Hammad Ahmad</u>{" "}
+        <b className={`${darkMode ? "text-white" : ""} text-xl -xsm:text-sm `}>
+          Hammad Ahmad{" "}
         </b>
         <br />
         Founder & CEO of eduAI

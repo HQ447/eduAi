@@ -21,7 +21,7 @@ function Navbar() {
         darkModeFromRedux
           ? "bg-[#1b1b1b8f] text-white"
           : " bg-[#eff9ff99] text-[#000000b5] "
-      } flex px-20 py-6 -xsm:py-4 -md:px-10 -sm:px-6 bg-opacity-50 justify-between fixed top-0 w-full backdrop-blur-lg transition-all`}
+      } flex px-20 py-6 -xsm:py-4 -md:px-10 -sm:px-6 bg-opacity-50 justify-between sticky top-0 w-full backdrop-blur-lg transition-all`}
       style={{
         boxShadow:
           "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
@@ -45,34 +45,34 @@ function Navbar() {
       <div className="flex list-none text-lg gap-8 -md:hidden font-semibold">
         <NavLink
           to={""}
-          className={`${currStatus === "Home" ? "text-green-600" : ""}`}
+          className={`${currStatus === "Home" ? "text-[#653bce]" : ""}`}
           onClick={() => dispatch(updateCurrStatus("Home"))}
         >
           Home
         </NavLink>
         <NavLink
           to={"about"}
-          className={`${currStatus === "About" ? "text-green-600" : ""}`}
+          className={`${currStatus === "About" ? "text-[#653bce]" : ""}`}
           onClick={() => dispatch(updateCurrStatus("About"))}
         >
           About
         </NavLink>
         <NavLink
           to={"courses"}
-          className={`${currStatus === "Courses" ? "text-green-600" : ""}`}
+          className={`${currStatus === "Courses" ? "text-[#653bce]" : ""}`}
           onClick={() => dispatch(updateCurrStatus("Courses"))}
         >
           Courses
         </NavLink>
         <NavLink
           to={"resourses"}
-          className={`${currStatus === "Resourses" ? "text-green-600" : ""}`}
+          className={`${currStatus === "Resourses" ? "text-[#653bce]" : ""}`}
           onClick={() => dispatch(updateCurrStatus("Resourses"))}
         >
           Resources
         </NavLink>
       </div>
-      <div className="flex text-2xl gap-4">
+      <div className="flex text-2xl gap-4 -xsm:text-xl">
         {darkModeFromRedux ? (
           <CiBrightnessUp
             onClick={handledarkMode}

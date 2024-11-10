@@ -7,11 +7,13 @@ function Courses() {
   return (
     <div
       className={` ${
-        darkMode ? "bg-[#101215] text-white " : "bg-[#cce7f5]"
-      } pt-28 px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 `}
+        darkMode
+          ? "bg-[#101215] text-white "
+          : "bg-gradient-to-b from-[#dfedfa] to-[#f5faff]"
+      }  px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-10 `}
     >
       <div className="flex flex-col justify-center items-center mb-5">
-        <h1 className="-xsm:text-2xl w-full text-center text-4xl font-[600] mb-5 ">
+        <h1 className="-xsm:text-2xl w-full text-center text-4xl font-[600] mb-5 -xsm:mb-1 ">
           Popular{" "}
           <span
             style={{

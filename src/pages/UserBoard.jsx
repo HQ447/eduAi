@@ -24,11 +24,11 @@ function UserBoard() {
   }, [currStatus]);
 
   return (
-    <div className="w-full  ">
+    <div className="w-full  bg-gradient-to-b from-[#cce7f5] to-[#f5faff]">
       <div
         className={`${
           darkMode ? "bg-[#52525273] backdrop-blur-md text-white " : "bg-white"
-        } responsive-menu shadow-xl hidden -md:flex left-1/2 -translate-x-1/2 fixed bottom-10   px-5 py-3 rounded-full  justify-center items-center gap-6`}
+        } responsive-menu  shadow-xl hidden -md:flex left-1/2 -translate-x-1/2 fixed bottom-10   px-3 py-3 rounded-full  justify-center items-center gap-6`}
       >
         <div
           className={`${

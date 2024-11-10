@@ -9,10 +9,12 @@ function Home() {
   return (
     <div
       className={`${
-        darkMode ? "bg-[#101215] text-white " : "bg-[#cce7f5]"
-      }  py-10  flex flex-col px-20 -md:px-10 -sm:px-6 -xsm:px-3   w-full transition-all`}
+        darkMode
+          ? "bg-[#101215] text-white "
+          : "bg-gradient-to-b from-[#cce7f5] to-[#f5faff]"
+      }    flex flex-col px-20 -md:px-10 -sm:px-6 -xsm:px-3   w-full transition-all`}
     >
-      <div className="flex w-full  min-h-screen md:items-center -md:justify-center flex-wrap-reverse">
+      <div className="flex w-full pt-10 md:items-center -md:justify-center flex-wrap-reverse">
         <div className="flex flex-col gap-5  basis-3/6 -md:basis-full  ">
           <h1 className=" -xsm:text-[1.3rem] text-5xl -md:text-center w-full -sm:text-4xl font-[600] lineHeight">
             Start your{" "}
@@ -40,7 +42,7 @@ function Home() {
             Explore Resources
           </button>
         </div>
-        <div className="flex basis-3/6 -xsm:mt-10 -md:basis-full -md:w-full ">
+        <div className="flex basis-3/6  -md:basis-full -md:w-full ">
           <img
             src="https://www.becodemy.com/_next/static/media/banner.8a9f498b.svg"
             alt="img loading error"
