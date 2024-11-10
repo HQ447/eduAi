@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import UserBoard from "./pages/UserBoard";
-import Home from "./pages/user/Home";
+import UserBoard from "./pages/user/UserBoard";
+import Home from "./pages/user/home/Home";
 import About from "./pages/user/About";
 import Courses from "./pages/user/Courses";
-import Resources from "./pages/user/Resources";
+import Resources from "./pages/user/resourses/Resources";
 import CourceDetails from "./pages/user/CourceDetails";
 import "./App.css";
-import Login from "./pages/Login";
-import RegisterUser from "./pages/RegisterUser";
+import Login from "./pages/auth/Login";
+import RegisterUser from "./pages/auth/RegisterUser";
 
 function App() {
   return (

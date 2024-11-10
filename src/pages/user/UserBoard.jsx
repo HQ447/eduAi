@@ -1,13 +1,13 @@
 import { Outlet, useNavigate } from "react-router-dom";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 import { IoHomeOutline } from "react-icons/io5";
 import { GiBlackBook } from "react-icons/gi";
 import { AiOutlineTeam } from "react-icons/ai";
 import { IoBulbOutline } from "react-icons/io5";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateCurrStatus } from "../store/cartSlice";
+import { updateCurrStatus } from "../../store/cartSlice";
 
 function UserBoard() {
   const darkMode = useSelector((state) => state.store.darkMode);
