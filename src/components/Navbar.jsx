@@ -19,7 +19,7 @@ function Navbar() {
     <div
       className={` ${
         darkModeFromRedux
-          ? "bg-[#1b1b1b8f] text-white"
+          ? "bg-[#000000d6] text-white"
           : " bg-[#eff9ff99] text-[#000000b5] "
       } flex px-20 py-6 -xsm:py-4 -md:px-10 -sm:px-6 bg-opacity-50 justify-between sticky top-0 w-full backdrop-blur-lg transition-all`}
       style={{
