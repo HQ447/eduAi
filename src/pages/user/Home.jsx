@@ -85,7 +85,7 @@ function Home() {
                 className="w-full rounded-lg"
                 alt="cource img loading error"
               />
-              <h1>{obj.title}</h1>
+              <h1 className="">{obj.title}</h1>
               <div className="flex justify-between">
                 <p>{obj.rating}Rating</p>
                 <p>{obj.students} Students</p>

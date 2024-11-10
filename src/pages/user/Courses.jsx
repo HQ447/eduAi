@@ -8,10 +8,10 @@ function Courses() {
     <div
       className={` ${
         darkMode ? "bg-[#101215] text-white " : "bg-[#f7f7f7]"
-      } pt-28 px-20 -md:px-10 -sm:px-6 pb-5  `}
+      } pt-28 px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 `}
     >
       <div className="flex flex-col justify-center items-center mb-5">
-        <h1 className="w-full text-center text-4xl font-[600] mb-5 ">
+        <h1 className="-xsm:text-2xl w-full text-center text-4xl font-[600] mb-5 ">
           Popular{" "}
           <span
             style={{
@@ -24,7 +24,7 @@ function Courses() {
             Cources
           </span>
         </h1>
-        <p className="text-xl flex items-center -xsm:text-center">
+        <p className=" -xsm:text-sm text-xl flex items-center -xsm:text-center">
           <GoDotFill className="text-3xl text-green-500" /> Our comprehensive
           project based courses
         </p>
@@ -34,15 +34,17 @@ function Courses() {
           <div
             key={obj.id}
             className={`${
-              darkMode ? "bg-[#242424] text-white " : "bg-white "
-            } flex w-80 flex-col p-5 gap-3 rounded-md shadow-lg`}
+              darkMode
+                ? "bg-[#242424] text-white "
+                : "bg-white text-[#000000b5] "
+            } flex w-80 flex-col p-5 gap-3 -xsm:text-sm rounded-md shadow-xl`}
           >
             <img
               src={obj.img}
               className="w-full rounded-lg"
               alt="cource img loading error"
             />
-            <h1>{obj.title}</h1>
+            <h1 className="">{obj.title}</h1>
             <div className="flex justify-between">
               <p>{obj.rating}Rating</p>
               <p>{obj.students} Students</p>
