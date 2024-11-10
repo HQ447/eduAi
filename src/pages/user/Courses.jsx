@@ -1,5 +1,6 @@
 import { GoDotFill } from "react-icons/go";
 import { courseCollection } from "../../Data/data";
+
 import { useSelector } from "react-redux";
 
 function Courses() {
