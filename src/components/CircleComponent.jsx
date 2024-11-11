@@ -8,13 +8,17 @@ import { useSelector } from "react-redux";
 const CircleComponent = () => {
   const darkMode = useSelector((state) => state.store.darkMode);
   return (
-    <div className="justify-center  flex flex-col items-center relative min-h-screen">
-      <h1 className=" -xsm:hidden w-[70%] text-3xl text-center absolute top-10">
+    <div
+      className={` ${
+        darkMode ? "bg-[#101215] text-white " : ""
+      }   justify-center  flex flex-col items-center relative min-h-screen`}
+    >
+      <h1 className=" -xsm:text-xl mb-4 -xsm:static w-[70%] text-3xl text-center absolute top-10">
         We support your programming journey in our community. Lets have a look
         at how to navigate the Becodemy website effectively.
       </h1>
       <motion.div
-        className="w-[90vh] h-[90vh] border border-gray-700 rounded-full relative flex items-center justify-center"
+        className="w-[90vh] -xsm:w-[50vh] -xsm:h-[50vh] h-[90vh] border border-gray-700 rounded-full relative flex items-center justify-center"
         animate={{ rotate: 360 }}
         transition={{
           repeat: Infinity,
@@ -49,11 +53,15 @@ const CircleComponent = () => {
       </motion.div>
 
       {/* Paragraph Inside the Circle, Outside Rotation */}
-      <p className="absolute flex items-center text-gray-700 text-center">
-        <AiOutlinePlayCircle className="text-5xl" />
+      <p
+        className={`absolute -xsm:top-[58%] flex items-center -xsm:flex-col -xsm:justify-center ${
+          darkMode ? "text-white" : "text-gray-700"
+        } text-center `}
+      >
+        <AiOutlinePlayCircle className=" text-5xl" />
         Click here to preview the video
       </p>
-      <div className="flex justify-center gap-6 absolute bottom-14">
+      <div className="-xsm:hidden flex justify-center gap-6 absolute bottom-14">
         <div className="flex items-center p-9 gap-4 rounded-md bg-[#3d3de4] text-white">
           <FaUsers className="text-6xl" />
           <div className="flex flex-col ">

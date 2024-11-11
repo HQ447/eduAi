@@ -13,9 +13,9 @@ function Home() {
   return (
     <div>
       <Mainpage />
-      <Courses />
       <CircleComponent />
       <Slider />
+      <Courses />
       <Feedback />
     </div>
 
