@@ -35,7 +35,7 @@ function Mainpage() {
             Begin your coding adventure in our community, where learning is
             always appreciated and valued.
           </p>
-          <button className="rounded-full -xsm:text-sm -md:mx-auto max-w-fit py-2 px-5 bg-[#2190ff] text-white font-semibold">
+          <button className="rounded-full -xsm:text-sm -md:mx-auto max-w-fit py-2 -xsm:py-2 px-5 bg-[#2190ff] text-white font-semibold">
             Explore Resources
           </button>
         </div>

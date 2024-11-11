@@ -21,7 +21,7 @@ function Navbar() {
         darkModeFromRedux
           ? "bg-[#000000d6] text-white"
           : " bg-[#eff9ff99] text-[#000000b5] "
-      } flex px-20 py-6 -xsm:py-4 -md:px-10 -sm:px-6 bg-opacity-50 justify-between sticky top-0 w-full backdrop-blur-lg transition-all`}
+      } flex px-20 py-6 -xsm:py-4 -md:px-10 -sm:px-6 bg-opacity-50 justify-between sticky top-0 z-40 w-full backdrop-blur-lg transition-all`}
       style={{
         boxShadow:
           "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
