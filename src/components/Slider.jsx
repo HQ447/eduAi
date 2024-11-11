@@ -15,7 +15,7 @@ const Slider = () => {
     <div
       className={`${
         darkMode ? "bg-[#101215] text-white" : ""
-      } flex flex-col justify-center items-center mt-12 h-[50vh]`}
+      } flex flex-col justify-center items-center  h-[50vh]`}
     >
       <div className="flex flex-col justify-center items-center">
         <h1 className="-xsm:text-2xl w-full text-center text-4xl font-[600] -xsm:mb-1 ">
@@ -33,13 +33,13 @@ const Slider = () => {
         </h1>
       </div>
 
-      <div className=" overflow-hidden   max-w-4xl relative">
+      <div className="  overflow-hidden  max-w-4xl relative">
         <motion.div
           className="flex gap-12 whitespace-nowrap"
           animate={{ x: ["0%", "-100%"] }}
           transition={{
             repeat: Infinity,
-            duration: 1, // Reduced to 10 seconds for faster speed
+            duration: 20, // Reduced to 10 seconds for faster speed
             ease: "linear",
           }}
         >

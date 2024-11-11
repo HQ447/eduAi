@@ -18,7 +18,7 @@ const CircleComponent = () => {
         at how to navigate the Becodemy website effectively.
       </h1>
       <motion.div
-        className="w-[90vh] -xsm:w-[50vh] -xsm:h-[50vh] h-[90vh] border border-gray-700 rounded-full relative flex items-center justify-center"
+        className="w-[90vh] -xsm:w-[35vh] -xsm:h-[35vh] h-[90vh] border border-gray-700 rounded-full relative flex items-center justify-center"
         animate={{ rotate: 360 }}
         transition={{
           repeat: Infinity,
@@ -54,11 +54,11 @@ const CircleComponent = () => {
 
       {/* Paragraph Inside the Circle, Outside Rotation */}
       <p
-        className={`absolute -xsm:top-[58%] flex items-center -xsm:flex-col -xsm:justify-center ${
+        className={`absolute -xsm:top-[62%] flex items-center -xsm:flex-col -xsm:justify-center ${
           darkMode ? "text-white" : "text-gray-700"
-        } text-center `}
+        } text-center -xsm:text-xs `}
       >
-        <AiOutlinePlayCircle className=" text-5xl" />
+        <AiOutlinePlayCircle className=" text-5xl -xsm:text-4xl" />
         Click here to preview the video
       </p>
       <div className="-xsm:hidden flex justify-center gap-6 absolute bottom-14">
