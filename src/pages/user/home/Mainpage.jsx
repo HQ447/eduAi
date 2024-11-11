@@ -9,7 +9,7 @@ function Mainpage() {
         darkMode
           ? "bg-[#101215] text-white "
           : "bg-gradient-to-b from-[#cce7f5] to-[#f5faff]"
-      }    flex flex-col px-20 -md:px-10 -sm:px-6 -xsm:px-3   w-full transition-all`}
+      }    flex flex-col  px-20 -md:px-10 -sm:px-6 -xsm:px-3   w-full transition-all`}
     >
       <div className="flex w-full pt-14 py-8 md:items-center -md:justify-center flex-wrap-reverse">
         <div className="flex flex-col gap-5  basis-3/6 -md:basis-full  ">

@@ -8,7 +8,7 @@ function Footer() {
       className={`${
         darkMode
           ? "text-white bg-[#101215]"
-          : "text-[#000000b5] bg-gradient-to-b from-[#f5faff] to-[#cce7f5]  "
+          : "text-[#000000b5] bg-gradient-to-b from-[#cce7f5] to-[#f5faff] "
       } flex flex-col px-20 py-10 gap-5 -md:px-10 -sm:px-6 -xsm:px-0 `}
     >
       <div className="flex justify-between mb-3 flex-wrap gap-10 -xsm:gap-5 -xsm:text-sm -sm:px-10 -xsm:px-7">

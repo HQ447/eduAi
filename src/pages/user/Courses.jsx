@@ -10,7 +10,7 @@ function Courses() {
       className={` ${
         darkMode
           ? "bg-[#101215] text-white "
-          : "bg-gradient-to-b from-[#f4faff] to-[#f5faff]"
+          : "bg-gradient-to-b from-[#cce7f5] to-[#f5faff]"
       }  px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-10 `}
     >
       <div className="flex flex-col justify-center items-center mb-5">

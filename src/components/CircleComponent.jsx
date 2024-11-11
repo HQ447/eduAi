@@ -10,8 +10,10 @@ const CircleComponent = () => {
   return (
     <div
       className={` ${
-        darkMode ? "bg-[#101215] text-white " : ""
-      }  max-w-full  overflow-hidden  justify-center  flex flex-col items-center relative `}
+        darkMode
+          ? "bg-[#101215] text-white "
+          : "bg-gradient-to-b from-[#f5faff] to-[#cce7f5]"
+      }  max-w-full py-14  overflow-hidden  justify-center  flex flex-col items-center relative `}
     >
       <h1 className=" -xsm:text-xl -xsm:mb-5 -xsm:static w-[70%] text-3xl text-center absolute top-10">
         We support your programming journey in our community.
@@ -53,7 +55,7 @@ const CircleComponent = () => {
 
       {/* Paragraph Inside the Circle, Outside Rotation */}
       <p
-        className={`absolute  -md:top-[30%] -sm:top-[26%] -xsm:top-[30%] flex items-center -xsm:flex-col -xsm:justify-center ${
+        className={`absolute  -md:top-[30%] -sm:top-[26%] -xsm:top-[32%] flex items-center -xsm:flex-col -xsm:justify-center ${
           darkMode ? "text-white" : "text-gray-700"
         } text-center -xsm:text-xs `}
       >
