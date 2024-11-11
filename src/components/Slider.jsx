@@ -15,7 +15,7 @@ const Slider = () => {
     <div
       className={`${
         darkMode ? "bg-[#101215] text-white" : ""
-      } flex flex-col justify-center items-center  h-[50vh]`}
+      } flex flex-col justify-center items-center   h-[50vh]`}
     >
       <div className="flex flex-col justify-center items-center">
         <h1 className="-xsm:text-2xl w-full text-center text-4xl font-[600] -xsm:mb-1 ">
@@ -33,13 +33,13 @@ const Slider = () => {
         </h1>
       </div>
 
-      <div className="  overflow-hidden  max-w-4xl relative">
+      <div className=" bg-red-100 overflow-hidden -lg:max-w-[43rem] -md:max-w-[37rem] -sm:max-w-[32rem]  -xsm:max-w-[14rem]  xl:max-w-4xl relative">
         <motion.div
-          className="flex gap-12 whitespace-nowrap"
+          className="flex whitespace-nowrap"
           animate={{ x: ["0%", "-100%"] }}
           transition={{
             repeat: Infinity,
-            duration: 20, // Reduced to 10 seconds for faster speed
+            duration: 8, // Reduced to 10 seconds for faster speed
             ease: "linear",
           }}
         >
@@ -48,7 +48,7 @@ const Slider = () => {
               key={index}
               src={logo}
               alt={`Brand ${index + 1}`}
-              className="w-44 h-auto opacity-80"
+              className="w-44 -xsm:w-32 h-auto opacity-80"
             />
           ))}
         </motion.div>

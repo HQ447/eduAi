@@ -11,7 +11,7 @@ function Home() {
   // const darkMode = useSelector((state) => state.store.darkMode);
 
   return (
-    <div>
+    <div className="w-full">
       <Mainpage />
       <CircleComponent />
       <Slider />

@@ -11,14 +11,14 @@ const CircleComponent = () => {
     <div
       className={` ${
         darkMode ? "bg-[#101215] text-white " : ""
-      }   justify-center  flex flex-col items-center relative min-h-screen`}
+      }  max-w-full  justify-center  flex flex-col items-center relative min-h-screen`}
     >
       <h1 className=" -xsm:text-xl mb-4 -xsm:static w-[70%] text-3xl text-center absolute top-10">
         We support your programming journey in our community. Lets have a look
         at how to navigate the Becodemy website effectively.
       </h1>
       <motion.div
-        className="w-[90vh] -xsm:w-[35vh] -xsm:h-[35vh] h-[90vh] border border-gray-700 rounded-full relative flex items-center justify-center"
+        className="w-[90vh] -xsm:w-[32vh] -lg:w-[70vh] -lg:h-[70vh] -md:w-[50vh] -md:h-[50vh] -sm:w-[40vh] -sm:h-[40vh] -xsm:h-[32vh] h-[90vh] border border-gray-700 rounded-full relative flex items-center justify-center"
         animate={{ rotate: 360 }}
         transition={{
           repeat: Infinity,
@@ -61,7 +61,7 @@ const CircleComponent = () => {
         <AiOutlinePlayCircle className=" text-5xl -xsm:text-4xl" />
         Click here to preview the video
       </p>
-      <div className="-xsm:hidden flex justify-center gap-6 absolute bottom-14">
+      <div className="-xsm:hidden flex flex-wrap justify-center gap-6 absolute bottom-14">
         <div className="flex items-center p-9 gap-4 rounded-md bg-[#3d3de4] text-white">
           <FaUsers className="text-6xl" />
           <div className="flex flex-col ">
