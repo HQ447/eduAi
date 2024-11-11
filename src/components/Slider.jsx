@@ -33,7 +33,7 @@ const Slider = () => {
         </h1>
       </div>
 
-      <div className=" bg-red-100 overflow-hidden -lg:max-w-[43rem] -md:max-w-[37rem] -sm:max-w-[32rem]  -xsm:max-w-[14rem]  xl:max-w-4xl relative">
+      <div className="  overflow-hidden -lg:max-w-[43rem] -md:max-w-[37rem] -sm:max-w-[32rem]  -xsm:max-w-[14rem]  xl:max-w-4xl relative">
         <motion.div
           className="flex whitespace-nowrap"
           animate={{ x: ["0%", "-100%"] }}

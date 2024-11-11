@@ -11,7 +11,7 @@ const CircleComponent = () => {
     <div
       className={` ${
         darkMode ? "bg-[#101215] text-white " : ""
-      }  max-w-full  justify-center  flex flex-col items-center relative min-h-screen`}
+      }  max-w-full  justify-center  flex flex-col items-center relative `}
     >
       <h1 className=" -xsm:text-xl mb-4 -xsm:static w-[70%] text-3xl text-center absolute top-10">
         We support your programming journey in our community. Lets have a look
@@ -54,7 +54,7 @@ const CircleComponent = () => {
 
       {/* Paragraph Inside the Circle, Outside Rotation */}
       <p
-        className={`absolute -xsm:top-[62%] flex items-center -xsm:flex-col -xsm:justify-center ${
+        className={`absolute -xsm:top-[52%] flex items-center -xsm:flex-col -xsm:justify-center ${
           darkMode ? "text-white" : "text-gray-700"
         } text-center -xsm:text-xs `}
       >
