@@ -1,12 +1,24 @@
+import { useSelector } from "react-redux";
 import { NavLink, Outlet } from "react-router-dom";
 
 function Resources() {
+  const darkModeFromRedux = useSelector((state) => state.store.darkMode);
   return (
     <div className="flex flex-col">
-      <div className="flex gap-2 py-3">
+      <div
+        className={` ${
+          darkModeFromRedux
+            ? "bg-[#000000d6] text-white"
+            : " bg-[#f4fbffea] text-[#000000b5] "
+        } flex  px-20 -xsm:text-[0.7rem] -xsm:gap-4 gap-10 py-6 -xsm:py-4 -md:px-10 -sm:px-6 bg-opacity-50 justify-center  w-full backdrop-blur-lg `}
+        style={{
+          boxShadow:
+            "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+        }}
+      >
         <NavLink to={""}>Discussions</NavLink>
         <NavLink to={"sourcecode"}>Source Code</NavLink>
-        <NavLink to={"guidline"}>Guidlines</NavLink>
+        <NavLink to={"guidlines"}>Guidlines</NavLink>
         <NavLink to={"blogs"}>Blogs</NavLink>
       </div>
       <Outlet />
