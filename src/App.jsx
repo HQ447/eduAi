@@ -8,6 +8,10 @@ import CourceDetails from "./pages/user/CourceDetails";
 import "./App.css";
 import Login from "./pages/auth/Login";
 import RegisterUser from "./pages/auth/RegisterUser";
+import Discussions from "./pages/user/resourses/Discussions";
+import SourceCode from "./pages/user/resourses/SourceCode";
+import Guidlines from "./pages/user/resourses/Guidlines";
+import Blogs from "./pages/user/resourses/Blogs";
 
 function App() {
   return (
@@ -23,7 +27,12 @@ function App() {
       <Routes>
         <Route path="/" element={<UserBoard />}>
           <Route index element={<Home />} />
-          <Route path="resourses" element={<Resources />} />
+          <Route path="resourses" element={<Resources />}>
+            <Route index element={<Discussions />} />
+            <Route path="sourcecode" element={<SourceCode />} />
+            <Route path="guidlines" element={<Guidlines />} />
+            <Route path="blogs" element={<Blogs />} />
+          </Route>
           <Route path="courses" element={<Courses />} />
           <Route path="about" element={<About />} />
           <Route path="coursedetails" element={<CourceDetails />} />
