@@ -13,7 +13,7 @@ const CircleComponent = () => {
         darkMode ? "bg-[#101215] text-white " : ""
       }  max-w-full  overflow-hidden  justify-center  flex flex-col items-center relative `}
     >
-      <h1 className=" -xsm:text-xl mb-4 -xsm:static w-[70%] text-3xl text-center absolute top-10">
+      <h1 className=" -xsm:text-xl -xsm:mb-5 -xsm:static w-[70%] text-3xl text-center absolute top-10">
         We support your programming journey in our community.
       </h1>
       <motion.div
@@ -53,14 +53,14 @@ const CircleComponent = () => {
 
       {/* Paragraph Inside the Circle, Outside Rotation */}
       <p
-        className={`absolute -xsm:top-[52%] flex items-center -xsm:flex-col -xsm:justify-center ${
+        className={`absolute  -md:top-[30%] -sm:top-[26%] -xsm:top-[30%] flex items-center -xsm:flex-col -xsm:justify-center ${
           darkMode ? "text-white" : "text-gray-700"
         } text-center -xsm:text-xs `}
       >
         <AiOutlinePlayCircle className=" text-5xl -xsm:text-4xl" />
         Click here to preview the video
       </p>
-      <div className="-xsm:hidden -md:static flex flex-wrap justify-center gap-6 absolute bottom-14">
+      <div className=" -md:static -xsm:mt-5 flex flex-wrap justify-center gap-6 absolute bottom-14">
         <div className="flex items-center p-9 -xsm:p-4 gap-4 rounded-md bg-[#3d3de4] text-white">
           <FaUsers className="text-6xl" />
           <div className="flex flex-col ">
