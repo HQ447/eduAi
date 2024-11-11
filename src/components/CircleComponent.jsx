@@ -12,7 +12,7 @@ const CircleComponent = () => {
       className={` ${
         darkMode
           ? "bg-[#101215] text-white "
-          : "bg-gradient-to-b from-[#f5faff] to-[#cce7f5]"
+          : "bg-gradient-to-b from-[#cce7f5] to-[#f5faff]"
       }  max-w-full py-14  overflow-hidden  justify-center  flex flex-col items-center relative `}
     >
       <h1 className=" -xsm:text-xl -xsm:mb-5 -xsm:static w-[70%] text-3xl text-center absolute top-10">
