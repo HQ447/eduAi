@@ -73,3 +73,27 @@ export const feedbacks = [
       "Your content is very special. The thing I liked the most is that the videos are so long, which means they cover everything in details. for that any person had beginner-level can complete an integrated project when he watches the videos. Thank you very much. Im very excited for the next videos Keep doing this amazing work",
   },
 ];
+
+export const faqs = [
+  {
+    question: "Will I receive a certificate for each course?",
+    answer:
+      "Yes — each student who completes any course will receive a certificate of completion to acknowledge their proficiency. We encourage students to include these on their LinkedIn profiles and in their job applications!",
+  },
+  {
+    question: "Can I get source code of each course?",
+    answer:
+      "Yes, you will have access to the source code for each course after enrollment.",
+  },
+  {
+    question:
+      "Can I ask about anything related course or if my code doesn't work?",
+    answer:
+      "Yes, our support team is available to help you with any questions related to the courses.",
+  },
+  {
+    question: "Can I download any course videos?",
+    answer:
+      "Videos are available for streaming only, not for download, to protect intellectual property.",
+  },
+];

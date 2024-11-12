@@ -15,7 +15,7 @@ function SourceCode() {
             key={obj.id}
             className={`${
               darkMode
-                ? "bg-[#242424] text-white "
+                ? "bg-[#474747] text-white "
                 : "bg-white text-[#000000b5] "
             } flex w-72 h-fit -xsm:w-full flex-col p-5 gap-3 -xsm:text-sm rounded-md shadow-xl`}
           >

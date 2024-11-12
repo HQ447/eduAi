@@ -56,7 +56,7 @@ function About() {
         <br />
         <br />
         <b className={`${darkMode ? "text-white" : ""} text-xl -xsm:text-sm `}>
-          Hammad Ahmad{" "}
+          Member-Name{" "}
         </b>
         <br />
         Founder & CEO of eduAI
