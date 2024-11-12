@@ -2,6 +2,7 @@ import { GoDotFill } from "react-icons/go";
 import { courseCollection } from "../../Data/data";
 
 import { useSelector } from "react-redux";
+import StarRating from "../../components/StarRating";
 
 function Courses() {
   const darkMode = useSelector((state) => state.store.darkMode);
@@ -49,7 +50,7 @@ function Courses() {
             />
             <h1 className="">{obj.title}</h1>
             <div className="flex justify-between">
-              <p>{obj.rating}Rating</p>
+              <StarRating rating={obj.rating} />
               <p>{obj.students} Students</p>
             </div>
             <div className="flex justify-between">

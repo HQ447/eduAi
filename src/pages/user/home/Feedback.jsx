@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { feedbacks } from "../../../Data/data";
 import { GoDotFill } from "react-icons/go";
+import StarRating from "../../../components/StarRating";
 
 function Feedback() {
   const darkMode = useSelector((state) => state.store.darkMode);
@@ -47,6 +48,7 @@ function Feedback() {
                 <h1>{obj.country}</h1>
               </div>
             </div>
+            <StarRating rating={obj.rating} />
             <p>{obj.comment}</p>
           </div>
         ))}

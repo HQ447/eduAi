@@ -26,6 +26,7 @@ export const feedbacks = [
     pic: "https://www.kindpng.com/picc/m/78-786678_avatar-hd-png-download.png",
     name: "John Smith",
     status: "Web Developer",
+    rating: 5,
     country: "United States",
     comment:
       "Your content is very special. The thing I liked the most is that the videos are so long, which means they cover everything in details. for that any person had beginner-level can complete an integrated project when he watches the videos. Thank you very much. Im very excited for the next videos Keep doing this amazing work",
@@ -34,6 +35,7 @@ export const feedbacks = [
     pic: "https://www.kindpng.com/picc/m/78-786678_avatar-hd-png-download.png",
     name: "Chalie Brow",
     status: "Student",
+    rating: 5,
     country: "India",
     comment:
       "Your content is very special. The thing I liked the most is that the videos are so long, which means they cover everything in details. for that any person had beginner-level can complete an integrated project when he watches the videos. Thank you very much. Im very excited for the next videos Keep doing this amazing work",
@@ -42,6 +44,7 @@ export const feedbacks = [
     pic: "https://www.kindpng.com/picc/m/78-786678_avatar-hd-png-download.png",
     name: "Ali Hamza",
     status: "Student",
+    rating: 5,
     country: "Pakistan",
     comment:
       "Your content is very special. The thing I liked the most is that the videos are so long, which means they cover everything in details. for that any person had beginner-level can complete an integrated project when he watches the videos. Thank you very much. Im very excited for the next videos Keep doing this amazing work",
@@ -50,6 +53,7 @@ export const feedbacks = [
     pic: "https://www.kindpng.com/picc/m/78-786678_avatar-hd-png-download.png",
     name: "Burk Altan",
     status: "Founder & CEO",
+    rating: 5,
     country: "Turkey",
     comment:
       "Your content is very special. The thing I liked the most is that the videos are so long, which means they cover everything in details. for that any person had beginner-level can complete an integrated project when he watches the videos. Thank you very much. Im very excited for the next videos Keep doing this amazing work",
