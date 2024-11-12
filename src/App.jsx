@@ -21,14 +21,20 @@ function App() {
         autoPlay
         loop
         muted
-        className="fixed w-full object-cover h-full  -z-10 opacity-75"
+        className="fixed w-full object-cover h-full -z-10 opacity-75"
       ></video>
 
       <Routes>
         <Route path="/" element={<UserBoard />}>
           <Route index element={<Home />} />
           <Route path="resourses" element={<Resources />}>
+            {/* Make Discussions the default content when /resourses is accessed */}
             <Route index element={<Discussions />} />
+            <Route path="discussions" element={<Discussions />}>
+              <Route index element={<h1>All Discussion</h1>} />
+              <Route path="general" element={<h1>General</h1>} />
+              <Route path="help" element={<h1>Help</h1>} />
+            </Route>
             <Route path="sourcecode" element={<SourceCode />} />
             <Route path="guidlines" element={<Guidlines />} />
             <Route path="blogs" element={<Blogs />} />

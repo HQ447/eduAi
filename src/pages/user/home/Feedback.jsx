@@ -43,7 +43,7 @@ function Feedback() {
             <div className="flex items-center gap-3">
               <img src={obj.pic} alt="" className=" w-10 h-10 rounded-full" />
               <div className="flex flex-col ">
-                <h1>{obj.name}</h1>
+                <h1 className="text-lg">{obj.name}</h1>
                 <h1>{obj.status}</h1>
                 <h1>{obj.country}</h1>
               </div>

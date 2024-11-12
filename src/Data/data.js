@@ -20,6 +20,20 @@ export const courseCollection = [
     lectures: "33",
   },
 ];
+export const sourceCode = [
+  {
+    img: "https://www.becodemy.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdokeqryvj%2Fimage%2Fupload%2Fv1719776615%2FTMECA_i5cmqd.png&w=640&q=75",
+    title:
+      "All Functional MERN Stack LMS  Learning Management system series with next 13, TypeScript | Full Course",
+    views: "4.3",
+  },
+  {
+    img: "https://www.becodemy.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdokeqryvj%2Fimage%2Fupload%2Fv1716753276%2Fcourses%2Fggj1npc4ydcqvfi5ssnb.png&w=640&q=75",
+    title:
+      "Multi-Vendor MERN Stack E-commerce project With All functionalities absolutely for beginners",
+    views: "4",
+  },
+];
 
 export const feedbacks = [
   {
