@@ -27,11 +27,13 @@ function App() {
       <Routes>
         <Route path="/" element={<UserBoard />}>
           <Route index element={<Home />} />
+
           <Route path="resourses" element={<Resources />}>
-            {/* Make Discussions the default content when /resourses is accessed */}
+            {/* Default to Discussions when /resourses is accessed */}
             <Route index element={<Discussions />} />
             <Route path="discussions" element={<Discussions />}>
-              <Route index element={<h1>All Discussion</h1>} />
+              {/* Routes for different discussion topics */}
+              <Route path="all" element={<h1>All Discussions</h1>} />
               <Route path="general" element={<h1>General</h1>} />
               <Route path="help" element={<h1>Help</h1>} />
             </Route>
@@ -43,6 +45,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="coursedetails" element={<CourceDetails />} />
         </Route>
+
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<RegisterUser />} />
       </Routes>
