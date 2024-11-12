@@ -1,7 +1,9 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { updateCurrStatus } from "../store/cartSlice";
 
 function Footer() {
+  const dispatch = useDispatch();
   const darkMode = useSelector((state) => state.store.darkMode);
   return (
     <div
@@ -17,7 +19,9 @@ function Footer() {
             About
           </h1>
           <NavLink to={"about"}>
-            <h1>Our Story</h1>
+            <h1 onClick={() => dispatch(updateCurrStatus("About"))}>
+              Our Story
+            </h1>
           </NavLink>
           <h1>Privacy Policy</h1>
           <h1>FAQs</h1>
@@ -27,10 +31,12 @@ function Footer() {
             Quick Links{" "}
           </h1>
           <NavLink to={"courses"}>
-            <h1>Courses</h1>
+            <h1 onClick={() => dispatch(updateCurrStatus("Courses"))}>
+              Courses
+            </h1>
           </NavLink>
           <h1>My Account</h1>
-          <h1>Cource </h1>
+          <h1 onClick={() => dispatch(updateCurrStatus("Courses"))}>Cource </h1>
         </div>
         <div className="flex flex-col gap-4 -xsm:w-full">
           <h1 className=" text-xl -xsm:text-[1rem] -xsm:font-bold  font-bold">

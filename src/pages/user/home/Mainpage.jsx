@@ -1,7 +1,10 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import "../style sheets/Home.css";
+import { NavLink } from "react-router-dom";
+import { updateCurrStatus } from "../../../store/cartSlice";
 
 function Mainpage() {
+  const dispatch = useDispatch();
   const darkMode = useSelector((state) => state.store.darkMode);
   return (
     <div
@@ -35,9 +38,14 @@ function Mainpage() {
             Begin your coding adventure in our community, where learning is
             always appreciated and valued.
           </p>
-          <button className="rounded-full -xsm:text-sm -md:mx-auto max-w-fit py-3 -xsm:py-2 px-5 bg-[#653bce] text-white font-semibold">
-            Explore Resources
-          </button>
+          <NavLink to={"resourses"}>
+            <button
+              className="rounded-full -xsm:text-sm -md:mx-auto max-w-fit py-3 -xsm:py-2 px-5 bg-[#653bce] text-white font-semibold"
+              onClick={() => dispatch(updateCurrStatus("Resourses"))}
+            >
+              Explore Resources
+            </button>
+          </NavLink>
         </div>
         <div className="flex basis-3/6  -md:basis-full -md:w-full ">
           <img
