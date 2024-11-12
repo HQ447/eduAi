@@ -16,8 +16,8 @@ function Resources() {
             "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
         }}
       >
-        <NavLink to={""}>Discussions</NavLink>
-        <NavLink to={"sourcecode"}>Source Code</NavLink>
+        <NavLink to={""}>Source Code</NavLink>
+        <NavLink to={"discussions"}>Discussions</NavLink>
         <NavLink to={"guidlines"}>Guidlines</NavLink>
         <NavLink to={"blogs"}>Blogs</NavLink>
       </div>

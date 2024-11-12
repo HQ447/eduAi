@@ -29,18 +29,18 @@ function App() {
           <Route index element={<Home />} />
 
           <Route path="resourses" element={<Resources />}>
-            {/* Default to Discussions when /resourses is accessed */}
-            <Route index element={<Discussions />} />
+            {/* Discussions Route with Nested Paths */}
+            <Route index element={<SourceCode />} />
             <Route path="discussions" element={<Discussions />}>
-              {/* Routes for different discussion topics */}
-              <Route path="all" element={<h1>All Discussions</h1>} />
+              {/* Default to All Discussions */}
+              <Route index element={<h1>All Discussions</h1>} />
               <Route path="general" element={<h1>General</h1>} />
               <Route path="help" element={<h1>Help</h1>} />
             </Route>
-            <Route path="sourcecode" element={<SourceCode />} />
             <Route path="guidlines" element={<Guidlines />} />
             <Route path="blogs" element={<Blogs />} />
           </Route>
+
           <Route path="courses" element={<Courses />} />
           <Route path="about" element={<About />} />
           <Route path="coursedetails" element={<CourceDetails />} />

@@ -57,7 +57,8 @@ const CircleComponent = () => {
       <p
         className={`absolute  -md:top-[30%] -sm:top-[26%] -xsm:top-[32%] flex items-center -xsm:flex-col -xsm:justify-center ${
           darkMode ? "text-white" : "text-gray-700"
-        } text-center -xsm:text-xs `}
+        } text-center -xsm:text-xs animate-pulse-scale `}
+        aria-hidden="true"
       >
         <AiOutlinePlayCircle className=" text-5xl -xsm:text-4xl" />
         Click here to preview the video

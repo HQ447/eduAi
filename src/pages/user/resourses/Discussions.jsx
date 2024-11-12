@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { TiMessages } from "react-icons/ti";
 import { GiLightningHelix } from "react-icons/gi";
 import { FaHashtag } from "react-icons/fa6";
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 function Discussions() {
   const darkMode = useSelector((state) => state.store.darkMode);
@@ -27,15 +27,21 @@ function Discussions() {
           <h1 className="text-lg font-bold">Categories</h1>
           <div className="flex items-center gap-2 cursor-pointer">
             <TiMessages className="" />
-            <p>View all Discussions</p>
+            <NavLink to={""}>
+              <p>View all Discussions</p>
+            </NavLink>
           </div>
           <div className="flex items-center gap-2 cursor-pointer">
             <FaHashtag className="text-blue-600" />
-            <p>General</p>
+            <NavLink to={"general"}>
+              <p>General</p>
+            </NavLink>
           </div>
           <div className="flex items-center gap-2 cursor-pointer">
             <GiLightningHelix className="text-yellow-400" />
-            <p>Help</p>
+            <NavLink to={"help"}>
+              <p>Help</p>
+            </NavLink>
           </div>
         </div>
         <div className="flex flex-col px-8 -xsm:py-3">

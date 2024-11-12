@@ -11,6 +11,15 @@ export default {
         "-sm": { max: "639px" },
         "-xsm": { max: "500px" },
       },
+      animation: {
+        "pulse-scale": "pulseScale 1s ease-in-out infinite",
+      },
+      keyframes: {
+        pulseScale: {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.05)" }, // Adjust scale as needed
+        },
+      },
     },
   },
   plugins: [],
