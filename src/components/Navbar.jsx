@@ -1,14 +1,19 @@
 import { LuUserCircle } from "react-icons/lu";
 import { IoMoonOutline } from "react-icons/io5";
 import { CiBrightnessUp } from "react-icons/ci";
+import { RiMenuFold3Line } from "react-icons/ri";
 import { FaRegBell } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { updateMode, updateCurrStatus } from "../store/cartSlice";
+import {
+  updateMode,
+  updateCurrStatus,
+  updateShowSidebar,
+} from "../store/cartSlice";
 
 function Navbar() {
   const dispatch = useDispatch();
-
+  const showSidebar = useSelector((state) => state.store.showSidebar);
   const darkModeFromRedux = useSelector((state) => state.store.darkMode);
   const currStatus = useSelector((state) => state.store.currStatus);
 
@@ -89,6 +94,13 @@ function Navbar() {
         <NavLink to={"/login"}>
           <LuUserCircle />
         </NavLink>
+
+        <RiMenuFold3Line
+          className={`hidden -md:flex`}
+          onClick={() => {
+            dispatch(updateShowSidebar(!showSidebar));
+          }}
+        />
       </div>
     </div>
   );
