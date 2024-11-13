@@ -11,6 +11,7 @@ function ResponsiveSidebar() {
   const dispatch = useDispatch();
   const showSidebar = useSelector((state) => state.store.showSidebar);
   const darkMode = useSelector((state) => state.store.darkMode);
+  const currStatus = useSelector((state) => state.store.currStatus);
 
   return (
     <div
@@ -51,8 +52,11 @@ function ResponsiveSidebar() {
           to={""}
           onClick={() => {
             dispatch(updateCurrStatus("Home"));
+            dispatch(updateShowSidebar(false));
           }}
-          className="flex gap-3 items-center w-full"
+          className={`${
+            currStatus === "Home" ? "bg-[#653bce] text-white" : ""
+          } flex gap-3 items-center w-full py-2 rounded-md px-2`}
         >
           <IoHomeOutline className="text-3xl" />
           <h1>Home</h1>
@@ -61,8 +65,11 @@ function ResponsiveSidebar() {
           to={"about"}
           onClick={() => {
             dispatch(updateCurrStatus("About"));
+            dispatch(updateShowSidebar(false));
           }}
-          className="flex gap-3 items-center w-full"
+          className={`${
+            currStatus === "About" ? "bg-[#653bce] text-white" : ""
+          } flex gap-3 items-center w-full py-2 rounded-md px-2`}
         >
           <AiOutlineTeam className="text-3xl" />
           <h1>About Us</h1>
@@ -71,8 +78,11 @@ function ResponsiveSidebar() {
           to={"courses"}
           onClick={() => {
             dispatch(updateCurrStatus("Courses"));
+            dispatch(updateShowSidebar(false));
           }}
-          className="flex gap-3 items-center w-full"
+          className={`${
+            currStatus === "Courses" ? "bg-[#653bce] text-white" : ""
+          } flex gap-3 items-center w-full py-2 rounded-md px-2`}
         >
           <GiBlackBook className="text-3xl" />
           <h1>Courses</h1>
@@ -81,8 +91,11 @@ function ResponsiveSidebar() {
           to={"resourses"}
           onClick={() => {
             dispatch(updateCurrStatus("Resourses"));
+            dispatch(updateShowSidebar(false));
           }}
-          className="flex gap-3 items-center w-full"
+          className={`${
+            currStatus === "Resourses" ? "bg-[#653bce] text-white" : ""
+          } flex gap-3 items-center w-full py-2 rounded-md px-2`}
         >
           <IoBulbOutline className="text-3xl" />
           <h1>Resourses</h1>
