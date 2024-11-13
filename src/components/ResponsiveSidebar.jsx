@@ -4,6 +4,8 @@ import { updateShowSidebar } from "../store/cartSlice";
 function ResponsiveSidebar() {
   const dispatch = useDispatch();
   const showSidebar = useSelector((state) => state.store.showSidebar);
+  const darkMode = useSelector((state) => state.store.darkMode);
+
   return (
     <div
       className={`${
@@ -20,9 +22,9 @@ function ResponsiveSidebar() {
 
       {/* Sidebar on the right */}
       <div
-        className={`relative ${
-          showSidebar ? "right-0" : "-right-[50rem]"
-        } px-20 justify-center  transition-all gap-5 flex-col min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex bg-[white] z-50 `}
+        className={`relative ${showSidebar ? "right-0" : "-right-[50rem]"} ${
+          darkMode ? "!bg-[#141414fc] text-white" : "bg-white"
+        } px-20 justify-center  transition-all gap-5 flex-col min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50 `}
       >
         <div>Link 1</div>
         <div>Link 1</div>
