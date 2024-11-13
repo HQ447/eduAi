@@ -8,7 +8,7 @@ function ResponsiveSidebar() {
     <div
       className={`${
         showSidebar ? "fixed" : "hidden"
-      } md:hidden inset-0 z-50 flex justify-end`}
+      } md:hidden inset-0 z-50 flex justify-end transition-all`}
     >
       {/* Backdrop */}
       <div
@@ -22,7 +22,7 @@ function ResponsiveSidebar() {
       <div
         className={`relative ${
           showSidebar ? "right-0" : "-right-[50rem]"
-        } px-10 justify-center gap-5 flex-col min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex bg-[white] z-50 `}
+        } px-20 justify-center  transition-all gap-5 flex-col min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex bg-[white] z-50 `}
       >
         <div>Link 1</div>
         <div>Link 1</div>

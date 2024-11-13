@@ -14,16 +14,16 @@ import {
 function Navbar() {
   const dispatch = useDispatch();
   const showSidebar = useSelector((state) => state.store.showSidebar);
-  const darkModeFromRedux = useSelector((state) => state.store.darkMode);
+  const darkMode = useSelector((state) => state.store.darkMode);
   const currStatus = useSelector((state) => state.store.currStatus);
 
   function handledarkMode() {
-    dispatch(updateMode(!darkModeFromRedux));
+    dispatch(updateMode(!darkMode));
   }
   return (
     <div
       className={` ${
-        darkModeFromRedux
+        darkMode
           ? "bg-[#000000d6] text-white"
           : " bg-[#eff9ff99] text-[#000000b5] "
       } flex px-20 py-6 -xsm:py-4 -md:px-10 -sm:px-6 bg-opacity-50 justify-between sticky top-0 z-40 w-full backdrop-blur-lg transition-all`}
@@ -78,7 +78,7 @@ function Navbar() {
         </NavLink>
       </div>
       <div className="flex text-2xl gap-4 -xsm:text-xl">
-        {darkModeFromRedux ? (
+        {darkMode ? (
           <CiBrightnessUp
             onClick={handledarkMode}
             className=" hover:scale-95 cursor-pointer"
