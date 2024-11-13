@@ -1,5 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { updateShowSidebar } from "../store/cartSlice";
+import { RxCross2 } from "react-icons/rx";
+import { IoHomeOutline } from "react-icons/io5";
+import { GiBlackBook } from "react-icons/gi";
+import { AiOutlineTeam } from "react-icons/ai";
+import { IoBulbOutline } from "react-icons/io5";
 
 function ResponsiveSidebar() {
   const dispatch = useDispatch();
@@ -26,10 +31,28 @@ function ResponsiveSidebar() {
           darkMode ? "!bg-[#141414fc] text-white" : "bg-white"
         } px-20 justify-center  transition-all gap-5 flex-col min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50 `}
       >
-        <div>Link 1</div>
-        <div>Link 1</div>
-        <div>Link 1</div>
-        <div>Link 1</div>
+        <RxCross2
+          className={`${
+            darkMode ? "text-white" : "text-black"
+          } absolute top-10 left-10 text-2xl`}
+          onClick={() => dispatch(updateShowSidebar(false))}
+        />
+        <div className="flex gap-3 items-center">
+          <IoHomeOutline />
+          <h1>Home</h1>
+        </div>
+        <div className="flex gap-3 items-center">
+          <AiOutlineTeam />
+          <h1>About Us</h1>
+        </div>
+        <div className="flex gap-3 items-center">
+          <GiBlackBook />
+          <h1>Courses</h1>
+        </div>
+        <div className="flex gap-3 items-center">
+          <IoBulbOutline />
+          <h1>Resourses</h1>
+        </div>
       </div>
     </div>
   );
