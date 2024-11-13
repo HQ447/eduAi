@@ -6,6 +6,7 @@ import Mainpage from "./Mainpage";
 import Feedback from "./Feedback";
 import CircleComponent from "../../../components/CircleComponent";
 import FAQ from "./FAQ";
+import ResponsiveSidebar from "../../../components/ResponsiveSidebar";
 // import Slider from "../../../components/Slider";
 
 function Home() {
@@ -18,6 +19,7 @@ function Home() {
       {/* <Slider /> */}
       <Courses />
       <Feedback />
+      <ResponsiveSidebar />
       <FAQ />
     </div>
 
