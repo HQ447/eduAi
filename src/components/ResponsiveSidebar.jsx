@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { updateShowSidebar } from "../store/cartSlice";
+import { updateCurrStatus, updateShowSidebar } from "../store/cartSlice";
 import { RxCross2 } from "react-icons/rx";
 import { IoHomeOutline } from "react-icons/io5";
 import { GiBlackBook } from "react-icons/gi";
@@ -50,8 +50,7 @@ function ResponsiveSidebar() {
         <NavLink
           to={""}
           onClick={() => {
-            setCurrStatus("");
-            dispatch(updateShowSidebar(false));
+            dispatch(updateCurrStatus("Home"));
           }}
           className="flex gap-3 items-center w-full"
         >
@@ -59,10 +58,9 @@ function ResponsiveSidebar() {
           <h1>Home</h1>
         </NavLink>
         <NavLink
-          to={""}
+          to={"about"}
           onClick={() => {
-            setCurrStatus("");
-            dispatch(updateShowSidebar(false));
+            dispatch(updateCurrStatus("About"));
           }}
           className="flex gap-3 items-center w-full"
         >
@@ -70,10 +68,9 @@ function ResponsiveSidebar() {
           <h1>About Us</h1>
         </NavLink>
         <NavLink
-          to={""}
+          to={"courses"}
           onClick={() => {
-            setCurrStatus("");
-            dispatch(updateShowSidebar(false));
+            dispatch(updateCurrStatus("Courses"));
           }}
           className="flex gap-3 items-center w-full"
         >
@@ -81,10 +78,9 @@ function ResponsiveSidebar() {
           <h1>Courses</h1>
         </NavLink>
         <NavLink
-          to={""}
+          to={"resourses"}
           onClick={() => {
-            setCurrStatus("");
-            dispatch(updateShowSidebar(false));
+            dispatch(updateCurrStatus("Resourses"));
           }}
           className="flex gap-3 items-center w-full"
         >
