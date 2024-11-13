@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   darkMode: false,
   currStatus: "Home",
+  showSidebar: false,
 };
 
 export const cartSlice = createSlice({
@@ -15,9 +16,13 @@ export const cartSlice = createSlice({
     updateCurrStatus: (state, action) => {
       state.currStatus = action.payload;
     },
+    updateShowSidebar: (state, action) => {
+      state.showSidebar = action.payload;
+    },
   },
 });
 
-export const { updateMode, updateCurrStatus } = cartSlice.actions;
+export const { updateMode, updateCurrStatus, updateShowSidebar } =
+  cartSlice.actions;
 
 export default cartSlice.reducer;
