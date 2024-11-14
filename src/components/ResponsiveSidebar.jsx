@@ -13,6 +13,14 @@ function ResponsiveSidebar() {
   const darkMode = useSelector((state) => state.store.darkMode);
   const currStatus = useSelector((state) => state.store.currStatus);
 
+  function renderChange(currStatus) {
+    dispatch(updateCurrStatus(currStatus));
+
+    setTimeout(() => {
+      dispatch(updateShowSidebar(false));
+    }, 4000);
+  }
+
   return (
     <div
       className={`${
@@ -50,10 +58,7 @@ function ResponsiveSidebar() {
 
         <NavLink
           to={""}
-          onClick={() => {
-            dispatch(updateCurrStatus("Home"));
-            dispatch(updateShowSidebar(false));
-          }}
+          onClick={() => renderChange("Home")}
           className={`${
             currStatus === "Home" ? "bg-[#653bce] text-white" : ""
           } flex gap-3 items-center -xsm:text-2xl w-full py-2 rounded-md px-2`}
@@ -63,10 +68,7 @@ function ResponsiveSidebar() {
         </NavLink>
         <NavLink
           to={"about"}
-          onClick={() => {
-            dispatch(updateCurrStatus("About"));
-            dispatch(updateShowSidebar(false));
-          }}
+          onClick={() => renderChange("About")}
           className={`${
             currStatus === "About" ? "bg-[#653bce] text-white" : ""
           } flex gap-3 items-center -xsm:text-2xl w-full py-2 rounded-md px-2`}
@@ -76,10 +78,7 @@ function ResponsiveSidebar() {
         </NavLink>
         <NavLink
           to={"courses"}
-          onClick={() => {
-            dispatch(updateCurrStatus("Courses"));
-            dispatch(updateShowSidebar(false));
-          }}
+          onClick={() => renderChange("Courses")}
           className={`${
             currStatus === "Courses" ? "bg-[#653bce] text-white" : ""
           } flex gap-3 items-center -xsm:text-2xl w-full py-2 rounded-md px-2`}
@@ -89,10 +88,7 @@ function ResponsiveSidebar() {
         </NavLink>
         <NavLink
           to={"resourses"}
-          onClick={() => {
-            dispatch(updateCurrStatus("Resourses"));
-            dispatch(updateShowSidebar(false));
-          }}
+          onClick={() => renderChange("Resourses")}
           className={`${
             currStatus === "Resourses" ? "bg-[#653bce] text-white" : ""
           } flex gap-3 items-center -xsm:text-2xl w-full py-2 rounded-md px-2`}
