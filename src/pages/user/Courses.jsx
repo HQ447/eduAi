@@ -3,9 +3,11 @@ import { courseCollection } from "../../Data/data";
 
 import { useSelector } from "react-redux";
 import StarRating from "../../components/StarRating";
+import { useNavigate } from "react-router-dom";
 
 function Courses() {
   const darkMode = useSelector((state) => state.store.darkMode);
+  const navigate = useNavigate();
   return (
     <div
       className={` ${
@@ -44,7 +46,8 @@ function Courses() {
               darkMode
                 ? "bg-[#242424] text-white "
                 : "bg-white text-[#000000b5] "
-            } flex w-80 flex-col p-5 gap-3 -xsm:text-sm rounded-md shadow-xl`}
+            } flex w-80 flex-col p-5 gap-3 -xsm:text-sm rounded-md shadow-xl cursor-pointer`}
+            onClick={() => navigate(`coursedetails/${obj.id}`)}
           >
             <img
               src={obj.img}

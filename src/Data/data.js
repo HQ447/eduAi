@@ -1,15 +1,45 @@
 export const courseCollection = [
   {
+    id: 1,
     img: "https://www.becodemy.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdokeqryvj%2Fimage%2Fupload%2Fv1719776615%2FTMECA_i5cmqd.png&w=640&q=75",
     title:
-      "All Functional MERN Stack LMS  Learning Management system series with next 13, TypeScript | Full Course",
+      "All Functional MERN Stack LMS Learning Management system series with Next 13, TypeScript | Full Course",
     rating: "5",
     students: "234",
     old_price: "67",
     new_price: "9.99",
     lectures: "43",
+    chapters: [
+      {
+        title: "Introduction",
+        lectures: [
+          {
+            title: "What is LMS?",
+            url: "https://sample-videos.com/video123.mp4",
+          },
+          {
+            title: "Setting up Project",
+            url: "https://sample-videos.com/video456.mp4",
+          },
+        ],
+      },
+      {
+        title: "MERN Stack Basics",
+        lectures: [
+          {
+            title: "Introduction to MongoDB",
+            url: "https://sample-videos.com/video789.mp4",
+          },
+          {
+            title: "Setting up Express",
+            url: "https://sample-videos.com/video101.mp4",
+          },
+        ],
+      },
+    ],
   },
   {
+    id: 2,
     img: "https://www.becodemy.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdokeqryvj%2Fimage%2Fupload%2Fv1716753276%2Fcourses%2Fggj1npc4ydcqvfi5ssnb.png&w=640&q=75",
     title:
       "Multi-Vendor MERN Stack E-commerce project With All functionalities absolutely for beginners",
@@ -18,8 +48,37 @@ export const courseCollection = [
     old_price: "80",
     new_price: "0",
     lectures: "33",
+    chapters: [
+      {
+        title: "E-commerce Basics",
+        lectures: [
+          {
+            title: "What is E-commerce?",
+            url: "https://sample-videos.com/video112.mp4",
+          },
+          {
+            title: "Project Structure",
+            url: "https://sample-videos.com/video113.mp4",
+          },
+        ],
+      },
+      {
+        title: "Frontend Development",
+        lectures: [
+          {
+            title: "React Basics",
+            url: "https://sample-videos.com/video114.mp4",
+          },
+          {
+            title: "Setting up Redux",
+            url: "https://sample-videos.com/video115.mp4",
+          },
+        ],
+      },
+    ],
   },
 ];
+
 export const sourceCode = [
   {
     img: "https://www.becodemy.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdokeqryvj%2Fimage%2Fupload%2Fv1719776615%2FTMECA_i5cmqd.png&w=640&q=75",
