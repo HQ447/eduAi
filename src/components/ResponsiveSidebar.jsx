@@ -31,7 +31,7 @@ function ResponsiveSidebar() {
       <div
         className={`relative ${showSidebar ? "right-0" : "-right-[50rem]"} ${
           darkMode ? "!bg-[#141414fc] text-white" : "bg-white"
-        } px-20 -xsm:px-10 justify-center  transition-all gap-10 flex-col min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50 `}
+        } px-20 -xsm:gap-5  -xsm:px-4 justify-center  transition-all gap-10 flex-col min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50 `}
       >
         <RxCross2
           className={`${
@@ -56,7 +56,7 @@ function ResponsiveSidebar() {
           }}
           className={`${
             currStatus === "Home" ? "bg-[#653bce] text-white" : ""
-          } flex gap-3 items-center w-full py-2 rounded-md px-2`}
+          } flex gap-3 items-center -xsm:text-2xl w-full py-2 rounded-md px-2`}
         >
           <IoHomeOutline className="text-3xl" />
           <h1>Home</h1>
@@ -69,7 +69,7 @@ function ResponsiveSidebar() {
           }}
           className={`${
             currStatus === "About" ? "bg-[#653bce] text-white" : ""
-          } flex gap-3 items-center w-full py-2 rounded-md px-2`}
+          } flex gap-3 items-center -xsm:text-2xl w-full py-2 rounded-md px-2`}
         >
           <AiOutlineTeam className="text-3xl" />
           <h1>About Us</h1>
@@ -82,7 +82,7 @@ function ResponsiveSidebar() {
           }}
           className={`${
             currStatus === "Courses" ? "bg-[#653bce] text-white" : ""
-          } flex gap-3 items-center w-full py-2 rounded-md px-2`}
+          } flex gap-3 items-center -xsm:text-2xl w-full py-2 rounded-md px-2`}
         >
           <GiBlackBook className="text-3xl" />
           <h1>Courses</h1>
@@ -95,7 +95,7 @@ function ResponsiveSidebar() {
           }}
           className={`${
             currStatus === "Resourses" ? "bg-[#653bce] text-white" : ""
-          } flex gap-3 items-center w-full py-2 rounded-md px-2`}
+          } flex gap-3 items-center -xsm:text-2xl w-full py-2 rounded-md px-2`}
         >
           <IoBulbOutline className="text-3xl" />
           <h1>Resourses</h1>
