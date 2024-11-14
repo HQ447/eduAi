@@ -15,11 +15,11 @@ export const courseCollection = [
         lectures: [
           {
             title: "What is LMS?",
-            url: "https://sample-videos.com/video123.mp4",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
           },
           {
             title: "Setting up Project",
-            url: "https://sample-videos.com/video456.mp4",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
           },
         ],
       },
@@ -28,11 +28,37 @@ export const courseCollection = [
         lectures: [
           {
             title: "Introduction to MongoDB",
-            url: "https://sample-videos.com/video789.mp4",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
           },
           {
             title: "Setting up Express",
-            url: "https://sample-videos.com/video101.mp4",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+      {
+        title: "MERN Stack Basics",
+        lectures: [
+          {
+            title: "Introduction to MongoDB",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Setting up Express",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+      {
+        title: "MERN Stack Basics",
+        lectures: [
+          {
+            title: "Introduction to MongoDB",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Setting up Express",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
           },
         ],
       },
@@ -54,11 +80,50 @@ export const courseCollection = [
         lectures: [
           {
             title: "What is E-commerce?",
-            url: "https://sample-videos.com/video112.mp4",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
           },
           {
             title: "Project Structure",
-            url: "https://sample-videos.com/video113.mp4",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+      {
+        title: "E-commerce Basics",
+        lectures: [
+          {
+            title: "What is E-commerce?",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Project Structure",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+      {
+        title: "E-commerce Basics",
+        lectures: [
+          {
+            title: "What is E-commerce?",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Project Structure",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+      {
+        title: "E-commerce Basics",
+        lectures: [
+          {
+            title: "What is E-commerce?",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Project Structure",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
           },
         ],
       },
@@ -67,11 +132,11 @@ export const courseCollection = [
         lectures: [
           {
             title: "React Basics",
-            url: "https://sample-videos.com/video114.mp4",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
           },
           {
             title: "Setting up Redux",
-            url: "https://sample-videos.com/video115.mp4",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
           },
         ],
       },

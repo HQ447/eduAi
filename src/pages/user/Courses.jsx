@@ -47,7 +47,7 @@ function Courses() {
                 ? "bg-[#242424] text-white "
                 : "bg-white text-[#000000b5] "
             } flex w-80 flex-col p-5 gap-3 -xsm:text-sm rounded-md shadow-xl cursor-pointer`}
-            onClick={() => navigate(`coursedetails/${obj.id}`)}
+            onClick={() => navigate(`/coursedetails/${obj.id}`)}
           >
             <img
               src={obj.img}
