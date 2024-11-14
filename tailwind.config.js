@@ -12,12 +12,12 @@ export default {
         "-xsm": { max: "500px" },
       },
       animation: {
-        "pulse-scale": "pulseScale 1s ease-in-out infinite",
+        "pulse-scale": "pulseScale 1.3s ease-in-out infinite",
       },
       keyframes: {
         pulseScale: {
-          "0%, 100%": { transform: "scale(1)" },
-          "50%": { transform: "scale(1.05)" }, // Adjust scale as needed
+          "0%, 100%": { transform: "scale(.9)" },
+          "50%": { transform: "scale(1.1)" }, // Adjust scale as needed
         },
       },
     },

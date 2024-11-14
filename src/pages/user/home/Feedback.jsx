@@ -28,8 +28,11 @@ function Feedback() {
           </span>
         </h1>
         <p className=" -xsm:text-sm text-xl flex items-center -xsm:text-center">
-          <GoDotFill className="text-3xl text-green-500" /> Lets have a look at
-          our students reaction!
+          <GoDotFill
+            className="text-3xl text-green-500 animate-pulse-scale"
+            aria-hidden="true"
+          />{" "}
+          Lets have a look at our students reaction!
         </p>
       </div>
       <div className="flex flex-wrap justify-center gap-4  ">

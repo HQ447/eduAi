@@ -29,8 +29,11 @@ function Courses() {
           </span>
         </h1>
         <p className=" -xsm:text-sm text-xl flex items-center -xsm:text-center">
-          <GoDotFill className="text-3xl text-green-500" /> Our comprehensive
-          project based courses
+          <GoDotFill
+            className="text-3xl text-green-500 animate-pulse-scale"
+            aria-hidden="true"
+          />{" "}
+          Our comprehensive project based courses
         </p>
       </div>
       <div className="flex flex-wrap justify-center gap-5">

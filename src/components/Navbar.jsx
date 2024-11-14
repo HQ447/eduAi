@@ -2,7 +2,7 @@ import { LuUserCircle } from "react-icons/lu";
 import { IoMoonOutline } from "react-icons/io5";
 import { CiBrightnessUp } from "react-icons/ci";
 import { RiMenuFold3Line } from "react-icons/ri";
-import { FaRegBell } from "react-icons/fa6";
+// import { FaRegBell } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -90,7 +90,6 @@ function Navbar() {
           />
         )}
 
-        <FaRegBell />
         <NavLink to={"/login"}>
           <LuUserCircle />
         </NavLink>
