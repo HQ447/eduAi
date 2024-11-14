@@ -44,7 +44,7 @@ function ResponsiveSidebar() {
         <RxCross2
           className={`${
             darkMode ? "text-white" : "text-black"
-          } absolute top-10 left-10 text-2xl`}
+          } absolute top-4 left-4 text-2xl`}
           onClick={() => dispatch(updateShowSidebar(false))}
         />
         <div className="w-full gap-3 mb-4 flex flex-col items-center">
@@ -61,7 +61,7 @@ function ResponsiveSidebar() {
           onClick={() => renderChange("Home")}
           className={`${
             currStatus === "Home" ? "bg-[#653bce] text-white" : ""
-          } flex gap-3 items-center -xsm:text-2xl w-full py-2 rounded-md px-2`}
+          } flex gap-3 items-center -xsm:text-xl w-full py-2 rounded-md px-2`}
         >
           <IoHomeOutline className="text-3xl" />
           <h1>Home</h1>
