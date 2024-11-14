@@ -7,17 +7,25 @@ import { AiOutlineClose } from "react-icons/ai";
 import { LuCheckCheck } from "react-icons/lu";
 import { MdArrowDropDown } from "react-icons/md";
 import { MdOndemandVideo } from "react-icons/md";
+import { useSelector } from "react-redux";
 
 function CourseDetail() {
   const { id } = useParams();
   const course = courseCollection.find((course) => course.id === parseInt(id));
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [activeChapter, setActiveChapter] = useState(null);
+  const darkMode = useSelector((state) => state.store.darkMode);
 
   if (!course) return <p>Course not found.</p>;
 
   return (
-    <div className="px-20 -md:px-10 -sm:px-6 py-6 min-h-screen flex -sm:flex-col-reverse ">
+    <div
+      className={`${
+        darkMode
+          ? "bg-[#101215] text-white "
+          : "bg-gradient-to-b from-[#f5faff] to-[#cce7f5]"
+      } px-20 -md:px-10 -sm:px-6 py-6 min-h-screen flex -sm:flex-col-reverse `}
+    >
       {/* Chapter List Section */}
       <div className="flex -sm:pr-0 -sm:mt-[40px] -sm:w-full flex-col -sm:min-h-fit overflow-y-scroll max-h-screen -md:w-[60%] w-[65%] pr-5">
         <h1 className="text-2xl -md:text-2xl -xsm:text-xl font-bold mb-5 -lg:text-3xl">
@@ -56,7 +64,9 @@ function CourseDetail() {
               onClick={() =>
                 setActiveChapter(activeChapter === index ? null : index)
               }
-              className="text-[15px] flex justify-between py-5  w-full text-left bg-white shadow-lg p-3 rounded-lg"
+              className={`${
+                darkMode ? "bg-[#313131]" : "bg-[#f4f6f9f0]"
+              } text-[15px] -xsm:text-xs flex justify-between py-5 -xsm:py-3  w-full text-left  shadow-lg p-3 rounded-lg`}
             >
               <p>{chapter.title}</p>
               <div className="flex items-center">
@@ -72,9 +82,9 @@ function CourseDetail() {
                     onClick={() => setSelectedVideo(lecture.url)}
                     className=" cursor-pointer flex flex-col mb-2  "
                   >
-                    <div className="flex items-center gap-2">
+                    <div className="flex text-sm  items-center gap-2">
                       <MdOndemandVideo />
-                      <p>{lecture.title}</p>
+                      <p className="-xsm:text-xs">{lecture.title}</p>
                     </div>
                   </button>
                 ))}
@@ -96,7 +106,7 @@ function CourseDetail() {
           className="w-full rounded-lg"
         />
         <h1 className="text-2xl font-semibold">
-          {course.new_price == 0 ? "Free" : course.new_price}
+          {course.new_price == 0 ? "Free" : `$${course.new_price}`}
         </h1>
         <button className="px-5 w-full py-2 bg-[#dc143c] text-sm font-semibold text-white rounded-full">
           Buy Now ${course.new_price}
