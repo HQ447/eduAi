@@ -24,14 +24,53 @@ export const courseCollection = [
         ],
       },
       {
-        title: "MERN Stack Basics",
+        title: "Introduction",
         lectures: [
           {
-            title: "Introduction to MongoDB",
+            title: "What is LMS?",
             url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
           },
           {
-            title: "Setting up Express",
+            title: "Setting up Project",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+      {
+        title: "Introduction",
+        lectures: [
+          {
+            title: "What is LMS?",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Setting up Project",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+      {
+        title: "Introduction",
+        lectures: [
+          {
+            title: "What is LMS?",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Setting up Project",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+      {
+        title: "Introduction",
+        lectures: [
+          {
+            title: "What is LMS?",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Setting up Project",
             url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
           },
         ],
@@ -62,6 +101,30 @@ export const courseCollection = [
           },
         ],
       },
+      {
+        title: "MERN Stack Basics",
+        lectures: [
+          {
+            title: "Introduction to MongoDB",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Setting up Express",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+    ],
+    learnings: [
+      "You will learn how to scale one big web application",
+      "You will be able to build a full stack LMS Platform",
+      "You will learn how to maintenance cache on a large scale application",
+      "You will learn how to send dynamic mail templates with Node.js and EJS",
+      "You will learn how to make an instant notification system with Socket.io/WebSocket",
+    ],
+    prerequisites: [
+      "You need basic knowledge of JavaScript and frontend development",
+      "You need basic knowledge of the MERN stack",
     ],
   },
   {
@@ -140,6 +203,17 @@ export const courseCollection = [
           },
         ],
       },
+    ],
+    learnings: [
+      "You will learn how to scale one big web application",
+      "You will be able to build a full stack LMS Platform",
+      "You will learn how to maintenance cache on a large scale application",
+      "You will learn how to send dynamic mail templates with Node.js and EJS",
+      "You will learn how to make an instant notification system with Socket.io/WebSocket",
+    ],
+    prerequisites: [
+      "You need basic knowledge of JavaScript and frontend development",
+      "You need basic knowledge of the MERN stack",
     ],
   },
 ];
