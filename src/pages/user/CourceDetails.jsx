@@ -6,6 +6,7 @@ import { courseCollection } from "../../Data/data";
 import { AiOutlineClose } from "react-icons/ai";
 import { LuCheckCheck } from "react-icons/lu";
 import { MdArrowDropDown } from "react-icons/md";
+import { MdOndemandVideo } from "react-icons/md";
 
 function CourseDetail() {
   const { id } = useParams();
@@ -55,7 +56,7 @@ function CourseDetail() {
               onClick={() =>
                 setActiveChapter(activeChapter === index ? null : index)
               }
-              className="text-[15px] flex justify-between  w-full text-left bg-white shadow-lg p-3 rounded-lg"
+              className="text-[15px] flex justify-between py-5  w-full text-left bg-white shadow-lg p-3 rounded-lg"
             >
               <p>{chapter.title}</p>
               <div className="flex items-center">
@@ -69,21 +70,34 @@ function CourseDetail() {
                   <button
                     key={idx}
                     onClick={() => setSelectedVideo(lecture.url)}
-                    className="block text-lg mb-2 text-blue-600 underline"
+                    className=" cursor-pointer flex flex-col mb-2  "
                   >
-                    {lecture.title}
+                    <div className="flex items-center gap-2">
+                      <MdOndemandVideo />
+                      <p>{lecture.title}</p>
+                    </div>
                   </button>
                 ))}
               </div>
             )}
           </div>
         ))}
+        <div className="my-3 flex gap-2 items-center">
+          <StarRating rating={course.rating} />
+          <p>{course.rating} Course Ratings</p>
+        </div>
       </div>
 
       {/* Fixed Course Details Section */}
       <div className="-sm:w-full -xsm:p-1  -sm:relative w-[35%] -md:w-[40%] sticky top-5 h-fit flex flex-col gap-3 p-4">
-        <img src={course.img} alt="Course Image" className="w-full" />
-        <h1 className="text-2xl font-semibold">${course.new_price}</h1>
+        <img
+          src={course.img}
+          alt="Course Image"
+          className="w-full rounded-lg"
+        />
+        <h1 className="text-2xl font-semibold">
+          {course.new_price == 0 ? "Free" : course.new_price}
+        </h1>
         <button className="px-5 w-full py-2 bg-[#dc143c] text-sm font-semibold text-white rounded-full">
           Buy Now ${course.new_price}
         </button>

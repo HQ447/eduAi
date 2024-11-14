@@ -24,7 +24,7 @@ export const courseCollection = [
         ],
       },
       {
-        title: "Introduction",
+        title: "Frontend Basics",
         lectures: [
           {
             title: "What is LMS?",
@@ -37,7 +37,28 @@ export const courseCollection = [
         ],
       },
       {
-        title: "Introduction",
+        title: "Frontend Advance",
+        lectures: [
+          {
+            title: "What is LMS?",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Setting up Project",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Whats Frontend Development",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Introduction to HTML",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+      {
+        title: "Backend Basic",
         lectures: [
           {
             title: "What is LMS?",
@@ -50,7 +71,7 @@ export const courseCollection = [
         ],
       },
       {
-        title: "Introduction",
+        title: "Backend Advance",
         lectures: [
           {
             title: "What is LMS?",
@@ -63,20 +84,7 @@ export const courseCollection = [
         ],
       },
       {
-        title: "Introduction",
-        lectures: [
-          {
-            title: "What is LMS?",
-            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
-          },
-          {
-            title: "Setting up Project",
-            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
-          },
-        ],
-      },
-      {
-        title: "MERN Stack Basics",
+        title: "Database Basics",
         lectures: [
           {
             title: "Introduction to MongoDB",
@@ -89,7 +97,7 @@ export const courseCollection = [
         ],
       },
       {
-        title: "MERN Stack Basics",
+        title: "Database Concept Advance",
         lectures: [
           {
             title: "Introduction to MongoDB",
@@ -102,7 +110,7 @@ export const courseCollection = [
         ],
       },
       {
-        title: "MERN Stack Basics",
+        title: "Final Section",
         lectures: [
           {
             title: "Introduction to MongoDB",
