@@ -39,7 +39,7 @@ function ResponsiveSidebar() {
       <div
         className={`relative ${showSidebar ? "right-0" : "-right-[50rem]"} ${
           darkMode ? "!bg-[#141414fc] text-white" : "bg-white"
-        } px-20 -xsm:gap-5  -xsm:px-4 justify-center  transition-all gap-10 flex-col min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50 `}
+        } px-20 -xsm:gap-5  -xsm:px-4 justify-center gap-10 flex-col min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50 transform transition-transform duration-500 ease-in-out`}
       >
         <RxCross2
           className={`${
