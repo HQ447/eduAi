@@ -18,14 +18,14 @@ function ResponsiveSidebar() {
 
     setTimeout(() => {
       dispatch(updateShowSidebar(false));
-    }, 4000);
+    }, 400);
   }
 
   return (
     <div
       className={`${
         showSidebar ? "fixed" : "hidden"
-      } md:hidden inset-0 z-50 flex justify-end transition-all`}
+      } md:hidden inset-0 z-50 flex justify-end`}
     >
       {/* Backdrop */}
       <div
@@ -35,11 +35,12 @@ function ResponsiveSidebar() {
         }}
       />
 
-      {/* Sidebar on the right */}
+      {/* Sidebar with sliding effect */}
       <div
-        className={`relative ${showSidebar ? "right-0" : "-right-[50rem]"} ${
-          darkMode ? "!bg-[#141414fc] text-white" : "bg-white"
-        } px-20 -xsm:gap-5  -xsm:px-4 justify-center gap-10 flex-col min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50 transform transition-transform duration-500 ease-in-out`}
+        className={`relative transform transition-transform duration-[3s] ease-in-out  ${
+          showSidebar ? "right-0" : " -right-48"
+        } ${darkMode ? "!bg-[#141414fc] text-white" : "bg-white"}
+         px-20 -xsm:gap-5 -xsm:px-4 justify-center gap-10 flex-col min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50`}
       >
         <RxCross2
           className={`${
@@ -61,40 +62,40 @@ function ResponsiveSidebar() {
           onClick={() => renderChange("Home")}
           className={`${
             currStatus === "Home" ? "bg-[#653bce] text-white" : ""
-          } flex gap-3 items-center -xsm:text-xl w-full py-2 rounded-md px-2`}
+          } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
         >
-          <IoHomeOutline className="text-3xl" />
-          <h1>Home</h1>
+          <IoHomeOutline className="text-3xl -xsm:text-lg" />
+          <h1 className="text-sm">Home</h1>
         </NavLink>
         <NavLink
           to={"about"}
           onClick={() => renderChange("About")}
           className={`${
             currStatus === "About" ? "bg-[#653bce] text-white" : ""
-          } flex gap-3 items-center -xsm:text-2xl w-full py-2 rounded-md px-2`}
+          } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
         >
-          <AiOutlineTeam className="text-3xl" />
-          <h1>About Us</h1>
+          <AiOutlineTeam className="text-3xl -xsm:text-lg" />
+          <h1 className="text-sm">About Us</h1>
         </NavLink>
         <NavLink
           to={"courses"}
           onClick={() => renderChange("Courses")}
           className={`${
             currStatus === "Courses" ? "bg-[#653bce] text-white" : ""
-          } flex gap-3 items-center -xsm:text-2xl w-full py-2 rounded-md px-2`}
+          } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
         >
-          <GiBlackBook className="text-3xl" />
-          <h1>Courses</h1>
+          <GiBlackBook className="text-3xl -xsm:text-lg" />
+          <h1 className="text-sm">Courses</h1>
         </NavLink>
         <NavLink
           to={"resourses"}
           onClick={() => renderChange("Resourses")}
           className={`${
             currStatus === "Resourses" ? "bg-[#653bce] text-white" : ""
-          } flex gap-3 items-center -xsm:text-2xl w-full py-2 rounded-md px-2`}
+          } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
         >
-          <IoBulbOutline className="text-3xl" />
-          <h1>Resourses</h1>
+          <IoBulbOutline className="text-3xl -xsm:text-lg" />
+          <h1 className="text-sm">Resources</h1>
         </NavLink>
       </div>
     </div>
