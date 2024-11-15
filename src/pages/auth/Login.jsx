@@ -30,7 +30,7 @@ function Login() {
             className="bg-white outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
           <p className=" text-end text-[12px] font-semibold">
-            Recovery Password
+            <NavLink to={"/recover-password"}> Recovery Password</NavLink>
           </p>
         </div>
         <NavLink to={"/"} className={"w-full"}>

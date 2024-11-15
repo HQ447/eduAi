@@ -12,6 +12,9 @@ import Discussions from "./pages/user/resourses/Discussions";
 import SourceCode from "./pages/user/resourses/SourceCode";
 import Guidlines from "./pages/user/resourses/Guidlines";
 import Blogs from "./pages/user/resourses/Blogs";
+import RecoverPassword from "./pages/auth/RecoverPassword";
+import GetOTP from "./pages/auth/GetOTP";
+import ChangePassword from "./pages/auth/ChangegPassword";
 
 function App() {
   return (
@@ -48,9 +51,9 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<RegisterUser />} />
-        <Route path="/recover-password" element={}/>
-        <Route path="/get-otp" element={}/>
-        <Route path="/update-password" element={}/>
+        <Route path="/recover-password" element={<RecoverPassword />} />
+        <Route path="/get-otp" element={<GetOTP />} />
+        <Route path="/update-password" element={<ChangePassword />} />
       </Routes>
     </div>
   );
