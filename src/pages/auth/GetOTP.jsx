@@ -9,8 +9,8 @@ function GetOTP() {
           alt=""
           className="w-14 h-14 rounded-full mb-2 mx-auto"
         />
-        <h1 className="text-2xl text-center font-semibold">Enter OTP!</h1>
-        <p className="text-md text-center">Send to your Email</p>
+        <h1 className="text-lg text-center font-semibold mt-3">Enter OTP!</h1>
+        <p className="text-md text-center mb-3">Send to your Email</p>
         <div className="flex flex-col my-3 gap-4">
           <input
             type="number"

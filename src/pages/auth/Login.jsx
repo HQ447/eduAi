@@ -30,7 +30,7 @@ function Login() {
             className="bg-white outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
           <p className=" text-end text-[12px] font-semibold">
-            <NavLink to={"/recover-password"}> Recovery Password</NavLink>
+            <NavLink to={"/recover-password"}> Recover Your Password</NavLink>
           </p>
         </div>
         <NavLink to={"/"} className={"w-full"}>
@@ -41,9 +41,9 @@ function Login() {
         <div>
           <p className="text-[12px] text-center">or continue with</p>
           <div className="flex justify-around my-3">
-            <FcGoogle className="text-5xl border-2 px-3 rounded-md hover:scale-95 transition-all hover:bg-white cursor-pointer" />
-            <FaFacebook className="text-5xl border-2 px-3 rounded-md hover:scale-95 transition-all hover:bg-white cursor-pointer" />
-            <FaApple className="text-5xl border-2 px-3 rounded-md hover:scale-95 transition-all hover:bg-white cursor-pointer" />
+            <FcGoogle className="bg-white text-5xl border-2 px-3 rounded-md hover:scale-95 transition-all hover:bg-white cursor-pointer" />
+            <FaFacebook className="bg-white text-5xl border-2 px-3 rounded-md hover:scale-95 transition-all hover:bg-white cursor-pointer" />
+            <FaApple className="bg-white text-5xl border-2 px-3 rounded-md hover:scale-95 transition-all hover:bg-white cursor-pointer" />
           </div>
           <p className="text-[12px] text-center">
             Not a member?{" "}

@@ -9,10 +9,12 @@ function ChangePassword() {
           alt=""
           className="w-14 h-14 rounded-full mb-2 mx-auto"
         />
-        <h1 className="text-2xl text-center font-semibold">
+        <h1 className="text-lg text-center font-semibold mt-3">
           Change Your Password!
         </h1>
-        <p className="text-md text-center">Give a Strong and Secure Password</p>
+        <p className="text-sm text-center mb-3">
+          Give a Strong and Secure Password
+        </p>
         <div className="flex flex-col my-3 gap-4">
           <input
             type="password"
@@ -24,9 +26,6 @@ function ChangePassword() {
             placeholder="Confirm Password"
             className="bg-white outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
-          <p className=" text-end text-[12px] font-semibold">
-            Recovery Password
-          </p>
         </div>
         <NavLink to={"/login"} className={"w-full"}>
           <button className="w-full bg-[#653bce] mb-3 hover:scale-95 transition-all hover:bg-orange-600 text-white rounded-md py-2 shadow-md">

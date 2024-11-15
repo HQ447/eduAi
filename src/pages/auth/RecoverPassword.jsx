@@ -9,10 +9,10 @@ function RecoverPassword() {
           alt=""
           className="w-14 h-14 rounded-full mb-2 mx-auto"
         />
-        <h1 className="text-2xl text-center font-semibold">
+        <h1 className="text-lg text-center font-semibold mt-3">
           Recover Your Password!
         </h1>
-        <p className="text-md text-center">with simple 2 steps</p>
+        <p className="text-md text-center mb-3">with simple 2 steps</p>
         <div className="flex flex-col my-3 gap-4">
           <input
             type="text"
