@@ -27,7 +27,9 @@ function AdminDashboard() {
         <div className="flex flex-col -xsm:px-3 px-10 py-4 min-h-screen">
           <Outlet />
         </div>
-        <div></div>
+        <div>
+          <h1>hello</h1>
+        </div>
       </div>
     </div>
   );
