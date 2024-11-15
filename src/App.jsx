@@ -15,6 +15,7 @@ import Blogs from "./pages/user/resourses/Blogs";
 import RecoverPassword from "./pages/auth/RecoverPassword";
 import GetOTP from "./pages/auth/GetOTP";
 import ChangePassword from "./pages/auth/ChangegPassword";
+import AdminDashboard from "./pages/admin/AdminDashboard";
 
 function App() {
   return (
@@ -28,9 +29,8 @@ function App() {
       ></video>
 
       <Routes>
-        <Route path="/" element={<UserBoard />}>
+        <Route path="/home" element={<UserBoard />}>
           <Route index element={<Home />} />
-
           <Route path="resourses" element={<Resources />}>
             {/* Discussions Route with Nested Paths */}
             <Route index element={<SourceCode />} />
@@ -48,7 +48,12 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="coursedetails/:id" element={<CourceDetails />} />
         </Route>
-
+        <Route path="/" element={<AdminDashboard />}>
+          <Route index element={<h1>default</h1>} />
+          <Route path="/link2" element={<h1>link 2</h1>} />
+          <Route path="/link3" element={<h1>link 3</h1>} />
+          <Route path="/link4" element={<h1>link 4</h1>} />
+        </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<RegisterUser />} />
         <Route path="/recover-password" element={<RecoverPassword />} />
