@@ -29,6 +29,7 @@ function AdminDashboard() {
         </div>
         <div>
           <h1>hello</h1>
+          <p>i am hammad</p>
         </div>
       </div>
     </div>
