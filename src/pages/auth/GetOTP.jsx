@@ -9,26 +9,18 @@ function GetOTP() {
           alt=""
           className="w-14 h-14 rounded-full mb-2 mx-auto"
         />
-        <h1 className="text-2xl text-center font-semibold">Hello!</h1>
-        <p className="text-md text-center">Welcome back</p>
+        <h1 className="text-2xl text-center font-semibold">Enter OTP!</h1>
+        <p className="text-md text-center">Send to your Email</p>
         <div className="flex flex-col my-3 gap-4">
           <input
-            type="text"
-            placeholder="Enter Email"
+            type="number"
+            placeholder="Enter OTP"
             className="bg-white px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
-          <input
-            type="password"
-            placeholder="Password"
-            className="bg-white outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
-          />
-          <p className=" text-end text-[12px] font-semibold">
-            Recovery Password
-          </p>
         </div>
-        <NavLink to={"/"} className={"w-full"}>
+        <NavLink to={"/update-password"} className={"w-full"}>
           <button className="w-full bg-[#653bce] mb-3 hover:scale-95 transition-all hover:bg-orange-600 text-white rounded-md py-2 shadow-md">
-            Sign in
+            Verify OTP
           </button>
         </NavLink>
       </div>
