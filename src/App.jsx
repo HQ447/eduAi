@@ -48,6 +48,9 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<RegisterUser />} />
+        <Route path="/recover-password" element={}/>
+        <Route path="/get-otp" element={}/>
+        <Route path="/update-password" element={}/>
       </Routes>
     </div>
   );
