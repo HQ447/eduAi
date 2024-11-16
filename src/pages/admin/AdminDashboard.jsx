@@ -15,18 +15,6 @@ function AdminDashboard() {
           if (showSidebar) setShowSidebar(false);
         }}
       >
-        <div>
-          <h1>
-            <p>
-              <a href="">
-                ask
-                <p>
-                  <aside>sak</aside>
-                </p>
-              </a>
-            </p>
-          </h1>
-        </div>
         <div className="flex justify-between ribbon -xsm:px-3 px-10 py-4  shadow-lg bg-[#f1f1f1]">
           <IoIosMenu
             className="hidden -md:flex cursor-pointer"
