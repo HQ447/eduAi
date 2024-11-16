@@ -1,7 +1,11 @@
 import React from "react";
 
 function test() {
-  return <div>test</div>;
+  return (
+    <div>
+      <p>sd</p>
+    </div>
+  );
 }
 
 export default test;
