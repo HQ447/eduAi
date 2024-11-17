@@ -28,7 +28,7 @@ function AdminSidebar({ showSidebar }) {
           Defaul
         </NavLink>
         <NavLink
-          to={"/link2"}
+          to={"link2"}
           className={` ${
             activeTab == "link2" ? "bg-[#9e1cb4] text-white" : ""
           } py-3 px-3 rounded-md`}
@@ -37,7 +37,7 @@ function AdminSidebar({ showSidebar }) {
           Link 2
         </NavLink>
         <NavLink
-          to={"/link3"}
+          to={"link3"}
           className={` ${
             activeTab == "link3" ? "bg-[#9e1cb4] text-white" : ""
           } py-3 px-3 rounded-md`}
@@ -46,7 +46,7 @@ function AdminSidebar({ showSidebar }) {
           Link 3
         </NavLink>
         <NavLink
-          to={"/link4"}
+          to={"link4"}
           className={` ${
             activeTab == "link4" ? "bg-[#9e1cb4] text-white" : ""
           } py-3  px-3 rounded-md`}
