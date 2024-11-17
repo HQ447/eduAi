@@ -29,7 +29,7 @@ function App() {
       ></video>
 
       <Routes>
-        <Route path="" element={<UserBoard />}>
+        <Route path="/" element={<UserBoard />}>
           <Route index element={<Home />} />
           <Route path="resourses" element={<Resources />}>
             {/* Discussions Route with Nested Paths */}
@@ -50,9 +50,9 @@ function App() {
         </Route>
         <Route path="/admin" element={<AdminDashboard />}>
           <Route index element={<h1>default</h1>} />
-          <Route path="/link2" element={<h1>link 2</h1>} />
-          <Route path="/link3" element={<h1>link 3</h1>} />
-          <Route path="/link4" element={<h1>link 4</h1>} />
+          <Route path="link2" element={<h1>link 2</h1>} />
+          <Route path="link3" element={<h1>link 3</h1>} />
+          <Route path="link4" element={<h1>link 4</h1>} />
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<RegisterUser />} />
