@@ -1,5 +1,5 @@
 function Dashboard() {
-  return <div>Dashboard</div>;
+  return <div className="flex flex-col ">Dashboard</div>;
 }
 
 export default Dashboard;
