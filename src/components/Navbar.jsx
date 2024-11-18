@@ -99,14 +99,17 @@ function Navbar() {
 
         {activeUser ? (
           <div className="flex items-center gap-1">
-            <p className="text-sm uppercase">{activeUser.username}</p>
-
-            <LuUserCircle />
+            <NavLink to={"/accounts"} className={"flex items-center"}>
+              <LuUserCircle />
+              <p className="text-sm uppercase">{activeUser.username}</p>
+            </NavLink>
           </div>
         ) : (
           <NavLink
             to={"/login"}
-            className={"text-sm bg-[#653bce] text-white px-4 rounded-sm py-2"}
+            className={
+              " -xsm:text-[10px] -xsm:px-2 -xsm:py-1 text-sm bg-[#653bce] text-white px-4 rounded-sm py-2"
+            }
           >
             Login
           </NavLink>

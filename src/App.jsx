@@ -17,6 +17,7 @@ import GetOTP from "./pages/auth/GetOTP";
 import ChangePassword from "./pages/auth/ChangegPassword";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminLogin from "./pages/auth/AdminLogin";
+import AccountSection from "./pages/account/AccountSection";
 
 function App() {
   return (
@@ -33,10 +34,8 @@ function App() {
         <Route path="/" element={<UserBoard />}>
           <Route index element={<Home />} />
           <Route path="resourses" element={<Resources />}>
-            {/* Discussions Route with Nested Paths */}
             <Route index element={<SourceCode />} />
             <Route path="discussions" element={<Discussions />}>
-              {/* Default to All Discussions */}
               <Route index element={<h1>All Discussions</h1>} />
               <Route path="general" element={<h1>General</h1>} />
               <Route path="help" element={<h1>Help</h1>} />
@@ -55,6 +54,9 @@ function App() {
           <Route path="link3" element={<h1>link 3</h1>} />
           <Route path="link4" element={<h1>link 4</h1>} />
         </Route>
+
+        <Route path="/accounts" element={<AccountSection />} />
+
         <Route path="/adminlogin" element={<AdminLogin />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<RegisterUser />} />
