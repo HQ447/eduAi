@@ -98,8 +98,8 @@ function Navbar() {
         )}
 
         {activeUser ? (
-          <div className="flex items-center gap-1">
-            <NavLink to={"/accounts"} className={"flex items-center"}>
+          <div className="flex items-center ">
+            <NavLink to={"/accounts"} className={"flex items-center gap-1"}>
               <LuUserCircle />
               <p className="text-sm uppercase">{activeUser.username}</p>
             </NavLink>
