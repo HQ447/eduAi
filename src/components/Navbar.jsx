@@ -84,7 +84,7 @@ function Navbar() {
           Resources
         </NavLink>
       </div>
-      <div className="flex text-2xl gap-4 -xsm:text-xl">
+      <div className="flex items-center text-2xl gap-4 -xsm:text-xl">
         {darkMode ? (
           <CiBrightnessUp
             onClick={handledarkMode}
@@ -103,7 +103,10 @@ function Navbar() {
             <LuUserCircle />
           </div>
         ) : (
-          <NavLink to={"/login"} className={"text-sm bg-[]"}>
+          <NavLink
+            to={"/login"}
+            className={"text-sm bg-[#653bce] text-white px-4 rounded-sm py-2"}
+          >
             Login
           </NavLink>
         )}
