@@ -5,7 +5,13 @@ const initialState = {
   currStatus: "Home",
   showSidebar: false,
   activeUser: null,
-  users: [],
+  users: [
+    {
+      name: "ali",
+      email: "ali@gmail.com",
+      password: "ali123",
+    },
+  ],
 };
 
 export const cartSlice = createSlice({

@@ -1,7 +1,3 @@
-// import { FaUser } from "react-icons/fa";
-// import { FaLock } from "react-icons/fa";
-// import { NavLink } from "react-router-dom";
-
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";

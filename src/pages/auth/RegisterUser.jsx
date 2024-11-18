@@ -1,7 +1,3 @@
-// import { FaUser } from "react-icons/fa";
-// import { FaLock } from "react-icons/fa";
-// import { NavLink } from "react-router-dom";
-
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
@@ -35,9 +31,10 @@ function RegisterUser() {
       return;
     }
 
-    //we will create the user by calling the backend api , and after
-    //user created we get that user response and dispatch it to activeUser
+    //we will create the user by calling the backend api for createuser , and after
     dispatch(createUsers(signupData));
+    //when user created successfully we get that user response and dispatch it to active user
+    //and navigate to the main page
     dispatch(setactiveUser(signupData));
     navigate("/");
   }
@@ -55,15 +52,15 @@ function RegisterUser() {
         <div className="flex flex-col my-3 gap-4">
           <input
             type="text"
-            placeholder="Enter Email"
-            name="email"
+            placeholder="Enter Name"
+            name="username"
             onChange={(e) => handleChange(e)}
             className="bg-white px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
           <input
             type="text"
-            placeholder="Enter Name"
-            name="username"
+            placeholder="Enter Email"
+            name="email"
             onChange={(e) => handleChange(e)}
             className="bg-white px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />

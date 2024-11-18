@@ -98,8 +98,9 @@ function Navbar() {
         )}
 
         {activeUser ? (
-          <div>
-            {activeUser.name}
+          <div className="flex items-center gap-1">
+            <p className="text-sm uppercase">{activeUser.username}</p>
+
             <LuUserCircle />
           </div>
         ) : (
