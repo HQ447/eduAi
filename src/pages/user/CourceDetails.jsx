@@ -95,7 +95,7 @@ function CourseDetail() {
         ))}
         <div className="my-3 flex gap-2 items-center">
           <StarRating rating={course.rating} />
-          <p>{course.rating} Course Ratings</p>
+          <p className="-xsm:text-sm">{course.rating} Course Ratings</p>
         </div>
       </div>
 

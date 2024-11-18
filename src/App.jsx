@@ -16,6 +16,7 @@ import RecoverPassword from "./pages/auth/RecoverPassword";
 import GetOTP from "./pages/auth/GetOTP";
 import ChangePassword from "./pages/auth/ChangegPassword";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminLogin from "./pages/auth/AdminLogin";
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
           <Route path="link3" element={<h1>link 3</h1>} />
           <Route path="link4" element={<h1>link 4</h1>} />
         </Route>
+        <Route path="/adminlogin" element={<AdminLogin />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<RegisterUser />} />
         <Route path="/recover-password" element={<RecoverPassword />} />
