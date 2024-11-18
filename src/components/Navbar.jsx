@@ -16,6 +16,7 @@ function Navbar() {
   const showSidebar = useSelector((state) => state.store.showSidebar);
   const darkMode = useSelector((state) => state.store.darkMode);
   const currStatus = useSelector((state) => state.store.currStatus);
+  const activeUser = useSelector((state) => state.store.activeUser);
 
   function handledarkMode() {
     dispatch(updateMode(!darkMode));
@@ -96,9 +97,16 @@ function Navbar() {
           />
         )}
 
-        <NavLink to={"/login"}>
-          <LuUserCircle />
-        </NavLink>
+        {activeUser ? (
+          <div>
+            {activeUser.name}
+            <LuUserCircle />
+          </div>
+        ) : (
+          <NavLink to={"/login"} className={"text-sm bg-[]"}>
+            Login
+          </NavLink>
+        )}
       </div>
     </div>
   );

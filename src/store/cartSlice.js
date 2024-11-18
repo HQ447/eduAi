@@ -4,6 +4,8 @@ const initialState = {
   darkMode: false,
   currStatus: "Home",
   showSidebar: false,
+  activeUser: null,
+  users: [],
 };
 
 export const cartSlice = createSlice({
@@ -19,10 +21,22 @@ export const cartSlice = createSlice({
     updateShowSidebar: (state, action) => {
       state.showSidebar = action.payload;
     },
+    setactiveUser: (state, action) => {
+      state.activeUser = action.payload;
+    },
+    //we will create user in db and then get the response and dispatch it in active user
+    createUsers: (state, action) => {
+      state.users.push(action.payload);
+    },
   },
 });
 
-export const { updateMode, updateCurrStatus, updateShowSidebar } =
-  cartSlice.actions;
+export const {
+  updateMode,
+  updateCurrStatus,
+  updateShowSidebar,
+  setactiveUser,
+  createUsers,
+} = cartSlice.actions;
 
 export default cartSlice.reducer;
