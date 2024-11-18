@@ -79,7 +79,8 @@ function CourseDetail() {
                 {chapter.lectures.map((lecture, idx) => (
                   <button
                     key={idx}
-                    onClick={() => setSelectedVideo(lecture.url)}
+                    //lectures not avaialble for non premimun students
+                    //onClick={() => setSelectedVideo(lecture.url)}
                     className=" cursor-pointer flex flex-col mb-2  "
                   >
                     <div className="flex text-sm  items-center gap-2">

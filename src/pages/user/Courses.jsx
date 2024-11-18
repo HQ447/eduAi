@@ -6,6 +6,8 @@ import StarRating from "../../components/StarRating";
 import { useNavigate } from "react-router-dom";
 
 function Courses() {
+  //Retrive all courses from DB in useEffect , adn then dispatch it into redux store to prevent api calls
+
   const darkMode = useSelector((state) => state.store.darkMode);
   const navigate = useNavigate();
   return (
@@ -27,7 +29,7 @@ function Courses() {
               WebkitTextFillColor: "transparent",
             }}
           >
-            Cources
+            Courses
           </span>
         </h1>
         <p className=" -xsm:text-sm text-xl flex items-center -xsm:text-center">
@@ -46,25 +48,31 @@ function Courses() {
               darkMode
                 ? "bg-[#242424] text-white "
                 : "bg-white text-[#000000b5] "
-            } flex w-80 flex-col p-5 gap-3 -xsm:text-sm rounded-md shadow-xl cursor-pointer`}
+            } flex w-80 rounded-md flex-col -xsm:text-sm  shadow-xl cursor-pointer`}
             onClick={() => navigate(`/coursedetails/${obj.id}`)}
           >
             <img
               src={obj.img}
-              className="w-full rounded-lg"
-              alt="cource img loading error"
+              className="w-full rounded-t-md "
+              alt="cource img loading error "
             />
-            <h1 className="">{obj.title}</h1>
-            <div className="flex justify-between">
-              <StarRating rating={obj.rating} />
-              <p>{obj.students} Students</p>
-            </div>
-            <div className="flex justify-between">
-              <p>
-                ${obj.new_price}{" "}
-                <del className="text-red-600">${obj.old_price}</del>
-              </p>
-              <p>{obj.lectures} Lectures</p>
+            <div className="p-4 flex flex-col gap-2">
+              <h1 className=" font-semibold">{obj.title}</h1>
+              <p>{obj.instructor}</p>
+              <div className="flex items-center">
+                <h1>{obj.rating}</h1>
+                &nbsp;
+                <StarRating rating={obj.rating} />
+                &nbsp;
+                <p>({obj.students})</p>
+              </div>
+              <div className="flex justify-between items-center">
+                <p className="text-lg font-semibold">
+                  ${obj.new_price}{" "}
+                  <del className="!text-sm text-gray-400">${obj.old_price}</del>
+                </p>
+                <p>{obj.lectures} Lectures</p>
+              </div>
             </div>
           </div>
         ))}

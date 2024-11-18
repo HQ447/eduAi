@@ -32,6 +32,12 @@ function Navbar() {
           "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
       }}
     >
+      <RiMenuFold3Line
+        className={`hidden -md:flex`}
+        onClick={() => {
+          dispatch(updateShowSidebar(!showSidebar));
+        }}
+      />
       <NavLink to={""}>
         <h1 className="text-2xl font-semibold -xsm:text-xl">
           edu
@@ -93,13 +99,6 @@ function Navbar() {
         <NavLink to={"/login"}>
           <LuUserCircle />
         </NavLink>
-
-        <RiMenuFold3Line
-          className={`hidden -md:flex`}
-          onClick={() => {
-            dispatch(updateShowSidebar(!showSidebar));
-          }}
-        />
       </div>
     </div>
   );
