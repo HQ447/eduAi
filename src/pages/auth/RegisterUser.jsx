@@ -5,10 +5,15 @@
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { createUsers, setactiveUser } from "../../store/cartSlice";
+import { useDispatch } from "react-redux";
 
 function RegisterUser() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [signupData, setSignupData] = useState({
     username: "",
     email: "",
@@ -22,7 +27,20 @@ function RegisterUser() {
     setSignupData(copySignup);
   }
 
-  function handleClick() {}
+  function handleClick() {
+    const { username, email, password } = signupData;
+
+    if (!username || !email || !password) {
+      alert("Please fill in all fields before registering.");
+      return;
+    }
+
+    //we will create the user by calling the backend api , and after
+    //user created we get that user response and dispatch it to activeUser
+    dispatch(createUsers(signupData));
+    dispatch(setactiveUser(signupData));
+    navigate("/");
+  }
 
   return (
     <div className=" backdrop-blur-sm flex w-full min-h-screen justify-center items-center">
@@ -62,14 +80,13 @@ function RegisterUser() {
             className="bg-white outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
         </div>
-        <NavLink className={"w-full"}>
-          <button
-            onClick={handleClick}
-            className="w-full bg-[#653bce] mb-3 hover:scale-95 transition-all hover:bg-orange-600 text-white rounded-md py-2 shadow-md"
-          >
-            Register
-          </button>
-        </NavLink>
+        <button
+          onClick={handleClick}
+          className="w-full bg-[#653bce] mb-3 hover:scale-95 transition-all hover:bg-orange-600 text-white rounded-md py-2 shadow-md"
+        >
+          Register
+        </button>
+
         <div>
           <p className="text-[12px] text-center">or continue with</p>
           <div className="flex justify-around my-3">
