@@ -7,8 +7,8 @@ const initialState = {
   activeUser: null,
   users: [
     {
-      name: "ali",
-      email: "ali@gmail.com",
+      username: "ali",
+      email: "ali123@gmail.com",
       password: "ali123",
     },
   ],
