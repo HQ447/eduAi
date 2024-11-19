@@ -31,7 +31,7 @@ function AdminLogin() {
           alt=""
           className="w-14 h-14 rounded-full mb-2 mx-auto"
         />
-        <h1 className="text-2xl text-center font-semibold">Hello Admin!</h1>
+        <h1 className="text-xl text-center font-semibold">Hello Admin!</h1>
         <p className="text-md text-center">Welcome back</p>
         <div className="flex flex-col my-3 gap-4">
           <input
@@ -71,7 +71,9 @@ function AdminLogin() {
             to={"/login"}
             className={"text-[12px] text-center hover:text-blue-700"}
           >
-            <p className="mb-2">I am not an Admin?</p>
+            <p className="mb-2 underline text-blue-700 hover:text-red-500">
+              I am not an Admin?
+            </p>
           </NavLink>
           {/* <p className="text-[12px] text-center">
             Not a member?{" "}
