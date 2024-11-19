@@ -33,7 +33,7 @@ function App() {
       <Routes>
         <Route path="/" element={<UserBoard />}>
           <Route index element={<Home />} />
-          <Route path="resourses" element={<Resources />}>
+          <Route path="resources" element={<Resources />}>
             <Route index element={<SourceCode />} />
             <Route path="discussions" element={<Discussions />}>
               <Route index element={<h1>All Discussions</h1>} />

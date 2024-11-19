@@ -1,15 +1,15 @@
+import { useState, useEffect, useRef } from "react";
 import { LuUserCircle } from "react-icons/lu";
 import { IoMoonOutline } from "react-icons/io5";
 import { CiBrightnessUp } from "react-icons/ci";
-// import { RiMenuFold3Line } from "react-icons/ri";
-// import { FaRegBell } from "react-icons/fa6";
 import { IoMenu } from "react-icons/io5";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   updateMode,
   updateCurrStatus,
   updateShowSidebar,
+  setactiveUser,
 } from "../store/cartSlice";
 
 function Navbar() {
@@ -18,10 +18,28 @@ function Navbar() {
   const darkMode = useSelector((state) => state.store.darkMode);
   const currStatus = useSelector((state) => state.store.currStatus);
   const activeUser = useSelector((state) => state.store.activeUser);
+  const navigate = useNavigate();
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
+  // Toggle dark mode
   function handledarkMode() {
     dispatch(updateMode(!darkMode));
   }
+
+  // Handle outside click to close dropdown
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <div
       className={` ${
@@ -78,9 +96,9 @@ function Navbar() {
           Courses
         </NavLink>
         <NavLink
-          to={"resourses"}
-          className={`${currStatus === "Resourses" ? "text-[#653bce]" : ""}`}
-          onClick={() => dispatch(updateCurrStatus("Resourses"))}
+          to={"resources"}
+          className={`${currStatus === "Resources" ? "text-[#653bce]" : ""}`}
+          onClick={() => dispatch(updateCurrStatus("Resources"))}
         >
           Resources
         </NavLink>
@@ -99,11 +117,33 @@ function Navbar() {
         )}
 
         {activeUser ? (
-          <div className="flex items-center ">
-            <NavLink to={"/accounts"} className={"flex items-center gap-1"}>
+          <div className="relative" ref={dropdownRef}>
+            <button
+              className="flex items-center gap-1"
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            >
               <LuUserCircle />
               <p className="text-sm uppercase">{activeUser.username}</p>
-            </NavLink>
+            </button>
+            {isDropdownOpen && (
+              <div className="absolute top-full right-0 mt-2 w-40 rounded-lg bg-white shadow-lg text-sm">
+                <button
+                  onClick={() => {
+                    navigate("/accounts");
+                  }}
+                  className="py-3 px-4 hover:bg-gray-100 w-full text-left"
+                >
+                  My Account
+                </button>
+                <hr />
+                <button
+                  onClick={() => dispatch(setactiveUser(null))}
+                  className="py-3 px-4 hover:bg-gray-100 w-full text-left"
+                >
+                  Logout
+                </button>
+              </div>
+            )}
           </div>
         ) : (
           <NavLink
