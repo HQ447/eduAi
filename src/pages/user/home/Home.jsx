@@ -17,7 +17,9 @@ function Home() {
       <CircleComponent />
       {/* <Slider /> */}
       <Courses />
+      {/* call the backend api for feedbacks , feedbacks will store in database */}
       <Feedback />
+      {/* call the backend api for FAQs  , feedbacks will store in database */}
       <FAQ />
     </div>
   );
