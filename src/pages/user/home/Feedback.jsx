@@ -36,9 +36,9 @@ function Feedback() {
         </p>
       </div>
       <div className="flex flex-wrap justify-center gap-4  ">
-        {feedbacks.map((obj) => (
+        {feedbacks.map((obj, index) => (
           <div
-            key={obj}
+            key={index}
             className={` ${
               darkMode ? "!bg-[#242424]" : "bg-white"
             } w-[20rem] flex flex-col bg-white p-3 text-sm gap-3 rounded-lg shadow-lg`}
