@@ -12,7 +12,7 @@ const AccountSection = () => {
           url: "https://sample-videos.com/video123.mp4",
         },
         {
-          title: "Building a REST API",
+          title: "Building a REST AP",
           url: "https://sample-videos.com/video456.mp4",
         },
       ],
