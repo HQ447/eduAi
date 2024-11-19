@@ -1,8 +1,9 @@
 import { LuUserCircle } from "react-icons/lu";
 import { IoMoonOutline } from "react-icons/io5";
 import { CiBrightnessUp } from "react-icons/ci";
-import { RiMenuFold3Line } from "react-icons/ri";
+// import { RiMenuFold3Line } from "react-icons/ri";
 // import { FaRegBell } from "react-icons/fa6";
+import { IoMenu } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -27,13 +28,13 @@ function Navbar() {
         darkMode
           ? "bg-[#000000d6] text-white"
           : " bg-[#eff9ff99] text-[#000000b5] "
-      } flex px-20 py-6 -xsm:py-4 items-center -md:px-10 -sm:px-6 bg-opacity-50 justify-between sticky top-0 z-40 w-full backdrop-blur-lg transition-all`}
+      } flex px-20 py-6 -xsm:py-4 items-center -md:px-10 -sm:px-6 -xsm:px-3 bg-opacity-50 justify-between sticky top-0 z-40 w-full backdrop-blur-lg transition-all`}
       style={{
         boxShadow:
           "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
       }}
     >
-      <RiMenuFold3Line
+      <IoMenu
         className={`hidden text-xl -md:flex`}
         onClick={() => {
           dispatch(updateShowSidebar(!showSidebar));
