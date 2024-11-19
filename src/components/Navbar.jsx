@@ -22,7 +22,6 @@ function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  // Toggle dark mode
   function handledarkMode() {
     dispatch(updateMode(!darkMode));
   }
