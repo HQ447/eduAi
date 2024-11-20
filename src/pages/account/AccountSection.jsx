@@ -65,7 +65,6 @@ const AccountSection = () => {
               {section.title}
             </div>
 
-            {/* Lectures */}
             {section.isOpen && (
               <ul className="pl-5 mt-2">
                 {section.lectures.map((lecture, idx) => (
