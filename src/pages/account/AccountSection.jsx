@@ -39,7 +39,6 @@ const AccountSection = () => {
 
   return (
     <div className="flex min-h-screen bg-gray-100">
-      {/* Left: Video Player */}
       <div className="w-3/5 bg-black">
         {selectedVideo ? (
           <video
@@ -54,7 +53,6 @@ const AccountSection = () => {
         )}
       </div>
 
-      {/* Right: Course Content */}
       <div className="w-2/5 bg-white p-5 overflow-y-scroll">
         {sections.map((section, index) => (
           <div key={index} className="mb-4">
