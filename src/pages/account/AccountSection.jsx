@@ -58,7 +58,6 @@ const AccountSection = () => {
       <div className="w-2/5 bg-white p-5 overflow-y-scroll">
         {sections.map((section, index) => (
           <div key={index} className="mb-4">
-            {/* Section Title */}
             <div
               className="p-3 bg-gray-200 cursor-pointer rounded-lg font-bold"
               onClick={() => toggleSection(index)}
