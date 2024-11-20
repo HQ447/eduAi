@@ -60,7 +60,7 @@ const AccountSection = () => {
           <div key={index} className="mb-4">
             {/* Section Title */}
             <div
-              className="p-3 bg-gray-200 cursor-pointer rounded-lg font-bold"
+              className="p-3 bg-gray-200 cursor- rounded-lg font-bold"
               onClick={() => toggleSection(index)}
             >
               {section.title}
