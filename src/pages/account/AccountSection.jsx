@@ -19,7 +19,7 @@ function AccountSection() {
 
   return (
     <div className="bg-white w-full min-h-screen">
-      <div className="bg-[#784aeb] pb-32 flex flex-col">
+      <div className="bg-[#784aeb] pb-20 flex flex-col">
         <div className="Nav flex justify-center text-semibold text-white w-full px-20 py-6 -xsm:py-4 -md:px-10 -sm:px-6 -xsm:px-3">
           EduAI
         </div>
