@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-
+import { FaLaptopCode } from "react-icons/fa";
 function AccountSection() {
   const activeUser = useSelector((state) => state.store.activeUser);
 
@@ -21,8 +21,16 @@ function AccountSection() {
         </div>
       </div>
       <div className="px-20 relative py-16 -xsm:py-4  -md:px-10 -sm:px-6 -xsm:px-3">
-        <div className="absolute rounded-md -top-8 left-0 right-0 shadow-lg mx-auto py-8 px-3 w-[60%] bg-white">
-          popup
+        <div className="absolute flex justify-between rounded-md -top-12 left-0 right-0 shadow-lg mx-auto py-8 px-7 w-[60%] bg-white">
+          <div className="flex flex-col items-center justify-center">
+            <FaLaptopCode />
+            <p>All Courses</p>
+          </div>
+          <p className="text-2xl font-semibold">My Learning</p>
+          <div className="flex flex-col items-center justify-center">
+            <FaLaptopCode />
+            <p>All Courses</p>
+          </div>
         </div>
         List of Purchased Courses
       </div>
