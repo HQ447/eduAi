@@ -35,7 +35,7 @@ function AccountSection() {
         </div>
       </div>
       <div className="px-20 relative py-16 -xsm:py-4 -md:px-10 -sm:px-6 -xsm:px-3">
-        <div className="absolute flex justify-between rounded-md -top-12 left-0 right-0 shadow-lg mx-auto py-8 px-7 w-[60%] bg-white">
+        <div className="absolute flex justify-between rounded-md -top-12 left-0 right-0 shadow-lg shadow-[#c2c2c2] mx-auto py-8 px-7 w-[60%] bg-white">
           <div className="flex flex-col items-center justify-center">
             <FaLaptopCode />
             <p>All Courses</p>
