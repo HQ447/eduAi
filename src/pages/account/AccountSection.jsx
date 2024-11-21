@@ -7,12 +7,13 @@ function AccountSection() {
 
   // Animation Variants
   const textVariants = {
-    initial: { y: 0, opacity: 1 },
-    hover: {
-      y: -10,
-      opacity: 1,
-      color: "#784aeb",
-      transition: { duration: 0.3 },
+    animate: {
+      y: [0, 5, 0], // Moves up and then back down
+      color: ["#000000", "#784aeb", "#000000"], // Color changes during the animation
+      transition: {
+        y: { duration: 10, repeat: Infinity, ease: "easeInOut" }, // Loop for the vertical animation
+        color: { duration: 10, repeat: Infinity, ease: "linear" }, // Loop for the color animation
+      },
     },
   };
 
@@ -42,8 +43,7 @@ function AccountSection() {
           <motion.p
             className="text-2xl font-semibold"
             variants={textVariants}
-            initial="initial"
-            whileHover="hover"
+            animate="animate" // Triggers the continuous animation
           >
             My Learning
           </motion.p>
