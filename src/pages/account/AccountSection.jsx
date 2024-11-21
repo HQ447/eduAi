@@ -21,7 +21,7 @@ function AccountSection() {
         </div>
       </div>
       <div className="px-20 relative py-16 -xsm:py-4  -md:px-10 -sm:px-6 -xsm:px-3">
-        <div className="absolute rounded-md -top-8 shadow-lg mx-auto py-8 px-3 w-[60%] bg-white">
+        <div className="absolute rounded-md -top-8 left-0 right-0 shadow-lg mx-auto py-8 px-3 w-[60%] bg-white">
           popup
         </div>
         List of Purchased Courses
