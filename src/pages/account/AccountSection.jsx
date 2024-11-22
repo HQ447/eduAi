@@ -24,11 +24,11 @@ function AccountSection() {
 
   return (
     <div className="bg-white w-full min-h-screen">
-      <div className="bg-[#784aeb] pb-20 flex flex-col">
+      <div className="bg-[#784aeb] pb-20 -xsm:pb-10 flex flex-col">
         <div className="Nav flex justify-center text-semibold text-white w-full px-20 py-6 -xsm:py-4 -md:px-10 -sm:px-6 -xsm:px-3">
           EduAI
         </div>
-        <hr />
+
         <div className="flex flex-col font-semibold text-white text-2xl items-center justify-center w-full">
           <img
             src="https://cdn-icons-png.flaticon.com/512/3781/3781986.png"
@@ -40,19 +40,19 @@ function AccountSection() {
         </div>
       </div>
       <div className="px-20 relative py-20 -xsm:py-4 -md:px-10 -sm:px-6 -xsm:px-3">
-        <div className="absolute flex justify-between rounded-md -top-12 left-0 right-0 shadow-lg shadow-[#c2c2c2] mx-auto py-8 px-7 w-[60%] bg-white">
-          <div className="flex flex-col items-center justify-center">
+        <div className="absolute -xsm:relative -xsm:justify-center -xsm:py-4 -xsm:mb-6 -xsm:top-0 -xsm:w-[95%] flex justify-between rounded-md -top-12 left-0 right-0 shadow-lg shadow-[#c2c2c2] mx-auto py-8 px-7 w-[60%] bg-white">
+          <div className="flex -xsm:hidden flex-col items-center justify-center">
             <FaLaptopCode />
             <p>All Courses</p>
           </div>
           <motion.p
-            className="text-2xl font-semibold flex items-center"
+            className="text-2xl -xsm:text-lg font-semibold flex items-center"
             variants={textVariants}
             animate="animate" // Triggers the continuous animation
           >
             My Learning <LuArrowBigDownDash />
           </motion.p>
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex -xsm:hidden flex-col items-center justify-center">
             <FaLaptopCode />
             <p>All Courses</p>
           </div>
@@ -63,16 +63,18 @@ function AccountSection() {
           {courseCollection.map((course) => (
             <div
               key={course.id}
-              className="flex w-fit gap-6 border-[1px] border-solid border-gray-500 p-4"
+              className="flex -xsm:flex-col -xsm:w-full w-fit gap-6 border-[1px] border-solid border-gray-500 p-4"
             >
               <img
                 src={course.img}
                 alt="img loading error"
-                className="w-[25rem] "
+                className="w-[25rem] -xsm:w-full"
               />
-              <div className="w-[30rem]  flex flex-col gap-2">
-                <h1 className="text-xl font-semibold">{course.title}</h1>
-                <p className=" text-sm">{course.decription}</p>
+              <div className="w-[30rem] -xsm:w-full flex flex-col gap-2">
+                <h1 className="text-xl -xsm:text-lg font-semibold">
+                  {course.title}
+                </h1>
+                <p className=" text-xs">{course.decription}</p>
                 <p className="text-gray-500 text-xs">By {course.instructor}</p>
                 <p className="text-green-800 text-xs font-semibold flex  ">
                   {course.chapters.length} Chapter or Sections
