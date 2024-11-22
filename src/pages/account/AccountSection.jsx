@@ -2,6 +2,8 @@ import { useSelector } from "react-redux";
 import { FaLaptopCode } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { LuArrowBigDownDash } from "react-icons/lu";
+
+//replace this with the purchased courses data of the user
 import { courseCollection } from "../../Data/data";
 
 function AccountSection() {
@@ -54,9 +56,22 @@ function AccountSection() {
             <p>All Courses</p>
           </div>
         </div>
-        {courseCollection.map((course) => (
-          <div key={course.id}></div>
-        ))}
+
+        <div className="flex flex-col gap-2">
+          {/* get the purchased courses data of that user */}
+          {courseCollection.map((course) => (
+            <div key={course.id} className="flex gap-6">
+              <img
+                src={course.img}
+                alt="img loading error"
+                className="w-[25rem] "
+              />
+              <div className="w-[30rem] border-2 border-black">
+                <h1 className="text-xl font-semibold">{course.title}</h1>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
