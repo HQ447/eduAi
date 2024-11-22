@@ -54,7 +54,9 @@ function AccountSection() {
             <p>All Courses</p>
           </div>
         </div>
-        List of Purchased Courses
+        {courseCollection.map((course) => (
+          <div key={course.id}></div>
+        ))}
       </div>
     </div>
   );
