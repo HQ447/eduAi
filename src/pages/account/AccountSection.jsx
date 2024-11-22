@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { FaLaptopCode } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { LuArrowBigDownDash } from "react-icons/lu";
+import StarRating from "../../components/StarRating";
 
 //replace this with the purchased courses data of the user
 import { courseCollection } from "../../Data/data";
@@ -57,19 +58,37 @@ function AccountSection() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col items-center gap-5">
           {/* get the purchased courses data of that user */}
           {courseCollection.map((course) => (
-            <div key={course.id} className="flex gap-6">
+            <div
+              key={course.id}
+              className="flex w-fit gap-6 border-[1px] border-solid border-gray-500 p-4"
+            >
               <img
                 src={course.img}
                 alt="img loading error"
                 className="w-[25rem] "
               />
-              <div className="w-[30rem] border-2 border-black">
+              <div className="w-[30rem]  flex flex-col gap-2">
                 <h1 className="text-xl font-semibold">{course.title}</h1>
-                <p className="text-gray-700 text-sm">{course.decription}</p>
-                <p className="text-gray-700 text-xs">By {course.instructor}</p>
+                <p className=" text-sm">{course.decription}</p>
+                <p className="text-gray-500 text-xs">By {course.instructor}</p>
+                <p className="text-green-800 text-xs font-semibold flex  ">
+                  {course.chapters.length} Chapter or Sections
+                  <p className="text-gray-500 font-normal">
+                    - {course.lectures} Lectures -
+                  </p>
+                  <p className="text-gray-500 font-normal">All Levels</p>
+                </p>
+                <div className="flex items-center gap-1">
+                  <p className="font-semibold text-sm">{course.rating}</p>
+                  <StarRating rating={course.rating} />
+                  <p className="text-xs">({course.students})</p>
+                </div>
+                <p className="px-2 py-1 text-[#0c4b0c] font-semibold text-xs w-fit rounded-sm bg-[#eceb98]">
+                  Purchased
+                </p>
               </div>
             </div>
           ))}
