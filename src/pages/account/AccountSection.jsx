@@ -68,6 +68,8 @@ function AccountSection() {
               />
               <div className="w-[30rem] border-2 border-black">
                 <h1 className="text-xl font-semibold">{course.title}</h1>
+                <p className="text-gray-700 text-sm">{course.decription}</p>
+                <p className="text-gray-700 text-xs">By {course.instructor}</p>
               </div>
             </div>
           ))}
