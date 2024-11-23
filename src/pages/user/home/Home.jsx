@@ -28,7 +28,7 @@ function Home() {
         className={`${
           darkMode
             ? "bg-[#101215] text-white"
-            : "bg-gradient-to-b from-[#f5faff] to-[#cce7f5]"
+            : "bg-gradient-to-b from-[#f7fbff] to-[#cce7f5]"
         } flex flex-col items-center gap-5 px-7`}
       >
         <div className="flex flex-col justify-center items-center mb-5">
