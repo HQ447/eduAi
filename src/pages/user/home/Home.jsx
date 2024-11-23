@@ -54,10 +54,12 @@ function Home() {
           </p>
         </div>
         {/* get the purchased courses data of that user */}
-        {courseCollection.map((course) => (
+        {courseCollection.map((course, index) => (
           <div
-            key={course.id}
-            className="flex cursor-pointer -sm:flex-col -sm:w-full w-fit gap-6 border-[1px] border-solid border-gray-500 p-4"
+            key={index}
+            className={`${
+              index % 2 == 0 ? "flex-row-reverse" : "flex"
+            } flex cursor-pointer -sm:flex-col -sm:w-full w-fit gap-6 border-[1px] border-solid border-gray-500 p-4`}
             onClick={() => navigate(`/coursedetails/${course.id}`)}
           >
             <img

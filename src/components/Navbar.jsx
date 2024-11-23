@@ -42,10 +42,8 @@ function Navbar() {
   return (
     <div
       className={` ${
-        darkMode
-          ? "bg-[#000000d6] text-white"
-          : " bg-[#eff9ff99] text-[#000000b5] "
-      } flex px-20 py-6 -xsm:py-4 items-center -md:px-10 -sm:px-6 -xsm:px-3 bg-opacity-50 justify-between sticky top-0 z-40 w-full backdrop-blur-lg transition-all`}
+        darkMode ? "bg-[#000000d6] text-white" : " bg-white text-[#000000b5] "
+      } flex px-20 py-5 -xsm:py-3 items-center -md:px-10 -sm:px-6 -xsm:px-3  justify-between sticky top-0 z-40 w-full  transition-all`}
       style={{
         boxShadow:
           "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
@@ -148,7 +146,7 @@ function Navbar() {
           <NavLink
             to={"/login"}
             className={
-              "rounded-full py-2 -xsm:text-[10px] -xsm:px-4 -xsm:py-1 text-sm bg-[#653bce] text-white px-4 "
+              "rounded-md py-2 -xsm:text-[10px] -xsm:px-4 -xsm:py-1 text-sm bg-[#653bce] text-white px-5 "
             }
           >
             Login

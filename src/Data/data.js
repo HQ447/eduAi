@@ -1,6 +1,72 @@
 export const courseCollection = [
   {
     id: 1,
+    img: "https://i.pcmag.com/imagery/articles/03dI0LmA2GJzfLIGI2xUir4-2..v1708701892.jpg",
+    title: "Introduction to Microsoft Excel",
+    decription:
+      "We offers Excel preparation courses which will help the students for excel, NUMS, Aga Khan, and other medical college entrance exams.",
+    rating: "3",
+    students: "143",
+    old_price: "50",
+    new_price: "0",
+    instructor: "Mr Israr Muzamil , Database Expert",
+    lectures: "33",
+    popular: true,
+    chapters: [
+      {
+        title: "Biology Basics",
+        lectures: [
+          {
+            title: "What is E-commerce?",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Project Structure",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+      {
+        title: "Chemistry Basics",
+        lectures: [
+          {
+            title: "What is E-commerce?",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Project Structure",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+      {
+        title: "Chemistry Intermediate",
+        lectures: [
+          {
+            title: "What is E-commerce?",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Project Structure",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+    ],
+    learnings: [
+      "You will learn how to scale one big web application",
+      "You will be able to build a full stack LMS Platform",
+      "You will learn how to maintenance cache on a large scale application",
+      "You will learn how to send dynamic mail templates with Node.js and EJS",
+      "You will learn how to make an instant notification system with Socket.io/WebSocket",
+    ],
+    prerequisites: [
+      "You need basic knowledge of Biology and Chemistry",
+      "You will understand English Language",
+    ],
+  },
+  {
+    id: 2,
     img: "https://www.becodemy.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdokeqryvj%2Fimage%2Fupload%2Fv1719776615%2FTMECA_i5cmqd.png&w=640&q=75",
     title: "All Functional MERN Stack LMS Learning Management system ",
     decription:
@@ -139,7 +205,7 @@ export const courseCollection = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     img: "https://www.becodemy.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdokeqryvj%2Fimage%2Fupload%2Fv1716753276%2Fcourses%2Fggj1npc4ydcqvfi5ssnb.png&w=640&q=75",
     title: "Multi-Vendor MERN Stack E-commerce project",
     decription:
@@ -228,72 +294,6 @@ export const courseCollection = [
     prerequisites: [
       "You need basic knowledge of JavaScript and frontend development",
       "You need basic knowledge of the MERN stack",
-    ],
-  },
-  {
-    id: 3,
-    img: "https://mdcatmentor.org/wp-content/uploads/2023/08/8.webp",
-    title: "100% Free MDCAT 2024 Prep",
-    decription:
-      "Tabir Academy offers mdcat preparation courses which will help the students for MDCAT, NUMS, Aga Khan, and other medical college entrance exams.",
-    rating: "4",
-    students: "143",
-    old_price: "180",
-    new_price: "0",
-    instructor: "Dr Hashim Ali , Assistant Professor at KMU",
-    lectures: "33",
-    popular: true,
-    chapters: [
-      {
-        title: "Biology Basics",
-        lectures: [
-          {
-            title: "What is E-commerce?",
-            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
-          },
-          {
-            title: "Project Structure",
-            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
-          },
-        ],
-      },
-      {
-        title: "Chemistry Basics",
-        lectures: [
-          {
-            title: "What is E-commerce?",
-            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
-          },
-          {
-            title: "Project Structure",
-            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
-          },
-        ],
-      },
-      {
-        title: "Chemistry Intermediate",
-        lectures: [
-          {
-            title: "What is E-commerce?",
-            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
-          },
-          {
-            title: "Project Structure",
-            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
-          },
-        ],
-      },
-    ],
-    learnings: [
-      "You will learn how to scale one big web application",
-      "You will be able to build a full stack LMS Platform",
-      "You will learn how to maintenance cache on a large scale application",
-      "You will learn how to send dynamic mail templates with Node.js and EJS",
-      "You will learn how to make an instant notification system with Socket.io/WebSocket",
-    ],
-    prerequisites: [
-      "You need basic knowledge of Biology and Chemistry",
-      "You will understand English Language",
     ],
   },
   {

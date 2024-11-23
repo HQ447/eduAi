@@ -13,9 +13,7 @@ function Courses() {
   return (
     <div
       className={` ${
-        darkMode
-          ? "bg-[#101215] text-white "
-          : "bg-gradient-to-b from-[#f5faff] to-[#cce7f5]"
+        darkMode ? "bg-[#101215] text-white " : "bg-white"
       }  px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-10 `}
     >
       <div className="flex flex-col justify-center items-center mb-5">
@@ -45,18 +43,17 @@ function Courses() {
           <div
             key={obj.id}
             className={`${
-              darkMode
-                ? "bg-[#242424] text-white "
-                : "bg-white text-[#000000b5] "
-            } flex  w-72 rounded-lg flex-col -xsm:text-sm  shadow-xl cursor-pointer`}
+              darkMode ? "bg-[#242424] text-white " : " text-[#000000b5] "
+            } flex p-[14px] border-2 w-72 rounded-lg flex-col -xsm:text-sm  cursor-pointer hover:scale-105 hover:shadow-xl transition-all
+            `}
             onClick={() => navigate(`/coursedetails/${obj.id}`)}
           >
             <img
               src={obj.img}
-              className="w-full rounded-t-lg"
+              className="w-full rounded-md"
               alt="cource img loading error "
             />
-            <div className="p-4 flex flex-col gap-2">
+            <div className="py-3 flex flex-col gap-2">
               <h1 className=" text-md font-semibold">{obj.title}</h1>
               <p className="text-xs text-green-800">{obj.instructor}</p>
               <p className="text-xs">{obj.decription}</p>
@@ -68,7 +65,7 @@ function Courses() {
                 <p>({obj.students})</p>
               </div>
               <div className="flex justify-between items-center">
-                <p className=" font-semibold">
+                <p className="font-semibold">
                   {obj.new_price == 0 ? "Free" : `$${obj.new_price}`}
                   &nbsp;{" "}
                   <del className="text-red-500 text-sm font-semibold">
