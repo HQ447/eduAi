@@ -79,7 +79,7 @@ function Home() {
                 <p className="text-gray-500 font-normal">All Levels</p>
               </p>
               <div className="flex items-center gap-1">
-                <p className="font-semibold text-sm">{course.rating}</p>
+                <p className="font-semibold text-sm">{course.rating}.0</p>
                 <StarRating rating={course.rating} />
                 <p className="text-xs">({course.students})</p>
               </div>

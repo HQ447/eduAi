@@ -38,10 +38,10 @@ function Mainpage() {
             Begin your coding adventure in our community, where learning is
             always appreciated and valued.
           </p>
-          <NavLink to={"resourses"} className={"-xsm:text-center"}>
+          <NavLink to={"courses"} className={"-xsm:text-center"}>
             <button
               className="rounded-full -xsm:py-3 -xsm:text-sm -md:mx-auto max-w-fit py-3  px-5 bg-[#653bce] text-white font-semibold"
-              onClick={() => dispatch(updateCurrStatus("Resourses"))}
+              onClick={() => dispatch(updateCurrStatus("courses"))}
             >
               Explore Resources
             </button>

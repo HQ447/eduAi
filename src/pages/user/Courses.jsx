@@ -32,9 +32,9 @@ function Courses() {
             Courses
           </span>
         </h1>
-        <p className=" -xsm:text-sm text-xl flex items-center -xsm:text-center">
+        <p className=" -xsm:text-sm text-xl flex gap-3 items-center -xsm:text-center">
           <GoDotFill
-            className="text-3xl text-green-500 animate-pulse-scale"
+            className="text-3xl text-green-500 rounded-full animate-pulse-scale border-2 "
             aria-hidden="true"
           />{" "}
           Our comprehensive project based courses
@@ -48,30 +48,34 @@ function Courses() {
               darkMode
                 ? "bg-[#242424] text-white "
                 : "bg-white text-[#000000b5] "
-            } flex w-80 rounded-md flex-col -xsm:text-sm  shadow-xl cursor-pointer`}
+            } flex  w-72 rounded-lg flex-col -xsm:text-sm  shadow-xl cursor-pointer`}
             onClick={() => navigate(`/coursedetails/${obj.id}`)}
           >
             <img
               src={obj.img}
-              className="w-full rounded-t-md "
+              className="w-full rounded-t-lg"
               alt="cource img loading error "
             />
             <div className="p-4 flex flex-col gap-2">
-              <h1 className=" font-semibold">{obj.title}</h1>
-              <p>{obj.instructor}</p>
-              <div className="flex items-center">
-                <h1>{obj.rating}</h1>
+              <h1 className=" text-md font-semibold">{obj.title}</h1>
+              <p className="text-xs text-green-800">{obj.instructor}</p>
+              <p className="text-xs">{obj.decription}</p>
+              <div className="flex items-center text-sm">
+                <h1>{obj.rating}.0</h1>
                 &nbsp;
                 <StarRating rating={obj.rating} />
                 &nbsp;
                 <p>({obj.students})</p>
               </div>
               <div className="flex justify-between items-center">
-                <p className="text-lg font-semibold">
-                  ${obj.new_price}{" "}
-                  <del className="!text-sm text-gray-400">${obj.old_price}</del>
+                <p className=" font-semibold">
+                  {obj.new_price == 0 ? "Free" : `$${obj.new_price}`}
+                  &nbsp;{" "}
+                  <del className="text-red-500 text-sm font-semibold">
+                    ${obj.old_price}
+                  </del>
                 </p>
-                <p>{obj.lectures} Lectures</p>
+                <p className="text-sm">{obj.lectures} Lectures</p>
               </div>
             </div>
           </div>
