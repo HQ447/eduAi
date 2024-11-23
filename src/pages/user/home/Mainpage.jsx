@@ -41,9 +41,9 @@ function Mainpage() {
           <NavLink to={"courses"} className={"-xsm:text-center"}>
             <button
               className="rounded-full -xsm:py-3 -xsm:text-sm -md:mx-auto max-w-fit py-3  px-5 bg-[#653bce] text-white font-semibold"
-              onClick={() => dispatch(updateCurrStatus("courses"))}
+              onClick={() => dispatch(updateCurrStatus("Courses"))}
             >
-              Explore Resources
+              Explore Courses
             </button>
           </NavLink>
         </div>

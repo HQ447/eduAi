@@ -8,8 +8,8 @@ const initialState = {
   users: [
     {
       username: "ali",
-      email: "ali123@gmail.com",
-      password: "ali123",
+      email: "ali@gmail.com",
+      password: "ali",
     },
   ],
 };
