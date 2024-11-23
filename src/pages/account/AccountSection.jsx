@@ -13,8 +13,8 @@ function AccountSection() {
   // Animation Variants
   const textVariants = {
     animate: {
-      y: [0, -10, 0], // Moves up and then back down
-      color: ["#000000", "#784aeb", "#000000"], // Color changes during the animation
+      y: [0, -10, 0],
+      color: ["#000000", "#784aeb", "#000000"],
       transition: {
         y: { duration: 1, repeat: Infinity, ease: "easeInOut" }, // Loop for the vertical animation
         color: { duration: 2, repeat: Infinity, ease: "linear" }, // Loop for the color animation
@@ -39,16 +39,16 @@ function AccountSection() {
           <p className="text-xl">{activeUser.email}</p>
         </div>
       </div>
-      <div className="px-20 relative py-20 -xsm:py-4 -md:px-10 -sm:px-6 -xsm:px-3">
-        <div className="absolute -xsm:relative -xsm:justify-center -xsm:py-4 -xsm:mb-6 -xsm:top-0 -xsm:w-[95%] flex justify-between rounded-md -top-12 left-0 right-0 shadow-lg shadow-[#c2c2c2] mx-auto py-8 px-7 w-[60%] bg-white">
+      <div className="relative -xsm:py-2 py-20  px-10 -xsm:px-2 ">
+        <div className="absolute -md:w-[80%] -sm:w-[86%] -xsm:relative -xsm:justify-center -xsm:py-4 -xsm:mb-6 -xsm:top-0 -xsm:w-[95%] flex justify-between rounded-md -top-12 left-0 right-0 shadow-lg shadow-[#c2c2c2] mx-auto py-5 px-7 w-[60%] bg-white">
           <div className="flex -xsm:hidden flex-col items-center justify-center">
             <FaLaptopCode />
             <p>All Courses</p>
           </div>
           <motion.p
-            className="text-2xl -xsm:text-lg font-semibold flex items-center"
+            className="text-2xl -sm:text-lg font-semibold flex items-center"
             variants={textVariants}
-            animate="animate" // Triggers the continuous animation
+            animate="animate"
           >
             My Learning <LuArrowBigDownDash />
           </motion.p>
@@ -63,20 +63,20 @@ function AccountSection() {
           {courseCollection.map((course) => (
             <div
               key={course.id}
-              className="flex -xsm:flex-col -xsm:w-full w-fit gap-6 border-[1px] border-solid border-gray-500 p-4"
+              className="flex -sm:flex-col -sm:w-full w-fit gap-6 border-[1px] border-solid border-gray-500 p-4"
             >
               <img
                 src={course.img}
                 alt="img loading error"
-                className="w-[25rem] -xsm:w-full"
+                className="w-[25rem] -l:w-[18rem] -md:w-[15rem] -sm:w-full"
               />
-              <div className="w-[30rem] -xsm:w-full flex flex-col gap-2">
-                <h1 className="text-xl -xsm:text-lg font-semibold">
+              <div className="w-[30rem] -md:w-[25rem] -sm:w-full flex flex-col gap-2">
+                <h1 className="text-xl -sm:text-lg font-semibold">
                   {course.title}
                 </h1>
                 <p className=" text-xs">{course.decription}</p>
                 <p className="text-gray-500 text-xs">By {course.instructor}</p>
-                <p className="text-green-800 text-xs font-semibold flex  ">
+                <p className="text-green-800 text-xs -xsm:text-[8px] font-semibold flex  ">
                   {course.chapters.length} Chapter or Sections
                   <p className="text-gray-500 font-normal">
                     - {course.lectures} Lectures -

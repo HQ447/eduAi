@@ -1,13 +1,13 @@
 import { GoDotFill } from "react-icons/go";
-import { courseCollection } from "../../Data/data";
 
+//replace this with the all courses data taken from db
+//Retrive all courses from DB in useEffect , and then dispatch it into redux store to prevent api calls
+import { courseCollection } from "../../Data/data";
 import { useSelector } from "react-redux";
 import StarRating from "../../components/StarRating";
 import { useNavigate } from "react-router-dom";
 
 function Courses() {
-  //Retrive all courses from DB in useEffect , adn then dispatch it into redux store to prevent api calls
-
   const darkMode = useSelector((state) => state.store.darkMode);
   const navigate = useNavigate();
   return (
