@@ -148,7 +148,7 @@ function Navbar() {
           <NavLink
             to={"/login"}
             className={
-              "rounded-full py-2 -xsm:text-[10px] -xsm:px-2 -xsm:py-1 text-sm bg-[#653bce] text-white px-4 "
+              "rounded-full py-2 -xsm:text-[10px] -xsm:px-4 -xsm:py-1 text-sm bg-[#653bce] text-white px-4 "
             }
           >
             Login
