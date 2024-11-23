@@ -41,7 +41,7 @@ function Feedback() {
             key={index}
             className={` ${
               darkMode ? "!bg-[#242424]" : "bg-white"
-            } w-[20rem] flex flex-col bg-white p-3 text-sm gap-3 rounded-lg shadow-lg`}
+            } w-[20rem] flex flex-col bg-white p-5 text-sm gap-3 rounded-lg shadow-lg`}
           >
             <div className="flex items-center gap-3">
               <img src={obj.pic} alt="" className=" w-10 h-10 rounded-full" />

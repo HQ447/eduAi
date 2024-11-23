@@ -55,7 +55,12 @@ function Navbar() {
           dispatch(updateShowSidebar(!showSidebar));
         }}
       />
-      <NavLink to={""}>
+      <NavLink to={""} className={"flex items-center gap-1"}>
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/4729/4729436.png"
+          alt="loading error"
+          className="w-6"
+        />
         <h1 className="text-2xl font-semibold -xsm:text-xl">
           edu
           <span
@@ -70,7 +75,7 @@ function Navbar() {
           </span>
         </h1>
       </NavLink>
-      <div className="flex list-none text-lg gap-8 -md:hidden font-semibold">
+      <div className="flex list-none text-md gap-8 -md:hidden font-semibold">
         <NavLink
           to={""}
           className={`${currStatus === "Home" ? "text-[#653bce]" : ""}`}
