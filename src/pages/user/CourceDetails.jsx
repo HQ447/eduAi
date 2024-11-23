@@ -28,9 +28,13 @@ function CourseDetail() {
     >
       {/* Chapter List Section */}
       <div className="flex -sm:pr-0 -sm:mt-[40px] -sm:w-full flex-col -sm:min-h-fit overflow-y-scroll max-h-screen -md:w-[60%] w-[65%] pr-5">
-        <h1 className="text-2xl -md:text-2xl -xsm:text-xl font-bold mb-5 -lg:text-3xl">
+        <h1 className="text-2xl -md:text-2xl -xsm:text-xl font-bold  -lg:text-3xl">
           {course.title}
         </h1>
+        <p className=" text-green-800 font-semibold my-3">
+          {course.instructor}
+        </p>
+
         <div className="flex items-center gap- mb-4">
           <StarRating rating={course.rating} />
           <p className="text-sm">{course.rating}/5</p>
@@ -106,6 +110,7 @@ function CourseDetail() {
           alt="Course Image"
           className="w-full rounded-lg"
         />
+
         <h1 className="text-2xl font-semibold">
           {course.new_price == 0 ? "Free" : `$${course.new_price}`}
         </h1>
