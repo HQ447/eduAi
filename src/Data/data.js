@@ -228,6 +228,72 @@ export const courseCollection = [
       "You need basic knowledge of the MERN stack",
     ],
   },
+  {
+    id: 3,
+    img: "https://mdcatmentor.org/wp-content/uploads/2023/08/8.webp",
+    title: "100% Free MDCAT 2024 Prep",
+    decription:
+      "Tabir Academy offers mdcat preparation courses which will help the students for MDCAT, NUMS, Aga Khan, and other medical college entrance exams.",
+    rating: "4.6",
+    students: "143",
+    old_price: "180",
+    new_price: "0",
+    instructor: "Dr Hashim Ali , Assistant Professor at KMU",
+    lectures: "33",
+    popular: true,
+    chapters: [
+      {
+        title: "Biology Basics",
+        lectures: [
+          {
+            title: "What is E-commerce?",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Project Structure",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+      {
+        title: "Chemistry Basics",
+        lectures: [
+          {
+            title: "What is E-commerce?",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Project Structure",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+      {
+        title: "Chemistry Intermediate",
+        lectures: [
+          {
+            title: "What is E-commerce?",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+          {
+            title: "Project Structure",
+            url: "https://cdn.pixabay.com/video/2024/06/02/214940_large.mp4",
+          },
+        ],
+      },
+    ],
+    learnings: [
+      "You will learn how to scale one big web application",
+      "You will be able to build a full stack LMS Platform",
+      "You will learn how to maintenance cache on a large scale application",
+      "You will learn how to send dynamic mail templates with Node.js and EJS",
+      "You will learn how to make an instant notification system with Socket.io/WebSocket",
+    ],
+    prerequisites: [
+      "You need basic knowledge of Biology and Chemistry",
+      "You will understand English Language",
+    ],
+  },
 ];
 
 export const sourceCode = [
