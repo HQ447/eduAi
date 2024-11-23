@@ -6,10 +6,11 @@ import StarRating from "../../components/StarRating";
 
 //replace this with the purchased courses data of the user
 import { courseCollection } from "../../Data/data";
+import { useNavigate } from "react-router-dom";
 
 function AccountSection() {
   const activeUser = useSelector((state) => state.store.activeUser);
-
+  const navigate = useNavigate();
   // Animation Variants
   const textVariants = {
     animate: {
@@ -63,7 +64,8 @@ function AccountSection() {
           {courseCollection.map((course) => (
             <div
               key={course.id}
-              className="flex -sm:flex-col -sm:w-full w-fit gap-6 border-[1px] border-solid border-gray-500 p-4"
+              className="flex -sm:flex-col cursor-pointer -sm:w-full w-fit gap-6 border-[1px] border-solid border-gray-500 p-4"
+              onClick={() => navigate(`/LMS/${course.id}`)}
             >
               <img
                 src={course.img}

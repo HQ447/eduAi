@@ -18,6 +18,7 @@ import ChangePassword from "./pages/auth/ChangegPassword";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminLogin from "./pages/auth/AdminLogin";
 import AccountSection from "./pages/account/AccountSection";
+import Lms from "./pages/account/Lms";
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
         </Route>
 
         <Route path="/accounts" element={<AccountSection />} />
+        <Route path="/LMS/:id" element={<Lms />} />
 
         <Route path="/adminlogin" element={<AdminLogin />} />
         <Route path="/login" element={<Login />} />
