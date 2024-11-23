@@ -11,6 +11,7 @@ export const courseCollection = [
     new_price: "9.99",
     instructor: "Dr Angela Yu , Developer & Lead Instructor",
     lectures: "43",
+    popular: false,
     chapters: [
       {
         title: "Introduction",
@@ -149,6 +150,7 @@ export const courseCollection = [
     new_price: "0",
     instructor: "Dr Angela Yu , Developer & Lead Instructor",
     lectures: "33",
+    popular: true,
     chapters: [
       {
         title: "E-commerce Basics",
