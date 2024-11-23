@@ -62,32 +62,42 @@ function CourseDetail() {
           ))}
         </div>
 
+        <h1 className="text-lg font-semibold mb-2">Course Contents</h1>
         {course.chapters.map((chapter, index) => (
-          <div key={index} className="mb-4">
+          <div key={index} className="">
             <button
               onClick={() =>
                 setActiveChapter(activeChapter === index ? null : index)
               }
               className={`${
                 darkMode ? "bg-[#313131]" : "bg-[#f4f6f9f0]"
-              } text-[15px] -xsm:text-xs flex justify-between py-5 -xsm:py-3  w-full text-left  shadow-lg p-3 rounded-lg`}
+              } text-[15px] border-b-[1px] -xsm:text-xs flex justify-between py-5 -xsm:py-3  w-full text-left  p-3 `}
             >
-              <p>{chapter.title}</p>
+              <p>
+                {index + 1} &nbsp; {chapter.title}
+              </p>
               <div className="flex items-center">
                 <p>{chapter.lectures.length} Lectures </p>
                 <MdArrowDropDown className="text-xl" />
               </div>
             </button>
             {activeChapter === index && (
-              <div className="pl-5 mt-2">
+              <div
+                className={`${
+                  darkMode ? "bg-[#232323] text-white" : "bg-white"
+                }  `}
+              >
                 {chapter.lectures.map((lecture, idx) => (
                   <button
                     key={idx}
                     //lectures not avaialble for non premimun students
                     //onClick={() => setSelectedVideo(lecture.url)}
-                    className=" cursor-pointer flex flex-col mb-2  "
+                    className=" cursor-pointer hover:bg-[#e1e0e0] w-full flex flex-col py-3 pl-6  "
                   >
-                    <div className="flex text-sm  items-center gap-2">
+                    <div className="flex  text-sm  items-center gap-2 ">
+                      <p>
+                        {index + 1}.{idx + 1} &nbsp;
+                      </p>
                       <MdOndemandVideo />
                       <p className="-xsm:text-xs">{lecture.title}</p>
                     </div>
@@ -114,7 +124,7 @@ function CourseDetail() {
         <h1 className="text-2xl font-semibold">
           {course.new_price == 0 ? "Free" : `$${course.new_price}`}
         </h1>
-        <button className="px-5 w-full py-2 bg-[#dc143c] text-sm font-semibold text-white rounded-full">
+        <button className="px-5 w-full py-2 hover:scale-95 transition-all bg-[#dc143c] text-sm font-semibold text-white rounded-full">
           Buy Now ${course.new_price}
         </button>
         <ul className="px-4 -xsm:px-2 list-disc text-sm space-y-1">
