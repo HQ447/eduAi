@@ -17,7 +17,7 @@ function Mainpage() {
       <div className="flex w-full pt-14 py-8 md:items-center -md:justify-center flex-wrap-reverse">
         <div className="flex flex-col gap-5  basis-3/6 -md:basis-full  ">
           <h1 className=" -xsm:text-[1.3rem] text-5xl -md:text-center w-full -sm:text-4xl font-[600] lineHeight">
-            Start your{" "}
+            You can{" "}
             <span
               style={{
                 background:
@@ -26,24 +26,23 @@ function Mainpage() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              programming Journey
+              Learn
             </span>{" "}
-            with our Dedicated community!
+            anything.
           </h1>
           <p
             className={` ${
               darkMode ? "text-white" : "text-[#000000b5] "
             } -xsm:text-sm text-xl -md:text-center`}
           >
-            Begin your coding adventure in our community, where learning is
-            always appreciated and valued.
+            Build a deep, solid understanding in math, science, and more
           </p>
           <NavLink to={"courses"} className={"-xsm:text-center"}>
             <button
-              className="rounded-full -xsm:py-3 -xsm:text-sm -md:mx-auto max-w-fit py-3  px-5 bg-[#653bce] text-white font-semibold"
+              className="rounded-md -xsm:py-3 -xsm:text-sm -md:mx-auto max-w-fit py-3  px-5 bg-[#653bce] text-white font-semibold"
               onClick={() => dispatch(updateCurrStatus("Courses"))}
             >
-              Explore Courses
+              Learners, Start Here
             </button>
           </NavLink>
         </div>
