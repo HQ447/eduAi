@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { useSelector } from "react-redux";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 function AccountSection() {
   const activeUser = useSelector((state) => state.store.activeUser);
-
+  const navigate = useNavigate();
+  const [active, setActive] = useState(1);
   // Animation Variants
   // const textVariants = {
   //   animate: {
@@ -34,7 +36,44 @@ function AccountSection() {
         </div>
       </div>
 
-      <Outlet />
+      <div className="rounded-t-[4rem] -xsm:rounded-t-[2rem] bg-white mt-3 -xsm:mt-2 relative -xsm:py-2 py-12  px-10 -sm:px-16 -xsm:px-7 ">
+        <div className="absolute gap-1 -md:w-[80%] -sm:w-[86%] -xsm:relative -xsm:justify-between -xsm:py-4 -xsm:mb-6 -xsm:top-0 -xsm:w-[95%] flex justify-between rounded-md -top-12 left-0 right-0 shadow-lg shadow-[#c2c2c2] mx-auto py-5 px-7 w-[60%] bg-white">
+          <p
+            className={` ${
+              active == 1 ? "border-b-2 border-[#784aeb]" : ""
+            } -xsm:text-[10px] `}
+            onClick={() => {
+              setActive(1);
+              navigate("");
+            }}
+          >
+            Learnings
+          </p>
+          <p
+            className={` ${
+              active == 2 ? "border-b-2 border-[#784aeb]" : ""
+            }  -xsm:text-[10px]`}
+            onClick={() => {
+              setActive(2);
+              navigate("certification");
+            }}
+          >
+            Certification
+          </p>
+          <p
+            className={` ${
+              active == 3 ? "border-b-2 border-[#784aeb]" : ""
+            }  -xsm:text-[10px] `}
+            onClick={() => {
+              setActive(3);
+              navigate("Settings");
+            }}
+          >
+            Settings
+          </p>
+        </div>
+        <Outlet />
+      </div>
     </div>
   );
 }

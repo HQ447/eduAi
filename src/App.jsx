@@ -19,6 +19,9 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminLogin from "./pages/auth/AdminLogin";
 import AccountSection from "./pages/account/AccountSection";
 import Lms from "./pages/account/Lms";
+import Learnings from "./pages/account/Learnings";
+import Settings from "./pages/account/Settings";
+import Certifications from "./pages/account/Certifications";
 
 function App() {
   return (
@@ -32,6 +35,7 @@ function App() {
       ></video>
 
       <Routes>
+        {/* Main/general section for all user */}
         <Route path="/" element={<UserBoard />}>
           <Route index element={<Home />} />
           <Route path="resources" element={<Resources />}>
@@ -49,6 +53,8 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="coursedetails/:id" element={<CourceDetails />} />
         </Route>
+
+        {/* Admin-dashboard */}
         <Route path="/admin" element={<AdminDashboard />}>
           <Route index element={<h1>default</h1>} />
           <Route path="link2" element={<h1>link 2</h1>} />
@@ -56,9 +62,15 @@ function App() {
           <Route path="link4" element={<h1>link 4</h1>} />
         </Route>
 
-        <Route path="/accounts" element={<AccountSection />} />
+        {/* User Account-section */}
+        <Route path="/accounts" element={<AccountSection />}>
+          <Route index element={<Learnings />} />
+          <Route path="settings" element={<Settings />} />
+          <Route path="certification" element={<Certifications />} />
+        </Route>
         <Route path="/LMS/:id" element={<Lms />} />
 
+        {/* authetication-section */}
         <Route path="/adminlogin" element={<AdminLogin />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<RegisterUser />} />
