@@ -16,7 +16,7 @@ function Mainpage() {
       <div className="flex w-full pt-14 py-8 md:items-center -md:justify-center flex-wrap-reverse">
         <div className="flex flex-col  basis-3/6 -md:basis-full  ">
           <p className="text-xs -xsm:text-center">For Teachers & Students</p>
-          <h1 className=" -xsm:text-[1.5rem] text-5xl -md:text-center w-full -sm:text-4xl font-[600] lineHeight">
+          <h1 className=" -xsm:text-[1.5rem] my-2 text-5xl -md:text-center w-full -sm:text-4xl font-[600] lineHeight">
             Everyone can{" "}
             <span
               style={{

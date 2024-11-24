@@ -26,7 +26,7 @@ function Courses() {
   return (
     <div
       className={` ${
-        darkMode ? "bg-[#101215] text-white " : "bg-[#f1f3f4]"
+        darkMode ? "bg-[#101215] text-white " : ""
       } flex -l:flex-col-reverse gap-2 px-5 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-10 `}
     >
       <div className="flex flex-col">
@@ -97,7 +97,7 @@ function Courses() {
       </div>
 
       <div
-        className={`sidebar -l:mb-4 -sm:flex-col -l:justify-between -l:flex-row -l:w-full gap-2 p-3 w-[20rem] h-fit box-shadow  bg-white rounded-xl  flex flex-col  items-center `}
+        className={`sidebar border-2 -l:mb-4 -sm:flex-col -l:justify-between -l:flex-row -l:w-full gap-2 p-3 w-[20rem] h-fit box-shadow  bg-white rounded-xl  flex flex-col  items-center `}
       >
         <h1 className="hidden -sm:flex text-center text-sm font-semibold mb-2">
           Choose The Best Course

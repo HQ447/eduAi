@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 function Home() {
   const darkMode = useSelector((state) => state.store.darkMode);
   const navigate = useNavigate();
-
+  // bg-gradient-to-b from-[#f7fbff] to-[#cce7f5]
   return (
     <div className="w-full">
       <Mainpage />
@@ -26,9 +26,7 @@ function Home() {
       {/* <Courses /> */}
       <div
         className={`${
-          darkMode
-            ? "bg-[#101215] text-white"
-            : "bg-gradient-to-b from-[#f7fbff] to-[#cce7f5]"
+          darkMode ? "bg-[#101215] text-white" : "bg-white"
         } flex flex-col items-center gap-5 px-7`}
       >
         <div className="flex flex-col justify-center items-center mb-5">

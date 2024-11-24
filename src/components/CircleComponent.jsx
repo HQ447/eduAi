@@ -7,12 +7,11 @@ import { useSelector } from "react-redux";
 
 const CircleComponent = () => {
   const darkMode = useSelector((state) => state.store.darkMode);
+  // bg-gradient-to-b from-[#cce7f5] to-[#f5faff]
   return (
     <div
       className={` ${
-        darkMode
-          ? "bg-[#101215] text-white "
-          : "bg-gradient-to-b from-[#cce7f5] to-[#f5faff]"
+        darkMode ? "bg-[#101215] text-white " : "bg-white"
       }  max-w-full py-14  overflow-hidden  justify-center  flex flex-col items-center relative `}
     >
       <h1 className=" -xsm:text-xl -xsm:mb-5 -xsm:static w-[70%] text-3xl text-center absolute top-10">

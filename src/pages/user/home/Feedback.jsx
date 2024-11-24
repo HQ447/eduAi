@@ -6,11 +6,10 @@ import StarRating from "../../../components/StarRating";
 function Feedback() {
   const darkMode = useSelector((state) => state.store.darkMode);
   return (
+    // bg-gradient-to-b from-[#cce7f5] to-[#f5faff]
     <div
       className={` ${
-        darkMode
-          ? "bg-[#101215] text-white "
-          : "bg-gradient-to-b from-[#cce7f5] to-[#f5faff]"
+        darkMode ? "bg-[#101215] text-white " : "bg-white"
       }  px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-10 `}
     >
       <div className="flex flex-col justify-center items-center mb-5">
@@ -41,7 +40,7 @@ function Feedback() {
             key={index}
             className={` ${
               darkMode ? "!bg-[#242424]" : "bg-white"
-            } w-[20rem] flex flex-col bg-white p-5 text-sm gap-3 rounded-lg shadow-lg`}
+            } w-[20rem] border-2 flex flex-col bg-white p-5 text-sm gap-3 rounded-lg shadow-sm`}
           >
             <div className="flex items-center gap-3">
               <img src={obj.pic} alt="" className=" w-10 h-10 rounded-full" />

@@ -11,13 +11,11 @@ const FAQ = () => {
   const toggleFAQ = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
   };
-
+  // bg-gradient-to-b from-[#f5faff] to-[#cce7f5]
   return (
     <div
       className={`  ${
-        darkMode
-          ? "bg-[#101215] text-white "
-          : "bg-gradient-to-b from-[#f5faff] to-[#cce7f5]"
+        darkMode ? "bg-[#101215] text-white " : "bg-white"
       } w-full py-10 px-20  -md:px-10 -sm:px-6 -xsm:px-3  mx-auto  `}
     >
       <div className="flex py-5 flex-col justify-center items-center mb-5">
