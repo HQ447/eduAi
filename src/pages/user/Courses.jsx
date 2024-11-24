@@ -27,7 +27,7 @@ function Courses() {
     <div
       className={` ${
         darkMode ? "bg-[#101215] text-white " : "bg-[#f1f3f4]"
-      } flex gap-2 px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-10 `}
+      } flex -l:flex-col-reverse gap-2 px-5 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-10 `}
     >
       <div className="flex flex-col">
         <div className="flex flex-col justify-center items-center mb-5">
@@ -97,53 +97,41 @@ function Courses() {
       </div>
 
       <div
-        className={`sidebar gap-2 p-3 w-[20rem] h-fit box-shadow  bg-white rounded-xl  flex flex-col  items-center `}
+        className={`sidebar -l:mb-4 -sm:flex-col -l:justify-between -l:flex-row -l:w-full gap-2 p-3 w-[20rem] h-fit box-shadow  bg-white rounded-xl  flex flex-col  items-center `}
       >
-        {/* <RxCross2
-          className="
-        hidden -lg:flex text-2xl "
-          onClick={() => setshowSidebar(false)}
-        /> */}
+        <h1 className="hidden -sm:flex text-center text-sm font-semibold mb-2">
+          Choose The Best Course
+        </h1>
         <input
           type="text"
           placeholder="Search Course By Name"
-          className=" w-11/12 px-3 py-2 rounded-md  bg-transparent border-2 outline-none placeholder:text-xs text-xs"
+          className=" w-11/12 -l:w-[17%] -sm:w-full px-3 py-2 rounded-md  bg-transparent border-2 outline-none placeholder:text-xs text-xs"
           value={searchInp}
           onChange={(e) => setSearchInp(e.target.value)}
           name=""
           id=""
         />
-        <div className="w-full flex flex-col gap-2  ">
-          <h1 className="w-full py-1 text-sm rounded-lg bg-[#ccf0e7] px-3 font-semibold">
+
+        <div className="company w-full -sm:w-full -l:w-[17%] my-3 flex flex-col  gap-4  items-center">
+          <h1 className="w-full -l:hidden  py-1 text-sm bg-[#ccf0e7] rounded-lg px-3 font-semibold">
             Select Category
           </h1>
-          <h1
-            onClick={() => setCategory("IT-courses")}
-            className=" cursor-pointer text-xs ml-3 hover:font-bold"
+
+          <select
+            name="select-company"
+            id=""
+            className=" w-full border-2 px-3 py-2 rounded-md text-xs"
+            onChange={(e) => setCategory(e.target.value)}
           >
-            IT Courses
-          </h1>
-          <h1
-            onClick={() => setCategory("academic-courses")}
-            className=" cursor-pointer text-xs  ml-3 hover:font-bold"
-          >
-            Academic Courses
-          </h1>
-          <h1
-            onClick={() => setCategory("exams-courses")}
-            className=" cursor-pointer text-xs  ml-3 hover:font-bold"
-          >
-            {`Exam Special Courses`}
-          </h1>
-          <h1
-            onClick={() => setCategory("test-couses")}
-            className=" cursor-pointer text-xs  ml-3 hover:font-bold"
-          >
-            {`Other Local Tests `}
-          </h1>
+            <option value="">Select Category</option>
+            <option value="it-courses">IT Courses</option>
+            <option value="academic-courses">Academic Courses</option>
+            <option value="exam-courses">Exam Special Courses</option>
+            <option value="test-courses">Logical Test Prep Courses</option>
+          </select>
         </div>
-        <div className="company w-full my-3 flex flex-col  gap-4  items-center">
-          <h1 className="w-full  py-1 text-sm bg-[#ccf0e7] rounded-lg px-3 font-semibold">
+        <div className="company w-full -sm:w-full -l:w-[17%] my-3 flex flex-col  gap-4  items-center">
+          <h1 className="w-full -l:hidden  py-1 text-sm bg-[#ccf0e7] rounded-lg px-3 font-semibold">
             Course Level
           </h1>
 
@@ -153,13 +141,14 @@ function Courses() {
             className=" w-full border-2 px-3 py-2 rounded-md text-xs"
             onChange={(e) => setLevel(e.target.value)}
           >
+            <option value="">Course Level</option>
             <option value="beginner">Beginner</option>
             <option value="intermediate">Intermediate</option>
             <option value="advance">Advance</option>
           </select>
         </div>
-        <div className="  w-full ">
-          <h1 className="w-full  bg-[#ccf0e7] py-1 text-sm rounded-lg px-3 font-semibold">
+        <div className="  -l:w-[17%] -sm:w-full w-full ">
+          <h1 className="w-full -l:hidden  bg-[#ccf0e7] py-1 text-sm rounded-lg px-3 font-semibold">
             Price Range
           </h1>
           <p className=" my-2 text-xs"> Less than ${priceRange}</p>
@@ -175,7 +164,7 @@ function Courses() {
           />
         </div>
         <button
-          className="w-full transition-all hover:scale-95 active:bg-red-700 px-3 py-2 bg-red-600 rounded-md text-white "
+          className="w-full -l:w-fit -sm:w-full transition-all hover:scale-95 active:bg-red-700 px-3 py-2 bg-red-600 rounded-md text-white "
           onClick={clearFilter}
         >
           Clear Filter
