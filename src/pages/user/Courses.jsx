@@ -12,7 +12,7 @@ function Courses() {
   const darkMode = useSelector((state) => state.store.darkMode);
   const navigate = useNavigate();
   const [searchInp, setSearchInp] = useState("");
-  const [category, setCategory] = useState();
+  const [category, setCategory] = useState("All");
   const [level, setLevel] = useState("");
   const [priceRange, setPriceRange] = useState(10);
 
@@ -27,12 +27,74 @@ function Courses() {
     <div
       className={` ${
         darkMode ? "bg-[#101215] text-white " : ""
-      } flex -l:flex-col-reverse gap-2 px-5 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-10 `}
+      } flex flex-col gap-2 px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-10 `}
     >
+      <div className="-md:flex-col filter-ribbon w-full justify-center flex items-center gap-3">
+        <div className=" w-[25rem] -md:w-full ">
+          <input
+            type="text"
+            value={searchInp}
+            onChange={(e) => setSearchInp(e.target.value)}
+            placeholder="Search Course By Name"
+            className=" bg-gray-200 rounded-md p-2 text-sm placeholder:text-xs w-full"
+          />
+        </div>
+        <div className="-md:w-full -xsm:flex-wrap flex gap-3 justify-around w-fit items-center">
+          <select
+            name="select-company"
+            id=""
+            className="w-[9rem] -xsm:w-[7rem] bg-gray-200  border-2 py-2 rounded-md text-xs"
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            <option value="">Select Category</option>
+            <option value="it-courses">IT Courses</option>
+            <option value="academic-courses">Academic Courses</option>
+            <option value="exam-courses">Exam Special Courses</option>
+            <option value="test-courses">Logical Test Prep Courses</option>
+          </select>
+          <select
+            name="select-company"
+            id=""
+            className="w-[7rem] -xsm:w-[6rem] bg-gray-200  border-2 py-2 rounded-md text-xs"
+            onChange={(e) => setLevel(e.target.value)}
+          >
+            <option value="">Course Level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advance">Advance</option>
+          </select>
+          <div className="flex flex-col w-[8rem] -xsm:hidden  ">
+            <p className=" my-2 text-xs"> Less than ${priceRange}</p>
+            <input
+              type="range"
+              name=""
+              value={priceRange}
+              onChange={(e) => setPriceRange(e.target.value)}
+              maxLength={100}
+              minLength={0}
+              id=""
+              className="mr-3 w-full"
+            />
+          </div>
+          <button
+            className="w-fit  -xsm:text-xs text-sm py-2 transition-all hover:scale-95 active:bg-red-700 px-3  bg-red-600 rounded-md text-white "
+            onClick={clearFilter}
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+
       <div className="flex flex-col">
+        <p className="text-xs w-full text-center">
+          {searchInp} &nbsp;-&nbsp;
+          {category}&nbsp;-&nbsp;
+          {level}&nbsp;-&nbsp;
+          {priceRange}
+        </p>
         <div className="flex flex-col justify-center items-center mb-5">
-          <h1 className="-xsm:text-2xl w-full text-center text-4xl font-[600] mb-5 -xsm:mb-1 ">
-            Popular{" "}
+          <h1 className="-xsm:text-2xl w-full text-center text-3xl font-[600] mb-1 mt-2 ">
+            {category}{" "}
             <span
               style={{
                 background:
@@ -44,7 +106,7 @@ function Courses() {
               Courses
             </span>
           </h1>
-          <p className=" -xsm:text-sm text-xl flex gap-3 items-center -xsm:text-center">
+          <p className=" -xsm:text-sm text-lg flex gap-3 items-center -xsm:text-center">
             <GoDotFill
               className="text-3xl text-green-500 rounded-full animate-pulse-scale border-2 "
               aria-hidden="true"
@@ -94,81 +156,6 @@ function Courses() {
             </div>
           ))}
         </div>
-      </div>
-
-      <div
-        className={`sidebar border-2 -l:mb-4 -sm:flex-col -l:justify-between -l:flex-row -l:w-full gap-2 p-3 w-[20rem] h-fit box-shadow  bg-white rounded-xl  flex flex-col  items-center `}
-      >
-        <h1 className="hidden -sm:flex text-center text-sm font-semibold mb-2">
-          Choose The Best Course
-        </h1>
-        <input
-          type="text"
-          placeholder="Search Course By Name"
-          className=" w-11/12 -l:w-[17%] -sm:w-full px-3 py-2 rounded-md  bg-transparent border-2 outline-none placeholder:text-xs text-xs"
-          value={searchInp}
-          onChange={(e) => setSearchInp(e.target.value)}
-          name=""
-          id=""
-        />
-
-        <div className="company w-full -sm:w-full -l:w-[17%] my-3 flex flex-col  gap-4  items-center">
-          <h1 className="w-full -l:hidden  py-1 text-sm bg-[#ccf0e7] rounded-lg px-3 font-semibold">
-            Select Category
-          </h1>
-
-          <select
-            name="select-company"
-            id=""
-            className=" w-full border-2 px-3 py-2 rounded-md text-xs"
-            onChange={(e) => setCategory(e.target.value)}
-          >
-            <option value="">Select Category</option>
-            <option value="it-courses">IT Courses</option>
-            <option value="academic-courses">Academic Courses</option>
-            <option value="exam-courses">Exam Special Courses</option>
-            <option value="test-courses">Logical Test Prep Courses</option>
-          </select>
-        </div>
-        <div className="company w-full -sm:w-full -l:w-[17%] my-3 flex flex-col  gap-4  items-center">
-          <h1 className="w-full -l:hidden  py-1 text-sm bg-[#ccf0e7] rounded-lg px-3 font-semibold">
-            Course Level
-          </h1>
-
-          <select
-            name="select-company"
-            id=""
-            className=" w-full border-2 px-3 py-2 rounded-md text-xs"
-            onChange={(e) => setLevel(e.target.value)}
-          >
-            <option value="">Course Level</option>
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="advance">Advance</option>
-          </select>
-        </div>
-        <div className="  -l:w-[17%] -sm:w-full w-full ">
-          <h1 className="w-full -l:hidden  bg-[#ccf0e7] py-1 text-sm rounded-lg px-3 font-semibold">
-            Price Range
-          </h1>
-          <p className=" my-2 text-xs"> Less than ${priceRange}</p>
-          <input
-            type="range"
-            name=""
-            value={priceRange}
-            onChange={(e) => setPriceRange(e.target.value)}
-            maxLength={100}
-            minLength={0}
-            id=""
-            className="mr-3 w-full slider"
-          />
-        </div>
-        <button
-          className="w-full -l:w-fit -sm:w-full transition-all hover:scale-95 active:bg-red-700 px-3 py-2 bg-red-600 rounded-md text-white "
-          onClick={clearFilter}
-        >
-          Clear Filter
-        </button>
       </div>
     </div>
   );
