@@ -5,8 +5,9 @@ import Navbar from "../../components/Navbar";
 import ResponsiveSidebar from "../../components/ResponsiveSidebar";
 
 function UserBoard() {
+  // bg-gradient-to-b from-[#cce7f5] to-[#f5faff]
   return (
-    <div className="w-full  bg-gradient-to-b from-[#cce7f5] to-[#f5faff]">
+    <div className="w-full bg-white ">
       {/* <ResponsiveNav /> */}
       <ResponsiveSidebar />
       <Navbar />

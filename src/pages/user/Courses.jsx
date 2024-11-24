@@ -52,7 +52,7 @@ function Courses() {
             Our comprehensive project based courses
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-5 -xsm:px-2">
+        <div className="flex flex-wrap justify-center gap-5 -xsm:px-3">
           {courseCollection.map((obj) => (
             <div
               key={obj.id}

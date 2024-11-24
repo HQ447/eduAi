@@ -6,18 +6,17 @@ import { updateCurrStatus } from "../../../store/cartSlice";
 function Mainpage() {
   const dispatch = useDispatch();
   const darkMode = useSelector((state) => state.store.darkMode);
+  // bg-gradient-to-b from-[#f5faff] to-[#cce7f5]
   return (
     <div
       className={`${
-        darkMode
-          ? "bg-[#101215] text-white "
-          : "bg-gradient-to-b from-[#f5faff] to-[#cce7f5]"
+        darkMode ? "bg-[#101215] text-white " : "bg-white"
       }    flex flex-col  px-20 -md:px-10 -sm:px-6 -xsm:px-3   w-full transition-all`}
     >
       <div className="flex w-full pt-14 py-8 md:items-center -md:justify-center flex-wrap-reverse">
-        <div className="flex flex-col   basis-3/6 -md:basis-full  ">
-          <p>For Teachers & Students</p>
-          <h1 className="my-3 -xsm:text-[1.3rem] text-5xl -md:text-center w-full -sm:text-4xl font-[600] lineHeight">
+        <div className="flex flex-col  basis-3/6 -md:basis-full  ">
+          <p className="text-xs -xsm:text-center">For Teachers & Students</p>
+          <h1 className=" -xsm:text-[1.5rem] text-5xl -md:text-center w-full -sm:text-4xl font-[600] lineHeight">
             Everyone can{" "}
             <span
               style={{
@@ -47,7 +46,7 @@ function Mainpage() {
             </button>
           </NavLink>
         </div>
-        <div className="flex basis-3/6  -md:basis-full -md:w-full ">
+        <div className="flex basis-3/6 -xsm:mb-5  -md:basis-full -md:w-full ">
           <img
             src="https://www.becodemy.com/_next/static/media/banner.8a9f498b.svg"
             alt="img loading error"
