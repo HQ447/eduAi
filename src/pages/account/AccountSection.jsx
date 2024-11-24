@@ -49,7 +49,7 @@ function AccountSection() {
           <p className="text-xl">{activeUser.email}</p>
         </div>
       </div>
-      <div className="relative -xsm:py-2 py-20  px-10 -xsm:px-2 ">
+      <div className="relative -xsm:py-2 py-20  px-10 -sm:px-16 -xsm:px-7 ">
         <div className="absolute -md:w-[80%] -sm:w-[86%] -xsm:relative -xsm:justify-center -xsm:py-4 -xsm:mb-6 -xsm:top-0 -xsm:w-[95%] flex justify-between rounded-md -top-12 left-0 right-0 shadow-lg shadow-[#c2c2c2] mx-auto py-5 px-7 w-[60%] bg-white">
           <div className="flex -xsm:hidden flex-col items-center justify-center">
             <FaLaptopCode />
@@ -79,13 +79,15 @@ function AccountSection() {
               <img
                 src={course.img}
                 alt="img loading error"
-                className="w-[25rem] -l:w-[18rem] -md:w-[15rem] -sm:w-full"
+                className="w-[25rem] my-auto -n:w-[18rem] -n:h-[13rem] -md:w-[15rem] -sm:w-full -sm:h-full"
               />
               <div className="w-[30rem] -md:w-[25rem] -sm:w-full flex flex-col gap-2">
                 <h1 className="text-xl -sm:text-lg font-semibold">
                   {course.title}
                 </h1>
-                <p className=" text-xs">{course.decription}</p>
+                <p className="-md:hidden -sm:flex text-xs">
+                  {course.decription}
+                </p>
                 <p className="text-gray-500 text-xs">By {course.instructor}</p>
                 <p className="text-green-800 text-xs -xsm:text-[8px] font-semibold flex  ">
                   {course.chapters.length} Chapter or Sections
@@ -105,7 +107,7 @@ function AccountSection() {
               </div>
               <div className="flex flex-col items-center">
                 <PieChart
-                  className="w-32"
+                  className="w-32 -sm:w-40"
                   data={pieChartData}
                   radius={42}
                   segmentsShift={(index) => (index === hovered ? 4 : 0)} // Slightly pull out the hovered section
