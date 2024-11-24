@@ -13,6 +13,7 @@ function Courses() {
   const navigate = useNavigate();
   const [searchInp, setSearchInp] = useState("");
   const [category, setCategory] = useState("All");
+  // eslint-disable-next-line no-unused-vars
   const [level, setLevel] = useState("Intermediate");
   const [priceRange, setPriceRange] = useState(10);
 
@@ -27,7 +28,7 @@ function Courses() {
     <div
       className={` ${
         darkMode ? "bg-[#101215] text-white " : ""
-      } flex flex-col gap-2 px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-10 `}
+      } flex flex-col gap-2 px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-7 `}
     >
       <div
         className={`  -md:flex-col filter-ribbon w-full justify-center flex items-center gap-3`}
@@ -39,8 +40,8 @@ function Courses() {
             onChange={(e) => setSearchInp(e.target.value)}
             placeholder="Search Course By Name"
             className={` ${
-              darkMode ? "bg-[#2f343c] text-white " : "bg-gray-200 "
-            } outline-none rounded-md p-2 text-sm placeholder:text-xs w-full`}
+              darkMode ? "bg-[#2f343c] text-white " : "bg-gray-100 "
+            } -xsm:text-xs -xsm:placeholder:text-xs outline-none rounded-md p-2 text-sm placeholder:text-xs w-full`}
           />
         </div>
         <div className="-md:w-full -xsm:flex-wrap flex gap-3 justify-around w-fit items-center">
@@ -50,8 +51,8 @@ function Courses() {
             className={` ${
               darkMode
                 ? "bg-[#2f343c] text-white border-0 "
-                : "bg-gray-200 border-none "
-            } outline-none  w-[9rem] -xsm:w-[7rem] bg-gray-200  border-2 py-2 rounded-md text-xs`}
+                : "bg-gray-100 border-none "
+            } outline-none -xsm:text-[9px]  w-[9rem] -xsm:w-[7rem] py-2 rounded-md text-xs`}
             onChange={(e) => setCategory(e.target.value)}
           >
             <option value="">Select Category</option>
@@ -66,8 +67,8 @@ function Courses() {
             name="select-company"
             id=""
             className={` ${
-              darkMode ? "bg-[#2f343c] text-white border-0" : "bg-gray-200 "
-            } outline-none w-[7rem] -xsm:w-[6rem] bg-gray-200  border-2 py-2 rounded-md text-xs`}
+              darkMode ? "bg-[#2f343c] text-white border-0" : "bg-gray-100 "
+            } -xsm:text-[9px] outline-none w-[7rem] -xsm:w-[6rem]   py-2 rounded-md text-xs`}
             onChange={(e) => setLevel(e.target.value)}
           >
             <option value="">Course Level</option>
@@ -98,14 +99,14 @@ function Courses() {
       </div>
 
       <div className="flex flex-col">
-        <p className="text-xs w-full text-center">
+        {/* <p className="text-xs w-full text-center">
           {searchInp} &nbsp;-&nbsp;
           {category}&nbsp;-&nbsp;
           {level}&nbsp;-&nbsp;
           {priceRange}
-        </p>
+        </p> */}
         <div className="flex flex-col justify-center items-center mb-5">
-          <h1 className="-xsm:text-2xl w-full text-center text-3xl font-[600] mb-1 mt-2 ">
+          <h1 className="-xsm:text-xl w-full text-center text-3xl font-[600] mb-1 mt-2 ">
             {category}{" "}
             <span
               style={{
@@ -118,9 +119,9 @@ function Courses() {
               Courses
             </span>
           </h1>
-          <p className=" -xsm:text-sm text-lg flex gap-3 items-center -xsm:text-center">
+          <p className=" -xsm:text-xs text-lg flex gap-3 items-center -xsm:text-center">
             <GoDotFill
-              className="text-3xl text-green-500 rounded-full animate-pulse-scale border-2 "
+              className="-xsm:hidden text-3xl text-green-500 rounded-full animate-pulse-scale border-2 "
               aria-hidden="true"
             />{" "}
             Our comprehensive project based courses

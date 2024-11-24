@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import { FaLaptopCode } from "react-icons/fa";
-import { motion } from "framer-motion";
-import { LuArrowBigDownDash } from "react-icons/lu";
+// import { FaLaptopCode } from "react-icons/fa";
+// import { motion } from "framer-motion";
+// import { LuArrowBigDownDash } from "react-icons/lu";
 import StarRating from "../../components/StarRating";
 import { PieChart } from "react-minimal-pie-chart";
 
@@ -21,20 +21,20 @@ function AccountSection() {
   ];
 
   // Animation Variants
-  const textVariants = {
-    animate: {
-      y: [0, -10, 0],
-      color: ["#000000", "#784aeb", "#000000"],
-      transition: {
-        y: { duration: 1, repeat: Infinity, ease: "easeInOut" }, // Loop for the vertical animation
-        color: { duration: 2, repeat: Infinity, ease: "linear" }, // Loop for the color animation
-      },
-    },
-  };
+  // const textVariants = {
+  //   animate: {
+  //     y: [0, -10, 0],
+  //     color: ["#000000", "#784aeb", "#000000"],
+  //     transition: {
+  //       y: { duration: 1, repeat: Infinity, ease: "easeInOut" }, // Loop for the vertical animation
+  //       color: { duration: 2, repeat: Infinity, ease: "linear" }, // Loop for the color animation
+  //     },
+  //   },
+  // };
 
   return (
     <div className="bg-[#dcdcdc] w-full min-h-screen">
-      <div className="bg-[#784aeb] pb-20 -xsm:pb-10 flex flex-col rounded-b-[5rem] -xsm:rounded-b-[4rem]">
+      <div className="bg-[#784aeb] pb-20 -xsm:pb-5 flex flex-col rounded-b-[4rem] -xsm:rounded-b-[2rem]">
         <div className="Nav flex justify-center text-semibold text-white w-full px-20 py-6 -xsm:py-4 -md:px-10 -sm:px-6 -xsm:px-3">
           EduAI
         </div>
@@ -43,29 +43,19 @@ function AccountSection() {
           <img
             src="https://cdn-icons-png.flaticon.com/512/3781/3781986.png"
             alt="img loading error"
-            className="bg-white rounded-full w-28 mb-3"
+            className="bg-white rounded-full w-28 mb-3 -xsm:w-16"
           />
-          <h1 className="uppercase">{activeUser.username}</h1>
-          <p className="text-xl">{activeUser.email}</p>
+          <h1 className="uppercase -xsm:text-sm">{activeUser.username}</h1>
+          <p className="text-xl -xsm:text-sm">{activeUser.email}</p>
         </div>
       </div>
-      <div className="rounded-t-[5rem] -xsm:rounded-t-[4rem] bg-white -xsm:mt-4 mt-6 relative -xsm:py-2 py-20  px-10 -sm:px-16 -xsm:px-7 ">
-        <div className="absolute -xsm:rounded-t-[4rem] -md:w-[80%] -sm:w-[86%] -xsm:relative -xsm:justify-center -xsm:py-4 -xsm:mb-6 -xsm:top-0 -xsm:w-[95%] flex justify-between rounded-md -top-12 left-0 right-0 shadow-lg shadow-[#c2c2c2] mx-auto py-5 px-7 w-[60%] bg-white">
-          <div className="flex -xsm:hidden flex-col items-center justify-center">
-            <FaLaptopCode />
-            <p>All Courses</p>
-          </div>
-          <motion.p
-            className="text-2xl -sm:text-lg font-semibold flex items-center"
-            variants={textVariants}
-            animate="animate"
-          >
-            My Learning <LuArrowBigDownDash />
-          </motion.p>
-          <div className="flex -xsm:hidden flex-col items-center justify-center">
-            <FaLaptopCode />
-            <p>All Courses</p>
-          </div>
+      <div className="rounded-t-[4rem] -xsm:rounded-t-[2rem] bg-white mt-3 -xsm:mt-2 relative -xsm:py-2 py-20  px-10 -sm:px-16 -xsm:px-7 ">
+        <div className="absolute gap-1 -md:w-[80%] -sm:w-[86%] -xsm:relative -xsm:justify-between -xsm:py-4 -xsm:mb-6 -xsm:top-0 -xsm:w-[95%] flex justify-between rounded-md -top-12 left-0 right-0 shadow-lg shadow-[#c2c2c2] mx-auto py-5 px-7 w-[60%] bg-white">
+          <p className="-xsm:text-xs ">Learnings</p>
+
+          <p className="-xsm:text-xs">Certification</p>
+
+          <p className="-xsm:text-xs ">Settings</p>
         </div>
 
         <div className="flex flex-col items-center gap-5 ">

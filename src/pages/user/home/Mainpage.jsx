@@ -39,7 +39,7 @@ function Mainpage() {
           </p>
           <NavLink to={"courses"} className={"-xsm:text-center"}>
             <button
-              className="rounded-md hover:scale-95 transition-all -xsm:py-3 -xsm:text-sm -md:mx-auto max-w-fit py-3  px-5 bg-[#653bce] text-white font-semibold"
+              className="rounded-md hover:scale-95 transition-all -xsm:py-2 -xsm:text-sm -md:mx-auto max-w-fit py-3  px-5 bg-[#653bce] text-white font-semibold"
               onClick={() => dispatch(updateCurrStatus("Courses"))}
             >
               Learners, Start Here
