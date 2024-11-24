@@ -95,18 +95,7 @@ function Courses() {
           ))}
         </div>
       </div>
-      {/* <div className="filteration-container flex-col gap-2 bg-white p-2 rounded-xl h-[70vh]">
-        <div className="border-2">
-          <p>Seach By Name</p>
-          <input
-            type="text"
-            className="bg-gray-200 p-2 rounded-md"
-            name="courseName"
-            placeholder="MERN Stack"
-            id=""
-          />
-        </div>
-      </div> */}
+
       <div
         className={`sidebar gap-2 p-3 w-[20rem] h-fit box-shadow  bg-white rounded-xl  flex flex-col  items-center `}
       >
@@ -125,7 +114,7 @@ function Courses() {
           id=""
         />
         <div className="w-full flex flex-col gap-2  ">
-          <h1 className="w-full py-1 text-md rounded-lg bg-[#ccf0e7] px-3 font-bold">
+          <h1 className="w-full py-1 text-sm rounded-lg bg-[#ccf0e7] px-3 font-semibold">
             Select Category
           </h1>
           <h1
@@ -154,7 +143,7 @@ function Courses() {
           </h1>
         </div>
         <div className="company w-full my-3 flex flex-col  gap-4  items-center">
-          <h1 className="w-full  py-1 text-md bg-[#ccf0e7] rounded-lg px-3 font-bold">
+          <h1 className="w-full  py-1 text-sm bg-[#ccf0e7] rounded-lg px-3 font-semibold">
             Course Level
           </h1>
 
@@ -170,7 +159,7 @@ function Courses() {
           </select>
         </div>
         <div className="  w-full ">
-          <h1 className="w-full  bg-[#ccf0e7] py-1 text-md rounded-lg px-3 font-bold">
+          <h1 className="w-full  bg-[#ccf0e7] py-1 text-sm rounded-lg px-3 font-semibold">
             Price Range
           </h1>
           <p className=" my-2 text-xs"> Less than ${priceRange}</p>
