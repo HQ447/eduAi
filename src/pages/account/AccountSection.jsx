@@ -3,14 +3,23 @@ import { FaLaptopCode } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { LuArrowBigDownDash } from "react-icons/lu";
 import StarRating from "../../components/StarRating";
+import { PieChart } from "react-minimal-pie-chart";
 
 //replace this with the purchased courses data of the user
 import { courseCollection } from "../../Data/data";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function AccountSection() {
   const activeUser = useSelector((state) => state.store.activeUser);
   const navigate = useNavigate();
+  const [hovered, setHovered] = useState(null);
+  const completed = 30;
+  const pieChartData = [
+    { title: "Remaining", value: 100 - completed, color: "#E38627" },
+    { title: "Completed", value: completed, color: "#C13C37" },
+  ];
+
   // Animation Variants
   const textVariants = {
     animate: {
@@ -93,6 +102,34 @@ function AccountSection() {
                 <p className="px-2 py-1 text-[#0c4b0c] font-semibold text-xs w-fit rounded-sm bg-[#eceb98]">
                   Purchased
                 </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <PieChart
+                  className="w-32"
+                  data={pieChartData}
+                  radius={42}
+                  segmentsShift={(index) => (index === hovered ? 4 : 0)} // Slightly pull out the hovered section
+                  animate
+                  onMouseOver={(_, index) => setHovered(index)}
+                  onMouseOut={() => setHovered(null)}
+                  label={({ dataEntry }) => ` ${dataEntry.value}%`} // Display percentage inside the pie chart
+                  labelPosition={50}
+                  labelStyle={{
+                    fontSize: "10px",
+                    fontFamily: "sans-serif",
+                    fill: "#fff",
+                  }}
+                />
+                <div className="flex flex-col gap-2 ">
+                  <p className="flex items-center justify-center gap-1">
+                    <div className="w-3 h-3 bg-[#C13C37]"></div>
+                    <p className="text-xs">Completed</p>
+                  </p>
+                  <p className="flex justify-center items-center gap-1">
+                    <div className="w-3 h-3 bg-[#E38627]"></div>
+                    <p className="text-xs">Remaining</p>
+                  </p>
+                </div>
               </div>
             </div>
           ))}
