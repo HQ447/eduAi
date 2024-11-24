@@ -33,8 +33,8 @@ function AccountSection() {
   };
 
   return (
-    <div className="bg-white w-full min-h-screen">
-      <div className="bg-[#784aeb] pb-20 -xsm:pb-10 flex flex-col">
+    <div className="bg-[#dcdcdc] w-full min-h-screen">
+      <div className="bg-[#784aeb] pb-20 -xsm:pb-10 flex flex-col rounded-b-[5rem] -xsm:rounded-t-[4rem]">
         <div className="Nav flex justify-center text-semibold text-white w-full px-20 py-6 -xsm:py-4 -md:px-10 -sm:px-6 -xsm:px-3">
           EduAI
         </div>
@@ -49,8 +49,8 @@ function AccountSection() {
           <p className="text-xl">{activeUser.email}</p>
         </div>
       </div>
-      <div className="relative -xsm:py-2 py-20  px-10 -sm:px-16 -xsm:px-7 ">
-        <div className="absolute -md:w-[80%] -sm:w-[86%] -xsm:relative -xsm:justify-center -xsm:py-4 -xsm:mb-6 -xsm:top-0 -xsm:w-[95%] flex justify-between rounded-md -top-12 left-0 right-0 shadow-lg shadow-[#c2c2c2] mx-auto py-5 px-7 w-[60%] bg-white">
+      <div className="rounded-t-[5rem] -xsm:rounded-t-[4rem] bg-white -xsm:mt-4 mt-6 relative -xsm:py-2 py-20  px-10 -sm:px-16 -xsm:px-7 ">
+        <div className="absolute -xsm:rounded-t-[4rem] -md:w-[80%] -sm:w-[86%] -xsm:relative -xsm:justify-center -xsm:py-4 -xsm:mb-6 -xsm:top-0 -xsm:w-[95%] flex justify-between rounded-md -top-12 left-0 right-0 shadow-lg shadow-[#c2c2c2] mx-auto py-5 px-7 w-[60%] bg-white">
           <div className="flex -xsm:hidden flex-col items-center justify-center">
             <FaLaptopCode />
             <p>All Courses</p>
@@ -68,7 +68,7 @@ function AccountSection() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-5">
+        <div className="flex flex-col items-center gap-5 ">
           {/* get the purchased courses data of that user */}
           {courseCollection.map((course) => (
             <div
