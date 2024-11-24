@@ -13,14 +13,14 @@ function Courses() {
   const navigate = useNavigate();
   const [searchInp, setSearchInp] = useState("");
   const [category, setCategory] = useState("All");
-  const [level, setLevel] = useState("");
+  const [level, setLevel] = useState("Intermediate");
   const [priceRange, setPriceRange] = useState(10);
 
   function clearFilter() {
-    setCategory("");
+    setCategory("All");
     setSearchInp("");
     setPriceRange(10);
-    setLevel("");
+    setLevel("Intermediate");
   }
 
   return (
@@ -29,33 +29,45 @@ function Courses() {
         darkMode ? "bg-[#101215] text-white " : ""
       } flex flex-col gap-2 px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-10 `}
     >
-      <div className="-md:flex-col filter-ribbon w-full justify-center flex items-center gap-3">
+      <div
+        className={`  -md:flex-col filter-ribbon w-full justify-center flex items-center gap-3`}
+      >
         <div className=" w-[25rem] -md:w-full ">
           <input
             type="text"
             value={searchInp}
             onChange={(e) => setSearchInp(e.target.value)}
             placeholder="Search Course By Name"
-            className=" bg-gray-200 rounded-md p-2 text-sm placeholder:text-xs w-full"
+            className={` ${
+              darkMode ? "bg-[#2f343c] text-white " : "bg-gray-200 "
+            } outline-none rounded-md p-2 text-sm placeholder:text-xs w-full`}
           />
         </div>
         <div className="-md:w-full -xsm:flex-wrap flex gap-3 justify-around w-fit items-center">
           <select
             name="select-company"
             id=""
-            className="w-[9rem] -xsm:w-[7rem] bg-gray-200  border-2 py-2 rounded-md text-xs"
+            className={` ${
+              darkMode
+                ? "bg-[#2f343c] text-white border-0 "
+                : "bg-gray-200 border-none "
+            } outline-none  w-[9rem] -xsm:w-[7rem] bg-gray-200  border-2 py-2 rounded-md text-xs`}
             onChange={(e) => setCategory(e.target.value)}
           >
             <option value="">Select Category</option>
-            <option value="it-courses">IT Courses</option>
-            <option value="academic-courses">Academic Courses</option>
-            <option value="exam-courses">Exam Special Courses</option>
-            <option value="test-courses">Logical Test Prep Courses</option>
+            <option value="IT">IT Courses</option>
+            <option value="Academic">Academic Courses</option>
+            <option value="Exams Preps">Exam Special Courses</option>
+            <option value="Logical Tests Preps">
+              Logical Test Prep Courses
+            </option>
           </select>
           <select
             name="select-company"
             id=""
-            className="w-[7rem] -xsm:w-[6rem] bg-gray-200  border-2 py-2 rounded-md text-xs"
+            className={` ${
+              darkMode ? "bg-[#2f343c] text-white border-0" : "bg-gray-200 "
+            } outline-none w-[7rem] -xsm:w-[6rem] bg-gray-200  border-2 py-2 rounded-md text-xs`}
             onChange={(e) => setLevel(e.target.value)}
           >
             <option value="">Course Level</option>
@@ -120,7 +132,7 @@ function Courses() {
               key={obj.id}
               className={`${
                 darkMode
-                  ? "bg-[#242424] text-white "
+                  ? "bg-[#242424] text-white border-gray-500 "
                   : "bg-white text-[#000000b5] "
               } flex p-[14px] border-2 w-72 -xsm:w-full flex-col -xsm:text-sm  cursor-pointer hover:scale-105 hover:shadow-xl transition-all
             `}
