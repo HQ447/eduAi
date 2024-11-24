@@ -38,13 +38,13 @@ function Courses() {
           Our comprehensive project based courses
         </p>
       </div>
-      <div className="flex flex-wrap justify-center gap-5">
+      <div className="flex flex-wrap justify-center gap-5 -xsm:px-2">
         {courseCollection.map((obj) => (
           <div
             key={obj.id}
             className={`${
               darkMode ? "bg-[#242424] text-white " : " text-[#000000b5] "
-            } flex p-[14px] border-2 w-72 rounded-lg flex-col -xsm:text-sm  cursor-pointer hover:scale-105 hover:shadow-xl transition-all
+            } flex p-[14px] border-2 w-72 -xsm:w-full rounded-lg flex-col -xsm:text-sm  cursor-pointer hover:scale-105 hover:shadow-xl transition-all
             `}
             onClick={() => navigate(`/coursedetails/${obj.id}`)}
           >
