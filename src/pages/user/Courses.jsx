@@ -60,13 +60,13 @@ function Courses() {
                 darkMode
                   ? "bg-[#242424] text-white "
                   : "bg-white text-[#000000b5] "
-              } flex p-[14px] border-2 w-72 -xsm:w-full rounded-lg flex-col -xsm:text-sm  cursor-pointer hover:scale-105 hover:shadow-xl transition-all
+              } flex p-[14px] border-2 w-72 -xsm:w-full flex-col -xsm:text-sm  cursor-pointer hover:scale-105 hover:shadow-xl transition-all
             `}
               onClick={() => navigate(`/coursedetails/${obj.id}`)}
             >
               <img
                 src={obj.img}
-                className="w-full rounded-md"
+                className="w-full "
                 alt="cource img loading error "
               />
               <div className="py-3 flex flex-col gap-2">
