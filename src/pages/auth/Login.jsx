@@ -1,5 +1,5 @@
 import { FcGoogle } from "react-icons/fc";
-import { FaApple } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -87,7 +87,7 @@ function Login() {
           <div className="flex justify-around my-3">
             <FcGoogle className="shadow-lg text-5xl px-3 rounded-md hover:scale-75 transition-all hover:bg-white cursor-pointer" />
             <FaFacebook className="shadow-lg text-5xl  px-3 rounded-md hover:scale-75 transition-all hover:bg-white cursor-pointer" />
-            <FaApple className="shadow-lg text-5xl  px-3 rounded-md hover:scale-75 transition-all hover:bg-white cursor-pointer" />
+            <FaGithub className="shadow-lg text-5xl  px-3 rounded-md hover:scale-75 transition-all hover:bg-white cursor-pointer" />
           </div>
           <NavLink
             to={"/adminlogin"}

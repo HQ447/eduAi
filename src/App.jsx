@@ -18,7 +18,7 @@ import ChangePassword from "./pages/auth/ChangegPassword";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminLogin from "./pages/auth/AdminLogin";
 import AccountSection from "./pages/account/AccountSection";
-import Lms from "./pages/account/Lms";
+import Lms from "./pages/account/lms/Lms";
 import Learnings from "./pages/account/Learnings";
 import Settings from "./pages/account/Settings";
 import Certifications from "./pages/account/Certifications";

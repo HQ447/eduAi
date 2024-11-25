@@ -1,5 +1,5 @@
 import { FcGoogle } from "react-icons/fc";
-import { FaApple } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
@@ -87,9 +87,9 @@ function RegisterUser() {
         <div>
           <p className="text-[12px] text-center">or continue with</p>
           <div className="flex justify-around my-3">
-            <FcGoogle className="text-5xl border-2 px-3 rounded-md hover:scale-95 transition-all hover:bg-white cursor-pointer" />
-            <FaFacebook className="text-5xl border-2 px-3 rounded-md hover:scale-95 transition-all hover:bg-white cursor-pointer" />
-            <FaApple className="text-5xl border-2 px-3 rounded-md hover:scale-95 transition-all hover:bg-white cursor-pointer" />
+            <FcGoogle className="text-5xl shadow-lg  px-3 rounded-md hover:scale-75 transition-all hover:bg-white cursor-pointer" />
+            <FaFacebook className="text-5xl shadow-lg  px-3 rounded-md hover:scale-75 transition-all hover:bg-white cursor-pointer" />
+            <FaGithub className="text-5xl shadow-lg  px-3 rounded-md hover:scale-75 transition-all hover:bg-white cursor-pointer" />
           </div>
           <p className="text-[12px] text-center">
             Already Register?{" "}
@@ -99,44 +99,6 @@ function RegisterUser() {
           </p>
         </div>
       </div>
-
-      {/* <div className=" w-fit flex justify-center items-center gap-8 flex-col bg-white px-20 -md:px-16 -sm:px-8 -xsm:px-2 -xsm:py-3 py-10 -xsm:w-11/12 rounded-lg">
-
-        <h1 className="w-fit text-center shadow-lg rounded-full px-9 py-1 bg-[#fbb329] text-xl ">
-          Login
-        </h1>
-        <div className="flex -sm:flex-wrap">
-          <img
-            src="https://sindphanapublicschool.com/Assets/img/logo-2.png"
-            alt="login imag error"
-            className=" w-60 -md:w-40 -md:h-40 mx-auto "
-          />
-          <div className=" w-full items-center justify-center gap-2 flex flex-col px-5 -xsm:px-0">
-            <div className="border-b-2 border-[#fbb329] flex items-center">
-              <input
-                type="text"
-                className=" py-4 px-1 outline-none placeholder:text-black placeholder:text-lg"
-                placeholder="Email ID"
-              />
-              <FaUser className="text-3xl" />
-            </div>
-            <div className="border-b-2 border-[#fbb329] flex items-center">
-              <input
-                type="password"
-                className=" py-4 px-1 outline-none placeholder:text-black placeholder:text-lg"
-                placeholder="Password"
-              />
-              <FaLock className="text-3xl" />
-            </div>
-
-            <NavLink to={"/"}>
-              <button className=" py-2 px-10 my-3 bg-[#fbb329] shadow-md rounded-full">
-                Login
-              </button>
-            </NavLink>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }
