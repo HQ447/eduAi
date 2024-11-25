@@ -62,14 +62,14 @@ function Login() {
             placeholder="Enter Email"
             name="email"
             onChange={(e) => handleChange(e)}
-            className="bg-white px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
+            className="bg-[] shadow-lg px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
           <input
             type="password"
             name="password"
             onChange={(e) => handleChange(e)}
             placeholder="Password"
-            className="bg-white outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
+            className="shadow-lg outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
           <p className=" text-end text-[12px] font-semibold">
             <NavLink to={"/recover-password"}> Recover Your Password</NavLink>
@@ -85,9 +85,9 @@ function Login() {
         <div>
           <p className="text-[12px] text-center">or continue with</p>
           <div className="flex justify-around my-3">
-            <FcGoogle className="bg-white text-5xl border-2 px-3 rounded-md hover:scale-95 transition-all hover:bg-white cursor-pointer" />
-            <FaFacebook className="bg-white text-5xl border-2 px-3 rounded-md hover:scale-95 transition-all hover:bg-white cursor-pointer" />
-            <FaApple className="bg-white text-5xl border-2 px-3 rounded-md hover:scale-95 transition-all hover:bg-white cursor-pointer" />
+            <FcGoogle className="shadow-lg text-5xl px-3 rounded-md hover:scale-75 transition-all hover:bg-white cursor-pointer" />
+            <FaFacebook className="shadow-lg text-5xl  px-3 rounded-md hover:scale-75 transition-all hover:bg-white cursor-pointer" />
+            <FaApple className="shadow-lg text-5xl  px-3 rounded-md hover:scale-75 transition-all hover:bg-white cursor-pointer" />
           </div>
           <NavLink
             to={"/adminlogin"}
