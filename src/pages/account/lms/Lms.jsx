@@ -44,9 +44,9 @@ function Lms() {
   }
 
   return (
-    <div className="bg-gray-800 w-full h-fit p-4 ">
+    <div className="bg-gray-800 w-full h-fit p-4 -xsm:p-0  ">
       <div className="flex w-full h-[100vh] bg-white  rounded-2xl ">
-        <div className="-sm:hidden course-contents h-screen overflow-auto bg-gray-200 w-[40%] rounded-tl-2xl rounded-bl-2xl px-5 py-5">
+        <div className="-md:hidden course-contents h-screen overflow-auto bg-gray-100 -n:w-[45%] w-[40%] rounded-tl-2xl rounded-bl-2xl px-5 py-5">
           <div>
             <h1 className=" font-semibold mb-3">Course Contents</h1>
             {course.chapters.map((chapter, index) => (
@@ -56,10 +56,10 @@ function Lms() {
                     setActiveChapter(activeChapter === index ? null : index)
                   }
                   className={`${
-                    darkMode ? "bg-[#313131]" : "bg-[#f4f6f9f0]"
-                  } text-[15px]  bg-white rounded-sm -xsm:text-xs flex justify-between py-5 -xsm:py-3  w-full text-left  p-3 `}
+                    darkMode ? "bg-[#313131]" : ""
+                  } text-[15px] shadow-md bg-white rounded-sm -xsm:text-xs flex justify-between py-5 -xsm:py-3  w-full text-left  p-3 `}
                 >
-                  <p>
+                  <p className="-n:text-sm">
                     {index + 1} &nbsp; {chapter.title}
                   </p>
                   <div className="flex items-center">
@@ -98,20 +98,20 @@ function Lms() {
             ))}
           </div>
         </div>
-        <div className="-sm:w-full flex flex-col lecture-section h-screen  border border-black w-[70%] py-5 px-7">
-          <div className="player bg-gray-500 rounded-3xl w-[80%] -sm:w-[40%] h-[20rem]"></div>
-          <div className="navbar w-full flex gap-5 border-b-2 py-3 text-sm">
+        <div className="-md:w-full flex flex-col lecture-section h-screen   -n:w-[55%] w-[70%] py-5 px-7 -xsm:px-4">
+          <div className="player bg-gray-200 rounded-3xl w-[80%] -n:w-full md:h-[60vh] -md:h-[40vh]"></div>
+          <div className="navbar w-full flex gap-5 border-b-2 py-3 text-sm -xsm:text-xs">
             <NavLink onClick={() => setActive("overview")}>Overview</NavLink>
             <NavLink
               onClick={() => setActive("contents")}
-              className={"-sm:flex hidden"}
+              className={"-md:flex hidden"}
             >
               Contents
             </NavLink>
             <NavLink onClick={() => setActive("QA")}>Q&A</NavLink>
             <NavLink onClick={() => setActive("notes")}>Notes</NavLink>
           </div>
-          <div className="max-h-[30vh] overflow-scroll ">
+          <div className=" md:h-[40vh] -md:h-[60vh] overflow-scroll ">
             {renderComponents()}
           </div>
         </div>
@@ -124,10 +124,10 @@ function Lms() {
 function Overview({ selectedLecture, instructor }) {
   return (
     <div className="flex flex-col gap-2 mt-2">
-      <h1 className=" font-semibold text-lg">
+      <h1 className=" font-semibold text-lg -xsm:text-sm">
         Lecture Title: {selectedLecture}
       </h1>
-      <h1 className="text-sm">{instructor}</h1>
+      <h1 className="text-sm -xsm:text-xs">{instructor}</h1>
     </div>
   );
 }
@@ -143,7 +143,7 @@ function CourseContents({
   return (
     <div>
       <div>
-        <h1 className=" font-semibold mb-3">Course Contents</h1>
+        <h1 className=" font-semibold mb-3 pt-5">Course Contents</h1>
         {course.chapters.map((chapter, index) => (
           <div key={index} className="flex flex-col mb-2">
             <button
@@ -151,8 +151,8 @@ function CourseContents({
                 setActiveChapter(activeChapter === index ? null : index)
               }
               className={`${
-                darkMode ? "bg-[#313131]" : "bg-[#f4f6f9f0]"
-              } text-[15px]  bg-[#ebebeb] rounded-sm -xsm:text-xs flex justify-between py-3 -xsm:py-3  w-full text-left  p-3 `}
+                darkMode ? "bg-[#313131]" : " bg-gray-50"
+              } text-[15px] shadow-md  rounded-sm -xsm:text-xs flex justify-between py-3 -xsm:py-3  w-full text-left  p-3 `}
             >
               <p>
                 {index + 1} &nbsp; {chapter.title}
