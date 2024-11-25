@@ -125,10 +125,13 @@ function Navbar() {
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             >
               <LuUserCircle />
-              <p className="text-sm uppercase">{activeUser.username}</p>
             </button>
             {isDropdownOpen && (
               <div className="absolute top-full right-0 mt-2 w-40 rounded-lg bg-white shadow-lg text-sm">
+                <p className="text-sm bg-indigo-400 text-white rounded-lg px-4 py-2">
+                  Welcome <b className=" capitalize ">{activeUser.username}</b>{" "}
+                </p>
+                <hr />
                 <button
                   onClick={() => {
                     navigate("/accounts");
