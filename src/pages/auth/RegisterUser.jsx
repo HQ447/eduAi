@@ -55,26 +55,26 @@ function RegisterUser() {
             placeholder="Enter Name"
             name="username"
             onChange={(e) => handleChange(e)}
-            className="bg-white px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
+            className="shadow-lg px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
           <input
             type="text"
             placeholder="Enter Email"
             name="email"
             onChange={(e) => handleChange(e)}
-            className="bg-white px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
+            className="shadow-lg px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
           <input
             type="password"
             placeholder="Password"
             name="password"
             onChange={(e) => handleChange(e)}
-            className="bg-white outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
+            className="shadow-lg outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
           <input
             type="password"
             placeholder="Confirm Password"
-            className="bg-white outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
+            className="shadow-lg outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
         </div>
         <button
