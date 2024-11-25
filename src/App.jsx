@@ -25,7 +25,7 @@ import Certifications from "./pages/account/Certifications";
 
 function App() {
   return (
-    <div className="flex w-full bg-white ">
+    <div className="flex w-full bg-[white] ">
       {/* <video
         src="https://cdn.pixabay.com/video/2024/06/06/215500_large.mp4"
         autoPlay
