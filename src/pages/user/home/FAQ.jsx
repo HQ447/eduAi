@@ -16,7 +16,7 @@ const FAQ = () => {
     <div
       className={`  ${
         darkMode ? "bg-[#101215] text-white " : "bg-white"
-      } w-full py-10 px-20  -md:px-10 -sm:px-6 -xsm:px-3  mx-auto  `}
+      } w-full py-10 px-20  -md:px-10 -sm:px-6   mx-auto  `}
     >
       <div className="flex py-5 flex-col justify-center items-center mb-5">
         <h1 className="-xsm:text-2xl w-full text-center text-4xl font-[600] mb-5 -xsm:mb-1 ">
