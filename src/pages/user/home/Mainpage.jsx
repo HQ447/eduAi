@@ -48,7 +48,7 @@ function Mainpage() {
         </div>
         <div className="flex basis-3/6 -xsm:mb-5  -md:basis-full -md:w-full ">
           <img
-            src="https://www.becodemy.com/_next/static/media/banner.8a9f498b.svg"
+            src="https://static.vecteezy.com/system/resources/previews/016/466/991/non_2x/online-education-concept-illustration-study-learning-online-with-laptop-tablet-smartphone-and-headphones-from-home-cozy-online-learing-and-education-with-coffee-and-learning-books-free-png.png"
             alt="img loading error"
             className=" "
           />
