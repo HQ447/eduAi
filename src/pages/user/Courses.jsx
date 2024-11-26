@@ -90,7 +90,7 @@ function Courses() {
             />
           </div>
           <button
-            className="w-fit -xsm:px-2  -xsm:text-[10px] text-sm py-2 transition-all hover:scale-95 active:bg-red-700 px-3  bg-red-600 rounded-md text-white "
+            className="w-fit -xsm:px-2 -xsm:py-[2px]  -xsm:text-[10px] text-sm py-[6px] transition-all hover:scale-95 active:bg-red-700 px-4  bg-red-600 rounded-md text-white "
             onClick={clearFilter}
           >
             Clear
