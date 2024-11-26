@@ -31,14 +31,14 @@ function SourceCode() {
               darkMode
                 ? "bg-[#474747] text-white "
                 : "bg-white text-[#000000b5] "
-            } flex w-72 h-fit -xsm:w-full flex-col p-5 gap-3 -xsm:text-sm rounded-md shadow-xl`}
+            } flex w-72 h-fit -xsm:w-full flex-col p-4 border-2 gap-3 -xsm:text-sm rounded-md shadow-xl`}
           >
             <img
               src={obj.img}
-              className="w-full rounded-lg"
+              className="w-full "
               alt="cource img loading error"
             />
-            <h1 className="">{obj.title}</h1>
+            <h1 className=" text-sm">{obj.title}</h1>
             <div className="flex justify-end">
               <p>{obj.views}k</p>
             </div>
