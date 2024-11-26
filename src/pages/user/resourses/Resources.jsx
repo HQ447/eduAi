@@ -9,7 +9,7 @@ function Resources() {
         className={` ${
           darkModeFromRedux
             ? "bg-[#000000d6] text-white"
-            : " bg-[#f4fbffea] text-[#000000b5] "
+            : " bg-[white] text-[#000000b5] "
         } flex  px-20 -xsm:text-[0.7rem] -xsm:gap-4 gap-10 py-4 -xsm:py-3 text-sm -md:px-10 -sm:px-6 bg-opacity-50   w-full backdrop-blur-lg `}
         style={{
           boxShadow:
