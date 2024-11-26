@@ -88,7 +88,7 @@ function ResponsiveSidebar() {
           <h1 className="text-sm">Courses</h1>
         </NavLink>
         <NavLink
-          to={"resourses"}
+          to={"resources"}
           onClick={() => renderChange("Resourses")}
           className={`${
             currStatus === "Resourses" ? "bg-[#653bce] text-white" : ""
