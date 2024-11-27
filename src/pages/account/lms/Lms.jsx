@@ -44,8 +44,8 @@ function Lms() {
   }
 
   return (
-    <div className="bg-gray-800 w-full h-fit p-4 -xsm:p-0  ">
-      <div className="flex w-full h-[100vh] bg-white  rounded-2xl ">
+    <div className="bg-gray-800 w-full h-fit -xsm:p-0  ">
+      <div className="flex w-full h-[100vh] bg-white  ">
         <div className="-md:hidden course-contents h-screen overflow-auto bg-gray-100 -n:w-[45%] w-[40%] rounded-tl-2xl rounded-bl-2xl px-5 py-5">
           <div>
             <h1 className=" font-semibold mb-3">Course Contents</h1>
