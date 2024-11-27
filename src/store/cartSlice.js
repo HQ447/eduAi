@@ -5,6 +5,8 @@ const initialState = {
   currStatus: "Home",
   showSidebar: false,
   activeUser: null,
+
+  //the user willbe added in database and after getting all userData from Api , dispatch and replace it with that user array to prevent multiple api calls
   users: [
     {
       username: "ali",
