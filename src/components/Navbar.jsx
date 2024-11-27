@@ -134,7 +134,11 @@ function Navbar() {
               <LuUserCircle />
             </button>
             {isDropdownOpen && (
-              <div className="absolute top-full right-0 mt-2 w-40 rounded-lg bg-white shadow-lg text-sm">
+              <div
+                className={`${
+                  darkMode ? "text-white bg-[#3e3e3e]" : "bg-white"
+                } absolute top-full right-0 mt-2 w-40 rounded-lg  shadow-lg text-sm`}
+              >
                 <p className="text-sm bg-indigo-400 text-white rounded-lg px-4 py-2">
                   Welcome <b className=" capitalize ">{activeUser.username}</b>{" "}
                 </p>
@@ -143,14 +147,18 @@ function Navbar() {
                   onClick={() => {
                     navigate("/accounts");
                   }}
-                  className="py-3 px-4 hover:bg-gray-100 w-full text-left"
+                  className={`py-3 px-4 ${
+                    darkMode ? "hover:bg-gray-500" : "hover:bg-gray-100"
+                  } w-full text-left`}
                 >
                   My Account
                 </button>
                 <hr />
                 <button
                   onClick={() => dispatch(setactiveUser(null))}
-                  className="py-3 px-4 hover:bg-gray-100 w-full text-left"
+                  className={`py-3 px-4 ${
+                    darkMode ? "hover:bg-gray-500" : "hover:bg-gray-100"
+                  } hover:bg-gray-100 w-full text-left`}
                 >
                   Logout
                 </button>
