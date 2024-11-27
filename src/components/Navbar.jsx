@@ -25,11 +25,6 @@ function Navbar() {
   //to open the drop down when user is autheticated , it contains userName Go to My Account and Logout button
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
-
-  function handledarkMode() {
-    dispatch(updateMode(!darkMode));
-  }
-
   // Handle outside click to close dropdown
   useEffect(() => {
     function handleClickOutside(event) {
@@ -42,6 +37,10 @@ function Navbar() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  function handledarkMode() {
+    dispatch(updateMode(!darkMode));
+  }
 
   return (
     <div
