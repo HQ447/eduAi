@@ -8,14 +8,17 @@ import StarRating from "../../../components/StarRating";
 import Feedback from "./Feedback";
 import CircleComponent from "../../../components/CircleComponent";
 import FAQ from "./FAQ";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { updateCurrStatus } from "../../../store/cartSlice";
 
 // import Slider from "../../../components/Slider";
 
 function Home() {
   const darkMode = useSelector((state) => state.store.darkMode);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   // bg-gradient-to-b from-[#f7fbff] to-[#cce7f5]
   return (
     <div className="w-full">
@@ -60,7 +63,10 @@ function Home() {
               className={`${
                 index % 2 == 0 ? "flex-row-reverse" : "flex"
               } flex cursor-pointer -sm:flex-col -sm:w-full w-fit gap-6 border-[1px] border-solid border-gray-500 p-4`}
-              onClick={() => navigate(`/coursedetails/${course.id}`)}
+              onClick={() => {
+                navigate(`/coursedetails/${course.id}`);
+                dispatch(updateCurrStatus("Courses"));
+              }}
             >
               <img
                 src={course.img}
