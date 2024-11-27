@@ -14,12 +14,11 @@ import {
 
 function Navbar() {
   const dispatch = useDispatch();
+  //
   const showSidebar = useSelector((state) => state.store.showSidebar);
   const darkMode = useSelector((state) => state.store.darkMode);
-
   //I add this to update the active Link in nanvigation
   const currStatus = useSelector((state) => state.store.currStatus);
-
   //After user is uthenticated the user is added to the activeUser obj in store and retrive from store
   const activeUser = useSelector((state) => state.store.activeUser);
   const navigate = useNavigate();
