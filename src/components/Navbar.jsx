@@ -55,7 +55,11 @@ function Navbar() {
           dispatch(updateShowSidebar(!showSidebar));
         }}
       />
-      <NavLink to={""} className={"flex items-center gap-1"}>
+      <NavLink
+        to={""}
+        className={"flex items-center gap-1"}
+        onClick={() => currStatus("Home")}
+      >
         <img
           src="https://cdn-icons-png.flaticon.com/512/4729/4729436.png"
           alt="loading error"
