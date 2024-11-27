@@ -14,7 +14,7 @@ import {
 
 function Navbar() {
   const dispatch = useDispatch();
-  //
+  //update the showSidebar when the menu icon clicked
   const showSidebar = useSelector((state) => state.store.showSidebar);
   const darkMode = useSelector((state) => state.store.darkMode);
   //I add this to update the active Link in nanvigation
@@ -22,6 +22,7 @@ function Navbar() {
   //After user is uthenticated the user is added to the activeUser obj in store and retrive from store
   const activeUser = useSelector((state) => state.store.activeUser);
   const navigate = useNavigate();
+  //to open the drop down when user is autheticated , it contains userName Go to My Account and Logout button
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
