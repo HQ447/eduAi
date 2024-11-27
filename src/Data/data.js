@@ -11,7 +11,7 @@ export const courseCollection = [
     new_price: "0",
     instructor: "Mr Israr Muzamil , Database Expert",
     lectures: "33",
-    popular: true,
+    popular: false,
     chapters: [
       {
         title: "Biology Basics",
