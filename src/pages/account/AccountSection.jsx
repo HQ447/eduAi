@@ -129,7 +129,7 @@ function AccountSection() {
         </svg> */}
       </div>
 
-      <div className=" bg-gray-100 mt-2 -xsm:mt-2 relative -xsm:py-2 py-12  px-10 -sm:px-16 -xsm:px-7 ">
+      <div className=" bg-gray-100 -xsm:mt-2 relative -xsm:py-2 py-12  px-10 -sm:px-16 -xsm:px-7 ">
         <svg
           className=" absolute top-0 left-0 w-full h-20"
           xmlns="http://www.w3.org/2000/svg"

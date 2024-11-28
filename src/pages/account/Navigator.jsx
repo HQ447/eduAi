@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 function Navigator() {
   const navigate = useNavigate();
   return (
-    <div className="flex border-2 flex-wrap w-fit justify-center py-10 px-20 min-h-[40vh]">
+    <div className="flex gap-8 w-full flex-wrap  justify-center py-10 px-20 min-h-[40vh]">
       <div
         onClick={() => navigate("my-learnings")}
         className="flex flex-col gap-2 shadow-md hover:scale-95 transition-all cursor-pointer shadow-black w-fit bg-white p-3 rounded-md"
@@ -16,7 +16,7 @@ function Navigator() {
         <p className="text-sm font-semibold">My Learnings</p>
       </div>
       <div
-        onClick={() => navigate("my-learnings")}
+        onClick={() => navigate("certification")}
         className="flex flex-col gap-2 shadow-md hover:scale-95 transition-all cursor-pointer shadow-black w-fit bg-white p-3 rounded-md"
       >
         <img
@@ -27,7 +27,7 @@ function Navigator() {
         <p className="text-sm font-semibold">Certifications</p>
       </div>
       <div
-        onClick={() => navigate("my-learnings")}
+        onClick={() => navigate("settings")}
         className="flex flex-col gap-2 shadow-md hover:scale-95 transition-all cursor-pointer shadow-black w-fit bg-white p-3 rounded-md"
       >
         <img
