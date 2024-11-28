@@ -62,17 +62,19 @@ function AccountSection() {
             Back
           </NavLink>
         </div>
+
         <svg
-          className=" absolute  "
+          className="absolute h-52 w-full"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
         >
           <path
             fill="#0099ff"
-            // fill-opacity="1"
-            d="M0,256L120,224C240,192,480,128,720,133.3C960,139,1200,213,1320,250.7L1440,288L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
+            d="M0,192L80,197.3C160,203,320,213,480,218.7C640,224,800,224,960,208C1120,192,1280,160,1360,144L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
           ></path>
         </svg>
+
         <div className="flex relative flex-col -xsm:my-5 font-semibold  text-2xl items-center justify-center w-full">
           <img
             src="https://cdn-icons-png.flaticon.com/512/3781/3781986.png"
@@ -129,15 +131,15 @@ function AccountSection() {
         </svg> */}
       </div>
 
-      <div className=" bg-white mt-2 -xsm:mt-2 relative -xsm:py-2 py-12  px-10 -sm:px-16 -xsm:px-7 ">
+      <div className=" bg-gray-200 mt-2 -xsm:mt-2 relative -xsm:py-2 py-12  px-10 -sm:px-16 -xsm:px-7 ">
         <svg
-          className="absolute top-0 left-0 w-full h-20"
+          className=" absolute top-0 left-0 w-full h-20"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
           preserveAspectRatio="none" // Allows independent height and width
         >
           <path
-            fill="#0099ff"
+            fill="#ffff"
             d="M0,256L120,224C240,192,480,128,720,133.3C960,139,1200,213,1320,250.7L1440,288L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
           ></path>
         </svg>
