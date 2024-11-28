@@ -22,6 +22,7 @@ import Lms from "./pages/account/lms/Lms";
 import Learnings from "./pages/account/Learnings";
 import Settings from "./pages/account/Settings";
 import Certifications from "./pages/account/Certifications";
+import Navigator from "./pages/account/Navigator";
 
 function App() {
   return (
@@ -64,7 +65,8 @@ function App() {
 
         {/* User Account-section */}
         <Route path="/accounts" element={<AccountSection />}>
-          <Route index element={<Learnings />} />
+          <Route index element={<Navigator />} />
+          <Route path="my-learnings" element={<Learnings />} />
           <Route path="settings" element={<Settings />} />
           <Route path="certification" element={<Certifications />} />
         </Route>
