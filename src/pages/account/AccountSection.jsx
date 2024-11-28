@@ -4,8 +4,8 @@ import { NavLink, Outlet, useNavigate } from "react-router-dom";
 
 function AccountSection() {
   const activeUser = useSelector((state) => state.store.activeUser);
-  const navigate = useNavigate();
-  const [active, setActive] = useState(1);
+  // const navigate = useNavigate();
+  // const [active, setActive] = useState(1);
   const darkMode = useSelector((state) => state.store.darkMode);
   // Animation Variants
   // const textVariants = {
@@ -82,9 +82,11 @@ function AccountSection() {
           <h1 className="uppercase -xsm:text-sm">{activeUser.username}</h1>
           <p className="text-xl -xsm:text-sm">{activeUser.email}</p>
         </div>
-        <div className="absolute w-full bottom-0 gap-7   flex justify-center  ">
+        {/* <div className="absolute w-full bottom-0 gap-7   flex justify-center  ">
           <p
-            className={` ${active == 1 ? "border-b-4 " : ""} -xsm:text-[10px] `}
+            className={` ${
+              active == 1 ? "border-b-4 " : ""
+            } -xsm:text-[10px] cursor-pointer `}
             onClick={() => {
               setActive(1);
               navigate("");
@@ -95,7 +97,7 @@ function AccountSection() {
           <p
             className={` ${
               active == 2 ? "border-b-4 border-white" : ""
-            }  -xsm:text-[10px]`}
+            }  -xsm:text-[10px] cursor-pointer`}
             onClick={() => {
               setActive(2);
               navigate("certification");
@@ -106,7 +108,7 @@ function AccountSection() {
           <p
             className={` ${
               active == 3 ? "border-b-4 border-white" : ""
-            }  -xsm:text-[10px] `}
+            }  -xsm:text-[10px] cursor-pointer `}
             onClick={() => {
               setActive(3);
               navigate("Settings");
@@ -114,10 +116,32 @@ function AccountSection() {
           >
             Settings
           </p>
-        </div>
+        </div> */}
+        {/* <svg
+          className="bottom-0 absolute"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+        >
+          <path
+            fill="#0099ff"
+            d="M0,96L120,122.7C240,149,480,203,720,213.3C960,224,1200,192,1320,176L1440,160L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+          ></path>
+        </svg> */}
       </div>
 
       <div className=" bg-white mt-2 -xsm:mt-2 relative -xsm:py-2 py-12  px-10 -sm:px-16 -xsm:px-7 ">
+        <svg
+          className="absolute top-0 left-0 w-full h-20"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none" // Allows independent height and width
+        >
+          <path
+            fill="#0099ff"
+            d="M0,256L120,224C240,192,480,128,720,133.3C960,139,1200,213,1320,250.7L1440,288L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
+          ></path>
+        </svg>
+
         <Outlet />
       </div>
     </div>
