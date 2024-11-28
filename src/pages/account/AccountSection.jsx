@@ -21,8 +21,8 @@ function AccountSection() {
 
   return (
     <div className="w-full min-h-screen">
-      <div className=" relative pb-14 -xsm:pb-8 flex flex-col gap-6 ">
-        <div
+      <div className=" relative  flex flex-col gap-6 ">
+        {/* <div
           className={` ${
             darkMode
               ? "bg-[#000000d6] text-white"
@@ -61,10 +61,9 @@ function AccountSection() {
           >
             Back
           </NavLink>
-        </div>
-
+        </div> */}
         <svg
-          className="absolute h-52 w-full"
+          className="top-0 absolute h-72 w-full"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
           preserveAspectRatio="none"
@@ -74,8 +73,7 @@ function AccountSection() {
             d="M0,192L80,197.3C160,203,320,213,480,218.7C640,224,800,224,960,208C1120,192,1280,160,1360,144L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
           ></path>
         </svg>
-
-        <div className="flex relative flex-col -xsm:my-5 font-semibold  text-2xl items-center justify-center w-full">
+        <div className="flex mt-32 relative flex-col -xsm:my-5 font-semibold  text-2xl items-center justify-center w-full">
           <img
             src="https://cdn-icons-png.flaticon.com/512/3781/3781986.png"
             alt="img loading error"
@@ -139,7 +137,7 @@ function AccountSection() {
           preserveAspectRatio="none" // Allows independent height and width
         >
           <path
-            fill="#ffff"
+            fill="#fff"
             d="M0,256L120,224C240,192,480,128,720,133.3C960,139,1200,213,1320,250.7L1440,288L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
           ></path>
         </svg>
