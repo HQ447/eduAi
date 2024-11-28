@@ -20,14 +20,14 @@ function AccountSection() {
   // };
 
   return (
-    <div className="bg-[#dcdcdc] w-full min-h-screen">
-      <div className="bg-[#8971c5] relative pb-14 -xsm:pb-8 flex flex-col gap-6 rounded-b-[4rem] -xsm:rounded-b-[2rem]">
+    <div className="w-full min-h-screen">
+      <div className=" relative pb-14 -xsm:pb-8 flex flex-col gap-6 ">
         <div
           className={` ${
             darkMode
               ? "bg-[#000000d6] text-white"
               : " bg-white text-[#000000b5] "
-          } flex px-20 py-4 justify-center -xsm:py-3 items-center -md:px-10 -sm:px-6 -xsm:px-3  w-full  transition-all`}
+          } flex relative z-1 px-20 py-4 justify-center -xsm:py-3 items-center -md:px-10 -sm:px-6 -xsm:px-3  w-full  transition-all`}
           style={{
             boxShadow:
               "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
@@ -62,8 +62,18 @@ function AccountSection() {
             Back
           </NavLink>
         </div>
-
-        <div className="flex flex-col -xsm:my-5 font-semibold text-white text-2xl items-center justify-center w-full">
+        <svg
+          className=" absolute  "
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+        >
+          <path
+            fill="#0099ff"
+            // fill-opacity="1"
+            d="M0,256L120,224C240,192,480,128,720,133.3C960,139,1200,213,1320,250.7L1440,288L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
+          ></path>
+        </svg>
+        <div className="flex relative flex-col -xsm:my-5 font-semibold  text-2xl items-center justify-center w-full">
           <img
             src="https://cdn-icons-png.flaticon.com/512/3781/3781986.png"
             alt="img loading error"
@@ -71,19 +81,10 @@ function AccountSection() {
           />
           <h1 className="uppercase -xsm:text-sm">{activeUser.username}</h1>
           <p className="text-xl -xsm:text-sm">{activeUser.email}</p>
-          {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path
-              fill="#0099ff"
-              // fill-opacity="1"
-              d="M0,256L120,224C240,192,480,128,720,133.3C960,139,1200,213,1320,250.7L1440,288L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"
-            ></path>
-          </svg> */}
         </div>
-        <div className="absolute w-full bottom-0 gap-7 text-white  flex justify-center  ">
+        <div className="absolute w-full bottom-0 gap-7   flex justify-center  ">
           <p
-            className={` ${
-              active == 1 ? "border-b-4 border-white" : ""
-            } -xsm:text-[10px] `}
+            className={` ${active == 1 ? "border-b-4 " : ""} -xsm:text-[10px] `}
             onClick={() => {
               setActive(1);
               navigate("");
