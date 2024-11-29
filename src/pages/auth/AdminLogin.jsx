@@ -39,14 +39,14 @@ function AdminLogin() {
             placeholder="Enter Email"
             name="email"
             onChange={(e) => handleChange(e)}
-            className="shadow-lg px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
+            className="border shadow-md px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
           <input
             type="password"
             placeholder="Password"
             name="password"
             onChange={(e) => handleChange(e)}
-            className="shadow-lg outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
+            className="border shadow-md outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
           {/* <p className=" text-end text-[12px] font-semibold">
             <NavLink to={"/recover-password"}> Recover Your Password</NavLink>

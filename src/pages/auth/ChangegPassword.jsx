@@ -19,12 +19,12 @@ function ChangePassword() {
           <input
             type="password"
             placeholder="Enter new Password"
-            className="shadow-lg px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
+            className="border shadow-md px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
           <input
             type="password"
             placeholder="Confirm Password"
-            className="shadow-lg outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
+            className="border shadow-md outline-none  px-3 py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
         </div>
         <NavLink to={"/login"} className={"w-full"}>

@@ -15,7 +15,7 @@ function GetOTP() {
           <input
             type="number"
             placeholder="Enter OTP"
-            className="shadow-lg px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
+            className="border shadow-md px-3   outline-none  py-3 placeholder:text-sm rounded-md placeholder:text-gray-400"
           />
         </div>
         <NavLink to={"/update-password"} className={"w-full"}>
