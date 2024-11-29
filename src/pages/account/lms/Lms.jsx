@@ -101,15 +101,32 @@ function Lms() {
         <div className="-md:w-full flex flex-col lecture-section h-screen   -n:w-[55%] w-[70%] py-5 px-7 -xsm:px-4">
           <div className="player bg-gray-200 rounded-3xl w-[80%] -n:w-full md:h-[60vh] -md:h-[40vh]"></div>
           <div className="navbar w-full flex gap-5 border-b-2 py-3 text-sm -xsm:text-xs">
-            <NavLink onClick={() => setActive("overview")}>Overview</NavLink>
+            <NavLink
+              className={`${active == "overview" ? " font-semibold" : ""}`}
+              onClick={() => setActive("overview")}
+            >
+              Overview
+            </NavLink>
             <NavLink
               onClick={() => setActive("contents")}
-              className={"-md:flex hidden"}
+              className={`${
+                active == "contents" ? " font-semibold" : ""
+              } -md:flex hidden`}
             >
               Contents
             </NavLink>
-            <NavLink onClick={() => setActive("QA")}>Q&A</NavLink>
-            <NavLink onClick={() => setActive("notes")}>Notes</NavLink>
+            <NavLink
+              className={`${active == "QA" ? " font-semibold" : ""}`}
+              onClick={() => setActive("QA")}
+            >
+              Q&A
+            </NavLink>
+            <NavLink
+              className={`${active == "notes" ? " font-semibold" : ""}`}
+              onClick={() => setActive("notes")}
+            >
+              Notes
+            </NavLink>
           </div>
           <div className=" md:h-[40vh] -md:h-[60vh] overflow-scroll ">
             {renderComponents()}

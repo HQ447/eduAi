@@ -143,7 +143,7 @@ function Navbar() {
               <img
                 src="https://cdn-icons-png.freepik.com/512/219/219988.png"
                 alt=""
-                className="w-8 -xsm:w-6  rounded-full "
+                className="w-7 -xsm:w-6  rounded-full hover:scale-95 transition-all "
               />
             </button>
             {isDropdownOpen && (
