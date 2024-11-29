@@ -11,7 +11,7 @@ const CircleComponent = () => {
   return (
     <div
       className={` ${
-        darkMode ? "bg-[#101215] text-white " : "bg-white"
+        darkMode ? "bg-[#0f1113] text-white " : "bg-white"
       }  max-w-full py-14  overflow-hidden  justify-center  flex flex-col items-center relative `}
     >
       <h1 className=" -xsm:text-xl -xsm:mb-5 -xsm:static w-[70%] text-3xl text-center absolute top-10">

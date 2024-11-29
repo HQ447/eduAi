@@ -27,7 +27,7 @@ function Courses() {
   return (
     <div
       className={` ${
-        darkMode ? "bg-[#101215] text-white " : ""
+        darkMode ? "bg-[#0f1113] text-white " : ""
       } flex flex-col gap-2 px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-7 `}
     >
       <div
@@ -133,9 +133,9 @@ function Courses() {
               key={obj.id}
               className={`${
                 darkMode
-                  ? "bg-[#242424] text-white border-gray-500 "
-                  : "bg-white text-[#000000b5] "
-              } flex p-[14px] border-2 w-72 -xsm:w-full flex-col -xsm:text-sm  cursor-pointer hover:scale-105 hover:shadow-xl transition-all
+                  ? "bg-[#0f1113] text-white border  "
+                  : "bg-white border-2  text-[#000000b5] border-gray-200"
+              } flex p-[14px]   w-72 -xsm:w-full flex-col -xsm:text-sm  cursor-pointer hover:scale-105 hover:shadow-xl transition-all
             `}
               onClick={() => navigate(`/coursedetails/${obj.id}`)}
             >

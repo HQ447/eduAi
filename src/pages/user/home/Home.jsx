@@ -29,7 +29,7 @@ function Home() {
       {/* <Courses /> */}
       <div
         className={`${
-          darkMode ? "bg-[#101215] text-white" : "bg-white"
+          darkMode ? "bg-[#0f1113] text-white" : "bg-white"
         } flex flex-col items-center gap-5 px-7`}
       >
         <div className="flex flex-col justify-center items-center mb-5">

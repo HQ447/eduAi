@@ -9,7 +9,7 @@ function Feedback() {
     // bg-gradient-to-b from-[#cce7f5] to-[#f5faff]
     <div
       className={` ${
-        darkMode ? "bg-[#101215] text-white " : "bg-white"
+        darkMode ? "bg-[#0f1113] text-white " : "bg-white"
       }  px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-10 `}
     >
       <div className="flex flex-col justify-center items-center mb-5">
@@ -39,8 +39,8 @@ function Feedback() {
           <div
             key={index}
             className={` ${
-              darkMode ? "!bg-[#242424]" : "bg-white"
-            } w-[20rem] -xsm:text-xs  border-2 flex flex-col bg-white p-5 text-sm gap-3 rounded-lg shadow-sm`}
+              darkMode ? "bg-[#0f1113] border" : "bg-white  border-2"
+            } w-[20rem] -xsm:text-xs  flex flex-col bg-white p-5 text-sm gap-3 rounded-lg shadow-sm`}
           >
             <div className="flex items-center gap-3">
               <img src={obj.pic} alt="" className=" w-10 h-10 rounded-full" />
