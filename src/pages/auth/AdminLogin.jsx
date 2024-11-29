@@ -55,7 +55,7 @@ function AdminLogin() {
 
         <button
           onClick={handleClickBtn}
-          className="w-full bg-[#653bce] mb-3 hover:scale-95 transition-all hover:bg-orange-600 text-white rounded-md py-2 shadow-md"
+          className="w-full bg-orange-600 mb-3 hover:scale-95 transition-all hover:bg-orange-600 text-white rounded-md py-2 shadow-md"
         >
           Sign in
         </button>

@@ -28,7 +28,7 @@ function ChangePassword() {
           />
         </div>
         <NavLink to={"/login"} className={"w-full"}>
-          <button className="w-full bg-[#653bce] mb-3 hover:scale-95 transition-all hover:bg-orange-600 text-white rounded-md py-2 shadow-md">
+          <button className="w-full bg-orange-600 mb-3 hover:scale-95 transition-all hover:bg-orange-600 text-white rounded-md py-2 shadow-md">
             Update
           </button>
         </NavLink>

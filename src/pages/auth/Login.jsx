@@ -93,11 +93,16 @@ function Login() {
             to={"/adminlogin"}
             className={"text-[12px] text-center hover:text-blue-700"}
           >
-            <p className="mb-2">Login as Admin?</p>
+            <p className="mb-2 text-blue-700 underline hover:font-semibold cursor-pointer">
+              Login as Admin?
+            </p>
           </NavLink>
-          <p className="text-[12px] text-center">
+          <p className="text-[12px] text-center ">
             Not a member?{" "}
-            <NavLink to={"/signup"} className={"text-blue-700"}>
+            <NavLink
+              to={"/signup"}
+              className={"text-blue-700 hover:font-semibold cursor-pointer"}
+            >
               Register now
             </NavLink>
           </p>
