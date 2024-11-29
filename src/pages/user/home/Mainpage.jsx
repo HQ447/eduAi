@@ -7,6 +7,7 @@ function Mainpage() {
   const dispatch = useDispatch();
   const darkMode = useSelector((state) => state.store.darkMode);
   // bg-gradient-to-b from-[#f5faff] to-[#cce7f5]
+  // bg-[#653bce]
   return (
     <div
       className={`${
@@ -21,7 +22,7 @@ function Mainpage() {
             <span
               style={{
                 background:
-                  "linear-gradient(90deg, #455be7 2.34%, #653bce 100.78%)",
+                  " linear-gradient(90deg, rgb(234 88 12) 2.34%, rgb(229 3 3) 100.78%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -39,7 +40,7 @@ function Mainpage() {
           </p>
           <NavLink to={"courses"} className={"-xsm:text-center"}>
             <button
-              className="rounded-md hover:scale-95 transition-all -xsm:py-3 -xsm:text-sm -md:mx-auto max-w-fit py-3  px-5 bg-[#653bce] text-white font-semibold"
+              className="rounded-md hover:scale-95 transition-all -xsm:py-3 -xsm:text-sm -md:mx-auto max-w-fit py-3  px-5 bg-orange-600 text-white font-semibold"
               onClick={() => dispatch(updateCurrStatus("Courses"))}
             >
               Learners, Start Here

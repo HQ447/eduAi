@@ -73,7 +73,7 @@ function Navbar() {
           <span
             style={{
               background:
-                "linear-gradient(90deg, #455be7 2.34%, #653bce 100.78%)",
+                "linear-gradient(90deg, rgb(234 88 12) 2.34%, rgb(229 3 3) 100.78%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -85,28 +85,36 @@ function Navbar() {
       <div className="flex list-none text-md gap-8 -md:hidden font-semibold">
         <NavLink
           to={""}
-          className={`${currStatus === "Home" ? "text-[#653bce]" : ""}`}
+          className={`${
+            currStatus === "Home" ? "text-orange-600 font-bold" : ""
+          }`}
           onClick={() => dispatch(updateCurrStatus("Home"))}
         >
           Home
         </NavLink>
         <NavLink
           to={"about"}
-          className={`${currStatus === "About" ? "text-[#653bce]" : ""}`}
+          className={`${
+            currStatus === "About" ? "text-orange-600 font-bold" : ""
+          }`}
           onClick={() => dispatch(updateCurrStatus("About"))}
         >
           About
         </NavLink>
         <NavLink
           to={"courses"}
-          className={`${currStatus === "Courses" ? "text-[#653bce]" : ""}`}
+          className={`${
+            currStatus === "Courses" ? "text-orange-600 font-bold" : ""
+          }`}
           onClick={() => dispatch(updateCurrStatus("Courses"))}
         >
           Courses
         </NavLink>
         <NavLink
           to={"resources"}
-          className={`${currStatus === "Resources" ? "text-[#653bce]" : ""}`}
+          className={`${
+            currStatus === "Resources" ? "text-orange-600 font-bold" : ""
+          }`}
           onClick={() => dispatch(updateCurrStatus("Resources"))}
         >
           Resources
@@ -169,7 +177,7 @@ function Navbar() {
           <NavLink
             to={"/login"}
             className={
-              "rounded-md py-2 -xsm:text-[10px] -xsm:px-4 -xsm:py-1 text-sm bg-[#653bce] text-white px-5 "
+              "rounded-md py-2 -xsm:text-[10px] -xsm:px-4 -xsm:py-1 text-sm bg-orange-600 text-white px-5 "
             }
           >
             Login

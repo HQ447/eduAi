@@ -111,7 +111,7 @@ function Courses() {
             <span
               style={{
                 background:
-                  "linear-gradient(90deg, #455be7 2.34%, #653bce 100.78%)",
+                  "linear-gradient(90deg, rgb(234 88 12) 2.34%, rgb(229 3 3) 100.78%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}

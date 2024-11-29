@@ -6,7 +6,7 @@ function AccountSection() {
   const activeUser = useSelector((state) => state.store.activeUser);
   // const navigate = useNavigate();
   // const [active, setActive] = useState(1);
-  const darkMode = useSelector((state) => state.store.darkMode);
+  // const darkMode = useSelector((state) => state.store.darkMode);
   // Animation Variants
   // const textVariants = {
   //   animate: {
