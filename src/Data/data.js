@@ -12,6 +12,7 @@ export const courseCollection = [
     instructor: "Mr Israr Muzamil , Database Expert",
     lectures: "33",
     popular: false,
+    category: "IT",
     chapters: [
       {
         title: "Biology Basics",
@@ -78,6 +79,7 @@ export const courseCollection = [
     instructor: "Dr Angela Yu , Developer & Lead Instructor",
     lectures: "43",
     popular: false,
+    category: "IT",
     chapters: [
       {
         title: "Introduction",
@@ -217,6 +219,7 @@ export const courseCollection = [
     instructor: "Dr Angela Yu , Developer & Lead Instructor",
     lectures: "33",
     popular: true,
+    category: "IT",
     chapters: [
       {
         title: "E-commerce Basics",
@@ -309,6 +312,7 @@ export const courseCollection = [
     instructor: "Dr Hashim Ali , Assistant Professor at KMU",
     lectures: "33",
     popular: true,
+    category: "Exams Preps",
     chapters: [
       {
         title: "Biology Basics",

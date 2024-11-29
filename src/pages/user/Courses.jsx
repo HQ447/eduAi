@@ -24,6 +24,17 @@ function Courses() {
     setLevel("Intermediate");
   }
 
+  // Filter logic
+  const filteredCourses = courseCollection.filter((course) => {
+    const matchesSearch = course.title
+      .toLowerCase()
+      .includes(searchInp.toLowerCase());
+    const matchesCategory = category === "All" || course.category === category;
+    const matchesPrice = course.new_price <= priceRange;
+
+    return matchesSearch && matchesCategory && matchesPrice;
+  });
+
   return (
     <div
       className={` ${
@@ -55,7 +66,7 @@ function Courses() {
             } outline-none -xsm:text-[9px]  w-[9rem] -xsm:w-[7rem] py-2 rounded-md text-xs`}
             onChange={(e) => setCategory(e.target.value)}
           >
-            <option value="">Select Category</option>
+            <option value="All">Select Category</option>
             <option value="IT">IT Courses</option>
             <option value="Academic">Academic Courses</option>
             <option value="Exams Preps">Exam Special Courses</option>
@@ -128,7 +139,7 @@ function Courses() {
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-5 -xsm:px-3">
-          {courseCollection.map((obj) => (
+          {filteredCourses.map((obj) => (
             <div
               key={obj.id}
               className={`${

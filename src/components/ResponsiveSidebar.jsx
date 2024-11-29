@@ -6,6 +6,7 @@ import { GiBlackBook } from "react-icons/gi";
 import { AiOutlineTeam } from "react-icons/ai";
 import { IoBulbOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
+import svg from "./../assets/images/svg.png";
 
 function ResponsiveSidebar() {
   const dispatch = useDispatch();
@@ -40,15 +41,15 @@ function ResponsiveSidebar() {
         className={`relative transform transition-transform duration-[3s] ease-in-out  ${
           showSidebar ? "right-0" : " -right-48"
         } ${darkMode ? "!bg-[#141414fc] text-white" : "bg-white"}
-          -xsm:gap-5   gap-10 flex-col min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50`}
+           flex-col rounded-l-3xl min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50`}
       >
         <RxCross2
           className={`${
             darkMode ? "text-white" : "text-black"
-          } absolute top-3 left-3 text-xl text-white`}
+          } absolute top-5 left-5 text-xl text-white`}
           onClick={() => dispatch(updateShowSidebar(false))}
         />
-        <div className=" text-white py-5 gap-2 rounded-lg m-2  bg-orange-600  flex flex-col items-center">
+        <div className=" text-white py-5 gap-2 mx-2 mt-2 rounded-t-3xl   bg-[#ff6900]  flex flex-col items-center">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Student_icon.svg/1024px-Student_icon.svg.png"
             alt=""
@@ -57,13 +58,18 @@ function ResponsiveSidebar() {
           <h1>EduAI</h1>
         </div>
 
-        <div className="px-2 gap-4 flex flex-col">
+        <div className=" mx-2 relative gap-4 flex flex-col">
+          <img
+            src={svg}
+            alt=""
+            className=" left-0 top-0 absolute w-full h-7 "
+          />
           <NavLink
             to={""}
             onClick={() => renderChange("Home")}
             className={`${
-              currStatus === "Home" ? "bg-orange-600 text-white" : ""
-            } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
+              currStatus === "Home" ? "bg-[#ff6900] text-white" : ""
+            } flex gap-3 mt-10 items-center  w-full py-2 rounded-md px-2`}
           >
             <IoHomeOutline className="text-3xl -xsm:text-sm" />
             <h1 className="text-xs">Home</h1>
