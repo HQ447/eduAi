@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 function Navigator() {
   const navigate = useNavigate();
   return (
-    <div className="flex gap-8 -xsm:gap-3 -xsm:px-3 -xsm:10  w-full flex-wrap  justify-center py-10 px-20 min-h-[40vh]">
+    <div className="flex gap-8 -xsm:gap-3 -xsm:px-3 -xsm:10  w-full flex-wrap  justify-center py-10 -xsm:pt-16 px-20 min-h-[40vh]">
       <div
         onClick={() => navigate("my-learnings")}
         className="flex h-fit  flex-col gap-2 items-center shadow-lg border-2 hover:scale-95 transition-all cursor-pointer  w-fit bg-white p-3 rounded-md"
