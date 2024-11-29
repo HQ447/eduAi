@@ -12,11 +12,11 @@ function Mainpage() {
     <div
       className={`${
         darkMode ? "bg-[#101215] text-white " : "bg-white"
-      }    flex flex-col  px-20 -md:px-10 -sm:px-6 -xsm:px-3   w-full transition-all`}
+      }    flex flex-col  px-20 -md:px-10 -sm:px-6 -xsm:px-4   w-full transition-all`}
     >
       <div className="flex w-full pt-14 py-8 md:items-center -md:justify-center flex-wrap-reverse">
         <div className="flex flex-col  basis-3/6 -md:basis-full  ">
-          <p className="text-xs -xsm:text-center">For Teachers & Students</p>
+          <p className="text-xs -md:text-center">For Teachers & Students</p>
           <h1 className=" -xsm:text-[1.5rem] my-2 text-5xl -md:text-center w-full -sm:text-4xl font-[600] lineHeight">
             Everyone can{" "}
             <span
@@ -40,7 +40,7 @@ function Mainpage() {
           </p>
           <NavLink to={"courses"} className={"-xsm:text-center"}>
             <button
-              className="rounded-md hover:scale-95 transition-all -xsm:py-3 -xsm:text-sm -md:mx-auto max-w-fit py-3  px-5 bg-orange-600 text-white font-semibold"
+              className="rounded-md hover:scale-95 transition-all -xsm:py-3 -xsm:text-sm -md:mx-auto -md:text-center w-full max-w-fit py-3  px-5 bg-orange-600 text-white font-semibold"
               onClick={() => dispatch(updateCurrStatus("Courses"))}
             >
               Learners, Start Here
