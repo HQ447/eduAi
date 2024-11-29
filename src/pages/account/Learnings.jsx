@@ -16,14 +16,14 @@ function Learnings() {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-5 ">
+    <div className="flex flex-col items-center gap-5 pt-10 ">
       <h1 className="text-center w-full font-semibold text-xl">My Learnings</h1>
 
       {/* get the purchased courses data of that user */}
       {courseCollection.map((course) => (
         <div
           key={course.id}
-          className=" bg-white shadow-md flex -sm:flex-col cursor-pointer -sm:w-full w-fit gap-6  p-4"
+          className=" bg-white shadow-md flex -sm:flex-col cursor-pointer -sm:w-full w-fit gap-6  px-4"
           onClick={() => navigate(`/LMS/${course.id}`)}
         >
           <img
