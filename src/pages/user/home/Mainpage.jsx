@@ -11,7 +11,7 @@ function Mainpage() {
   return (
     <div
       className={`${
-        darkMode ? "bg-[#101215] text-white " : "bg-white"
+        darkMode ? "bg-[#0f1113] text-white " : "bg-white"
       }    flex flex-col  px-20 -md:px-10 -sm:px-6 -xsm:px-4   w-full transition-all`}
     >
       <div className="flex w-full pt-14 py-8 md:items-center -md:justify-center flex-wrap-reverse">
