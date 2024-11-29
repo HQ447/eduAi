@@ -12,7 +12,7 @@ function Mainpage() {
     <div
       className={`${
         darkMode ? "bg-[#0f1113] text-white " : "bg-white"
-      }    flex flex-col  px-20 -md:px-10 -sm:px-6 -xsm:px-4   w-full transition-all`}
+      }    flex flex-col  px-20 -md:px-10 -sm:px-6 -xsm:px-4 h-[80vh]  w-full transition-all`}
     >
       <div className="flex w-full pt-14 py-8 md:items-center -md:justify-center flex-wrap-reverse">
         <div className="flex flex-col  basis-3/6 -md:basis-full  ">
