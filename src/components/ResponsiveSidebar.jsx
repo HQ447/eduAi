@@ -40,63 +40,65 @@ function ResponsiveSidebar() {
         className={`relative transform transition-transform duration-[3s] ease-in-out  ${
           showSidebar ? "right-0" : " -right-48"
         } ${darkMode ? "!bg-[#141414fc] text-white" : "bg-white"}
-         px-20 -xsm:gap-5 -xsm:px-4 justify-center gap-10 flex-col min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50`}
+          -xsm:gap-5   gap-10 flex-col min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50`}
       >
         <RxCross2
           className={`${
             darkMode ? "text-white" : "text-black"
-          } absolute top-4 left-4 text-2xl`}
+          } absolute top-3 left-3 text-xl text-white`}
           onClick={() => dispatch(updateShowSidebar(false))}
         />
-        <div className="w-full gap-3 mb-4 flex flex-col items-center">
+        <div className=" text-white py-5 gap-2 rounded-lg m-2  bg-orange-600  flex flex-col items-center">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Student_icon.svg/1024px-Student_icon.svg.png"
             alt=""
-            className="w-20 h-20 rounded-full"
+            className="w-14 h-14 rounded-full"
           />
           <h1>EduAI</h1>
         </div>
 
-        <NavLink
-          to={""}
-          onClick={() => renderChange("Home")}
-          className={`${
-            currStatus === "Home" ? "bg-[#653bce] text-white" : ""
-          } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
-        >
-          <IoHomeOutline className="text-3xl -xsm:text-lg" />
-          <h1 className="text-sm">Home</h1>
-        </NavLink>
-        <NavLink
-          to={"about"}
-          onClick={() => renderChange("About")}
-          className={`${
-            currStatus === "About" ? "bg-[#653bce] text-white" : ""
-          } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
-        >
-          <AiOutlineTeam className="text-3xl -xsm:text-lg" />
-          <h1 className="text-sm">About Us</h1>
-        </NavLink>
-        <NavLink
-          to={"courses"}
-          onClick={() => renderChange("Courses")}
-          className={`${
-            currStatus === "Courses" ? "bg-[#653bce] text-white" : ""
-          } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
-        >
-          <GiBlackBook className="text-3xl -xsm:text-lg" />
-          <h1 className="text-sm">Courses</h1>
-        </NavLink>
-        <NavLink
-          to={"resources"}
-          onClick={() => renderChange("Resourses")}
-          className={`${
-            currStatus === "Resourses" ? "bg-[#653bce] text-white" : ""
-          } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
-        >
-          <IoBulbOutline className="text-3xl -xsm:text-lg" />
-          <h1 className="text-sm">Resources</h1>
-        </NavLink>
+        <div className="px-2 gap-4 flex flex-col">
+          <NavLink
+            to={""}
+            onClick={() => renderChange("Home")}
+            className={`${
+              currStatus === "Home" ? "bg-orange-600 text-white" : ""
+            } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
+          >
+            <IoHomeOutline className="text-3xl -xsm:text-sm" />
+            <h1 className="text-xs">Home</h1>
+          </NavLink>
+          <NavLink
+            to={"about"}
+            onClick={() => renderChange("About")}
+            className={`${
+              currStatus === "About" ? "bg-orange-600 text-white" : ""
+            } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
+          >
+            <AiOutlineTeam className="text-3xl -xsm:text-sm" />
+            <h1 className="text-xs">About Us</h1>
+          </NavLink>
+          <NavLink
+            to={"courses"}
+            onClick={() => renderChange("Courses")}
+            className={`${
+              currStatus === "Courses" ? "bg-orange-600 text-white" : ""
+            } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
+          >
+            <GiBlackBook className="text-3xl -xsm:text-sm" />
+            <h1 className="text-xs">Courses</h1>
+          </NavLink>
+          <NavLink
+            to={"resources"}
+            onClick={() => renderChange("Resourses")}
+            className={`${
+              currStatus === "Resourses" ? "bg-orange-600 text-white" : ""
+            } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
+          >
+            <IoBulbOutline className="text-3xl -xsm:text-sm" />
+            <h1 className="text-xs">Resources</h1>
+          </NavLink>
+        </div>
       </div>
     </div>
   );
