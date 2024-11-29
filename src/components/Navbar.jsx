@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { LuUserCircle } from "react-icons/lu";
+// import { LuUserCircle } from "react-icons/lu";
 import { IoMoonOutline } from "react-icons/io5";
 import { CiBrightnessUp } from "react-icons/ci";
 import { IoMenu } from "react-icons/io5";
@@ -120,7 +120,7 @@ function Navbar() {
           Resources
         </NavLink>
       </div>
-      <div className="flex items-center text-2xl gap-4 -xsm:text-xl">
+      <div className="flex items-center text-2xl gap-2 -xsm:text-xl">
         {darkMode ? (
           <CiBrightnessUp
             onClick={handledarkMode}
@@ -136,10 +136,15 @@ function Navbar() {
         {activeUser ? (
           <div className="relative" ref={dropdownRef}>
             <button
-              className="flex items-center gap-1"
+              className="flex items-center "
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             >
-              <LuUserCircle />
+              {/* <LuUserCircle /> */}
+              <img
+                src="https://cdn-icons-png.freepik.com/512/219/219988.png"
+                alt=""
+                className="w-8 -xsm:w-6  rounded-full "
+              />
             </button>
             {isDropdownOpen && (
               <div
@@ -147,7 +152,7 @@ function Navbar() {
                   darkMode ? "text-white bg-[#3e3e3e]" : "bg-white"
                 } absolute top-full right-0 mt-2 w-40 rounded-lg  shadow-lg text-sm`}
               >
-                <p className="text-sm bg-indigo-400 text-white rounded-lg px-4 py-2">
+                <p className="text-sm bg-orange-600 text-white rounded-t-lg px-4 py-2">
                   Welcome <b className=" capitalize ">{activeUser.username}</b>{" "}
                 </p>
                 <hr />
