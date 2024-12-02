@@ -30,7 +30,7 @@ function Home() {
       <div
         className={`${
           darkMode ? "bg-[#0f1113] text-white" : "bg-white"
-        } flex flex-col items-center gap-5 px-7`}
+        } flex flex-col items-center my-5 gap-5 px-7`}
       >
         <div className="flex flex-col justify-center items-center mb-5">
           <h1 className="-xsm:text-2xl w-full text-center text-4xl font-[600] mb-5 -xsm:mb-1 ">

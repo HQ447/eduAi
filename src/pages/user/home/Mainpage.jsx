@@ -12,13 +12,13 @@ function Mainpage() {
     <div
       className={`${
         darkMode ? "bg-[#0f1113] text-white " : "bg-white"
-      }    flex flex-col  px-20 -md:px-10 -sm:px-6 -xsm:px-4 h-[80vh]  w-full transition-all`}
+      }    flex flex-col  px-20 -md:px-10 -sm:px-6 -xsm:px-4   w-full transition-all`}
     >
       <div className="flex w-full pt-14 py-8 md:items-center -md:justify-center flex-wrap-reverse">
         <div className="flex flex-col  basis-3/6 -md:basis-full  ">
           <p className="text-xs -md:text-center">For Teachers & Students</p>
           <h1 className=" -xsm:text-[1.5rem] my-2 text-5xl -md:text-center w-full -sm:text-4xl font-[600] lineHeight">
-            Everyone can{" "}
+            Empowering Local Minds with{" "}
             <span
               style={{
                 background:
@@ -27,9 +27,8 @@ function Mainpage() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              Learn
+              Global Standards.
             </span>{" "}
-            anything.
           </h1>
           <p
             className={` ${

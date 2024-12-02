@@ -138,7 +138,7 @@ function Courses() {
             Our comprehensive project based courses
           </p>
         </div>
-        <div className="flex flex-wrap justify-between gap-5 -xsm:px-3">
+        <div className="flex flex-wrap justify-center gap-5 -xsm:px-3">
           {filteredCourses.map((obj) => (
             <div
               key={obj.id}
