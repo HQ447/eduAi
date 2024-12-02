@@ -40,8 +40,8 @@ function ResponsiveSidebar() {
       <div
         className={`relative transform transition-transform duration-[3s] ease-in-out  ${
           showSidebar ? "right-0" : " -right-48"
-        } ${darkMode ? "!bg-[#141414fc] text-white" : "bg-white"}
-           flex-col rounded-l-3xl min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50`}
+        } ${darkMode ? "!bg-[#141414fc] text-white" : ""}
+           flex-col pt-20 rounded-l-3xl min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50`}
       >
         <RxCross2
           className={`${
@@ -49,27 +49,30 @@ function ResponsiveSidebar() {
           } absolute top-5 left-5 text-xl text-white`}
           onClick={() => dispatch(updateShowSidebar(false))}
         />
-        <div className=" text-white py-5 gap-2 mx-2 mt-2 rounded-t-3xl   bg-[#ff6900]  flex flex-col items-center">
+        <div className="relative text-white pt-6 pb-4  gap-1 mx-2 mt-2 rounded-3xl   bg-[#ff6900]  flex flex-col items-center">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Student_icon.svg/1024px-Student_icon.svg.png"
             alt=""
-            className="w-14 h-14 rounded-full"
+            className="w-12 border-2 border-[#ff6900] h-12 rounded-full absolute -top-7"
           />
           <h1>EduAI</h1>
+          <p className="w-full text-center text-xs">
+            "Prepare Locally, Compete Globally."
+          </p>
         </div>
 
-        <div className=" mx-2 relative gap-4 flex flex-col">
-          <img
+        <div className=" bg-white h-fit rounded-3xl mx-2 mt-3 relative gap-4 flex flex-col">
+          {/* <img
             src={svg}
             alt=""
-            className=" left-0 top-0 absolute w-full h-7 "
-          />
+            className=" left-0 top-0 absolute w-full h-7 rounded-t-3xl "
+          /> */}
           <NavLink
             to={""}
             onClick={() => renderChange("Home")}
             className={`${
               currStatus === "Home" ? "bg-[#ff6900] text-white" : ""
-            } flex gap-3 mt-10 items-center  w-full py-2 rounded-md px-2`}
+            } flex gap-3 mt-10 items-center  w-full py-3 rounded-md px-2`}
           >
             <IoHomeOutline className="text-3xl -xsm:text-sm" />
             <h1 className="text-xs">Home</h1>
