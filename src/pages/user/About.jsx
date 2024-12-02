@@ -26,32 +26,30 @@ function About() {
           darkMode ? "text-white" : "text-[#000000b5] "
         } text-[1rem] text-justify -xsm:text-[.8rem]  `}
       >
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-        suscipit assumenda velit! Atque adipisci deleniti ea est, qui cum dolor
-        in, labore quibusdam praesentium quidem eveniet unde deserunt aperiam
-        velit?
+        At Edu-AI, we are dedicated to transforming education by providing an
+        innovative e-learning platform designed for a diverse range of learners.
+        Whether you’re preparing for competitive exams, school exams, enhancing
+        your skills with IT courses, or pursuing academic success in college,
+        Edu-AI offers comprehensive resources tailored to your needs. We aim to
+        make quality education accessible to everyone, anywhere, anytime.
         <br />
         <br />
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-        suscipit assumenda velit! Atque adipisci deleniti ea est, qui cum dolor
-        in, labore quibusdam praesentium quidem eveniet unde deserunt aperiam
-        velit? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Nesciunt suscipit assumenda velit! Atque adipisci deleniti ea est, qui
-        cum dolor in, labore quibusdam praesentium quidem eveniet unde deserunt
-        aperiam velit?
+        Our mission is to empower learners with a platform that combines
+        advanced technology and carefully crafted content. From foundational
+        school subjects and exam preparation courses to professional
+        skill-building programs, we cater to students of all ages and academic
+        levels. With interactive tools and personalized learning paths, Edu-AI
+        is committed to helping you achieve your goals, whether it’s excelling
+        in academics, passing crucial exams, or advancing in your career.
         <br />
         <br />
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-        suscipit assumenda velit! Atque adipisci deleniti ea est, qui cum dolor
-        in, labore quibusdam praesentium quidem eveniet unde deserunt aperiam
-        velit? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Nesciunt suscipit assumenda velit! Atque adipisci deleniti ea est, qui
-        cum dolor in, labore quibusdam praesentium quidem eveniet unde deserunt
-        aperiam velit?
+        Edu-AI stands apart by addressing the unique needs of learners in
+        Pakistan and beyond. We believe education is the key to unlocking
+        potential, and our platform ensures you have the resources and support
+        needed to succeed. Join us in shaping a future where learning is not
+        limited by boundaries and everyone has the opportunity to thrive.
         <br /> <br />
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-        suscipit assumenda velit! Atque adipisci deleniti ea est, qui cum dolor
-        in, labore quibusdam praesentium quidem eveniet unde deserunt aperiam
+        Together, let’s redefine education for a smarter, more connected world.
         <br />
         <br />
         <br />
