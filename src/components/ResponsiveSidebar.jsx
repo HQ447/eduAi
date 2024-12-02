@@ -6,7 +6,7 @@ import { GiBlackBook } from "react-icons/gi";
 import { AiOutlineTeam } from "react-icons/ai";
 import { IoBulbOutline } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
-import svg from "./../assets/images/svg.png";
+// import svg from "./../assets/images/svg.png";
 
 function ResponsiveSidebar() {
   const dispatch = useDispatch();
@@ -41,12 +41,12 @@ function ResponsiveSidebar() {
         className={`relative transform transition-transform duration-[3s] ease-in-out  ${
           showSidebar ? "right-0" : " -right-48"
         } ${darkMode ? "!bg-[#141414fc] text-white" : ""}
-           flex-col pt-20 rounded-l-3xl min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50`}
+           flex-col pt-8 rounded-l-3xl min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50`}
       >
         <RxCross2
           className={`${
             darkMode ? "text-white" : "text-black"
-          } absolute top-5 left-5 text-xl text-white`}
+          } absolute top-3 left-5 text-xl text-white`}
           onClick={() => dispatch(updateShowSidebar(false))}
         />
         <div className="relative text-white pt-6 pb-4  gap-1 mx-2 mt-2 rounded-3xl   bg-[#ff6900]  flex flex-col items-center">
@@ -57,11 +57,11 @@ function ResponsiveSidebar() {
           />
           <h1>EduAI</h1>
           <p className="w-full text-center text-xs">
-            "Prepare Locally, Compete Globally."
+            &quot;Prepare Locally, Compete Globally.&quot;
           </p>
         </div>
 
-        <div className=" bg-white h-fit rounded-3xl mx-2 mt-3 relative gap-4 flex flex-col">
+        <div className=" bg-white py-5 px-5 h-[70vh] rounded-3xl mx-2 mt-3 relative gap-4 flex flex-col">
           {/* <img
             src={svg}
             alt=""
@@ -72,7 +72,7 @@ function ResponsiveSidebar() {
             onClick={() => renderChange("Home")}
             className={`${
               currStatus === "Home" ? "bg-[#ff6900] text-white" : ""
-            } flex gap-3 mt-10 items-center  w-full py-3 rounded-md px-2`}
+            } flex gap-3  items-center  w-full py-3 rounded-2xl px-2`}
           >
             <IoHomeOutline className="text-3xl -xsm:text-sm" />
             <h1 className="text-xs">Home</h1>
@@ -81,8 +81,8 @@ function ResponsiveSidebar() {
             to={"about"}
             onClick={() => renderChange("About")}
             className={`${
-              currStatus === "About" ? "bg-orange-600 text-white" : ""
-            } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
+              currStatus === "About" ? "bg-[#ff6900] text-white" : ""
+            } flex gap-3 items-center  w-full py-3 rounded-2xl px-2`}
           >
             <AiOutlineTeam className="text-3xl -xsm:text-sm" />
             <h1 className="text-xs">About Us</h1>
@@ -91,8 +91,8 @@ function ResponsiveSidebar() {
             to={"courses"}
             onClick={() => renderChange("Courses")}
             className={`${
-              currStatus === "Courses" ? "bg-orange-600 text-white" : ""
-            } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
+              currStatus === "Courses" ? "bg-[#ff6900] text-white" : ""
+            } flex gap-3 items-center  w-full py-3 rounded-2xl px-2`}
           >
             <GiBlackBook className="text-3xl -xsm:text-sm" />
             <h1 className="text-xs">Courses</h1>
@@ -101,8 +101,8 @@ function ResponsiveSidebar() {
             to={"resources"}
             onClick={() => renderChange("Resourses")}
             className={`${
-              currStatus === "Resourses" ? "bg-orange-600 text-white" : ""
-            } flex gap-3 items-center  w-full py-2 rounded-md px-2`}
+              currStatus === "Resourses" ? "bg-[#ff6900] text-white" : ""
+            } flex gap-3 items-center  w-full py-3 rounded-2xl px-2`}
           >
             <IoBulbOutline className="text-3xl -xsm:text-sm" />
             <h1 className="text-xs">Resources</h1>
