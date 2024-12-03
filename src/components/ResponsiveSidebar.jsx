@@ -16,7 +16,6 @@ function ResponsiveSidebar() {
 
   function renderChange(currStatus) {
     dispatch(updateCurrStatus(currStatus));
-
     setTimeout(() => {
       dispatch(updateShowSidebar(false));
     }, 400);
