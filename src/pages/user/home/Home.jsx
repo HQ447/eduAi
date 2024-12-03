@@ -21,7 +21,7 @@ function Home() {
 
   // bg-gradient-to-b from-[#f7fbff] to-[#cce7f5]
   return (
-    <div className="w-full">
+    <div className={`${darkMode ? "bg-[#0f1113]" : "bg-white"} w-full`}>
       <Mainpage />
       <CircleComponent />
       {/* <Slider /> */}
