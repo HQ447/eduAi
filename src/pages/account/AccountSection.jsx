@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
-import svg from "../../assets/images/svg.png";
+import svg from "../../assets/images/2waves.png";
 
 function AccountSection() {
   const activeUser = useSelector((state) => state.store.activeUser);
@@ -21,7 +21,7 @@ function AccountSection() {
 
   return (
     <div className="w-full min-h-screen">
-      <div className=" relative bg-[#ff6900]  flex flex-col gap-6 ">
+      <div className=" relative bg-[#1E3A8A] flex flex-col gap-6 ">
         {/* <div
           className={` ${
             darkMode
