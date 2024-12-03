@@ -25,11 +25,11 @@ function ResponsiveSidebar() {
     <div
       className={`${
         showSidebar ? "fixed" : "hidden"
-      } md:hidden inset-0 z-50 flex justify-end`}
+      } md:hidden inset-0 z-50 flex justify-end `}
     >
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black opacity-50 backdrop-blur-sm"
+        className="absolute  inset-0 bg-black opacity-50 backdrop-blur-sm"
         onClick={() => {
           dispatch(updateShowSidebar(false));
         }}
@@ -40,27 +40,27 @@ function ResponsiveSidebar() {
         className={`relative transform transition-transform duration-[3s] ease-in-out  ${
           showSidebar ? "right-0" : " -right-48"
         } ${darkMode ? "!bg-[#141414fc] text-white" : ""}
-           flex-col pt-8 rounded-l-3xl min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50`}
+          bg-white flex-col pt-8 rounded-l-3xl min-h-screen -md:w-[50%] -sm:w-[60%] -xsm:w-[80%] flex z-50`}
       >
         <RxCross2
           className={`${
             darkMode ? "text-white" : "text-black"
-          } absolute top-3 left-5 text-xl text-white`}
+          } absolute top-3 left-5 text-xl `}
           onClick={() => dispatch(updateShowSidebar(false))}
         />
-        <div className="relative text-white pt-6 pb-4  gap-1 mx-2 mt-2 rounded-3xl   bg-[#ff6900]  flex flex-col items-center">
+        <div className="relative pt-6 pb-4  gap-1 mx-2 mt-2 rounded-3xl  shadow shadow-[#c9c8c8]  flex flex-col items-center">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Student_icon.svg/1024px-Student_icon.svg.png"
             alt=""
-            className="w-12 border-2 border-[#ff6900] h-12 rounded-full absolute -top-7"
+            className="w-12 h-12 rounded-full shadow-none absolute -top-7"
           />
-          <h1>EduAI</h1>
-          <p className="w-full text-center text-xs">
+          <h1 className="text-xs">EduAI</h1>
+          <p className="w-full text-center text-[10px]">
             &quot;Prepare Locally, Compete Globally.&quot;
           </p>
         </div>
 
-        <div className=" bg-white py-5 px-5 h-[70vh] rounded-3xl mx-2 mt-3 relative gap-4 flex flex-col">
+        <div className=" bg-white border shadow-lg shadow-[#c9c8c8]  py-5 px-5 mx-4 h-[70vh] rounded-3xl  mt-3 relative gap-4 flex flex-col">
           {/* <img
             src={svg}
             alt=""
