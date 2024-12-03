@@ -124,7 +124,7 @@ function CourseDetail() {
         <h1 className="text-2xl font-semibold">
           {course.new_price == 0 ? "Free" : `$${course.new_price}`}
         </h1>
-        <button className="px-5 -xsm:px-2 w-full py-2 hover:scale-95 transition-all bg-[#F59E0B]  text-sm font-semibold text-white rounded-lg">
+        <button className="px-5 -xsm:px-2 w-full py-2 hover:scale-95 transition-all bg-red-600  text-sm font-semibold text-white rounded-lg">
           Enroll Now ${course.new_price}
         </button>
         <ul className="px-4 -xsm:px-2 -xsm:text-xs list-disc text-sm space-y-1">
