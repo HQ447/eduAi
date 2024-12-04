@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { RxDashboard } from "react-icons/rx";
+import { TbBrandGoogleAnalytics } from "react-icons/tb";
+import { BsDatabaseAdd } from "react-icons/bs";
 
 // eslint-disable-next-line react/prop-types
 function AdminSidebar({ showSidebar }) {
@@ -33,28 +36,31 @@ function AdminSidebar({ showSidebar }) {
           to={""}
           className={`${
             activeTab == "dashboard" ? "bg-[#1E3A8A] text-white " : ""
-          } py-2   px-3 rounded-md`}
+          } py-2  flex items-center gap-2  px-3 rounded-md`}
           onClick={() => setActiveTabs("dashboard")}
         >
+          <RxDashboard className="text-lg" />
           Dashboard
         </NavLink>
         <NavLink
           to={"link2"}
           className={` ${
             activeTab == "link2" ? "bg-[#1E3A8A] text-white" : ""
-          } py-2 px-3 rounded-md`}
+          } py-2 px-3 flex items-center gap-2 rounded-md`}
           onClick={() => setActiveTabs("link2")}
         >
+          <TbBrandGoogleAnalytics className="text-lg" />
           Analytics
         </NavLink>
         <NavLink
           to={"link3"}
           className={` ${
             activeTab == "link3" ? "bg-[#1E3A8A] text-white" : ""
-          } py-2 px-3 rounded-md`}
+          } py-2 px-3 flex items-center gap-2 rounded-md`}
           onClick={() => setActiveTabs("link3")}
         >
-          Add/Drop Courses
+          <BsDatabaseAdd className="text-lg" />
+          Manage Courses
         </NavLink>
         <NavLink
           to={"link4"}
