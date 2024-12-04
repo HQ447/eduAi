@@ -19,7 +19,7 @@ function AdminSidebar({ showSidebar }) {
         <img
           src="https://imgcdn.stablediffusionweb.com/2024/6/12/4d688bcf-f53b-42b6-a98d-3254619f3b58.jpg"
           alt=""
-          className="rounded-full w-16 h-16 absolute -top-5 left-20"
+          className="rounded-full w-16 h-16 absolute -top-5 left-24"
         />
         <p className="flex justify-center items-center gap-1 text-xs text-gray-600">
           <div className=" bg-green-500 w-2 h-2 rounded-full"></div>
@@ -28,39 +28,39 @@ function AdminSidebar({ showSidebar }) {
         <h1 className=" font-semibold">Ayesha Khan Afridi</h1>
         <p className=" text-xs">Founder of EduAI</p>
       </div>
-      <div className="flex flex-col my-5 gap-3">
+      <div className="flex flex-col my-5 gap-3 text-sm">
         <NavLink
           to={""}
           className={`${
-            activeTab == "dashboard" ? "bg-[#9e1cb4] text-white" : ""
-          } py-3   px-3 rounded-md`}
+            activeTab == "dashboard" ? "bg-[#1E3A8A] text-white " : ""
+          } py-2   px-3 rounded-md`}
           onClick={() => setActiveTabs("dashboard")}
         >
-          Defaul
+          Dashboard
         </NavLink>
         <NavLink
           to={"link2"}
           className={` ${
-            activeTab == "link2" ? "bg-[#9e1cb4] text-white" : ""
-          } py-3 px-3 rounded-md`}
+            activeTab == "link2" ? "bg-[#1E3A8A] text-white" : ""
+          } py-2 px-3 rounded-md`}
           onClick={() => setActiveTabs("link2")}
         >
-          Link 2
+          Analytics
         </NavLink>
         <NavLink
           to={"link3"}
           className={` ${
-            activeTab == "link3" ? "bg-[#9e1cb4] text-white" : ""
-          } py-3 px-3 rounded-md`}
+            activeTab == "link3" ? "bg-[#1E3A8A] text-white" : ""
+          } py-2 px-3 rounded-md`}
           onClick={() => setActiveTabs("link3")}
         >
-          Link 3
+          Add/Drop Courses
         </NavLink>
         <NavLink
           to={"link4"}
           className={` ${
-            activeTab == "link4" ? "bg-[#9e1cb4] text-white" : ""
-          } py-3  px-3 rounded-md`}
+            activeTab == "link4" ? "bg-[#1E3A8A] text-white" : ""
+          } py-2  px-3 rounded-md`}
           onClick={() => setActiveTabs("link4")}
         >
           Link 4
