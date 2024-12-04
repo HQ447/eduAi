@@ -5,7 +5,6 @@ import { IoIosMenu } from "react-icons/io";
 
 function AdminDashboard() {
   const [showSidebar, setShowSidebar] = useState(false);
-  const styles = { boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" };
 
   return (
     <div className="flex w-full ">
@@ -16,10 +15,7 @@ function AdminDashboard() {
           if (showSidebar) setShowSidebar(false);
         }}
       >
-        <div
-          style={styles}
-          className="flex justify-between ribbon -xsm:px-3 px-10 py-4 bg-white "
-        >
+        <div className="flex justify-between ribbon -xsm:px-3 px-10 py-4 bg-white ">
           <IoIosMenu
             className="hidden -md:flex cursor-pointer"
             onClick={() => {
