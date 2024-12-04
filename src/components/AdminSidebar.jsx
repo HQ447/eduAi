@@ -13,7 +13,7 @@ function AdminSidebar({ showSidebar }) {
     <div
       className={`${
         showSidebar ? "left-0" : "-left-72"
-      } flex shadow-lg px-5 py-10  flex-col w-[22%] -lg:w-[30%] -md:w-[40%] -sm:w-[50%] -xsm:w-[70%] -md:fixed -left-72 bg-white  min-h-screen `}
+      } flex  px-5 py-10  flex-col w-[22%] -lg:w-[30%] -md:w-[40%] -sm:w-[50%] -xsm:w-[70%] -md:fixed -left-72 bg-white  min-h-screen `}
     >
       <div className="relative pt-14  border shadow-md rounded-md text-center   p-3">
         <img
