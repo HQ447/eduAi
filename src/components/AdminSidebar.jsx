@@ -21,6 +21,10 @@ function AdminSidebar({ showSidebar }) {
           alt=""
           className="rounded-full w-16 h-16 absolute -top-5 left-20"
         />
+        <p className="flex justify-center items-center gap-1 text-xs text-gray-600">
+          <div className=" bg-green-500 w-2 h-2 rounded-full"></div>
+          Active
+        </p>
         <h1 className=" font-semibold">Ayesha Khan Afridi</h1>
         <p className=" text-xs">Founder of EduAI</p>
       </div>
