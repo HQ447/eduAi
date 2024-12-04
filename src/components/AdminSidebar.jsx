@@ -13,9 +13,9 @@ function AdminSidebar({ showSidebar }) {
     <div
       className={`${
         showSidebar ? "left-0" : "-left-72"
-      } flex px-5 py-10  flex-col w-[22%] -lg:w-[30%] -md:w-[40%] -sm:w-[50%] -xsm:w-[70%] -md:fixed -left-72 bg-white  min-h-screen `}
+      } flex shadow-lg px-5 py-10  flex-col w-[22%] -lg:w-[30%] -md:w-[40%] -sm:w-[50%] -xsm:w-[70%] -md:fixed -left-72 bg-white  min-h-screen `}
     >
-      <div className="relative pt-14 border shadow-md rounded-md text-center   p-3">
+      <div className="relative pt-14  border shadow-md rounded-md text-center   p-3">
         <img
           src="https://imgcdn.stablediffusionweb.com/2024/6/12/4d688bcf-f53b-42b6-a98d-3254619f3b58.jpg"
           alt=""

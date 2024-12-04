@@ -7,7 +7,7 @@ function AdminDashboard() {
   const [showSidebar, setShowSidebar] = useState(false);
 
   return (
-    <div className="flex w-full bg-[#eae9e9]">
+    <div className="flex w-full ">
       <AdminSidebar showSidebar={showSidebar} />
       <div
         className="flex flex-col w-[78%] -lg:w-[70%] -md:w-full"
@@ -15,7 +15,7 @@ function AdminDashboard() {
           if (showSidebar) setShowSidebar(false);
         }}
       >
-        <div className="flex justify-between ribbon -xsm:px-3 px-10 py-4  shadow-lg bg-[#f1f1f1]">
+        <div className="flex justify-between ribbon -xsm:px-3 px-10 py-4  shadow-md">
           <IoIosMenu
             className="hidden -md:flex cursor-pointer"
             onClick={() => {
@@ -24,7 +24,7 @@ function AdminDashboard() {
           />
           profileicon
         </div>
-        <div className="flex flex-col -xsm:px-3 px-10 py-4 min-h-screen">
+        <div className="flex flex-col -xsm:px-3 px-10 py-4 min-h-screen ">
           <Outlet />
         </div>
       </div>
