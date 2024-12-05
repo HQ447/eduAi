@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import StarRating from "../../components/StarRating";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { IoMdHeartEmpty } from "react-icons/io";
 
 function Courses() {
   const darkMode = useSelector((state) => state.store.darkMode);
@@ -159,7 +160,10 @@ function Courses() {
                 <h1 className=" text-md font-semibold">{obj.title}</h1>
                 <p className="text-xs">{obj.decription}</p>
                 <p className="text-xs text-green-800">{obj.instructor}</p>
-                <p className="text-xs bg-gray-400">{obj.chapters.length}</p>
+                <p className="text-xs text-gray-400">
+                  {obj.chapters.length} Sections - {obj.lectures.length}{" "}
+                  Lectures
+                </p>
                 <div className="flex items-center text-sm">
                   <h1>{obj.rating}.0</h1>
                   &nbsp;
@@ -175,7 +179,7 @@ function Courses() {
                       ${obj.old_price}
                     </del>
                   </p>
-                  <p className="text-sm">{obj.lectures} Lectures</p>
+                  <IoMdHeartEmpty className="text-xl" />
                 </div>
               </div>
             </div>
