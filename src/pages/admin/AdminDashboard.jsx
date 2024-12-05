@@ -3,6 +3,7 @@ import AdminSidebar from "../../components/AdminSidebar";
 import { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { SlMagnifier } from "react-icons/sl";
+import { IoMdNotificationsOutline } from "react-icons/io";
 
 function AdminDashboard() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -16,21 +17,24 @@ function AdminDashboard() {
           if (showSidebar) setShowSidebar(false);
         }}
       >
-        <div className="flex justify-between ribbon -xsm:px-3 px-10 py-4 bg-white ">
-          <IoIosMenu
-            className="hidden -md:flex cursor-pointer"
-            onClick={() => {
-              setShowSidebar((prev) => !prev);
-            }}
-          />
-          <div className="flex items-center gap-2">
-            <SlMagnifier />
-            <input
-              type="text"
-              placeholder="Search now"
-              className=" placeholder:text-sm placeholder:text-gray-300 outline-none"
+        <div className="flex items-center justify-between ribbon -xsm:px-3 px-10 py-4 bg-white ">
+          <div>
+            <IoIosMenu
+              className="hidden -md:flex cursor-pointer"
+              onClick={() => {
+                setShowSidebar((prev) => !prev);
+              }}
             />
+            <div className="flex items-center gap-2">
+              <SlMagnifier />
+              <input
+                type="text"
+                placeholder="Search now"
+                className=" placeholder:text-sm placeholder:text-gray-300 outline-none"
+              />
+            </div>
           </div>
+          <IoMdNotificationsOutline />
         </div>
         <div className="flex flex-col bg-[#f5f7ff] -xsm:px-3 px-10 py-4 min-h-screen ">
           <Outlet />
