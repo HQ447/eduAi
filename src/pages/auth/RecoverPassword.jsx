@@ -21,7 +21,7 @@ function RecoverPassword() {
           />
         </div>
         <NavLink to={"/get-otp"} className={"w-full"}>
-          <button className="w-full bg-orange-600 mb-3 hover:scale-95 transition-all hover:bg-orange-600 text-white rounded-md py-2 shadow-md">
+          <button className="w-full bg-[#1E3A8A] mb-3 hover:scale-95 transition-all hover:bg-orange-600 text-white rounded-md py-2 shadow-md">
             Next
           </button>
         </NavLink>

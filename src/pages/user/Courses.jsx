@@ -157,8 +157,9 @@ function Courses() {
               />
               <div className="py-3 flex flex-col gap-2">
                 <h1 className=" text-md font-semibold">{obj.title}</h1>
-                <p className="text-xs text-green-800">{obj.instructor}</p>
                 <p className="text-xs">{obj.decription}</p>
+                <p className="text-xs text-green-800">{obj.instructor}</p>
+                <p className="text-xs bg-gray-400">{obj.chapters.length}</p>
                 <div className="flex items-center text-sm">
                   <h1>{obj.rating}.0</h1>
                   &nbsp;
