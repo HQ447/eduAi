@@ -25,7 +25,7 @@ function ResponsiveSidebar() {
     <div
       className={`${
         showSidebar ? "fixed" : "hidden"
-      } md:hidden inset-0 z-50 flex justify-end `}
+      } md:hidden -xsm:hidden inset-0 z-50 flex justify-end `}
     >
       {/* Backdrop */}
       <div

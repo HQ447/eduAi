@@ -21,7 +21,7 @@ function BottomNavbar() {
   }, [currStatus]);
 
   return (
-    <div className="w-full fixed bottom-0 bg-[#300f85] text-white text-xs justify-center gap-6 flex py-1">
+    <div className="hidden -xsm:flex w-full fixed bottom-0 bg-[#300f85] text-white text-xs justify-center gap-6  py-1">
       <NavLink
         to={""}
         onClick={() => setCurrStatus("Home")}
