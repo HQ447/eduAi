@@ -22,7 +22,7 @@ function Mainpage() {
             <span
               style={{
                 background:
-                  " linear-gradient(90deg, #1E3A8A 2.34%, #1E3A8A 100.78%)",
+                  "linear-gradient(90deg, #455be7 2.34%, #653bce 100.78%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
@@ -39,7 +39,7 @@ function Mainpage() {
           </p>
           <NavLink to={"courses"} className={"-xsm:text-center"}>
             <button
-              className="rounded-md hover:scale-95 transition-all -xsm:py-3 -xsm:text-sm -md:mx-auto -md:text-center w-full max-w-fit py-3  px-5 bg-[#1E3A8A] text-white font-semibold"
+              className="rounded-md hover:scale-95 transition-all -xsm:py-3 -xsm:text-sm -md:mx-auto -md:text-center w-full max-w-fit py-3  px-5 bg-[#653bce] text-white font-semibold"
               onClick={() => dispatch(updateCurrStatus("Courses"))}
             >
               Learners, Start Here
