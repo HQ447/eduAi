@@ -11,8 +11,8 @@ function Learnings() {
   const navigate = useNavigate();
   const completed = 30;
   const pieChartData = [
-    { title: "Remaining", value: 100 - completed, color: "#E38627" },
-    { title: "Completed", value: completed, color: "#C13C37" },
+    { title: "Remaining", value: 100 - completed, color: "#d4cfca" },
+    { title: "Completed", value: completed, color: "#653bce" },
   ];
 
   return (
@@ -72,12 +72,12 @@ function Learnings() {
             />
             <div className="flex flex-col gap-2 ">
               <p className="flex items-center justify-center gap-1">
-                <div className="w-3 h-3 bg-[#C13C37]"></div>
+                <div className="w-3 h-3 bg-[#653bce]"></div>
                 <p className="text-xs">Completed</p>
               </p>
               <p className="flex justify-center items-center gap-1">
-                <div className="w-3 h-3 bg-[#E38627]"></div>
-                <p className="text-xs">Remaining</p>
+                <div className="w-3 h-3 bg-[#d4cfca]"></div>
+                <p className="text-xs ">Remaining</p>
               </p>
             </div>
             <p className="w-full text-left -xsm:text-center text-xs mt-4">
