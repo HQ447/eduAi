@@ -86,7 +86,7 @@ function Navbar() {
         <NavLink
           to={""}
           className={`${
-            currStatus === "Home" ? "text-[#1E3A8A] font-bold" : ""
+            currStatus === "Home" ? "text-[#653bce] font-bold" : ""
           }`}
           onClick={() => dispatch(updateCurrStatus("Home"))}
         >
@@ -95,7 +95,7 @@ function Navbar() {
         <NavLink
           to={"about"}
           className={`${
-            currStatus === "About" ? "text-[#1E3A8A] font-bold " : ""
+            currStatus === "About" ? "text-[#653bce] font-bold " : ""
           }`}
           onClick={() => dispatch(updateCurrStatus("About"))}
         >
@@ -104,7 +104,7 @@ function Navbar() {
         <NavLink
           to={"courses"}
           className={`${
-            currStatus === "Courses" ? "text-[#1E3A8A] font-bold" : ""
+            currStatus === "Courses" ? "text-[#653bce] font-bold" : ""
           }`}
           onClick={() => dispatch(updateCurrStatus("Courses"))}
         >
@@ -113,7 +113,7 @@ function Navbar() {
         <NavLink
           to={"resources"}
           className={`${
-            currStatus === "Resources" ? "text-[#1E3A8A] font-bold" : ""
+            currStatus === "Resources" ? "text-[#653bce] font-bold" : ""
           }`}
           onClick={() => dispatch(updateCurrStatus("Resources"))}
         >
