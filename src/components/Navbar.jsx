@@ -73,7 +73,7 @@ function Navbar() {
           <span
             style={{
               background:
-                "linear-gradient(90deg, #1E3A8A 2.34%, #1E3A8A 100.78%)",
+                "linear-gradient(90deg, #455be7 2.34%, #653bce 100.78%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -182,7 +182,7 @@ function Navbar() {
           <NavLink
             to={"/login"}
             className={
-              "rounded-md py-2 -xsm:text-[10px] -xsm:px-4 -xsm:py-1 text-sm  bg-[#1E3A8A] text-white px-5 "
+              "rounded-md py-2 -xsm:text-[10px] -xsm:px-4 -xsm:py-1 text-sm  bg-[#653bce] text-white px-5 "
             }
           >
             Login
