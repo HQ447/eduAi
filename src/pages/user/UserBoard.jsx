@@ -3,6 +3,7 @@ import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 // import ResponsiveNav from "../../components/ResponsiveNav";
 import ResponsiveSidebar from "../../components/ResponsiveSidebar";
+import BottomNavbar from "../../components/BottomNavbar";
 
 function UserBoard() {
   // bg-gradient-to-b from-[#cce7f5] to-[#f5faff]
@@ -13,6 +14,7 @@ function UserBoard() {
       <Navbar />
       <Outlet />
       <Footer />
+      <BottomNavbar />
     </div>
   );
 }
