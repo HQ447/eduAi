@@ -49,6 +49,7 @@ function BottomNavbar() {
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Student_icon.svg/1024px-Student_icon.svg.png"
         alt=""
+        className=" w-10 h-10 rounded-full relative -top-2 border-2 border-[#300f85]"
       />
       <NavLink
         to={"courses"}
