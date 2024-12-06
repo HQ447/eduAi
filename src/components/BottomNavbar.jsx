@@ -6,21 +6,21 @@ import { MdOutlineDataset } from "react-icons/md";
 
 function BottomNavbar() {
   return (
-    <div className="w-full fixed bottom-0 bg-black text-white text-xs justify-center gap-3 flex py-4">
-      <NavLink to={""} className={"flex flex-col"}>
-        <IoHomeOutline />
+    <div className="w-full fixed bottom-0 bg-black text-white text-xs justify-center gap-6 flex py-2">
+      <NavLink to={""} className={"flex flex-col justify-center items-center"}>
+        <IoHomeOutline className="text-lg" />
         <p>Home</p>
       </NavLink>
-      <NavLink to={""} className={"flex flex-col"}>
-        <RiTeamLine />
+      <NavLink to={""} className={"flex flex-col justify-center items-center"}>
+        <RiTeamLine className="text-lg" />
         <p>About</p>
       </NavLink>
-      <NavLink to={""} className={"flex flex-col"}>
-        <IoBookOutline />
+      <NavLink to={""} className={"flex flex-col justify-center items-center"}>
+        <IoBookOutline className="text-lg" />
         <p>Courses</p>
       </NavLink>
-      <NavLink to={""} className={"flex flex-col"}>
-        <MdOutlineDataset />
+      <NavLink to={""} className={"flex flex-col justify-center items-center"}>
+        <MdOutlineDataset className="text-lg" />
         <p>Resourses</p>
       </NavLink>
     </div>
