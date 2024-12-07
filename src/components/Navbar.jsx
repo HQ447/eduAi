@@ -53,7 +53,7 @@ function Navbar() {
       }}
     >
       <IoMenu
-        className={`hidden md:flex text-xl `}
+        className={`md:hidden -md:flex -xsm:hidden text-xl `}
         onClick={() => {
           dispatch(updateShowSidebar(!showSidebar));
         }}
