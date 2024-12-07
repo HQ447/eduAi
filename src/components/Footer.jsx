@@ -19,7 +19,12 @@ function Footer() {
             About
           </h1>
           <NavLink to={"about"}>
-            <h1 onClick={() => dispatch(updateCurrStatus("About"))}>
+            <h1
+              onClick={() => {
+                dispatch(updateCurrStatus("About"));
+                window.scrollTo(0, 0);
+              }}
+            >
               Our Story
             </h1>
           </NavLink>
@@ -31,7 +36,12 @@ function Footer() {
             Quick Links{" "}
           </h1>
           <NavLink to={"courses"}>
-            <h1 onClick={() => dispatch(updateCurrStatus("Courses"))}>
+            <h1
+              onClick={() => {
+                dispatch(updateCurrStatus("Courses"));
+                window.scrollTo(0, 0);
+              }}
+            >
               Courses
             </h1>
           </NavLink>
