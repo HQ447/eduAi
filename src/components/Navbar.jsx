@@ -46,14 +46,14 @@ function Navbar() {
     <div
       className={` ${
         darkMode ? "bg-[#0f1113] text-white" : " bg-white text-[#000000b5] "
-      } flex px-20 py-5 -xsm:py-3 items-center -md:px-10 -sm:px-6 -xsm:px-5  justify-between sticky top-0 z-40 w-full  transition-all`}
+      } flex px-20 py-5 -xsm:py-3 items-center -md:px-10 -sm:px-6 -xsm:px-5  justify-between -xsm:justify-between sticky top-0 z-40 w-full  transition-all`}
       style={{
         boxShadow:
           "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
       }}
     >
       <IoMenu
-        className={`hidden text-xl -md:flex`}
+        className={`hidden md:flex text-xl `}
         onClick={() => {
           dispatch(updateShowSidebar(!showSidebar));
         }}
