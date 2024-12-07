@@ -5,6 +5,7 @@ import { updateCurrStatus } from "../store/cartSlice";
 function Footer() {
   const dispatch = useDispatch();
   const darkMode = useSelector((state) => state.store.darkMode);
+
   // bg-gradient-to-b from-[#cce7f5] to-[#f5faff]
   return (
     <div

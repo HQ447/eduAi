@@ -3,28 +3,19 @@ import { IoHomeOutline } from "react-icons/io5";
 import { IoBookOutline } from "react-icons/io5";
 import { RiTeamLine } from "react-icons/ri";
 import { MdOutlineDataset } from "react-icons/md";
-import { useDispatch } from "react-redux";
-import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+// import { useState, useEffect } from "react";
 import { updateCurrStatus } from "../store/cartSlice";
 
 function BottomNavbar() {
   const dispatch = useDispatch();
   //   const darkMode = useSelector((state) => state.store.darkMode);
-  const [currStatus, setCurrStatus] = useState("Home");
-
-  function renderChange() {
-    dispatch(updateCurrStatus(currStatus));
-  }
-
-  useEffect(() => {
-    renderChange();
-  }, [currStatus]);
-
+  const currStatus = useSelector((state) => state.store.currStatus);
   return (
     <div className="hidden h-14 -xsm:flex w-full fixed bottom-0 bg-[#4c2f93] text-white text-xs justify-center gap-6">
       <NavLink
         to={""}
-        onClick={() => setCurrStatus("Home")}
+        onClick={() => dispatch(updateCurrStatus("Home"))}
         className={` ${
           currStatus == "Home"
             ? "bg-white rounded-full relative  -top-2 border-2 border-[#4c2f93] text-black"
@@ -36,7 +27,7 @@ function BottomNavbar() {
       </NavLink>
       <NavLink
         to={"about"}
-        onClick={() => setCurrStatus("About")}
+        onClick={() => dispatch(updateCurrStatus("About"))}
         className={`  ${
           currStatus == "About"
             ? "bg-white rounded-full relative -top-2 border-2 border-[#4c2f93] text-black"
@@ -53,7 +44,7 @@ function BottomNavbar() {
       /> */}
       <NavLink
         to={"courses"}
-        onClick={() => setCurrStatus("Courses")}
+        onClick={() => dispatch(updateCurrStatus("Courses"))}
         className={`  ${
           currStatus == "Courses"
             ? "bg-white rounded-full relative  -top-2 border-2 border-[#4c2f93] text-black"
@@ -65,7 +56,7 @@ function BottomNavbar() {
       </NavLink>
       <NavLink
         to={"resources"}
-        onClick={() => setCurrStatus("Resourses")}
+        onClick={() => dispatch(updateCurrStatus("Resourses"))}
         className={`  ${
           currStatus == "Resourses"
             ? "bg-white rounded-full relative  -top-2 border-2 border-[#4c2f93] text-black"
