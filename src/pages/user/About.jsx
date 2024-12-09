@@ -54,7 +54,7 @@ function About() {
         <br />
         <br />
         <b className={`${darkMode ? "text-white" : ""} text-xl -xsm:text-sm `}>
-          Member-Name{" "}
+          Founder-Name{" "}
         </b>
         <br />
         Founder & CEO of eduAI

@@ -27,14 +27,6 @@ import Navigator from "./pages/account/Navigator";
 function App() {
   return (
     <div className="flex w-full bg-[white] ">
-      {/* <video
-        src="https://cdn.pixabay.com/video/2024/06/06/215500_large.mp4"
-        autoPlay
-        loop
-        muted
-        className="fixed w-full object-cover h-full -z-10 opacity-75"
-      ></video> */}
-
       <Routes>
         {/* Main/general section for all user */}
         <Route path="/" element={<UserSection />}>

@@ -77,7 +77,7 @@ function Login() {
         </div>
         <button
           onClick={handleClick}
-          className="w-full  mb-3 hover:scale-95 transition-all bg-[#653bce] text-white rounded-md py-2 shadow-md"
+          className="w-full  mb-3 hover:scale-95 transition-all bg-[#1E3A8A] text-white rounded-md py-2 shadow-md"
         >
           Sign in
         </button>

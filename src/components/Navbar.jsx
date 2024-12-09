@@ -61,7 +61,10 @@ function Navbar() {
       <NavLink
         to={""}
         className={"flex items-center gap-1"}
-        onClick={() => currStatus("Home")}
+        onClick={() => {
+          currStatus("Home");
+          window.scrollTo(0, 0);
+        }}
       >
         <img
           src="https://cdn-icons-png.flaticon.com/512/4729/4729436.png"
@@ -88,7 +91,10 @@ function Navbar() {
           className={`${
             currStatus === "Home" ? "text-[#653bce] font-bold" : ""
           }`}
-          onClick={() => dispatch(updateCurrStatus("Home"))}
+          onClick={() => {
+            dispatch(updateCurrStatus("Home"));
+            window.scrollTo(0, 0);
+          }}
         >
           Home
         </NavLink>
@@ -97,7 +103,10 @@ function Navbar() {
           className={`${
             currStatus === "About" ? "text-[#653bce] font-bold " : ""
           }`}
-          onClick={() => dispatch(updateCurrStatus("About"))}
+          onClick={() => {
+            dispatch(updateCurrStatus("About"));
+            window.scrollTo(0, 0);
+          }}
         >
           About
         </NavLink>
@@ -106,7 +115,10 @@ function Navbar() {
           className={`${
             currStatus === "Courses" ? "text-[#653bce] font-bold" : ""
           }`}
-          onClick={() => dispatch(updateCurrStatus("Courses"))}
+          onClick={() => {
+            dispatch(updateCurrStatus("Courses"));
+            window.scrollTo(0, 0);
+          }}
         >
           Courses
         </NavLink>
@@ -115,7 +127,10 @@ function Navbar() {
           className={`${
             currStatus === "Resources" ? "text-[#653bce] font-bold" : ""
           }`}
-          onClick={() => dispatch(updateCurrStatus("Resources"))}
+          onClick={() => {
+            dispatch(updateCurrStatus("Resources"));
+            window.scrollTo(0, 0);
+          }}
         >
           Resources
         </NavLink>

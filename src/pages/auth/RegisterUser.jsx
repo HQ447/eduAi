@@ -79,7 +79,7 @@ function RegisterUser() {
         </div>
         <button
           onClick={handleClick}
-          className="w-full bg-[#1E3A8A] mb-3 hover:scale-95 transition-all hover:bg-orange-600 text-white rounded-md py-2 shadow-md"
+          className="w-full bg-[#1E3A8A] mb-3 hover:scale-95 transition-all  text-white rounded-md py-2 shadow-md"
         >
           Register
         </button>
