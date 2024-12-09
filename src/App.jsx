@@ -49,10 +49,10 @@ function App() {
 
         {/* Admin-dashboard */}
         <Route path="/admin" element={<AdminDashboard />}>
-          <Route index element={<h1>default</h1>} />
-          <Route path="link2" element={<h1>link 2</h1>} />
-          <Route path="link3" element={<h1>link 3</h1>} />
-          <Route path="link4" element={<h1>link 4</h1>} />
+          <Route index element={<h1>Dashboad</h1>} />
+          <Route path="link2" element={<h1>Analytics</h1>} />
+          <Route path="link3" element={<h1>Manage Courses</h1>} />
+          <Route path="link4" element={<h1>Link 4</h1>} />
         </Route>
 
         {/* User Account-section */}

@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { RxDashboard } from "react-icons/rx";
 import { TbBrandGoogleAnalytics } from "react-icons/tb";
 import { BsDatabaseAdd } from "react-icons/bs";
+import { MdLogout } from "react-icons/md";
 
 // eslint-disable-next-line react/prop-types
 function AdminSidebar({ showSidebar }) {
@@ -34,8 +35,8 @@ function AdminSidebar({ showSidebar }) {
       <div className="flex flex-col my-5 gap-3 text-sm">
         <NavLink
           to={""}
-          className={`${
-            activeTab == "dashboard" ? "bg-[#1E3A8A] text-white " : ""
+          className={`hover:bg-gray-100 cursor-pointer ${
+            activeTab == "dashboard" ? "!bg-[#1E3A8A] text-white " : ""
           } py-2  flex items-center gap-2  px-3 rounded-md`}
           onClick={() => setActiveTabs("dashboard")}
         >
@@ -44,8 +45,8 @@ function AdminSidebar({ showSidebar }) {
         </NavLink>
         <NavLink
           to={"link2"}
-          className={` ${
-            activeTab == "link2" ? "bg-[#1E3A8A] text-white" : ""
+          className={`hover:bg-gray-100 cursor-pointer ${
+            activeTab == "link2" ? "!bg-[#1E3A8A] text-white" : ""
           } py-2 px-3 flex items-center gap-2 rounded-md`}
           onClick={() => setActiveTabs("link2")}
         >
@@ -54,8 +55,8 @@ function AdminSidebar({ showSidebar }) {
         </NavLink>
         <NavLink
           to={"link3"}
-          className={` ${
-            activeTab == "link3" ? "bg-[#1E3A8A] text-white" : ""
+          className={`hover:bg-gray-100 cursor-pointer ${
+            activeTab == "link3" ? "!bg-[#1E3A8A] text-white" : ""
           } py-2 px-3 flex items-center gap-2 rounded-md`}
           onClick={() => setActiveTabs("link3")}
         >
@@ -64,12 +65,19 @@ function AdminSidebar({ showSidebar }) {
         </NavLink>
         <NavLink
           to={"link4"}
-          className={` ${
-            activeTab == "link4" ? "bg-[#1E3A8A] text-white" : ""
+          className={`hover:bg-gray-100 cursor-pointer ${
+            activeTab == "link4" ? "!bg-[#1E3A8A] text-white" : ""
           } py-2  px-3 rounded-md`}
           onClick={() => setActiveTabs("link4")}
         >
           Link 4
+        </NavLink>
+        <NavLink
+          to={"/adminlogin"}
+          className={` flex gap-2  hover:bg-gray-100 cursor-pointer py-2  px-3 rounded-md text-red-600 font-semibold`}
+        >
+          <MdLogout className="text-lg" />
+          Logout
         </NavLink>
       </div>
     </div>
