@@ -5,7 +5,7 @@ import Navbar from "../../components/Navbar";
 import ResponsiveSidebar from "../../components/ResponsiveSidebar";
 import BottomNavbar from "../../components/BottomNavbar";
 
-function UserBoard() {
+function UserSection() {
   // bg-gradient-to-b from-[#cce7f5] to-[#f5faff]
   return (
     <div className="w-full bg-white ">
@@ -19,4 +19,4 @@ function UserBoard() {
   );
 }
 
-export default UserBoard;
+export default UserSection;

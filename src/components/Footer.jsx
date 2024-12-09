@@ -1,9 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { updateCurrStatus } from "../store/cartSlice";
 
 function Footer() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const darkMode = useSelector((state) => state.store.darkMode);
 
   // bg-gradient-to-b from-[#cce7f5] to-[#f5faff]
@@ -45,7 +46,9 @@ function Footer() {
               Courses
             </h1>
           </NavLink>
-          <h1>My Account</h1>
+          <h1 onClick={() => navigate("/login")} className=" cursor-pointer">
+            My Account
+          </h1>
           <h1 onClick={() => dispatch(updateCurrStatus("Courses"))}>Cource </h1>
         </div>
         <div className="flex flex-col gap-4 -xsm:w-full">

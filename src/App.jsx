@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import UserBoard from "./pages/user/UserBoard";
+import UserSection from "./pages/user/UserSection";
 import Home from "./pages/user/home/Home";
 import About from "./pages/user/About";
 import Courses from "./pages/user/Courses";
@@ -37,7 +37,7 @@ function App() {
 
       <Routes>
         {/* Main/general section for all user */}
-        <Route path="/" element={<UserBoard />}>
+        <Route path="/" element={<UserSection />}>
           <Route index element={<Home />} />
           <Route path="resources" element={<Resources />}>
             <Route index element={<SourceCode />} />
