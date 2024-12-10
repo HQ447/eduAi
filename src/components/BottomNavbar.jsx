@@ -15,7 +15,10 @@ function BottomNavbar() {
     <div className="hidden py-1 -xsm:flex w-full fixed bottom-0 bg-white border-t-2 text-black  text-xs justify-center gap-6">
       <NavLink
         to={""}
-        onClick={() => dispatch(updateCurrStatus("Home"))}
+        onClick={() => {
+          dispatch(updateCurrStatus("Home"));
+          window.scrollTo(0, 0);
+        }}
         className={` ${
           currStatus == "Home"
             ? "  rounded-full   text-[#4c2f93] font-semibold "
@@ -28,7 +31,10 @@ function BottomNavbar() {
       </NavLink>
       <NavLink
         to={"about"}
-        onClick={() => dispatch(updateCurrStatus("About"))}
+        onClick={() => {
+          dispatch(updateCurrStatus("About"));
+          window.scrollTo(0, 0);
+        }}
         className={`  ${
           currStatus == "About"
             ? " rounded-full   text-[#4c2f93] font-semibold "
@@ -46,7 +52,10 @@ function BottomNavbar() {
       /> */}
       <NavLink
         to={"courses"}
-        onClick={() => dispatch(updateCurrStatus("Courses"))}
+        onClick={() => {
+          dispatch(updateCurrStatus("Courses"));
+          window.scrollTo(0, 0);
+        }}
         className={`  ${
           currStatus == "Courses"
             ? " rounded-full   text-[#4c2f93] font-semibold "
@@ -59,7 +68,10 @@ function BottomNavbar() {
       </NavLink>
       <NavLink
         to={"resources"}
-        onClick={() => dispatch(updateCurrStatus("Resourses"))}
+        onClick={() => {
+          dispatch(updateCurrStatus("Resourses"));
+          window.scrollTo(0, 0);
+        }}
         className={`  ${
           currStatus == "Resourses"
             ? " rounded-full   text-[#4c2f93] font-semibold "
