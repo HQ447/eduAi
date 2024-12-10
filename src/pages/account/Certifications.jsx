@@ -14,10 +14,10 @@ function Certifications() {
           alt=""
           className="w-full shadow-lg border- border-2 border-[#c8c8c8] p-2"
         />
+        <button className=" text-sm bg-green-600 text-white px-3 py-1 rounded-md mt-3 disabled:bg-gray-500 hover:scale-95 transition-all cursor-pointer">
+          Download
+        </button>
       </div>
-      <button className=" text-sm bg-green-600 text-white px-3 py-1 rounded-md mt-3 disabled:bg-gray-500 hover:scale-95 transition-all cursor-pointer">
-        Download
-      </button>
     </div>
   );
 }
