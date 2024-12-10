@@ -17,20 +17,20 @@ function AdminDashboard() {
           if (showSidebar) setShowSidebar(false);
         }}
       >
-        <div className="flex items-center justify-between ribbon -xsm:px-3 px-10 py-4 bg-white ">
-          <div>
-            <IoIosMenu
-              className="hidden -md:flex cursor-pointer"
-              onClick={() => {
-                setShowSidebar((prev) => !prev);
-              }}
-            />
-            <div className="flex items-center gap-2">
+        <div className="flex items-center justify-between ribbon -xsm:px-3 px-10 py-2 bg-white ">
+          <IoIosMenu
+            className="hidden -md:flex cursor-pointer text-xl"
+            onClick={() => {
+              setShowSidebar((prev) => !prev);
+            }}
+          />
+          <div className="flex items-center ">
+            <div className="flex items-center gap-2 py-2 px-2 rounded-full bg-[#edf1fc]">
               <SlMagnifier />
               <input
                 type="text"
                 placeholder="Search now"
-                className=" placeholder:text-sm placeholder:text-gray-300 outline-none"
+                className="text-xs bg-[#edf1fc] placeholder:text-[#7f7f7f]  placeholder:text-xs  outline-none"
               />
             </div>
           </div>
