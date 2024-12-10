@@ -12,30 +12,32 @@ function BottomNavbar() {
   //   const darkMode = useSelector((state) => state.store.darkMode);
   const currStatus = useSelector((state) => state.store.currStatus);
   return (
-    <div className="hidden h-14 -xsm:flex w-full fixed bottom-0 bg-[#4c2f93] text-white text-xs justify-center gap-6">
+    <div className="hidden py-1 -xsm:flex w-full fixed bottom-0 bg-white border-t-2 text-black  text-xs justify-center gap-6">
       <NavLink
         to={""}
         onClick={() => dispatch(updateCurrStatus("Home"))}
         className={` ${
           currStatus == "Home"
-            ? "bg-white rounded-full relative  -top-2 border-2 border-[#4c2f93] text-black"
+            ? "  rounded-full   text-[#4c2f93] font-semibold "
             : ""
         } w-10 h-10  rounded-full  flex flex-col justify-center items-center`}
       >
         <IoHomeOutline className="text-lg" />
         {/* {currStatus === "Home" ? <p className="text-sm">Home</p> : ""} */}
+        <p className=" text-[10px]">Home</p>
       </NavLink>
       <NavLink
         to={"about"}
         onClick={() => dispatch(updateCurrStatus("About"))}
         className={`  ${
           currStatus == "About"
-            ? "bg-white rounded-full relative -top-2 border-2 border-[#4c2f93] text-black"
+            ? " rounded-full   text-[#4c2f93] font-semibold "
             : ""
         } w-10 h-10  rounded-full flex transition-all flex-col justify-center items-center`}
       >
         <RiTeamLine className="text-lg" />
         {/* {currStatus === "About" ? <p className="text-sm">About</p> : ""} */}
+        <p className=" text-[10px]">About</p>
       </NavLink>
       {/* <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Student_icon.svg/1024px-Student_icon.svg.png"
@@ -47,24 +49,26 @@ function BottomNavbar() {
         onClick={() => dispatch(updateCurrStatus("Courses"))}
         className={`  ${
           currStatus == "Courses"
-            ? "bg-white rounded-full relative  -top-2 border-2 border-[#4c2f93] text-black"
+            ? " rounded-full   text-[#4c2f93] font-semibold "
             : ""
         } w-10 h-10  rounded-full  flex transition-all flex-col justify-center items-center`}
       >
         <IoBookOutline className="text-lg" />
         {/* {currStatus === "Courses" ? <p className="text-sm">Courses</p> : ""} */}
+        <p className=" text-[10px]">Courses</p>
       </NavLink>
       <NavLink
         to={"resources"}
         onClick={() => dispatch(updateCurrStatus("Resourses"))}
         className={`  ${
           currStatus == "Resourses"
-            ? "bg-white rounded-full relative  -top-2 border-2 border-[#4c2f93] text-black"
+            ? " rounded-full   text-[#4c2f93] font-semibold "
             : ""
         } w-10 h-10  rounded-full  flex flex-col justify-center items-center`}
       >
         <MdOutlineDataset className="text-lg" />
         {/* {currStatus === "Resourses" ? <p className="text-sm">Resourses</p> : ""} */}
+        <p className=" text-[10px]">Resourses</p>
       </NavLink>
     </div>
   );
