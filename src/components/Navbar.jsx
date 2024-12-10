@@ -72,7 +72,7 @@ function Navbar() {
           className="w-6"
         />
         <h1 className="text-2xl font-semibold -xsm:text-xl">
-          edu
+          Edu
           <span
             style={{
               background:
