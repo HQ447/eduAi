@@ -43,7 +43,7 @@ function Courses() {
       } flex flex-col gap-2 px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-7 `}
     >
       <div
-        className={` bg-indigo-200 rounded-lg py-2 -md:flex-col filter-ribbon w-full justify-center flex items-center gap-3`}
+        className={` bg-indigo-200 rounded-lg py-2 !px-2 -md:flex-col filter-ribbon w-full justify-center flex items-center gap-3`}
       >
         <div className=" w-[25rem] -md:w-full ">
           <input
