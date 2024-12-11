@@ -157,10 +157,10 @@ function Courses() {
                 alt="cource img loading error "
               />
               <div className="py-3 flex flex-col gap-2">
-                <h1 className="text-xl -sm:text-lg -xsm:text-sm text-black font-semibold">
+                <h1 className="text-[15px] -xsm:text-sm text-black font-semibold">
                   {obj.title}
                 </h1>
-                <p className="text-xs text-black">{obj.decription}</p>
+                <p className="text-xs text-[#515151]">{obj.decription}</p>
                 <p className="text-xs text-green-800">{obj.instructor}</p>
                 <p className="text-[10px] text-gray-400">
                   {obj.chapters.length} Sections - {obj.lectures.length}{" "}
