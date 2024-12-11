@@ -43,7 +43,7 @@ function Courses() {
       } flex flex-col gap-2 px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-7 `}
     >
       <div
-        className={`  -md:flex-col filter-ribbon w-full justify-center flex items-center gap-3`}
+        className={` bg-indigo-200 rounded-lg py-2 -md:flex-col filter-ribbon w-full justify-center flex items-center gap-3`}
       >
         <div className=" w-[25rem] -md:w-full ">
           <input
@@ -53,7 +53,7 @@ function Courses() {
             placeholder="Search Course By Name"
             className={` ${
               darkMode ? "bg-[#2f343c] text-white " : "bg-gray-100 "
-            } -xsm:text-xs -xsm:placeholder:text-xs outline-none rounded-md p-2 text-sm placeholder:text-xs w-full`}
+            } -xsm:text-xs  outline-none rounded-md p-2 text-sm placeholder:text-[10px] w-full`}
           />
         </div>
         <div className="-md:w-full -xsm:flex-wrap flex gap-3 justify-around w-fit items-center">
@@ -147,7 +147,7 @@ function Courses() {
                 darkMode
                   ? "bg-[#0f1113] text-white border  "
                   : "bg-white border border-black  text-[#000000b5] "
-              } flex p-[14px]   w-72 -xsm:w-full flex-col -xsm:text-sm  cursor-pointer hover:scale-105 hover:shadow-xl transition-all
+              } flex p-[14px]   w-72 -xsm:w-full flex-col -xsm:text-sm  cursor-pointer hover:scale-95 hover:shadow-xl transition-all
             `}
               onClick={() => navigate(`/coursedetails/${obj.id}`)}
             >
@@ -156,7 +156,7 @@ function Courses() {
                 className="w-full "
                 alt="cource img loading error "
               />
-              <div className="py-3 flex flex-col gap-2">
+              <div className="pt-3 flex flex-col gap-2">
                 <h1 className="text-[15px] -xsm:text-sm text-black font-semibold">
                   {obj.title}
                 </h1>
