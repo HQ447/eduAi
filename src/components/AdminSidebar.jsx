@@ -29,8 +29,8 @@ function AdminSidebar({ showSidebar }) {
           <div className=" bg-green-500 w-2 h-2 rounded-full"></div>
           Active
         </p>
-        <h1 className=" font-semibold">Ayesha Khan Afridi</h1>
-        <p className=" text-xs">Founder of EduAI</p>
+        <h1 className=" font-semibold">{"Admin Name"}</h1>
+        <p className=" text-xs">Admin of EduAI</p>
       </div>
       <div className="flex flex-col my-5 gap-3 text-sm">
         <NavLink
