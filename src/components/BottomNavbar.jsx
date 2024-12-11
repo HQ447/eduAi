@@ -12,7 +12,7 @@ function BottomNavbar() {
   //   const darkMode = useSelector((state) => state.store.darkMode);
   const currStatus = useSelector((state) => state.store.currStatus);
   return (
-    <div className="hidden py-1 -xsm:flex w-full fixed bottom-0 bg-white border-t-2 text-black  text-xs justify-center gap-6">
+    <div className="hidden py-1 -xsm:flex w-full fixed bottom-0 bg-white border-t-2 text-black  text-xs justify-around ">
       <NavLink
         to={""}
         onClick={() => {
