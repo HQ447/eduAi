@@ -157,7 +157,9 @@ function Courses() {
                 alt="cource img loading error "
               />
               <div className="py-3 flex flex-col gap-2">
-                <h1 className=" text-md font-semibold">{obj.title}</h1>
+                <h1 className="text-xl -sm:text-lg font-semibold">
+                  {obj.title}
+                </h1>
                 <p className="text-xs">{obj.decription}</p>
                 <p className="text-xs text-green-800">{obj.instructor}</p>
                 <p className="text-xs text-gray-400">
