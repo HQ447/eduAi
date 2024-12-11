@@ -43,7 +43,7 @@ function Courses() {
       } flex flex-col gap-2 px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-7 `}
     >
       <div
-        className={` bg-indigo-200 rounded-lg py-2 !px-2 -md:flex-col filter-ribbon w-full justify-center flex items-center gap-3`}
+        className={` bg-[#e3d8ff] rounded-lg py-2 !px-2 -md:flex-col filter-ribbon w-full justify-center flex items-center gap-3`}
       >
         <div className=" w-[25rem] -md:w-full ">
           <input
@@ -102,7 +102,7 @@ function Courses() {
             />
           </div>
           <button
-            className="w-fit -xsm:px-2 -xsm:py-[2px]  -xsm:text-[10px] text-sm py-[6px] transition-all hover:scale-95 active:bg-red-700 px-4  bg-red-600 rounded-md text-white "
+            className="w-fit -xsm:px-2 -xsm:py-[4px]  -xsm:text-[10px] text-sm py-[6px] transition-all hover:scale-95 active:bg-red-700 px-4  bg-red-600 rounded-md text-white "
             onClick={clearFilter}
           >
             Clear

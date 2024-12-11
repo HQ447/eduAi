@@ -91,13 +91,13 @@ function Home() {
                   <StarRating rating={course.rating} />
                   <p className="text-xs">({course.students})</p>
                 </div>
-                <p className=" font-semibold">
+                <div className=" font-semibold">
                   {course.new_price == 0 ? "Free" : `$${course.new_price}`}
                   &nbsp;{" "}
                   <del className="text-red-500 text-sm font-semibold">
                     ${course.old_price}
                   </del>
-                </p>
+                </div>
                 <p className="px-2 py-1 text-[#0c4b0c] font-semibold text-xs w-fit rounded-sm bg-[#eceb98]">
                   Top Rated
                 </p>
