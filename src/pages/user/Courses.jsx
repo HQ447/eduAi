@@ -157,12 +157,12 @@ function Courses() {
                 alt="cource img loading error "
               />
               <div className="py-3 flex flex-col gap-2">
-                <h1 className="text-xl -sm:text-lg font-semibold">
+                <h1 className="text-xl -sm:text-lg -xsm:text-sm text-black font-semibold">
                   {obj.title}
                 </h1>
-                <p className="text-xs">{obj.decription}</p>
+                <p className="text-xs text-black">{obj.decription}</p>
                 <p className="text-xs text-green-800">{obj.instructor}</p>
-                <p className="text-xs text-gray-400">
+                <p className="text-[10px] text-gray-400">
                   {obj.chapters.length} Sections - {obj.lectures.length}{" "}
                   Lectures
                 </p>
@@ -174,7 +174,7 @@ function Courses() {
                   <p>({obj.students})</p>
                 </div>
                 <div className="flex justify-between items-center">
-                  <p className="font-semibold">
+                  <p className="font-semibold text-lg">
                     {obj.new_price == 0 ? "Free" : `$${obj.new_price}`}
                     &nbsp;{" "}
                     <del className="text-red-500 text-sm font-semibold">
