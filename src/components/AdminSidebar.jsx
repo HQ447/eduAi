@@ -54,11 +54,11 @@ function AdminSidebar({ showSidebar }) {
           Analytics
         </NavLink>
         <NavLink
-          to={"link3"}
+          to={"managecourses"}
           className={`hover:bg-gray-100 cursor-pointer ${
-            activeTab == "link3" ? "!bg-[#1E3A8A] text-white" : ""
+            activeTab == "managecourses" ? "!bg-[#1E3A8A] text-white" : ""
           } py-2 px-3 flex items-center gap-2 rounded-md`}
-          onClick={() => setActiveTabs("link3")}
+          onClick={() => setActiveTabs("managecourses")}
         >
           <BsDatabaseAdd className="text-lg" />
           Manage Courses
