@@ -30,7 +30,7 @@ function ManageCourses() {
             onChange={(e) => setSearchInp(e.target.value)}
           />
         </div>
-        <button className="text-xs bg-[#464646] hover:scale-95 transition-all px-3 py-2 rounded-md text-white">
+        <button className="text-xs -xsm:text-[10px] bg-[#464646] hover:scale-95 transition-all px-3 -xsm:px-2  w-fit py-2 rounded-md text-white">
           Add new Course
         </button>
       </div>
