@@ -39,14 +39,14 @@ function ManageCourses() {
         {filteredCourses.map((obj) => (
           <div
             key={obj.id}
-            className={`flex relative p-[14px] bg-white w-48 !text-xs -xsm:w-full flex-col -xsm:text-sm   shadow transition-all
+            className={`flex relative p-[14px] -xsm:p-[10px] bg-white w-48 -xsm:w-36 !text-xs  flex-col -xsm:text-sm   shadow transition-all
             `}
           >
-            <div className="absolute  hover:scale-95 transition-all cursor-pointer top-5 right-5 border px-2 py-2 bg-white rounded-md">
-              <ImBin className="   text-lg text-[red]" />
+            <div className="absolute  hover:scale-95 transition-all cursor-pointer top-5 -xsm:top-4 right-5 -xsm:right-3 border px-2 py-2 bg-white rounded-md">
+              <ImBin className="   text-lg -xsm:text-xs text-[red]" />
             </div>
-            <div className="absolute  hover:scale-95 transition-all cursor-pointer top-16 right-5 border px-2 py-2 bg-white rounded-md">
-              <FaRegEdit className="   text-lg " />
+            <div className="absolute  hover:scale-95 transition-all cursor-pointer top-16 -xsm:top-12 right-5 -xsm:right-3 border px-2 py-2 bg-white rounded-md">
+              <FaRegEdit className="   text-lg -xsm:text-xs " />
             </div>
 
             <img
@@ -55,10 +55,12 @@ function ManageCourses() {
               alt="cource img loading error "
             />
             <div className="pt-3 flex flex-col gap-2">
-              <h1 className=" text-black font-semibold">{obj.title}</h1>
+              <h1 className=" text-black font-semibold -xsm:text-[10px]">
+                {obj.title}
+              </h1>
               {/* <p className="text-xs text-[#515151]">{obj.decription}</p> */}
               {/* <p className="text-xs text-green-800">{obj.instructor}</p> */}
-              <p className="text-[10px] text-gray-400">
+              <p className="text-[10px] text-gray-400 -xsm:text-[10px]">
                 {obj.chapters.length} Sections - {obj.lectures.length} Lectures
               </p>
               {/* <div className="flex items-center text-xs">
@@ -69,10 +71,10 @@ function ManageCourses() {
                 <p>({obj.students})</p>
               </div> */}
               <div className="flex justify-between items-center">
-                <p className="font-semibold text-sm">
+                <p className="font-semibold text-sm -xsm:text-[10px]">
                   {obj.new_price == 0 ? "Free" : `$${obj.new_price}`}
                   &nbsp;{" "}
-                  <del className="text-red-500 text-sm font-semibold">
+                  <del className="text-red-500 text-sm -xsm:text-[10px] font-semibold">
                     ${obj.old_price}
                   </del>
                 </p>
