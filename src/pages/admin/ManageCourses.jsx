@@ -35,19 +35,19 @@ function ManageCourses() {
         </button>
       </div>
 
-      <div className=" flex flex-wrap gap-2">
+      <div className=" flex flex-wrap justify-between gap-4">
         {filteredCourses.map((obj) => (
           <div
             key={obj.id}
-            className={`flex relative p-[14px] -xsm:p-[10px] bg-white w-48 -xsm:w-[10rem] !text-xs  flex-col -xsm:text-sm   shadow transition-all
+            className={`flex relative  p-[14px] -xsm:p-[10px] bg-white w-48 -xsm:w-[10rem] !text-xs  flex-col -xsm:text-sm   shadow transition-all
             `}
           >
-            <div className="absolute  hover:scale-95 transition-all cursor-pointer top-5 -xsm:top-4 right-5 -xsm:right-3 border px-2 py-2 bg-white rounded-md">
+            {/* <div className="absolute  hover:scale-95 transition-all cursor-pointer top-5 -xsm:top-4 right-5 -xsm:right-3 border px-2 py-2 bg-white rounded-md">
               <ImBin className="   text-lg -xsm:text-xs text-[red]" />
             </div>
             <div className="absolute  hover:scale-95 transition-all cursor-pointer top-16 -xsm:top-12 right-5 -xsm:right-3 border px-2 py-2 bg-white rounded-md">
               <FaRegEdit className="   text-lg -xsm:text-xs " />
-            </div>
+            </div> */}
 
             <img
               src={obj.img}
@@ -73,18 +73,14 @@ function ManageCourses() {
               <div className="flex justify-between items-center">
                 <p className="font-semibold text-sm -xsm:text-[10px]">
                   {obj.new_price == 0 ? "Free" : `$${obj.new_price}`}
-                  &nbsp;{" "}
-                  <del className="text-red-500 text-sm -xsm:text-[10px] font-semibold">
-                    ${obj.old_price}
-                  </del>
                 </p>
               </div>
               <div className="flex w-full gap-2 justify-between">
-                <button className="hover:bg-[#252525] hover:!text-white hover:scale-95 transition-all w-full justify-center py-1 -xsm:text-[8px] rounded-md flex gap-1 border-black bg-white border">
+                <button className="hover:bg-[#252525] hover:!text-white hover:scale-95 transition-all w-full justify-center py-1 -xsm:text-[8px] rounded-md flex gap-1  bg-[#ececec] ">
                   <FaRegEdit className="   text-sm -xsm:text-xs " />{" "}
                   <p className="text-[10px]">Update</p>
                 </button>
-                <button className=" hover:bg-[#dd0303] hover:!text-white hover:scale-95 transition-all w-full justify-center  py-1 -xsm:text-[8px] text-[red] border-black rounded-md flex gap-1 bg-white border">
+                <button className=" hover:bg-[#dd0303] hover:!text-white hover:scale-95 transition-all w-full justify-center  py-1 -xsm:text-[8px] text-[red]  rounded-md flex gap-1 bg-[#ececec] ">
                   <ImBin className="   text-sm -xsm:text-xs " />
                   <p className="text-[10px]">Delete</p>
                 </button>
