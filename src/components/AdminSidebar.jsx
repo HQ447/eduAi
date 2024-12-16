@@ -5,7 +5,7 @@ import { TbBrandGoogleAnalytics } from "react-icons/tb";
 import { BsDatabaseAdd } from "react-icons/bs";
 import { MdLogout } from "react-icons/md";
 
-// eslint-disable-next-line react/prop-types
+// eslint-disable-next-line react/
 function AdminSidebar({ showSidebar }) {
   const [activeTab, setActive] = useState("dashboard");
 
