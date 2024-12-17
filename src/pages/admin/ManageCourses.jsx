@@ -21,7 +21,7 @@ function ManageCourses() {
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center justify-between w-full">
-        <div className="flex items-center  gap-2 py-2 px-2 rounded-full bg-white">
+        <div className="flex items-center -xsm:w-fit  gap-2 py-2 px-2 rounded-full bg-white">
           <SlMagnifier />
           <input
             type="text"
@@ -35,11 +35,11 @@ function ManageCourses() {
         </button>
       </div>
 
-      <div className=" flex flex-wrap justify-between gap-4">
+      <div className=" flex flex-wrap justify-evenly gap-4">
         {filteredCourses.map((obj) => (
           <div
             key={obj.id}
-            className={`flex relative  p-[14px] -xsm:p-[10px] bg-white w-48 -xsm:w-[10rem] !text-xs  flex-col -xsm:text-sm   shadow transition-all
+            className={`flex relative   p-[14px] -xsm:p-[10px] bg-white w-48 -xsm:w-[10rem] !text-xs  flex-col -xsm:text-sm   shadow transition-all
             `}
           >
             {/* <div className="absolute  hover:scale-95 transition-all cursor-pointer top-5 -xsm:top-4 right-5 -xsm:right-3 border px-2 py-2 bg-white rounded-md">
