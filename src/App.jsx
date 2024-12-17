@@ -24,6 +24,7 @@ import Settings from "./pages/account/Settings";
 import Certifications from "./pages/account/Certifications";
 import Navigator from "./pages/account/Navigator";
 import ManageCourses from "./pages/admin/ManageCourses";
+import AddCourse from "./pages/admin/AddCourse";
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
           <Route index element={<h1>Dashboad</h1>} />
           <Route path="link2" element={<h1>Analytics</h1>} />
           <Route path="managecourses" element={<ManageCourses />} />
+          <Route path="addNewCourse" element={<AddCourse />} />
           <Route path="link4" element={<h1>Link 4</h1>} />
         </Route>
 

@@ -6,9 +6,11 @@ import { useState } from "react";
 // import StarRating from "../../components/StarRating";
 import { ImBin } from "react-icons/im";
 import { FaRegEdit } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function ManageCourses() {
   const [searchInp, setSearchInp] = useState("");
+  const navigate = useNavigate();
 
   // Filter logic
   const filteredCourses = courseCollection.filter((course) => {
@@ -30,7 +32,10 @@ function ManageCourses() {
             onChange={(e) => setSearchInp(e.target.value)}
           />
         </div>
-        <button className="text-xs -xsm:text-[10px] bg-[#464646] hover:scale-95 transition-all px-3 -xsm:px-2  w-fit py-2 rounded-md text-white">
+        <button
+          onClick={() => navigate("/admin/addNewCourse")}
+          className="text-xs -xsm:text-[10px] bg-[#464646] hover:scale-95 transition-all px-3 -xsm:px-2  w-fit py-2 rounded-md text-white"
+        >
           Add new Course
         </button>
       </div>
