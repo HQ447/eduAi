@@ -21,7 +21,7 @@ function ManageCourses() {
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center justify-between w-full">
-        <div className="flex items-center -xsm:w-fit  gap-2 py-2 px-2 rounded-full bg-white">
+        <div className="flex items-center -xsm:w-[50%]  gap-2 py-2 px-2 rounded-full bg-white">
           <SlMagnifier />
           <input
             type="text"
