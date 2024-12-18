@@ -153,7 +153,9 @@ function Courses() {
                   : "bg-white border border-black  text-[#000000b5] "
               } flex p-[14px]   w-72 -xsm:w-full flex-col -xsm:text-sm  cursor-pointer hover:scale-95 hover:shadow-xl transition-all
             `}
-              onClick={() => navigate(`/coursedetails/${obj.id}`)}
+              onClick={() => {
+                navigate(`/coursedetails/${obj.id}`);
+              }}
             >
               <img
                 src={obj.img}
