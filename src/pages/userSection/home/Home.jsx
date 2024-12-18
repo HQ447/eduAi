@@ -2,7 +2,7 @@ import { GoDotFill } from "react-icons/go";
 import "../style sheets/Home.css";
 // import Courses from "../Courses";
 import Mainpage from "./Mainpage";
-//replace this with the all courses data get it from redux store : which will come from db and stored in redux
+//replace this with the courses data get it from redux store : which will come from db and stored in redux
 import { courseCollection } from "../../../Data/data";
 import StarRating from "../../../components/StarRating";
 import Feedback from "./Feedback";

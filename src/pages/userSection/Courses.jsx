@@ -43,7 +43,9 @@ function Courses() {
       } flex flex-col gap-2 px-20 -md:px-10 -sm:px-6 pb-5 -xsm:px-3 pt-7 `}
     >
       <div
-        className={` bg-[#e3d8ff] rounded-lg py-2 !px-2 -md:flex-col filter-ribbon w-full justify-center flex items-center gap-3`}
+        className={`${
+          darkMode ? "bg-[#232323] " : "bg-[#e3d8ff]"
+        }  rounded-lg py-2 !px-2 -md:flex-col filter-ribbon w-full justify-center flex items-center gap-3`}
       >
         <div className=" w-[25rem] -md:w-full ">
           <input
@@ -118,7 +120,9 @@ function Courses() {
           {priceRange}
         </p> */}
         <div className="flex flex-col justify-center items-center mb-5">
-          <h1 className="-xsm:text-xl w-full text-center text-3xl font-[600] mb-1 mt-2 ">
+          <h1
+            className={` -xsm:text-xl w-full text-center text-3xl font-[600] mb-1 mt-2 `}
+          >
             {category}{" "}
             <span
               style={{
@@ -145,7 +149,7 @@ function Courses() {
               key={obj.id}
               className={`${
                 darkMode
-                  ? "bg-[#0f1113] text-white border  "
+                  ? "bg-[#21262a] text-white  "
                   : "bg-white border border-black  text-[#000000b5] "
               } flex p-[14px]   w-72 -xsm:w-full flex-col -xsm:text-sm  cursor-pointer hover:scale-95 hover:shadow-xl transition-all
             `}
@@ -157,10 +161,20 @@ function Courses() {
                 alt="cource img loading error "
               />
               <div className="pt-3 flex flex-col gap-2">
-                <h1 className="text-[15px] -xsm:text-sm text-black font-semibold">
+                <h1
+                  className={` ${
+                    darkMode ? "text-[#eeeeee]" : ""
+                  } text-[15px] -xsm:text-sm text-black font-semibold`}
+                >
                   {obj.title}
                 </h1>
-                <p className="text-xs text-[#515151]">{obj.decription}</p>
+                <p
+                  className={`${
+                    darkMode ? "text-[#dcdcdc]" : ""
+                  }  text-xs text-[#515151]`}
+                >
+                  {obj.decription}
+                </p>
                 <p className="text-xs text-green-800">{obj.instructor}</p>
                 <p className="text-[10px] text-gray-400">
                   {obj.chapters.length} Sections - {obj.lectures.length}{" "}

@@ -9,10 +9,14 @@ import { updateCurrStatus } from "../store/cartSlice";
 
 function BottomNavbar() {
   const dispatch = useDispatch();
-  //   const darkMode = useSelector((state) => state.store.darkMode);
+  const darkMode = useSelector((state) => state.store.darkMode);
   const currStatus = useSelector((state) => state.store.currStatus);
   return (
-    <div className="hidden py-1 -xsm:flex w-full fixed bottom-0 bg-white border-t-2 text-black  text-xs justify-around ">
+    <div
+      className={` ${
+        darkMode ? "bg-[black] text-white border-none" : "bg-white text-black"
+      } hidden py-1 -xsm:flex w-full fixed bottom-0  border-t-2   text-xs justify-around `}
+    >
       <NavLink
         to={""}
         onClick={() => {
