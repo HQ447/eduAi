@@ -66,6 +66,7 @@ function Home() {
               onClick={() => {
                 navigate(`/coursedetails/${course.id}`);
                 dispatch(updateCurrStatus("Courses"));
+                window.scrollTo(0, 0);
               }}
             >
               <img
