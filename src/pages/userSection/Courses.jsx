@@ -14,6 +14,7 @@ import { updateCourseCollection } from "../../store/cartSlice";
 
 function Courses() {
   const darkMode = useSelector((state) => state.store.darkMode);
+  //const courses = useSelector((state) => state.store.courseCollection);
   const navigate = useNavigate();
   const [searchInp, setSearchInp] = useState("");
   const [category, setCategory] = useState("All");
@@ -40,14 +41,13 @@ function Courses() {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  function test() {
-    const testArr = [{ name: "testing array", project: "fpy" }];
-    dispatch(updateCourseCollection(testArr));
-  }
-  test();
+  // function test() {
+  //   const testArr = [{ name: "testing array", project: "fpy" }];
+  //   dispatch(updateCourseCollection(testArr));
+  // }
+  // test();
+  // console.log(courses[0].name);
 
-  const courses = useSelector((state) => state.store.courseCollection);
-  console.log(courses[0].name);
   //call the api here to get all courses form backend and dispatch it from redux store
   // useEffect(() => {
   //   //1. api call
