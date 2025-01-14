@@ -2,6 +2,7 @@ import { GoDotFill } from "react-icons/go";
 
 //replace this with the all courses data taken from db server from backend
 //Retrive all courses from DB in useEffect , and then dispatch it into redux store to prevent api calls
+//comment the below statment after doing that
 import { courseCollection } from "../../Data/data";
 
 import { useSelector } from "react-redux";
@@ -36,6 +37,14 @@ function Courses() {
 
     return matchesSearch && matchesCategory && matchesPrice;
   });
+
+  //call the api here to get all courses form backend and dispatch it from redux store
+  // useEffect(() => {
+  //   //1. api call
+
+  //   //2.distptch it to redux store
+  //   dispatch(updateCourseCollection("api responcce"))
+  // });
 
   return (
     <div
