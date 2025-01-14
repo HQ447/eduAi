@@ -11,7 +11,11 @@ import CircleComponent from "../../../components/CircleComponent";
 import FAQ from "./FAQ";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { updateCurrStatus } from "../../../store/cartSlice";
+import {
+  updateCourseCollection,
+  updateCurrStatus,
+} from "../../../store/cartSlice";
+import { useEffect } from "react";
 
 // import Slider from "../../../components/Slider";
 
@@ -19,6 +23,14 @@ function Home() {
   const darkMode = useSelector((state) => state.store.darkMode);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  //call the api here to get all courses form backend and dispatch it from redux store
+  // useEffect(() => {
+  //   //1. api call
+
+  //   //2.distptch it to redux store
+  //   dispatch(updateCourseCollection("api responcce"))
+  // });
 
   // bg-gradient-to-b from-[#f7fbff] to-[#cce7f5]
   return (

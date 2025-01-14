@@ -5,6 +5,7 @@ const initialState = {
   currStatus: "Home",
   showSidebar: false,
   activeUser: null,
+  courseCollection: [],
 
   //the user willbe added in database and after getting all userData from Api ,
   //  dispatch and replace it with that user array to prevent multiple api calls
@@ -23,6 +24,9 @@ export const cartSlice = createSlice({
   name: "store",
   initialState,
   reducers: {
+    updateCourseCollection: (state, action) => {
+      state.courseCollection = action.payload;
+    },
     updateMode: (state, action) => {
       state.darkMode = action.payload;
     },
@@ -44,6 +48,7 @@ export const cartSlice = createSlice({
 
 export const {
   updateMode,
+  updateCourseCollection,
   updateCurrStatus,
   updateShowSidebar,
   setactiveUser,
