@@ -6,7 +6,10 @@ const initialState = {
   showSidebar: false,
   activeUser: null,
 
-  //the user willbe added in database and after getting all userData from Api , dispatch and replace it with that user array to prevent multiple api calls
+  //the user willbe added in database and after getting all userData from Api ,
+  //  dispatch and replace it with that user array to prevent multiple api calls
+  //its just for demo to login into user account this authentication will be processed in backend
+
   users: [
     {
       username: "ali",

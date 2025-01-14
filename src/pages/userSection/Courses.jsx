@@ -1,6 +1,6 @@
 import { GoDotFill } from "react-icons/go";
 
-//replace this with the all courses data taken from db
+//replace this with the all courses data taken from db server from backend
 //Retrive all courses from DB in useEffect , and then dispatch it into redux store to prevent api calls
 import { courseCollection } from "../../Data/data";
 import { useSelector } from "react-redux";
