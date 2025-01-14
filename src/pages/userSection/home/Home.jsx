@@ -3,8 +3,9 @@ import "../style sheets/Home.css";
 // import Courses from "../Courses";
 import Mainpage from "./Mainpage";
 
-//replace this with the courses data get it from redux store : which will come from db and stored in redux
+//we will get the course course collection from redux after it stored it in thr redux store by calling api
 import { courseCollection } from "../../../Data/data";
+
 import StarRating from "../../../components/StarRating";
 import Feedback from "./Feedback";
 import CircleComponent from "../../../components/CircleComponent";

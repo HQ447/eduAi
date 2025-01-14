@@ -5,11 +5,12 @@ import { GoDotFill } from "react-icons/go";
 //comment the below statment after doing that
 import { courseCollection } from "../../Data/data";
 
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import StarRating from "../../components/StarRating";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { IoMdHeartEmpty } from "react-icons/io";
+import { updateCourseCollection } from "../../store/cartSlice";
 
 function Courses() {
   const darkMode = useSelector((state) => state.store.darkMode);
@@ -19,6 +20,7 @@ function Courses() {
   // eslint-disable-next-line no-unused-vars
   const [level, setLevel] = useState("Intermediate");
   const [priceRange, setPriceRange] = useState(10);
+  const dispatch = useDispatch();
 
   function clearFilter() {
     setCategory("All");
@@ -38,6 +40,14 @@ function Courses() {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
+  function test() {
+    const testArr = [{ name: "testing array", project: "fpy" }];
+    dispatch(updateCourseCollection(testArr));
+  }
+  test();
+
+  const courses = useSelector((state) => state.store.courseCollection);
+  console.log(courses[0].name);
   //call the api here to get all courses form backend and dispatch it from redux store
   // useEffect(() => {
   //   //1. api call
