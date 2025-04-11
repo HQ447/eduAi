@@ -120,39 +120,54 @@ const UserManagement = () => {
     setCurrentPage(1);
   }, [nameFilter, roleFilter, statusFilter, recordsPerPage]);
 
+  // Close dropdown when clicking outside
+  React.useEffect(() => {
+    const handleClickOutside = () => {
+      setOpenDropdown(null);
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="px-6 py-8 bg-gray-50 min-h-screen">
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-bold text-gray-800">User Management</h1>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md flex items-center gap-2 transition-colors">
+    <div className="min-h-screen px-2 py-4 sm:px-4 lg:px-6 sm:py-6 lg:py-8 bg-gray-50">
+      <div className="p-3 bg-white rounded-lg shadow-md sm:p-4 lg:p-6">
+        <div className="flex flex-col gap-3 mb-4 sm:flex-row sm:justify-between sm:items-center sm:mb-6">
+          <h1 className="text-xl font-bold text-gray-800 sm:text-2xl">
+            User Management
+          </h1>
+          <button className="flex items-center justify-center w-full gap-2 px-3 py-2 text-white transition-colors bg-blue-600 rounded-md hover:bg-blue-700 sm:w-auto">
             <UserPlus size={16} />
             <span>Add User</span>
           </button>
         </div>
 
-        {/* Filters section */}
-        <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            {/* Name filter */}
-            <div className="relative">
-              <Search
-                size={16}
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
-              />
-              <input
-                type="text"
-                placeholder="Search by name"
-                className="pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-64"
-                value={nameFilter}
-                onChange={(e) => setNameFilter(e.target.value)}
-              />
-            </div>
+        {/* Filters section - Improved for mobile */}
+        <div className="flex flex-col gap-3 mb-4 sm:mb-6">
+          {/* Name filter */}
+          <div className="relative w-full">
+            <Search
+              size={16}
+              className="absolute text-gray-400 transform -translate-y-1/2 left-3 top-1/2"
+            />
+            <input
+              type="text"
+              placeholder="Search by name"
+              className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={nameFilter}
+              onChange={(e) => setNameFilter(e.target.value)}
+            />
+          </div>
 
+          {/* Role and Status filters - side by side on larger screens */}
+          <div className="flex flex-col w-full gap-3 sm:flex-row">
             {/* Role filter */}
-            <div className="relative">
+            <div className="relative w-full sm:w-1/2">
               <select
-                className="pl-4 pr-10 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none w-full sm:w-40"
+                className="w-full py-2 pl-4 pr-10 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={roleFilter}
                 onChange={(e) => setRoleFilter(e.target.value)}
               >
@@ -165,14 +180,14 @@ const UserManagement = () => {
               </select>
               <ChevronDown
                 size={16}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"
+                className="absolute text-gray-400 transform -translate-y-1/2 pointer-events-none right-3 top-1/2"
               />
             </div>
 
             {/* Status filter */}
-            <div className="relative">
+            <div className="relative w-full sm:w-1/2">
               <select
-                className="pl-4 pr-10 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none w-full sm:w-40"
+                className="w-full py-2 pl-4 pr-10 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
               >
@@ -185,16 +200,16 @@ const UserManagement = () => {
               </select>
               <ChevronDown
                 size={16}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none"
+                className="absolute text-gray-400 transform -translate-y-1/2 pointer-events-none right-3 top-1/2"
               />
             </div>
           </div>
 
           {/* Records per page */}
           <div className="flex items-center">
-            <span className="text-sm text-gray-600 mr-2">Show</span>
+            <span className="mr-2 text-sm text-gray-600">Show</span>
             <select
-              className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-16"
+              className="w-16 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={recordsPerPage}
               onChange={(e) => setRecordsPerPage(Number(e.target.value))}
             >
@@ -202,126 +217,158 @@ const UserManagement = () => {
               <option value={10}>10</option>
               <option value={20}>20</option>
             </select>
-            <span className="text-sm text-gray-600 ml-2">entries</span>
+            <span className="ml-2 text-sm text-gray-600">entries</span>
           </div>
         </div>
 
-        {/* Users table */}
-        <div className="overflow-x-auto">
-          <table className="min-w-full bg-white border border-gray-200 rounded-lg overflow-hidden">
-            <thead className="bg-gray-100">
-              <tr>
-                <th className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                  Name
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                  Email
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                  Role
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                  Entry Date
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                  Status
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                  Actions
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-200">
-              {currentUsers.length > 0 ? (
-                currentUsers.map((user) => (
-                  <tr key={user.id} className="hover:bg-gray-50">
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      {user.name}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {user.email}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {user.role}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {user.entryDate}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm">
-                      <span
-                        className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
-                          user.status === "Active"
-                            ? "bg-green-100 text-green-800"
-                            : "bg-red-100 text-red-800"
-                        }`}
-                      >
-                        {user.status}
-                      </span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium relative">
-                      <button
-                        onClick={() => toggleDropdown(user.id)}
-                        className="text-gray-500 hover:text-gray-700 focus:outline-none"
-                      >
-                        <MoreVertical size={16} />
-                      </button>
+        {/* Users table with horizontal scroll on small screens */}
+        <div className="-mx-3 overflow-x-auto sm:mx-0">
+          <div className="inline-block min-w-full align-middle">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-100">
+                <tr>
+                  <th
+                    scope="col"
+                    className="px-3 py-3 text-xs font-semibold tracking-wider text-left text-gray-700 uppercase sm:px-6"
+                  >
+                    Name
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3 text-xs font-semibold tracking-wider text-left text-gray-700 uppercase sm:px-6"
+                  >
+                    Email
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3 text-xs font-semibold tracking-wider text-left text-gray-700 uppercase sm:px-6"
+                  >
+                    Role
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3 text-xs font-semibold tracking-wider text-left text-gray-700 uppercase sm:px-6"
+                  >
+                    Entry Date
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3 text-xs font-semibold tracking-wider text-left text-gray-700 uppercase sm:px-6"
+                  >
+                    Status
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3 text-xs font-semibold tracking-wider text-left text-gray-700 uppercase sm:px-6"
+                  >
+                    Actions
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {currentUsers.length > 0 ? (
+                  currentUsers.map((user) => (
+                    <tr key={user.id} className="hover:bg-gray-50">
+                      <td className="px-3 py-4 text-sm font-medium text-gray-900 sm:px-6 whitespace-nowrap">
+                        {user.name}
+                      </td>
+                      <td className="px-3 py-4 text-sm text-gray-500 sm:px-6 whitespace-nowrap">
+                        {user.email}
+                      </td>
+                      <td className="px-3 py-4 text-sm text-gray-500 sm:px-6 whitespace-nowrap">
+                        {user.role}
+                      </td>
+                      <td className="px-3 py-4 text-sm text-gray-500 sm:px-6 whitespace-nowrap">
+                        {user.entryDate}
+                      </td>
+                      <td className="px-3 py-4 text-sm sm:px-6 whitespace-nowrap">
+                        <span
+                          className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
+                            user.status === "Active"
+                              ? "bg-green-100 text-green-800"
+                              : "bg-red-100 text-red-800"
+                          }`}
+                        >
+                          {user.status}
+                        </span>
+                      </td>
+                      <td className="relative px-3 py-4 text-sm font-medium sm:px-6 whitespace-nowrap">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            toggleDropdown(user.id);
+                          }}
+                          className="text-gray-500 hover:text-gray-700 focus:outline-none"
+                        >
+                          <MoreVertical size={16} />
+                        </button>
 
-                      {openDropdown === user.id && (
-                        <div className="absolute right-8 mt-2 w-48 bg-white rounded-md shadow-lg z-10 border border-gray-200">
-                          <div className="py-1">
-                            <button
-                              onClick={() => handleViewUser(user.id)}
-                              className="flex items-center w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            >
-                              <Eye size={16} className="mr-2" />
-                              View Details
-                            </button>
-                            <button
-                              onClick={() => handleEditUser(user.id)}
-                              className="flex items-center w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            >
-                              <Edit size={16} className="mr-2" />
-                              Edit User
-                            </button>
-                            <button
-                              onClick={() => handleDeleteUser(user.id)}
-                              className="flex items-center w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-100"
-                            >
-                              <Trash2 size={16} className="mr-2" />
-                              Delete User
-                            </button>
+                        {openDropdown === user.id && (
+                          <div className="absolute right-0 z-10 mt-2 bg-white border border-gray-200 rounded-md shadow-lg sm:right-8 w-36 sm:w-48">
+                            <div className="py-1">
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleViewUser(user.id);
+                                }}
+                                className="flex items-center w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-gray-100"
+                              >
+                                <Eye size={16} className="mr-2" />
+                                View Details
+                              </button>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleEditUser(user.id);
+                                }}
+                                className="flex items-center w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-gray-100"
+                              >
+                                <Edit size={16} className="mr-2" />
+                                Edit User
+                              </button>
+                              <button
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  handleDeleteUser(user.id);
+                                }}
+                                className="flex items-center w-full px-4 py-2 text-sm text-left text-red-600 hover:bg-gray-100"
+                              >
+                                <Trash2 size={16} className="mr-2" />
+                                Delete User
+                              </button>
+                            </div>
                           </div>
-                        </div>
-                      )}
+                        )}
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td
+                      colSpan="6"
+                      className="px-3 py-4 text-sm text-center text-gray-500 sm:px-6"
+                    >
+                      No users found matching the selected filters.
                     </td>
                   </tr>
-                ))
-              ) : (
-                <tr>
-                  <td
-                    colSpan="6"
-                    className="px-6 py-4 text-center text-sm text-gray-500"
-                  >
-                    No users found matching the selected filters.
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        {/* Pagination */}
-        <div className="flex items-center justify-between mt-6">
-          <div className="text-sm text-gray-500">
+        {/* Pagination - Improved for mobile */}
+        <div className="flex flex-col gap-3 mt-4 sm:flex-row sm:items-center sm:justify-between sm:mt-6">
+          <div className="text-xs text-gray-500 sm:text-sm">
             Showing {indexOfFirstRecord + 1} to{" "}
             {Math.min(indexOfLastRecord, filteredUsers.length)} of{" "}
             {filteredUsers.length} entries
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap justify-center gap-1 sm:gap-2 sm:justify-end">
             <button
               onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
               disabled={currentPage === 1}
-              className={`px-3 py-1 rounded border ${
+              className={`px-2 sm:px-3 py-1 rounded text-xs sm:text-sm border ${
                 currentPage === 1
                   ? "bg-gray-100 text-gray-400 cursor-not-allowed border-gray-200"
                   : "bg-white text-gray-700 hover:bg-gray-50 border-gray-300"
@@ -329,29 +376,45 @@ const UserManagement = () => {
             >
               Previous
             </button>
-            <div className="flex items-center">
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                (page) => (
+            <div className="flex items-center gap-1">
+              {Array.from({ length: Math.min(totalPages, 3) }, (_, i) => {
+                // Show max 3 page buttons on mobile
+                let pageNum;
+                if (totalPages <= 3) {
+                  // If 3 or fewer pages, show them all
+                  pageNum = i + 1;
+                } else if (currentPage <= 2) {
+                  // Near start, show first 3 pages
+                  pageNum = i + 1;
+                } else if (currentPage >= totalPages - 1) {
+                  // Near end, show last 3 pages
+                  pageNum = totalPages - 2 + i;
+                } else {
+                  // In middle, show currentPage and neighbors
+                  pageNum = currentPage - 1 + i;
+                }
+
+                return (
                   <button
-                    key={page}
-                    onClick={() => setCurrentPage(page)}
-                    className={`px-3 py-1 rounded ${
-                      currentPage === page
+                    key={pageNum}
+                    onClick={() => setCurrentPage(pageNum)}
+                    className={`px-2 sm:px-3 py-1 rounded text-xs sm:text-sm ${
+                      currentPage === pageNum
                         ? "bg-blue-600 text-white"
                         : "bg-white text-gray-700 hover:bg-gray-50 border border-gray-300"
                     }`}
                   >
-                    {page}
+                    {pageNum}
                   </button>
-                )
-              )}
+                );
+              })}
             </div>
             <button
               onClick={() =>
                 setCurrentPage((prev) => Math.min(prev + 1, totalPages))
               }
               disabled={currentPage === totalPages || totalPages === 0}
-              className={`px-3 py-1 rounded border ${
+              className={`px-2 sm:px-3 py-1 rounded text-xs sm:text-sm border ${
                 currentPage === totalPages || totalPages === 0
                   ? "bg-gray-100 text-gray-400 cursor-not-allowed border-gray-200"
                   : "bg-white text-gray-700 hover:bg-gray-50 border-gray-300"
