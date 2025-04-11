@@ -9,16 +9,16 @@ function AdminDashboard() {
 
   return (
     <div className="flex w-full ">
-      <AdminSidebar showSidebar={showSidebar} />
+      <AdminSidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
       <div
         className="flex flex-col w-[78%] -lg:w-[70%] -md:w-full"
         onClick={() => {
           if (showSidebar) setShowSidebar(false);
         }}
       >
-        <div className="flex items-center justify-end -md:justify-between ribbon -xsm:px-3 px-10 py-2 bg-white ">
+        <div className="flex items-center justify-end px-10 py-2 bg-white -md:justify-between ribbon -xsm:px-3 ">
           <IoIosMenu
-            className="hidden -md:flex cursor-pointer text-xl"
+            className="hidden text-xl cursor-pointer -md:flex"
             onClick={() => {
               setShowSidebar((prev) => !prev);
             }}
