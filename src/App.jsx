@@ -25,6 +25,7 @@ import Certifications from "./pages/account/Certifications";
 import Navigator from "./pages/account/Navigator";
 import ManageCourses from "./pages/admin/ManageCourses";
 import AddCourse from "./pages/admin/AddCourse";
+import Dashboard from "./pages/admin/Dashboard";
 
 function App() {
   return (
@@ -51,7 +52,7 @@ function App() {
 
         {/* Admin-dashboard */}
         <Route path="/admin" element={<AdminDashboard />}>
-          <Route index element={<h1>Dashboad</h1>} />
+          <Route index element={<Dashboard />} />
           <Route path="link2" element={<h1>Analytics</h1>} />
           <Route path="managecourses" element={<ManageCourses />} />
           <Route path="addNewCourse" element={<AddCourse />} />
