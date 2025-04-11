@@ -26,6 +26,7 @@ import Navigator from "./pages/account/Navigator";
 import ManageCourses from "./pages/admin/ManageCourses";
 import AddCourse from "./pages/admin/AddCourse";
 import Dashboard from "./pages/admin/Dashboard";
+import UserManagement from "./pages/admin/UserManagement";
 
 function App() {
   return (
@@ -53,7 +54,8 @@ function App() {
         {/* Admin-dashboard */}
         <Route path="/admin" element={<AdminDashboard />}>
           <Route index element={<Dashboard />} />
-          <Route path="link2" element={<h1>Analytics</h1>} />
+          <Route path="users" element={<UserManagement />} />
+
           <Route path="managecourses" element={<ManageCourses />} />
           <Route path="addNewCourse" element={<AddCourse />} />
           <Route path="link4" element={<h1>Link 4</h1>} />

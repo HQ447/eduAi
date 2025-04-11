@@ -47,7 +47,7 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
           Dashboard
         </NavLink>
         <NavLink
-          to={"link2"}
+          to={"users"}
           className={`hover:bg-gray-100 cursor-pointer ${
             activeTab == "link2" ? "!bg-[#1E3A8A] text-white" : ""
           } py-2 px-3 flex items-center gap-2 rounded-md`}
@@ -57,7 +57,7 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
           }}
         >
           <TbBrandGoogleAnalytics className="text-lg" />
-          Analytics
+          User Management
         </NavLink>
         <NavLink
           to={"managecourses"}
@@ -70,7 +70,7 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
           }}
         >
           <BsDatabaseAdd className="text-lg" />
-          Manage Courses
+          Course Management
         </NavLink>
         <NavLink
           to={"link4"}
