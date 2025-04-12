@@ -95,7 +95,7 @@ const Notifications = () => {
   };
 
   return (
-    <div className="p-6 max-w-full bg-white rounded-lg shadow">
+    <div className="p-6 max-w-full bg-white rounded-lg shadow text-sm">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
         <h1 className="text-2xl font-bold text-gray-800 flex items-center gap-2 mb-4 md:mb-0">
           <Bell className="text-gray-700" size={24} />
@@ -104,7 +104,7 @@ const Notifications = () => {
 
         <button
           onClick={() => setShowForm(true)}
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors w-full md:w-auto"
+          className="bg-blue-600 text-xs text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors w-full md:w-auto"
         >
           Create Notification
         </button>
@@ -176,7 +176,7 @@ const Notifications = () => {
                     value={newNotification.title}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full placeholder:text-xs px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Notification title"
                   />
                 </div>
@@ -191,29 +191,29 @@ const Notifications = () => {
                     onChange={handleInputChange}
                     required
                     rows="4"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full placeholder:text-xs  px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Notification message"
                   ></textarea>
                 </div>
 
-                <div>
+                <div className="my-3">
                   <label className="block text-sm font-medium text-gray-700 mb-1">
                     Notification Type
                   </label>
-                  <div className="flex space-x-4">
-                    <label className="flex items-center">
+                  <div className="flex space-x-4 ">
+                    <label className="flex text-xs items-center">
                       <input
                         type="radio"
                         name="type"
                         value="info"
                         checked={newNotification.type === "info"}
                         onChange={handleInputChange}
-                        className="mr-2"
+                        className="mr-2 "
                       />
-                      <Info size={18} className="text-blue-500 mr-1" />
+                      <Info size={12} className="text-blue-500 mr-1" />
                       Info
                     </label>
-                    <label className="flex items-center">
+                    <label className="flex text-xs items-center">
                       <input
                         type="radio"
                         name="type"
@@ -223,12 +223,12 @@ const Notifications = () => {
                         className="mr-2"
                       />
                       <AlertTriangle
-                        size={18}
+                        size={12}
                         className="text-amber-500 mr-1"
                       />
                       Warning
                     </label>
-                    <label className="flex items-center">
+                    <label className="flex text-xs items-center">
                       <input
                         type="radio"
                         name="type"
@@ -237,7 +237,7 @@ const Notifications = () => {
                         onChange={handleInputChange}
                         className="mr-2"
                       />
-                      <AlertCircle size={18} className="text-red-500 mr-1" />
+                      <AlertCircle size={12} className="text-red-500 mr-1" />
                       Alert
                     </label>
                   </div>
@@ -275,12 +275,12 @@ const Notifications = () => {
                     name="scheduleDate"
                     value={newNotification.scheduleDate}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full text-xs px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
               </div>
 
-              <div className="mt-6 flex justify-end space-x-3">
+              <div className="mt-6 flex text-xs justify-end space-x-3">
                 <button
                   type="button"
                   onClick={() => setShowForm(false)}

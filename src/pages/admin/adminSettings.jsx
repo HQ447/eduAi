@@ -70,7 +70,7 @@ const AdminSettings = () => {
     switch (activeTab) {
       case "payments":
         return (
-          <div>
+          <div className=" !text-sm">
             <h2 className="text-xl font-bold text-gray-800 mb-6">
               Payment Settings
             </h2>
@@ -175,7 +175,7 @@ const AdminSettings = () => {
 
       case "notifications":
         return (
-          <div>
+          <div className=" !text-sm">
             <h2 className="text-xl font-bold text-gray-800 mb-6">
               Notification Settings
             </h2>
@@ -255,7 +255,7 @@ const AdminSettings = () => {
 
       case "privacy":
         return (
-          <div>
+          <div className=" !text-sm">
             <h2 className="text-xl font-bold text-gray-800 mb-6">
               Privacy Policy Settings
             </h2>
@@ -305,7 +305,7 @@ const AdminSettings = () => {
                     eleifend nibh porttitor. Ut in nulla enim.
                   </p>
                   <div className="flex justify-end">
-                    <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">
+                    <button className="px-4 py-2  bg-blue-600 text-white rounded-md hover:bg-blue-700 text-xs">
                       Edit Privacy Policy
                     </button>
                   </div>
@@ -313,16 +313,16 @@ const AdminSettings = () => {
               </div>
 
               <div className="border-t pt-6">
-                <h3 className="text-lg font-medium text-gray-700 mb-3">
+                <h3 className="text-xs font-medium text-gray-700 mb-3">
                   Account Data
                 </h3>
                 <div className="space-y-4">
-                  <button className="px-4 py-2 bg-yellow-100 text-yellow-800 rounded-md hover:bg-yellow-200 text-sm flex items-center">
+                  <button className="px-4 text-xs py-2 bg-yellow-100 text-yellow-800 rounded-md hover:bg-yellow-200  flex items-center">
                     <Shield size={16} className="mr-2" />
                     Request Data Export
                   </button>
 
-                  <button className="px-4 py-2 bg-red-100 text-red-800 rounded-md hover:bg-red-200 text-sm flex items-center">
+                  <button className="px-4 py-2 bg-red-100 text-red-800 rounded-md hover:bg-red-200 text-xs flex items-center">
                     <Shield size={16} className="mr-2" />
                     Delete Account Data
                   </button>
@@ -334,7 +334,7 @@ const AdminSettings = () => {
 
       case "contact":
         return (
-          <div>
+          <div className=" !text-sm">
             <h2 className="text-xl font-bold text-gray-800 mb-6">
               Contact Email Settings
             </h2>
@@ -446,7 +446,7 @@ const AdminSettings = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 text-sm">
       <div className="container mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row gap-6">
           {/* Settings Sidebar */}

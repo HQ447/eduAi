@@ -542,7 +542,7 @@ const ManageCourses = () => {
                 </div>
               </div>
 
-              <div className="mt-8 flex justify-end space-x-3">
+              <div className="mt-8 flex justify-end text-xs space-x-3">
                 <button
                   type="button"
                   onClick={() => setShowAddForm(false)}
