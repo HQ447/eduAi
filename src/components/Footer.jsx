@@ -14,7 +14,7 @@ function Footer() {
         darkMode ? "text-white bg-[#101215]" : "text-[#000000b5] bg-white "
       } flex flex-col px-20 py-10 gap-5 -md:px-10 -sm:px-6 -xsm:px-0 `}
     >
-      <div className="flex justify-between mb-3 flex-wrap gap-10 -xsm:gap-5 -xsm:text-sm -sm:px-10 -xsm:px-7">
+      <div className="flex flex-wrap justify-between gap-10 mb-3 -xsm:gap-5 -xsm:text-sm -sm:px-10 -xsm:px-7">
         <div className="flex flex-col gap-4 -xsm:w-full">
           <h1 className=" text-xl -xsm:text-[1rem] -xsm:font-bold  font-bold">
             About
@@ -46,7 +46,7 @@ function Footer() {
               Courses
             </h1>
           </NavLink>
-          <h1 onClick={() => navigate("/login")} className=" cursor-pointer">
+          <h1 onClick={() => navigate("/login")} className="cursor-pointer ">
             My Account
           </h1>
           <h1 onClick={() => dispatch(updateCurrStatus("Courses"))}>Cource </h1>

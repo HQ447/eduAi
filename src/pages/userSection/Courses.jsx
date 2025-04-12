@@ -5,12 +5,12 @@ import { GoDotFill } from "react-icons/go";
 //comment the below statment after doing that
 import { courseCollection } from "../../Data/data";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import StarRating from "../../components/StarRating";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { IoMdHeartEmpty } from "react-icons/io";
-import { updateCourseCollection } from "../../store/cartSlice";
+//import { updateCourseCollection } from "../../store/cartSlice";
 
 function Courses() {
   const darkMode = useSelector((state) => state.store.darkMode);
@@ -21,7 +21,7 @@ function Courses() {
   // eslint-disable-next-line no-unused-vars
   const [level, setLevel] = useState("Intermediate");
   const [priceRange, setPriceRange] = useState(10);
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
 
   function clearFilter() {
     setCategory("All");
@@ -64,8 +64,8 @@ function Courses() {
     >
       <div
         className={`${
-          darkMode ? "bg-[#232323] " : "bg-[#e3d8ff]"
-        }  rounded-lg py-2 !px-2 -md:flex-col filter-ribbon w-full justify-center flex items-center gap-3`}
+          darkMode ? "bg-[#232323] " : " "
+        }  rounded-lg shadow-md py-2 !px-2 -md:flex-col filter-ribbon w-full justify-center flex items-center gap-3`}
       >
         <div className=" w-[25rem] -md:w-full ">
           <input
@@ -78,7 +78,7 @@ function Courses() {
             } -xsm:text-xs  outline-none rounded-md p-2 text-sm placeholder:text-[10px] w-full`}
           />
         </div>
-        <div className="-md:w-full -xsm:flex-wrap flex gap-3 justify-around w-fit items-center">
+        <div className="flex items-center justify-around gap-3 -md:w-full -xsm:flex-wrap w-fit">
           <select
             name="select-company"
             id=""
@@ -111,7 +111,7 @@ function Courses() {
             <option value="advance">Advance</option>
           </select>
           <div className="flex flex-col w-[8rem] -xsm:hidden  ">
-            <p className=" my-2 text-xs"> Less than ${priceRange}</p>
+            <p className="my-2 text-xs "> Less than ${priceRange}</p>
             <input
               type="range"
               name=""
@@ -120,7 +120,7 @@ function Courses() {
               maxLength={100}
               minLength={0}
               id=""
-              className="mr-3 w-full"
+              className="w-full mr-3"
             />
           </div>
           <button
@@ -133,13 +133,13 @@ function Courses() {
       </div>
 
       <div className="flex flex-col">
-        {/* <p className="text-xs w-full text-center">
+        {/* <p className="w-full text-xs text-center">
           {searchInp} &nbsp;-&nbsp;
           {category}&nbsp;-&nbsp;
           {level}&nbsp;-&nbsp;
           {priceRange}
         </p> */}
-        <div className="flex flex-col justify-center items-center mb-5">
+        <div className="flex flex-col items-center justify-center mb-5">
           <h1
             className={` -xsm:text-xl w-full text-center text-3xl font-[600] mb-1 mt-2 `}
           >
@@ -155,9 +155,9 @@ function Courses() {
               Courses
             </span>
           </h1>
-          <p className=" -xsm:text-xs text-lg flex gap-3 items-center -xsm:text-center">
+          <p className="flex items-center gap-3 text-lg -xsm:text-xs -xsm:text-center">
             <GoDotFill
-              className="-xsm:hidden text-3xl text-green-500 rounded-full animate-pulse-scale border-2 "
+              className="text-3xl text-green-500 border-2 rounded-full -xsm:hidden animate-pulse-scale "
               aria-hidden="true"
             />{" "}
             Our comprehensive project based courses
@@ -182,11 +182,11 @@ function Courses() {
                 className="w-full "
                 alt="cource img loading error "
               />
-              <div className="pt-3 flex flex-col gap-2">
+              <div className="flex flex-col gap-2 pt-3">
                 <h1
                   className={` ${
-                    darkMode ? "text-[#eeeeee]" : ""
-                  } text-[15px] -xsm:text-sm text-black font-semibold`}
+                    darkMode ? "text-[#eeeeee]" : " text-black"
+                  } text-[15px] -xsm:text-sm  font-semibold`}
                 >
                   {obj.title}
                 </h1>
@@ -203,17 +203,17 @@ function Courses() {
                   Lectures
                 </p>
                 <div className="flex items-center text-sm">
-                  <h1 className="font-semibold text-sm">{obj.rating}.0</h1>
+                  <h1 className="text-sm font-semibold">{obj.rating}.0</h1>
                   &nbsp;
                   <StarRating rating={obj.rating} />
                   &nbsp;
                   <p>({obj.students})</p>
                 </div>
-                <div className="flex justify-between items-center">
-                  <p className="font-semibold text-lg">
+                <div className="flex items-center justify-between">
+                  <p className="text-lg font-semibold">
                     {obj.new_price == 0 ? "Free" : `$${obj.new_price}`}
                     &nbsp;{" "}
-                    <del className="text-red-500 text-sm font-semibold">
+                    <del className="text-sm font-semibold text-red-500">
                       ${obj.old_price}
                     </del>
                   </p>
