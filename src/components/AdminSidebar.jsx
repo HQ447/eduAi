@@ -21,18 +21,13 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
         showSidebar ? "left-0" : " -left-96"
       } flex  px-5 py-10 text-white  flex-col w-[20%] -lg:w-[30%] bg-[#1f2937]  -md:w-[40%] -sm:w-[50%] -xsm:w-[70%] -md:fixed z-50 md:-left-96   min-h-screen `}
     >
-      <div className="relative p-3 text-center border rounded-md shadow-md pt-14">
-        <img
-          src="https://imgcdn.stablediffusionweb.com/2024/6/12/4d688bcf-f53b-42b6-a98d-3254619f3b58.jpg"
-          alt=""
-          className="absolute w-16 h-16 rounded-full -top-5 left-24"
-        />
-        <p className="flex items-center justify-center gap-1 text-xs text-gray-600">
-          <div className="w-2 h-2 bg-green-500 rounded-full "></div>
+      <div className="relative p-3 text-center  rounded-md shadow-md bg-[#2b384d]  ">
+        <p className="flex items-center text-white justify-center gap-1 text-xs ">
+          <div className="w-2 h-2 bg-green-500 rounded-full  "></div>
           Active
         </p>
         <h1 className="font-semibold ">{"Admin Name"}</h1>
-        <p className="text-xs ">Admin of EduAI</p>
+        <p className="text-xs ">Admin</p>
       </div>
       <div className="flex flex-col gap-3 my-5 text-sm">
         <NavLink
@@ -108,6 +103,9 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
           Logout
         </NavLink>
       </div>
+      <button className="text-xs py-2  absolute px-5 bottom-10 left-10 bg-indigo-600 rounded-md">
+        Visit EduAI &gt;&gt;{" "}
+      </button>
     </div>
   );
 }

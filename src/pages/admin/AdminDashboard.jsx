@@ -17,7 +17,7 @@ function AdminDashboard() {
         }}
       >
         <IoIosMenu
-          className="fixed hidden text-xl cursor-pointer -md:flex top-10 right-9"
+          className="fixed hidden text-xl cursor-pointer z-30 -md:flex top-10 right-9"
           onClick={() => {
             setShowSidebar((prev) => !prev);
           }}
