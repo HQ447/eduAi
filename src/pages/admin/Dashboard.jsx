@@ -255,7 +255,7 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="p-4 md:p-6 bg-gray-50">
+    <div className="shadow-md rounded-lg p-5 ">
       <h1 className="mb-6 text-xl font-bold text-gray-800 md:text-2xl">
         Dashboard Overview
       </h1>

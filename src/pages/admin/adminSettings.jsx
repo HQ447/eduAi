@@ -446,8 +446,8 @@ const AdminSettings = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 text-sm">
-      <div className="container mx-auto py-6 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen rounded-lg p-5   text-sm">
+      <div className="container mx-auto ">
         <div className="flex flex-col md:flex-row gap-6">
           {/* Settings Sidebar */}
           <div className="w-full md:w-64 bg-white rounded-lg shadow">

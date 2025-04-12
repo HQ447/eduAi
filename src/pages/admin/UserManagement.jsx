@@ -133,8 +133,8 @@ const UserManagement = () => {
   }, []);
 
   return (
-    <div className="min-h-screen px-2 py-4 sm:px-4 lg:px-6 sm:py-6 lg:py-8 bg-gray-50">
-      <div className="p-3 bg-white rounded-lg shadow-md sm:p-4 lg:p-6">
+    <div className="min-h-screen rounded-lg shadow-md  p-5 ">
+      <div className=" ">
         <div className="flex flex-col gap-3 mb-4 sm:flex-row sm:justify-between sm:items-center sm:mb-6">
           <h1 className="text-xl font-bold text-gray-800 sm:text-2xl">
             User Management
