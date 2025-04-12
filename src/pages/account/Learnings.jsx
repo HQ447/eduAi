@@ -24,7 +24,7 @@ function Learnings() {
         <div
           key={course.id}
           className=" bg-white drop-shadow flex -sm:flex-col cursor-pointer -sm:w-full w-fit gap-6  p-4"
-          onClick={() => navigate(`/LMS/${course.id}`)}
+          onClick={() => navigate(`/LMS`)}
         >
           <img
             src={course.img}
