@@ -135,7 +135,7 @@ const ManageCourses = () => {
   return (
     <div className="p-6 max-w-full bg-white rounded-lg shadow">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-        <h1 className="text-2xl font-bold text-gray-800 mb-4 md:mb-0">
+        <h1 className="text-2xl font-bold text-gray-800 mb-4 md:mb-0 -sm:text-sm">
           Manage Courses
         </h1>
 
@@ -143,8 +143,8 @@ const ManageCourses = () => {
           <div className="relative">
             <input
               type="text"
-              placeholder="Search courses..."
-              className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-64"
+              placeholder="Search Courses"
+              className="pl-10 pr-4 py-1 border placeholder:text-xs border-gray-300 rounded-lg focus:outline-none  focus:ring-blue-500 w-full sm:w-64"
               value={searchTerm}
               onChange={handleSearch}
             />
@@ -157,7 +157,7 @@ const ManageCourses = () => {
           <div className="flex gap-2">
             <button
               onClick={() => setViewMode("cards")}
-              className={`px-3 py-2 rounded-lg ${
+              className={`px-3 py-1 rounded-lg text-xs ${
                 viewMode === "cards"
                   ? "bg-blue-100 text-blue-700 border border-blue-200"
                   : "bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200"
@@ -167,7 +167,7 @@ const ManageCourses = () => {
             </button>
             <button
               onClick={() => setViewMode("table")}
-              className={`px-3 py-2 rounded-lg ${
+              className={`px-3 py-1 text-xs rounded-lg ${
                 viewMode === "table"
                   ? "bg-blue-100 text-blue-700 border border-blue-200"
                   : "bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200"
@@ -179,7 +179,7 @@ const ManageCourses = () => {
 
           <button
             onClick={() => setShowAddForm(true)}
-            className="flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            className="flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-1 text-xs rounded-lg hover:bg-blue-700 transition-colors"
           >
             <Plus size={18} />
             <span>Add New Course</span>
@@ -205,7 +205,7 @@ const ManageCourses = () => {
                   />
                   <div className="absolute top-3 right-3">
                     <span
-                      className={`px-2 py-1 text-xs font-medium rounded-full ${
+                      className={`px-2 py-1 text-xs -md:text-[8px] font-medium rounded-full ${
                         course.status === "active"
                           ? "bg-green-100 text-green-800"
                           : "bg-yellow-100 text-yellow-800"
@@ -225,24 +225,24 @@ const ManageCourses = () => {
                     </span>
                   </div>
 
-                  <h3 className="font-bold text-gray-800 text-lg mb-2 line-clamp-1">
+                  <h3 className="font-bold text-md text-gray-800  mb-2 line-clamp-1">
                     {course.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                  <p className="text-gray-600 text-xs mb-4 line-clamp-2">
                     {course.description}
                   </p>
 
                   <div className="flex flex-wrap items-center text-sm text-gray-500 mb-4 gap-3">
-                    <div className="flex items-center">
+                    <div className="flex items-center text-xs">
                       <Clock size={14} className="mr-1" />
                       {course.duration}
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center text-xs">
                       <Users size={14} className="mr-1" />
                       {course.students} students
                     </div>
-                    <div className="flex items-center font-medium text-gray-800">
+                    <div className="flex items-center text-xs font-medium text-gray-800">
                       <DollarSign size={14} className="mr-0.5" />
                       {course.price.toFixed(2)}
                     </div>
@@ -370,7 +370,7 @@ const ManageCourses = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg shadow-xl w-full max-w-2xl max-h-screen overflow-y-auto">
             <div className="flex justify-between items-center border-b p-4">
-              <h2 className="text-xl font-bold text-gray-800">
+              <h2 className="text-xl font-bold -md:text-lg text-gray-800">
                 Add New Course
               </h2>
               <button
@@ -393,7 +393,7 @@ const ManageCourses = () => {
                     value={newCourse.title}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full placeholder:text-xs px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Enter course title"
                   />
                 </div>
@@ -407,7 +407,7 @@ const ManageCourses = () => {
                     value={newCourse.category}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full text-xs px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     <option value="">Select category</option>
                     <option value="Web Development">Web Development</option>
@@ -419,7 +419,7 @@ const ManageCourses = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm  font-medium text-gray-700 mb-1">
                     Price ($)
                   </label>
                   <input
@@ -430,7 +430,7 @@ const ManageCourses = () => {
                     required
                     min="0"
                     step="0.01"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 placeholder:text-xs py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Enter price"
                   />
                 </div>
@@ -444,7 +444,7 @@ const ManageCourses = () => {
                     name="duration"
                     value={newCourse.duration}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 py-2 placeholder:text-xs border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="e.g. 12 hours"
                   />
                 </div>
@@ -457,7 +457,7 @@ const ManageCourses = () => {
                     name="status"
                     value={newCourse.status}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-3 text-xs py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     <option value="draft">Draft</option>
                     <option value="active">Active</option>
@@ -473,8 +473,8 @@ const ManageCourses = () => {
                     value={newCourse.description}
                     onChange={handleInputChange}
                     rows="4"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter course description"
+                    className="w-full px-3 placeholder:text-xs py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="course description"
                   ></textarea>
                 </div>
 

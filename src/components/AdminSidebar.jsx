@@ -19,7 +19,7 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
     <div
       className={`${
         showSidebar ? "left-0" : " -left-96"
-      } flex  px-5 py-10 text-white  flex-col w-[22%] -lg:w-[30%] bg-[#1f2937]  -md:w-[40%] -sm:w-[50%] -xsm:w-[70%] -md:fixed z-50 md:-left-96   min-h-screen `}
+      } flex  px-5 py-10 text-white  flex-col w-[20%] -lg:w-[30%] bg-[#1f2937]  -md:w-[40%] -sm:w-[50%] -xsm:w-[70%] -md:fixed z-50 md:-left-96   min-h-screen `}
     >
       <div className="relative p-3 text-center border rounded-md shadow-md pt-14">
         <img
@@ -37,8 +37,8 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
       <div className="flex flex-col gap-3 my-5 text-sm">
         <NavLink
           to={""}
-          className={`hover:bg-gray-100 cursor-pointer ${
-            activeTab == "dashboard" ? "!bg-[#1E3A8A] text-white " : ""
+          className={`hover:bg-[#3b4e69] text-xs cursor-pointer ${
+            activeTab == "dashboard" ? "!bg-[#f33c1c] text-white " : ""
           } py-2  flex items-center gap-2  px-3 rounded-md`}
           onClick={() => {
             setActiveTabs("dashboard");
@@ -50,8 +50,8 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
         </NavLink>
         <NavLink
           to={"users"}
-          className={`hover:bg-gray-100 cursor-pointer ${
-            activeTab == "user" ? "!bg-[#1E3A8A] text-white" : ""
+          className={`hover:bg-[#3b4e69] text-xs cursor-pointer ${
+            activeTab == "user" ? "!bg-[#f33c1c] text-white" : ""
           } py-2 px-3 flex items-center gap-2 rounded-md`}
           onClick={() => {
             setActiveTabs("user");
@@ -63,8 +63,8 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
         </NavLink>
         <NavLink
           to={"managecourses"}
-          className={`hover:bg-gray-100 cursor-pointer ${
-            activeTab == "managecourses" ? "!bg-[#1E3A8A] text-white" : ""
+          className={`hover:bg-[#3b4e69] text-xs cursor-pointer ${
+            activeTab == "managecourses" ? "!bg-[#f33c1c] text-white" : ""
           } py-2 px-3 flex items-center gap-2 rounded-md`}
           onClick={() => {
             setActiveTabs("managecourses");
@@ -76,8 +76,8 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
         </NavLink>
         <NavLink
           to={"notifications"}
-          className={`hover:bg-gray-100 cursor-pointer ${
-            activeTab == "notification" ? "!bg-[#1E3A8A] text-white" : ""
+          className={`hover:bg-[#3b4e69] text-xs cursor-pointer ${
+            activeTab == "notification" ? "!bg-[#f33c1c] text-white" : ""
           } py-2 flex items-center gap-2 px-3 rounded-md`}
           onClick={() => {
             setActiveTabs("notification");
@@ -89,8 +89,8 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
         </NavLink>
         <NavLink
           to={"admin-settings"}
-          className={`hover:bg-gray-100 cursor-pointer ${
-            activeTab == "setting" ? "!bg-[#1E3A8A] text-white" : ""
+          className={`hover:bg-[#3b4e69] text-xs cursor-pointer ${
+            activeTab == "setting" ? "!bg-[#f33c1c] text-white" : ""
           } py-2 flex items-center gap-2 px-3 rounded-md`}
           onClick={() => {
             setActiveTabs("setting");
@@ -102,7 +102,7 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
         </NavLink>
         <NavLink
           to={"/adminlogin"}
-          className={` flex gap-2  hover:bg-gray-100 cursor-pointer py-2  px-3 rounded-md text-red-600 font-semibold`}
+          className={` flex items-center gap-2  hover:bg-[#3b4e69] text-xs cursor-pointer py-2  px-3 rounded-md  font-semibold`}
         >
           <MdLogout className="text-lg" />
           Logout

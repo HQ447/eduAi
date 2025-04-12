@@ -11,7 +11,7 @@ function AdminDashboard() {
     <div className="flex w-full ">
       <AdminSidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
       <div
-        className="flex flex-col w-[78%] -lg:w-[70%] -md:w-full h-screen"
+        className="flex flex-col w-[80%] -lg:w-[70%] -md:w-full h-screen"
         onClick={() => {
           if (showSidebar) setShowSidebar(false);
         }}
