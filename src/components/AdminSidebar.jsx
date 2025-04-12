@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { RxDashboard } from "react-icons/rx";
 import { TbBrandGoogleAnalytics } from "react-icons/tb";
 import { BsDatabaseAdd } from "react-icons/bs";
@@ -11,6 +11,7 @@ import { MdOutlineEditNotifications } from "react-icons/md";
 function AdminSidebar({ showSidebar, setShowSidebar }) {
   const [activeTab, setActive] = useState("dashboard");
 
+  const navigate = useNavigate();
   function setActiveTabs(state) {
     setActive(state);
   }
@@ -103,7 +104,10 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
           Logout
         </NavLink>
       </div>
-      <button className="text-xs py-2  absolute px-5 bottom-10 left-10 bg-indigo-600 rounded-md">
+      <button
+        onClick={() => navigate("/")}
+        className="text-xs py-2  absolute px-5 bottom-10 left-10 bg-indigo-600 rounded-md"
+      >
         Visit EduAI &gt;&gt;{" "}
       </button>
     </div>
