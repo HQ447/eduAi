@@ -11,7 +11,7 @@ import {
 
 const UserManagement = () => {
   // Sample user data
-  const [users, setUsers] = useState([
+  const [users] = useState([
     {
       id: 1,
       name: "John Doe",
@@ -156,7 +156,7 @@ const UserManagement = () => {
             <input
               type="text"
               placeholder="Search by name"
-              className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full placeholder:text-xs py-2 pl-10 pr-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={nameFilter}
               onChange={(e) => setNameFilter(e.target.value)}
             />
@@ -167,7 +167,7 @@ const UserManagement = () => {
             {/* Role filter */}
             <div className="relative w-full sm:w-1/2">
               <select
-                className="w-full py-2 pl-4 pr-10 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full py-2 text-xs pl-4 pr-10 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={roleFilter}
                 onChange={(e) => setRoleFilter(e.target.value)}
               >
@@ -187,7 +187,7 @@ const UserManagement = () => {
             {/* Status filter */}
             <div className="relative w-full sm:w-1/2">
               <select
-                className="w-full py-2 pl-4 pr-10 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full py-2 text-xs pl-4 pr-10 border border-gray-300 rounded-md appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
               >
@@ -209,7 +209,7 @@ const UserManagement = () => {
           <div className="flex items-center">
             <span className="mr-2 text-sm text-gray-600">Show</span>
             <select
-              className="w-16 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-16 px-3 py-2 text-xs border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={recordsPerPage}
               onChange={(e) => setRecordsPerPage(Number(e.target.value))}
             >
@@ -265,23 +265,23 @@ const UserManagement = () => {
                   </th>
                 </tr>
               </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
+              <tbody className="bg-white divide-y divide-gray-200 ">
                 {currentUsers.length > 0 ? (
                   currentUsers.map((user) => (
                     <tr key={user.id} className="hover:bg-gray-50">
-                      <td className="px-3 py-4 text-sm font-medium text-gray-900 sm:px-6 whitespace-nowrap">
+                      <td className="px-3 py-4 text-sm -sm:text-xs font-medium text-gray-900 sm:px-6 whitespace-nowrap">
                         {user.name}
                       </td>
-                      <td className="px-3 py-4 text-sm text-gray-500 sm:px-6 whitespace-nowrap">
+                      <td className="px-3 py-4 text-sm -sm:text-xs text-gray-500 sm:px-6 whitespace-nowrap">
                         {user.email}
                       </td>
-                      <td className="px-3 py-4 text-sm text-gray-500 sm:px-6 whitespace-nowrap">
+                      <td className="px-3 py-4 text-sm -sm:text-xs text-gray-500 sm:px-6 whitespace-nowrap">
                         {user.role}
                       </td>
-                      <td className="px-3 py-4 text-sm text-gray-500 sm:px-6 whitespace-nowrap">
+                      <td className="px-3 py-4 text-sm -sm:text-xs text-gray-500 sm:px-6 whitespace-nowrap">
                         {user.entryDate}
                       </td>
-                      <td className="px-3 py-4 text-sm sm:px-6 whitespace-nowrap">
+                      <td className="px-3 py-4 text-sm -sm:text-xs sm:px-6 whitespace-nowrap">
                         <span
                           className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${
                             user.status === "Active"

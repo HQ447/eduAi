@@ -73,7 +73,7 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
           Course Management
         </NavLink>
         <NavLink
-          to={"link4"}
+          to={"notifications"}
           className={`hover:bg-gray-100 cursor-pointer ${
             activeTab == "link4" ? "!bg-[#1E3A8A] text-white" : ""
           } py-2  px-3 rounded-md`}
@@ -82,7 +82,19 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
             setShowSidebar((prev) => !prev);
           }}
         >
-          Link 4
+          Notifications
+        </NavLink>
+        <NavLink
+          to={"admin-settings"}
+          className={`hover:bg-gray-100 cursor-pointer ${
+            activeTab == "link4" ? "!bg-[#1E3A8A] text-white" : ""
+          } py-2  px-3 rounded-md`}
+          onClick={() => {
+            setActiveTabs("link4");
+            setShowSidebar((prev) => !prev);
+          }}
+        >
+          Settings
         </NavLink>
         <NavLink
           to={"/adminlogin"}
