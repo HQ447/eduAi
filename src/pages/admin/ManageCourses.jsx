@@ -135,7 +135,7 @@ const ManageCourses = () => {
   return (
     <div className="p-6 max-w-full bg-white rounded-lg shadow">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-        <h1 className="text-2xl font-bold text-gray-800 mb-4 md:mb-0 -sm:text-sm">
+        <h1 className="text-2xl font-bold text-gray-800 mb-4 md:mb-0 ">
           Manage Courses
         </h1>
 
@@ -179,7 +179,7 @@ const ManageCourses = () => {
 
           <button
             onClick={() => setShowAddForm(true)}
-            className="flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-1 text-xs rounded-lg hover:bg-blue-700 transition-colors"
+            className="flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 text-xs rounded-lg hover:bg-blue-700 transition-colors"
           >
             <Plus size={18} />
             <span>Add New Course</span>
@@ -382,7 +382,7 @@ const ManageCourses = () => {
             </div>
 
             <form onSubmit={handleSubmit} className="p-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="flex flex-col gap-6">
                 <div className="col-span-2">
                   <label className="block text-sm font-medium text-gray-700 mb-1">
                     Course Title
@@ -398,8 +398,8 @@ const ManageCourses = () => {
                   />
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                <div className="flex -sm:flex flex-col">
+                  <label className=" text-sm font-medium text-gray-700 mb-1">
                     Category
                   </label>
                   <select
@@ -407,7 +407,7 @@ const ManageCourses = () => {
                     value={newCourse.category}
                     onChange={handleInputChange}
                     required
-                    className="w-full text-xs px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full  text-xs px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     <option value="">Select category</option>
                     <option value="Web Development">Web Development</option>
@@ -418,8 +418,8 @@ const ManageCourses = () => {
                   </select>
                 </div>
 
-                <div>
-                  <label className="block text-sm  font-medium text-gray-700 mb-1">
+                <div className="">
+                  <label className="  text-sm w-full font-medium text-gray-700 mb-1">
                     Price ($)
                   </label>
                   <input
@@ -430,7 +430,7 @@ const ManageCourses = () => {
                     required
                     min="0"
                     step="0.01"
-                    className="w-full px-3 placeholder:text-xs py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className=" px-3 w-full placeholder:text-xs py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Enter price"
                   />
                 </div>
