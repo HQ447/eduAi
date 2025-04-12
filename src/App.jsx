@@ -27,6 +27,7 @@ import ManageCourses from "./pages/admin/ManageCourses";
 import Dashboard from "./pages/admin/Dashboard";
 import UserManagement from "./pages/admin/UserManagement";
 import Notifications from "./pages/admin/Notifications";
+import AdminSettings from "./pages/admin/adminSettings";
 
 function App() {
   return (
@@ -57,7 +58,7 @@ function App() {
           <Route path="users" element={<UserManagement />} />
           <Route path="managecourses" element={<ManageCourses />} />
           <Route path="notifications" element={<Notifications />} />
-          <Route path="admin-settings" element={<adminSettings />} />
+          <Route path="admin-settings" element={<AdminSettings />} />
         </Route>
 
         {/* User Account-section */}

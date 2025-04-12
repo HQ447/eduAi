@@ -4,6 +4,8 @@ import { RxDashboard } from "react-icons/rx";
 import { TbBrandGoogleAnalytics } from "react-icons/tb";
 import { BsDatabaseAdd } from "react-icons/bs";
 import { MdLogout } from "react-icons/md";
+import { IoSettingsOutline } from "react-icons/io5";
+import { MdOutlineEditNotifications } from "react-icons/md";
 
 // eslint-disable-next-line react/prop-types
 function AdminSidebar({ showSidebar, setShowSidebar }) {
@@ -49,10 +51,10 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
         <NavLink
           to={"users"}
           className={`hover:bg-gray-100 cursor-pointer ${
-            activeTab == "link2" ? "!bg-[#1E3A8A] text-white" : ""
+            activeTab == "user" ? "!bg-[#1E3A8A] text-white" : ""
           } py-2 px-3 flex items-center gap-2 rounded-md`}
           onClick={() => {
-            setActiveTabs("link2");
+            setActiveTabs("user");
             setShowSidebar((prev) => !prev);
           }}
         >
@@ -75,25 +77,27 @@ function AdminSidebar({ showSidebar, setShowSidebar }) {
         <NavLink
           to={"notifications"}
           className={`hover:bg-gray-100 cursor-pointer ${
-            activeTab == "link4" ? "!bg-[#1E3A8A] text-white" : ""
-          } py-2  px-3 rounded-md`}
+            activeTab == "notification" ? "!bg-[#1E3A8A] text-white" : ""
+          } py-2 flex items-center gap-2 px-3 rounded-md`}
           onClick={() => {
-            setActiveTabs("link4");
+            setActiveTabs("notification");
             setShowSidebar((prev) => !prev);
           }}
         >
+          <MdOutlineEditNotifications className="text-xl" />
           Notifications
         </NavLink>
         <NavLink
           to={"admin-settings"}
           className={`hover:bg-gray-100 cursor-pointer ${
-            activeTab == "link4" ? "!bg-[#1E3A8A] text-white" : ""
-          } py-2  px-3 rounded-md`}
+            activeTab == "setting" ? "!bg-[#1E3A8A] text-white" : ""
+          } py-2 flex items-center gap-2 px-3 rounded-md`}
           onClick={() => {
-            setActiveTabs("link4");
+            setActiveTabs("setting");
             setShowSidebar((prev) => !prev);
           }}
         >
+          <IoSettingsOutline className="text-xl" />
           Settings
         </NavLink>
         <NavLink
