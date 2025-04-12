@@ -83,6 +83,7 @@ const defaultCourse = {
   ],
 };
 
+// eslint-disable-next-line react/prop-types
 export default function LMS({ course = defaultCourse }) {
   const [activeChapter, setActiveChapter] = useState(0);
   const [activeLecture, setActiveLecture] = useState(0);
@@ -239,6 +240,7 @@ export default function LMS({ course = defaultCourse }) {
     }
     // Close mobile sidebar when selecting a lecture
     setShowMobileSidebar(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeChapter, activeLecture]);
 
   const toggleChapter = (index) => {
@@ -266,11 +268,11 @@ export default function LMS({ course = defaultCourse }) {
   ) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
-        <div className="text-center p-6 bg-white rounded-lg shadow-md">
-          <h2 className="text-lg font-bold text-gray-800 mb-2">
+        <div className="p-6 text-center bg-white rounded-lg shadow-md">
+          <h2 className="mb-2 text-lg font-bold text-gray-800">
             Loading course content...
           </h2>
-          <p className="text-gray-600 text-sm">
+          <p className="text-sm text-gray-600">
             Please wait while we prepare your learning materials.
           </p>
         </div>
@@ -287,14 +289,14 @@ export default function LMS({ course = defaultCourse }) {
     currentCourse.chapters[activeChapter]?.title || "Chapter";
 
   return (
-    <div className="flex flex-col md:flex-row w-full bg-gray-100 min-h-screen max-h-screen overflow-hidden">
+    <div className="flex flex-col w-full max-h-screen min-h-screen overflow-hidden bg-gray-100 md:flex-row">
       {/* Desktop Sidebar */}
-      <div className="hidden md:block md:w-1/3 lg:w-1/3 bg-white border-r border-gray-200 overflow-y-auto max-h-screen">
-        <div className="sticky top-0 bg-white z-10 p-3 border-b border-gray-200">
+      <div className="hidden max-h-screen overflow-y-auto bg-white border-r border-gray-200 md:block md:w-1/3 lg:w-1/4">
+        <div className="sticky top-0 z-10 p-3 bg-white border-b border-gray-200">
           <h1 className="text-xl font-bold text-gray-800">
             {currentCourse.title}
           </h1>
-          <p className="text-xs text-gray-600 mt-1">
+          <p className="mt-1 text-xs text-gray-600">
             Instructor: {currentCourse.instructor}
           </p>
         </div>
@@ -303,7 +305,7 @@ export default function LMS({ course = defaultCourse }) {
           {currentCourse.chapters.map((chapter, chapterIndex) => (
             <div
               key={chapterIndex}
-              className="border border-gray-200 rounded-lg overflow-hidden"
+              className="overflow-hidden border border-gray-200 rounded-lg"
             >
               <div
                 className={`flex justify-between items-center p-3 cursor-pointer ${
@@ -313,7 +315,7 @@ export default function LMS({ course = defaultCourse }) {
                 }`}
                 onClick={() => toggleChapter(chapterIndex)}
               >
-                <h3 className="font-medium text-sm">{chapter.title}</h3>
+                <h3 className="text-sm font-medium">{chapter.title}</h3>
                 <button className="text-gray-500">
                   {isChapterOpen[chapterIndex] ? (
                     <ChevronUp size={16} />
@@ -351,9 +353,9 @@ export default function LMS({ course = defaultCourse }) {
 
       {/* Mobile Sidebar (Overlay) */}
       {showMobileSidebar && (
-        <div className="md:hidden fixed inset-0 z-50 bg-black bg-opacity-50 flex">
-          <div className="w-3/4 bg-white h-full overflow-y-auto">
-            <div className="sticky top-0 bg-white z-10 p-3 border-b border-gray-200 flex justify-between items-center">
+        <div className="fixed inset-0 z-50 flex bg-black bg-opacity-50 md:hidden">
+          <div className="w-3/4 h-full overflow-y-auto bg-white">
+            <div className="sticky top-0 z-10 flex items-center justify-between p-3 bg-white border-b border-gray-200">
               <h1 className="text-lg font-bold text-gray-800 truncate">
                 {currentCourse.title}
               </h1>
@@ -369,7 +371,7 @@ export default function LMS({ course = defaultCourse }) {
               {currentCourse.chapters.map((chapter, chapterIndex) => (
                 <div
                   key={chapterIndex}
-                  className="border border-gray-200 rounded-lg overflow-hidden"
+                  className="overflow-hidden border border-gray-200 rounded-lg"
                 >
                   <div
                     className={`flex justify-between items-center p-3 cursor-pointer ${
@@ -379,7 +381,7 @@ export default function LMS({ course = defaultCourse }) {
                     }`}
                     onClick={() => toggleChapter(chapterIndex)}
                   >
-                    <h3 className="font-medium text-sm">{chapter.title}</h3>
+                    <h3 className="text-sm font-medium">{chapter.title}</h3>
                     <button className="text-gray-500">
                       {isChapterOpen[chapterIndex] ? (
                         <ChevronUp size={16} />
@@ -421,27 +423,30 @@ export default function LMS({ course = defaultCourse }) {
       )}
 
       {/* Main Content - Video Player */}
-      <div className="md:w-2/3 lg:w-2/3 w-full md:overflow-y-auto flex flex-col h-screen">
-        {/* Video Player */}
-        <div className="bg-black w-full">
-          <div className="relative aspect-video bg-black max-w-full mx-auto">
-            <video
-              ref={videoRef}
-              className="w-full h-full"
-              onTimeUpdate={handleTimeUpdate}
-              onLoadedMetadata={handleLoadedMetadata}
-              onEnded={goToNextLecture}
-            >
-              <source src={currentLectureUrl} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+      <div className="flex flex-col w-full h-screen md:w-2/3 lg:w-3/4 md:overflow-y-auto">
+        {/* Video Player - BALANCED SIZE */}
+        <div className="w-full">
+          <div className="relative bg-black">
+            <div className="max-w-3xl mx-auto">
+              <video
+                ref={videoRef}
+                className="mx-auto"
+                onTimeUpdate={handleTimeUpdate}
+                onLoadedMetadata={handleLoadedMetadata}
+                onEnded={goToNextLecture}
+                style={{ height: "360px" }}
+              >
+                <source src={currentLectureUrl} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
 
             {/* Custom Video Controls */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent text-white p-3">
+            <div className="absolute bottom-0 left-0 right-0 p-2 text-white bg-gradient-to-t from-black/80 to-transparent">
               {/* Progress Bar */}
               <div
                 ref={progressBarRef}
-                className="w-full h-1 bg-gray-600 cursor-pointer mb-3 rounded-full overflow-hidden"
+                className="w-full h-1 mb-2 overflow-hidden bg-gray-600 rounded-full cursor-pointer"
                 onClick={handleProgressChange}
               >
                 <div
@@ -451,10 +456,10 @@ export default function LMS({ course = defaultCourse }) {
               </div>
 
               <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2">
                   {/* Play/Pause Button */}
                   <button onClick={togglePlay} className="hover:text-blue-400">
-                    {isPlaying ? <Pause size={20} /> : <Play size={20} />}
+                    {isPlaying ? <Pause size={18} /> : <Play size={18} />}
                   </button>
 
                   {/* Previous/Next Lecture */}
@@ -462,23 +467,23 @@ export default function LMS({ course = defaultCourse }) {
                     onClick={goToPreviousLecture}
                     className="hover:text-blue-400"
                   >
-                    <SkipBack size={18} />
+                    <SkipBack size={16} />
                   </button>
 
                   <button
                     onClick={goToNextLecture}
                     className="hover:text-blue-400"
                   >
-                    <SkipForward size={18} />
+                    <SkipForward size={16} />
                   </button>
 
                   {/* Volume Controls - Hide on small screens */}
-                  <div className="hidden sm:flex items-center">
+                  <div className="items-center hidden sm:flex">
                     <button
                       onClick={toggleMute}
-                      className="hover:text-blue-400 mr-1"
+                      className="mr-1 hover:text-blue-400"
                     >
-                      {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+                      {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
                     </button>
                     <input
                       type="range"
@@ -487,12 +492,12 @@ export default function LMS({ course = defaultCourse }) {
                       step="0.01"
                       value={volume}
                       onChange={handleVolumeChange}
-                      className="w-16 md:w-20"
+                      className="w-14 md:w-16"
                     />
                   </div>
 
                   {/* Time Display - Hide on very small screens */}
-                  <div className="text-xs hidden sm:block">
+                  <div className="hidden text-xs sm:block">
                     {formatTime(currentTime)} / {formatTime(duration)}
                   </div>
                 </div>
@@ -502,7 +507,7 @@ export default function LMS({ course = defaultCourse }) {
                   onClick={handleFullScreen}
                   className="hover:text-blue-400"
                 >
-                  <Maximize size={18} />
+                  <Maximize size={16} />
                 </button>
               </div>
             </div>
@@ -510,25 +515,25 @@ export default function LMS({ course = defaultCourse }) {
         </div>
 
         {/* Mobile Controls and Info Bar */}
-        <div className="md:hidden bg-white border-b border-gray-200 flex items-center justify-between p-2">
+        <div className="flex items-center justify-between p-2 bg-white border-b border-gray-200 md:hidden">
           <div className="flex-1 truncate">
-            <h2 className="font-medium text-sm truncate">
+            <h2 className="text-sm font-medium truncate">
               {currentLectureTitle}
             </h2>
-            <p className="text-gray-500 text-xs truncate">
+            <p className="text-xs text-gray-500 truncate">
               {currentChapterTitle}
             </p>
           </div>
           <button
             onClick={toggleMobileSidebar}
-            className="ml-2 p-2 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center"
+            className="flex items-center justify-center p-2 ml-2 text-blue-600 rounded-full bg-blue-50"
           >
             <Menu size={18} />
           </button>
         </div>
 
         {/* Mobile Tab Navigation */}
-        <div className="md:hidden bg-white border-b border-gray-200">
+        <div className="bg-white border-b border-gray-200 md:hidden">
           <div className="flex">
             <button
               className={`flex-1 py-2 text-center text-sm font-medium ${
@@ -563,7 +568,7 @@ export default function LMS({ course = defaultCourse }) {
             {currentCourse.chapters.map((chapter, chapterIndex) => (
               <div
                 key={chapterIndex}
-                className="border border-gray-200 rounded-lg overflow-hidden"
+                className="overflow-hidden border border-gray-200 rounded-lg"
               >
                 <div
                   className={`flex justify-between items-center p-3 cursor-pointer ${
@@ -573,7 +578,7 @@ export default function LMS({ course = defaultCourse }) {
                   }`}
                   onClick={() => toggleChapter(chapterIndex)}
                 >
-                  <h3 className="font-medium text-sm">{chapter.title}</h3>
+                  <h3 className="text-sm font-medium">{chapter.title}</h3>
                   <button className="text-gray-500">
                     {isChapterOpen[chapterIndex] ? (
                       <ChevronUp size={16} />
@@ -619,12 +624,12 @@ export default function LMS({ course = defaultCourse }) {
         >
           <div className="p-4">
             <div className="mb-4">
-              <h3 className="text-sm font-medium text-gray-800 mb-2">
-                What Youll Learn
+              <h3 className="mb-2 text-sm font-medium text-gray-800">
+                What You will Learn
               </h3>
-              <ul className="list-disc pl-4 space-y-1">
+              <ul className="pl-4 space-y-1 list-disc">
                 {currentCourse.learnings.map((item, index) => (
-                  <li key={index} className="text-gray-600 text-xs">
+                  <li key={index} className="text-xs text-gray-600">
                     {item}
                   </li>
                 ))}
@@ -632,25 +637,25 @@ export default function LMS({ course = defaultCourse }) {
             </div>
 
             <div className="mb-4">
-              <h3 className="text-sm font-medium text-gray-800 mb-2">
+              <h3 className="mb-2 text-sm font-medium text-gray-800">
                 Prerequisites
               </h3>
-              <ul className="list-disc pl-4 space-y-1">
+              <ul className="pl-4 space-y-1 list-disc">
                 {currentCourse.prerequisites.map((item, index) => (
-                  <li key={index} className="text-gray-600 text-xs">
+                  <li key={index} className="text-xs text-gray-600">
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="mt-4 bg-blue-50 rounded-lg p-3">
+            <div className="p-3 mt-4 rounded-lg bg-blue-50">
               <div className="flex items-start">
                 <div className="mr-3 text-blue-500">
                   <BookOpen size={16} />
                 </div>
                 <div>
-                  <h4 className="text-xs font-medium text-blue-800 mb-1">
+                  <h4 className="mb-1 text-xs font-medium text-blue-800">
                     Course Progress
                   </h4>
                   <p className="text-xs text-blue-700">
@@ -658,7 +663,7 @@ export default function LMS({ course = defaultCourse }) {
                     {currentCourse.chapters[activeChapter]?.lectures?.length ||
                       0}
                   </p>
-                  <div className="w-full h-1 bg-blue-200 rounded-full mt-2">
+                  <div className="w-full h-1 mt-2 bg-blue-200 rounded-full">
                     <div
                       className="h-full bg-blue-600 rounded-full"
                       style={{ width: "25%" }}
@@ -671,23 +676,23 @@ export default function LMS({ course = defaultCourse }) {
         </div>
 
         {/* Desktop Course Information (hidden on mobile) */}
-        <div className="hidden md:block p-4 bg-white flex-1 overflow-y-auto">
-          <h2 className="text-lg font-bold text-gray-800 mb-1">
+        <div className="flex-1 hidden p-4 overflow-y-auto bg-white md:block">
+          <h2 className="mb-1 text-lg font-bold text-gray-800">
             {currentLectureTitle}
           </h2>
-          <p className="text-gray-600 mb-4 text-sm">
+          <p className="mb-4 text-sm text-gray-600">
             Chapter {activeChapter + 1}: {currentChapterTitle}
           </p>
 
           {/* Course Information Tabs */}
           <div className="mt-4">
-            <div className="border-b border-gray-200 pb-4">
-              <h3 className="text-base font-medium text-gray-800 mb-2">
+            <div className="pb-4 border-b border-gray-200">
+              <h3 className="mb-2 text-base font-medium text-gray-800">
                 What You will Learn
               </h3>
-              <ul className="list-disc pl-5 space-y-1">
+              <ul className="pl-5 space-y-1 list-disc">
                 {currentCourse.learnings.map((item, index) => (
-                  <li key={index} className="text-gray-600 text-sm">
+                  <li key={index} className="text-sm text-gray-600">
                     {item}
                   </li>
                 ))}
@@ -695,12 +700,12 @@ export default function LMS({ course = defaultCourse }) {
             </div>
 
             <div className="mt-4">
-              <h3 className="text-base font-medium text-gray-800 mb-2">
+              <h3 className="mb-2 text-base font-medium text-gray-800">
                 Prerequisites
               </h3>
-              <ul className="list-disc pl-5 space-y-1">
+              <ul className="pl-5 space-y-1 list-disc">
                 {currentCourse.prerequisites.map((item, index) => (
-                  <li key={index} className="text-gray-600 text-sm">
+                  <li key={index} className="text-sm text-gray-600">
                     {item}
                   </li>
                 ))}
