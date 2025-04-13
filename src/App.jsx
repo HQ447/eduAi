@@ -28,7 +28,7 @@ import Dashboard from "./pages/admin/Dashboard";
 import UserManagement from "./pages/admin/UserManagement";
 import Notifications from "./pages/admin/Notifications";
 import AdminSettings from "./pages/admin/adminSettings";
-import LMS from "./pages/account/lms/LMS";
+import LMS from "./pages/account/LMS";
 
 function App() {
   return (
