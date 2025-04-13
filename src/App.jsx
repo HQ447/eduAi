@@ -18,7 +18,7 @@ import ChangePassword from "./pages/auth/ChangegPassword";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminLogin from "./pages/auth/AdminLogin";
 import AccountSection from "./pages/account/AccountSection";
-import LMS from "./pages/account/lms/LMS";
+
 import Learnings from "./pages/account/Learnings";
 import Settings from "./pages/account/Settings";
 import Certifications from "./pages/account/Certifications";
@@ -28,6 +28,7 @@ import Dashboard from "./pages/admin/Dashboard";
 import UserManagement from "./pages/admin/UserManagement";
 import Notifications from "./pages/admin/Notifications";
 import AdminSettings from "./pages/admin/adminSettings";
+import LMS from "./pages/account/lms/LMS";
 
 function App() {
   return (
@@ -68,6 +69,7 @@ function App() {
           <Route path="settings" element={<Settings />} />
           <Route path="certification" element={<Certifications />} />
         </Route>
+        {/* <Route path="/LMS" element={<LMS />} /> */}
         <Route path="/LMS" element={<LMS />} />
 
         {/* authetication-section */}
