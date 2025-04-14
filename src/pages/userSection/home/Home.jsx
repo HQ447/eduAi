@@ -34,9 +34,9 @@ function Home() {
           darkMode ? "bg-[#0f1113] text-white" : "bg-white"
         } flex flex-col items-center my-5 gap-5 px-7`}
       >
-        <div className="flex flex-col justify-center items-center mb-5">
+        <div className="flex flex-col items-center justify-center mb-5">
           <h1 className="-xsm:text-2xl w-full text-center text-4xl font-[600] mb-5 -xsm:mb-1 ">
-            Popular{" "}
+            Recommended{" "}
             <span
               style={{
                 background:
@@ -48,7 +48,7 @@ function Home() {
               Courses
             </span>
           </h1>
-          <p className=" -xsm:text-sm text-xl flex items-center -xsm:text-center">
+          <p className="flex items-center text-xl  -xsm:text-sm -xsm:text-center">
             <GoDotFill
               className="text-3xl text-green-500 animate-pulse-scale"
               aria-hidden="true"
@@ -77,27 +77,27 @@ function Home() {
                 className="w-[25rem] -l:w-[18rem] -md:w-[15rem] -sm:w-full"
               />
               <div className="w-[30rem] -md:w-[25rem] -sm:w-full flex flex-col gap-2">
-                <h1 className="text-xl -sm:text-lg font-semibold">
+                <h1 className="text-xl font-semibold -sm:text-lg">
                   {course.title}
                 </h1>
-                <p className=" text-xs">{course.decription}</p>
-                <p className="text-gray-500 text-xs">By {course.instructor}</p>
+                <p className="text-xs ">{course.decription}</p>
+                <p className="text-xs text-gray-500">By {course.instructor}</p>
                 <p className="text-green-800 text-xs -xsm:text-[8px] font-semibold flex  ">
                   {course.chapters.length} Chapter or Sections
-                  <p className="text-gray-500 font-normal">
+                  <p className="font-normal text-gray-500">
                     - {course.lectures} Lectures -
                   </p>
-                  <p className="text-gray-500 font-normal">All Levels</p>
+                  <p className="font-normal text-gray-500">All Levels</p>
                 </p>
                 <div className="flex items-center gap-1">
-                  <p className="font-semibold text-sm">{course.rating}.0</p>
+                  <p className="text-sm font-semibold">{course.rating}.0</p>
                   <StarRating rating={course.rating} />
                   <p className="text-xs">({course.students})</p>
                 </div>
-                <div className=" font-semibold">
+                <div className="font-semibold ">
                   {course.new_price == 0 ? "Free" : `$${course.new_price}`}
                   &nbsp;{" "}
-                  <del className="text-red-500 text-sm font-semibold">
+                  <del className="text-sm font-semibold text-red-500">
                     ${course.old_price}
                   </del>
                 </div>
