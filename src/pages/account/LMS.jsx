@@ -13,6 +13,7 @@ import {
   X,
   BookOpen,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 // Sample course data
 const defaultCourse = {
@@ -216,6 +217,8 @@ export default function LMS({ course = defaultCourse }) {
     }
   };
 
+  const navigate = useNavigate();
+
   const goToPreviousLecture = () => {
     if (!currentCourse || !currentCourse.chapters) return;
 
@@ -291,6 +294,7 @@ export default function LMS({ course = defaultCourse }) {
   return (
     <div className="flex flex-col w-full max-h-screen min-h-screen overflow-hidden bg-gray-100 md:flex-row">
       {/* Desktop Sidebar */}
+
       <div className="hidden max-h-screen overflow-y-auto bg-white border-r border-gray-200 md:block md:w-1/3 lg:w-1/4">
         <div className="sticky top-0 z-10 p-3 bg-white border-b border-gray-200">
           <h1 className="text-xl font-bold text-gray-800">
@@ -348,6 +352,14 @@ export default function LMS({ course = defaultCourse }) {
               )}
             </div>
           ))}
+        </div>
+        <div className="flex justify-center w-full">
+          <button
+            onClick={() => navigate("/quiz")}
+            className="px-10 py-1 mx-auto text-sm text-center text-white transition-all bg-blue-700 rounded-md hover:scale-95 hover:bg-blue-800"
+          >
+            Quiz
+          </button>
         </div>
       </div>
 

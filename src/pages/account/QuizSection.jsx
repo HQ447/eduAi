@@ -175,7 +175,7 @@ export default function QuizSection() {
   // Intro screen
   if (currentStep === "intro") {
     return (
-      <div className="max-w-4xl p-6 mx-auto bg-white rounded-lg shadow-lg">
+      <div className="max-w-4xl p-6 mx-auto mt-5 bg-white rounded-lg shadow-lg">
         <div className="mb-8 text-center">
           <h1 className="text-3xl font-bold text-gray-800">{quiz.title}</h1>
           <p className="mt-2 text-gray-600">{quiz.description}</p>
@@ -222,7 +222,7 @@ export default function QuizSection() {
     const question = quiz.questions[currentQuestion];
 
     return (
-      <div className="max-w-4xl p-6 mx-auto bg-white rounded-lg shadow-lg">
+      <div className="max-w-4xl p-6 mx-auto mt-5 bg-white rounded-lg shadow-lg">
         {/* Quiz header */}
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-xl font-bold text-gray-800 md:text-2xl">
@@ -364,7 +364,7 @@ export default function QuizSection() {
     const results = calculateResults();
 
     return (
-      <div className="max-w-4xl p-6 mx-auto bg-white rounded-lg shadow-lg">
+      <div className="max-w-4xl p-6 mx-auto mt-5 bg-white rounded-lg shadow-lg">
         <div className="mb-8 text-center">
           <h1 className="text-3xl font-bold text-gray-800">Quiz Results</h1>
           <p className="mt-2 text-gray-600">{quiz.title}</p>
