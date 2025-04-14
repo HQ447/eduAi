@@ -4,9 +4,23 @@ import { FaUsers } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
 import { FaGlobe } from "react-icons/fa";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import { IoMdClose } from "react-icons/io";
 
 const CircleComponent = () => {
   const darkMode = useSelector((state) => state.store.darkMode);
+  const [showVideoPlayer, setShowVideoPlayer] = useState(false);
+
+  // Function to handle play button click
+  const handlePlayClick = () => {
+    setShowVideoPlayer(true);
+  };
+
+  // Function to close video player
+  const handleCloseVideo = () => {
+    setShowVideoPlayer(false);
+  };
+
   // bg-gradient-to-b from-[#cce7f5] to-[#f5faff]
   return (
     <div
@@ -28,7 +42,7 @@ const CircleComponent = () => {
       >
         {/* Blue Dot */}
         <motion.div
-          className="w-3 h-3 bg-blue-700 rounded-full absolute"
+          className="absolute w-3 h-3 bg-blue-700 rounded-full"
           style={{ top: 0, left: "60%", transform: "translateX(-50%)" }}
           initial={{ rotate: 0 }}
           animate={{ rotate: -360 }}
@@ -40,7 +54,7 @@ const CircleComponent = () => {
         />
         {/* Green Dot */}
         <motion.div
-          className="w-4 h-4 bg-green-600 rounded-full absolute"
+          className="absolute w-4 h-4 bg-green-600 rounded-full"
           style={{ bottom: 0, left: "60%", transform: "translateX(-50%)" }}
           initial={{ rotate: 0 }}
           animate={{ rotate: -360 }}
@@ -53,16 +67,17 @@ const CircleComponent = () => {
       </motion.div>
 
       {/* Paragraph Inside the Circle, Outside Rotation */}
-      <p
+      <div
         className={`absolute  -md:top-[30%] -sm:top-[26%] -xsm:top-[32%] flex items-center -xsm:flex-col -xsm:justify-center ${
           darkMode ? "text-white" : "text-gray-700"
-        } text-center -xsm:text-xs animate-pulse-scale `}
+        } text-center -xsm:text-xs animate-pulse-scale cursor-pointer`}
         aria-hidden="true"
+        onClick={handlePlayClick}
       >
-        <AiOutlinePlayCircle className=" text-5xl -xsm:text-4xl" />
+        <AiOutlinePlayCircle className="text-5xl  -xsm:text-4xl" />
         Click here to preview the video
-      </p>
-      <div className=" -md:static -xsm:mt-5 flex flex-wrap justify-center gap-6 absolute bottom-14">
+      </div>
+      <div className="absolute flex flex-wrap justify-center gap-6  -md:static -xsm:mt-5 bottom-14">
         <div className="flex items-center p-9 -xsm:p-4 gap-4 rounded-md bg-[#3d3de4] text-white">
           <FaUsers className="text-6xl" />
           <div className="flex flex-col ">
@@ -85,6 +100,33 @@ const CircleComponent = () => {
           </div>
         </div>
       </div>
+
+      {/* Video Player Modal */}
+      {showVideoPlayer && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75">
+          <div className="relative w-full max-w-md overflow-hidden bg-black rounded-lg md:max-w-lg lg:max-w-xl">
+            {/* Close button */}
+            <button
+              className="absolute z-10 p-1 text-white bg-black bg-opacity-50 rounded-full top-2 right-2"
+              onClick={handleCloseVideo}
+            >
+              <IoMdClose className="text-2xl" />
+            </button>
+
+            {/* Video Player */}
+            <div className="relative pb-[56.25%] h-0">
+              <video
+                className="absolute top-0 left-0 w-full h-full rounded-lg"
+                controls
+                autoPlay
+                src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
