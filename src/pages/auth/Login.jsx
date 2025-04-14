@@ -22,12 +22,6 @@ function Login() {
   }
 
   function handleClick() {
-    const { email, password } = loginData;
-
-    if (!email || !password) {
-      alert("Please fill in all fields before login.");
-      return;
-    }
     navigate("/");
     //we will find the user by calling the backend api for findinguser , and after
   }
