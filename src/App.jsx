@@ -33,7 +33,7 @@ import QuizSection from "./pages/account/QuizSection";
 
 function App() {
   return (
-    <div className="flex w-full bg-[white] ">
+    <div className="flex w-full min-h-screen bg-[#f7f7f7]">
       <Routes>
         {/* Main/general section for all user */}
         <Route path="/" element={<UserSection />}>
