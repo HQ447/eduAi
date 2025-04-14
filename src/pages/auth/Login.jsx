@@ -3,10 +3,13 @@ import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setactiveUser } from "../../store/cartSlice";
 
 function Login() {
   // const dispatch = useDispatch();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   // const users = useSelector((state) => state.store.users);
 
   const [loginData, setLoginData] = useState({
@@ -14,15 +17,38 @@ function Login() {
     password: "",
   });
 
+  const [error, setError] = useState("");
+
   function handleChange(e) {
     const { name, value } = e.target;
     const copyloginData = { ...loginData };
     copyloginData[name] = value;
     setLoginData(copyloginData);
+
+    // Clear error when user starts typing
+    if (error) {
+      setError("");
+    }
   }
 
   function handleClick() {
+    const { email, password } = loginData;
+
+    if (!email && !password) {
+      setError("Please enter both email and password");
+      return;
+    } else if (!email) {
+      setError("Please enter your email");
+      return;
+    } else if (!password) {
+      setError("Please enter your password");
+      return;
+    }
+
+    // If we get here, both fields are filled
+    dispatch(setactiveUser(loginData));
     navigate("/");
+
     //we will find the user by calling the backend api for findinguser , and after
   }
   return (
@@ -40,16 +66,19 @@ function Login() {
             type="text"
             placeholder="Enter Email"
             name="email"
+            value={loginData.email}
             onChange={(e) => handleChange(e)}
             className="px-3 py-3 text-xs border rounded-md shadow-md outline-none placeholder:text-sm placeholder:text-gray-400"
           />
           <input
             type="password"
             name="password"
+            value={loginData.password}
             onChange={(e) => handleChange(e)}
             placeholder="Password"
             className="px-3 py-3 text-xs border rounded-md shadow-md outline-none placeholder:text-sm placeholder:text-gray-400"
           />
+          {error && <p className="text-xs text-red-500">{error}</p>}
           <p className=" text-end text-[12px] font-semibold">
             <NavLink to={"/recover-password"}> Recover Your Password</NavLink>
           </p>
@@ -87,44 +116,6 @@ function Login() {
           </p>
         </div>
       </div>
-
-      {/* <div className="flex flex-col items-center justify-center gap-8 px-20 py-10 bg-white rounded-lg w-fit -md:px-16 -sm:px-8 -xsm:px-2 -xsm:py-3 -xsm:w-11/12">
-
-        <h1 className="w-fit text-center shadow-lg rounded-full px-9 py-1 bg-[#fbb329] text-xl ">
-          Login
-        </h1>
-        <div className="flex -sm:flex-wrap">
-          <img
-            src="https://sindphanapublicschool.com/Assets/img/logo-2.png"
-            alt="login imag error"
-            className="mx-auto w-60 -md:w-40 -md:h-40"
-          />
-          <div className="flex flex-col items-center justify-center w-full gap-2 px-5 -xsm:px-0">
-            <div className="border-b-2 border-[#fbb329] flex items-center">
-              <input
-                type="text"
-                className="px-1 py-4 outline-none placeholder:text-black placeholder:text-lg"
-                placeholder="Email ID"
-              />
-              <FaUser className="text-3xl" />
-            </div>
-            <div className="border-b-2 border-[#fbb329] flex items-center">
-              <input
-                type="password"
-                className="px-1 py-4 outline-none placeholder:text-black placeholder:text-lg"
-                placeholder="Password"
-              />
-              <FaLock className="text-3xl" />
-            </div>
-
-            <NavLink to={"/"}>
-              <button className=" py-2 px-10 my-3 bg-[#fbb329] shadow-md rounded-full">
-                Login
-              </button>
-            </NavLink>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }
