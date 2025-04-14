@@ -1,9 +1,9 @@
-import { useSelector } from "react-redux";
+//import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 import svg from "../../assets/images/2waves.png";
 
 function AccountSection() {
-  const activeUser = useSelector((state) => state.store.activeUser);
+  //const activeUser = useSelector((state) => state.store.activeUser);
   // const navigate = useNavigate();
   // const [active, setActive] = useState(1);
   // const darkMode = useSelector((state) => state.store.darkMode);
@@ -63,7 +63,7 @@ function AccountSection() {
           </NavLink>
         </div> */}
         {/* <svg
-          className="top-0 absolute h-72 w-full"
+          className="absolute top-0 w-full h-72"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
           preserveAspectRatio="none"
@@ -73,16 +73,16 @@ function AccountSection() {
             d="M0,192L80,197.3C160,203,320,213,480,218.7C640,224,800,224,960,208C1120,192,1280,160,1360,144L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
           ></path>
         </svg> */}
-        <div className="flex my-10 -xsm:mt-5 -xsm:mb-0 text-white relative flex-col  font-semibold  text-2xl items-center justify-center w-full">
+        <div className="relative flex flex-col items-center justify-center w-full my-10 text-2xl font-semibold text-white -xsm:mt-5 -xsm:mb-0">
           <img
             src="https://cdn-icons-png.flaticon.com/512/3781/3781986.png"
             alt="img loading error"
-            className="bg-white rounded-full w-28 mb-3 -xsm:w-16"
+            className="mb-3 bg-white rounded-full w-28 -xsm:w-16"
           />
-          <h1 className="uppercase -xsm:text-sm">{activeUser.username}</h1>
-          <p className="text-xl -xsm:text-sm">{activeUser.email}</p>
+          <h1 className="uppercase -xsm:text-sm">Ali</h1>
+          <p className="text-xl -xsm:text-sm">ali@gmail.com</p>
         </div>
-        {/* <div className="absolute w-full bottom-0 gap-7   flex justify-center  ">
+        {/* <div className="absolute bottom-0 flex justify-center w-full gap-7 ">
           <p
             className={` ${
               active == 1 ? "border-b-4 " : ""
@@ -118,7 +118,7 @@ function AccountSection() {
           </p>
         </div> */}
         {/* <svg
-          className="bottom-0 absolute"
+          className="absolute bottom-0"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
         >
@@ -129,9 +129,9 @@ function AccountSection() {
         </svg> */}
       </div>
 
-      <div className=" bg-white  relative py-16 -xsm:py-2  px-10 -sm:px-16 -xsm:px-7 ">
+      <div className="relative px-10 py-16 bg-white -xsm:py-2 -sm:px-16 -xsm:px-7">
         {/* <svg
-          className=" absolute top-0 left-0 w-full h-20"
+          className="absolute top-0 left-0 w-full h-20 "
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
           preserveAspectRatio="none" // Allows independent height and width
@@ -144,7 +144,7 @@ function AccountSection() {
         <img
           src={svg}
           alt=""
-          className=" absolute top-0 left-0 h-20 w-full -xsm:h-10"
+          className="absolute top-0 left-0 w-full h-20 -xsm:h-10"
         />
 
         <Outlet />

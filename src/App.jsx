@@ -29,6 +29,7 @@ import UserManagement from "./pages/admin/UserManagement";
 import Notifications from "./pages/admin/Notifications";
 import AdminSettings from "./pages/admin/adminSettings";
 import LMS from "./pages/account/LMS";
+import QuizSection from "./pages/account/QuizSection";
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
           <Route path="certification" element={<Certifications />} />
         </Route>
         {/* <Route path="/LMS" element={<LMS />} /> */}
+        <Route path="quiz" element={<QuizSection />} />
         <Route path="/LMS" element={<LMS />} />
 
         {/* authetication-section */}
